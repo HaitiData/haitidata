@@ -110,3 +110,22 @@ LOCKDOWN_GEONODE = True
 BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
+
+
+SOCIAL_ORIGINS = [{
+    "label":"paper-plane-o",
+    "url":"mailto:?subject={name}&body={url}",
+    "css_class":"email"
+}, {
+    "label":"facebook",
+    "url":"http://www.facebook.com/sharer.php?u={url}",
+    "css_class":"fb"
+}, {
+    "label":"twitter",
+    "url":"https://twitter.com/share?url={url}&hashtags={hashtags}",
+    "css_class":"tw"
+}, {
+    "label":"google-plus",
+    "url":"https://plus.google.com/share?url={url}",
+    "css_class":"gp"
+}]
