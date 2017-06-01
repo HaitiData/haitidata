@@ -1,0 +1,14 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About HaitiData" %} — {{ block.super }} {% endblock %}
+
+{% block body_outer %}
+<div class="page-header">
+  <h2>{% trans "About HaitiData" %}</h2>
+</div>
+<p>Le but de ce site est de faciliter l’accès libre à de l’information, des données et des connaissances géospatiales, sur les désastres naturels et sur la vulnérabilité et le risque en Haïti, ainsi que d’encourager leur partage et leur utilisation.</p>
+<p>Les données géospatiales peuvent être utilisées à plusieurs fins : l’établissement de données de base, l’élaboration d’évaluations des risques, la planification, la surveillance de projets et le suivi de leur avancement. L’accès à de l’information de haute qualité est critique pour les planificateurs, les décideurs et autres intervenants impliqués dans la reconstruction d’Haïti. Ce site vise à faciliter un support plus efficace à la réhabilitation, le redressement et le développement durable à long terme du pays.</p>
+<p>Suite au tremblement de terre du 12 janvier 2010, une quantité substantielle de données géospatiales a été créée, permettant d’évaluer l’intensité du séisme, la probabilité d’inondations, les risques associés aux glissements de terrain et aux tsunamis ainsi que les dommages, de façon globale. L’énormité du besoin actuel en assistance matérielle, en support pour le renforcement de la structure de gouvernance ainsi que la quantité innombrable d’organisations locales et internationales se joignant dans l’assistance aux processus de reconstruction et de développement, posent également un défi considérable à la capacité du gouvernement et des autres mandataires à se coordonner, afin que le peuple d’Haïti en bénéficie. Ce site souhaite aider à informer les décideurs à tous les niveaux et dans tous les secteurs, dans l’immédiat ainsi que dans la planification de l’avenir, incluant la gestion du risque dérivé des hazard naturels.</p>
+
+{% endblock %}

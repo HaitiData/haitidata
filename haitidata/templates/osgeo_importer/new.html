@@ -1,0 +1,62 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+
+{% block extra_script %}
+<script>
+
+   function chooseFile() {
+      $("#id_file").click();
+   }
+
+   $("#id_file").on("change", function() {
+     $("#uploads-new-form").submit();
+    });
+
+</script>
+
+{{ block.super }}
+{% endblock %}
+
+{% block title %}{{ block.super }} {% trans "Upload Data" %}{% endblock %}
+{% block page-title %}
+  {% trans "Upload Data" %}
+  <div class="btn-group pull-right">
+    <a class="btn btn-primary btn-icon" href="{% url 'uploads-list' %}">
+      <i class="fa fa-align-justify" title="Uploads"></i>
+    </a>
+    <a class="btn btn-primary" href="{% url 'uploads-list' %}">
+      {% trans "Uploads" %}
+    </a>
+  </div>
+{% endblock %}
+
+{% block body_outer %}
+
+
+<div>
+  <div class="row" style="margin:20px 0 30px">
+	<form id="uploads-new-form" action="{% url 'uploads-new' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div style="height:0px;overflow:hidden">
+            {{form}}
+        </div>
+        <div class="row">
+            <button type="button" class="btn-info col-md-4 btn" onclick="chooseFile();">choose file(s)</button>
+        </div>
+        <div class="row">
+            <div class="errorlist">
+            {% for error in form.file.errors %}
+                <i class="fa fa-warning">  {{ error|escape }}</i>
+            {% endfor %}
+                <div class="col-md-6" style="padding-top: 5px; padding-left: 2px;">
+                    Valid file extensions: {{ VALID_EXTENSIONS }}
+                </div>
+            </div>
+
+        </div>
+        </form>
+	</div>
+</div>
+
+
+{% endblock %}

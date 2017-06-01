@@ -1,15 +1,88 @@
 {% extends 'index.html' %}
 {% load i18n %}
-{% comment %}
-This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
-{% endcomment %}
-  {% block hero %}
-  <div class="jumbotron">
-    <div class="container">
-      <h1>HaitiData Test</h1>
-      <p>{% blocktrans %}GeoNode is an open source platform for sharing geospatial data and maps.{% endblocktrans %}</p>
-      <p>{% blocktrans %}If you have any questions about the software or service, join our <a href="https://groups.google.com/d/forum/geonode-users">mailing list</a>.{% endblocktrans %}</p>
-      <span>{% trans 'Need help?' %} <a href="http://docs.geonode.org/en/latest/tutorials/users/quickstart/index.html">{% trans 'Getting Started' %}</a></span>
-    </div>
+
+{% block middle %}
+
+{% block hero %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Haiti<span style="font-weight:200">Data</span></h1>
+    <p>{% blocktrans %}Le but de ce site est de faciliter l’accès libre à de l’information, des données et des connaissances géospatiales, sur les désastres naturels et sur la vulnérabilité et le risque en Haïti, ainsi que d’encourager leur partage et leur utilisation.{% endblocktrans %}</p>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}
+
+{% block mainbody %}
+<section id="hazards">
+	<div class="container">
+		<div class="row">
+			<h2>Haiti Risk and Hazards</h2>
+			<div class="col-xs-6 col-md-2">
+				<a class="hazards" href="/search/?limit=100&offset=0&keywords__slug__in=flood"><span class="icon-Flood"></span></a>
+				<h4>River Flood</h4>
+			</div>
+			<div class="col-xs-6 col-md-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=cyclone"><span class="icon-Cyclone"></span></a>
+				<h4>Cyclone</h4>
+			</div>
+      <div class="col-xs-6 col-md-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=coastal-flood"><span class="icon-StormSurge"></span></a>
+				<h4>Coastal Flood</h4>
+			</div>
+      <div class="col-xs-6 col-md-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=earthquake"><span class="icon-Earthquake"></span></a>
+				<h4>Earthquake</h4>
+			</div>
+      <div class="col-xs-6 col-md-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=water-scarcity"><span class="icon-water_scarcity"></span></a>
+				<h4>Water Scarcity</h4>
+			</div>
+      <div class="col-xs-6 col-md-2">
+				<a href="/search/?limit=100&offset=0&keywords__slug__in=landslide"><span class="icon-Landslide"></span></a>
+				<h4>Landslide</h4>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="imagery">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h1>Imagery</h1>
+        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. {% endblocktrans %}</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Aerial images</h3>
+        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktrans %}</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Satellite imagery</h3>
+        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktrans %}</p>
+      </div>
+      <div class="col-md-3">
+        <h3>DSM/DTM</h3>
+        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktrans %}</p>
+      </div>
+    </div>
+</section>
+<section id="showcase">
+	<div class="container">
+		<div class="row">
+			<h2>Featured Datasets</h2>
+		    {% verbatim %}
+		    <div ng-app="featured">
+		      <div ng-repeat="item in featured | limitTo:4">
+	  			<div class="col-md-3">
+	  				<a href="{{ item.detail_url }}"><img ng-src="{{ item.thumbnail_url }}" /></a>
+	  				<h4>{{ item.title }}</h4>
+	  			</div>
+		      </div>
+		    </div>
+		    {% endverbatim %}
+		</div>
+		<p><a href="#">Explore all datasets</a></p>
+	</div>
+</section>
+{% endblock %}
+
+{% endblock %}
