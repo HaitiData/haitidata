@@ -227,6 +227,11 @@
         {% endif %}
       </article>
 
+      <article id="charts" class="tab-pane">
+      <h4>No charts available at this time</h4>
+      <a href="/table/fields?lyrname={{ resource.typename }}">Create Chart</a>
+      </article>
+
       <article id="comments" class="tab-pane">
         {% with resource as obj %}
           {% include "_comments.html" %}
