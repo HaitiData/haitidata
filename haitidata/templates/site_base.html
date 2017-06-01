@@ -1,9 +1,26 @@
 {% extends "base.html" %}
 {% load i18n avatar_tags %}
 
+{% block head %}
+    {% if DEBUG_STATIC %}
+    <link href="{{ STATIC_URL }}lib/css/jquery.dataTables.css?v={{ VERSION }}" rel="stylesheet" />
+    <link href="{{ STATIC_URL }}lib/css/select2.css?v={{ VERSION }}" rel="stylesheet"/>
+    <link href="{{ STATIC_URL }}lib/css/bootstrap.min.css?v={{ VERSION }}" rel="stylesheet"/>
+    <link href="{{ STATIC_URL }}lib/css/jquery-ui.css?v={{ VERSION }}" rel="stylesheet"/>
+    <link href="{{ STATIC_URL }}lib/css/bootstrap-datetimepicker.css?v={{ VERSION }}" rel="stylesheet"/>
+    {% else %}
+    <link href="{{ STATIC_URL }}lib/css/assets.min.css?v={{ VERSION }}" rel="stylesheet"/>
+    {% endif %}
+    <link href="{{ STATIC_URL }}geonode/css/ext-compatibility.css?v={{ VERSION }}" rel="stylesheet" />
+    <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
+    <link href="{{ STATIC_URL }}css/haitidata.css" rel="stylesheet"/>
+    {% block extra_head %}
+    {% endblock %}
+{% endblock %}
+
 <!-- Navbar -->
 {% block header %}
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,12 +37,11 @@
             <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
             <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
             {% if user.is_authenticated %}
-            <li><a href="/uploads/">{% trans "Uploads" %}</a></li>
+            <li><a href="/uploads">{% trans "Uploads" %}</a></li>
             <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
             <li><a href="{% url "document_upload" %}">Upload Document</a></li>
-            <li><a href="/uploads/new">Importer</a></li>
             <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
             {% endif %}
           </ul>
@@ -67,9 +83,9 @@
               <form id="search" action="{% url "search" %}" >
                 <span class="fa fa-search"></span>
                 {% if HAYSTACK_SEARCH %}
-                <input id="search_input" type="text" placeholder="Search" name="q">
+                <input id="search_input" type="text" placeholder='{% trans "Search" %}' name="q">
                 {% else %}
-                <input id="search_input" type="text" placeholder="Search" name="title__icontains">
+                <input id="search_input" type="text" placeholder='{% trans "Search" %}' name="title__icontains">
                 {% endif %}
               </form>
             </div>
@@ -101,3 +117,28 @@
   </nav>
   {% endblock header %}
   <!-- End of Navbar -->
+
+
+  {% block middle %}
+  <header>
+  	<div class="container">
+  		<h3>{% block page-title %}{% endblock %}</h3>
+  	</div>
+  </header>
+  {% block subheader %}{% endblock %}
+  <div class="container">
+  	{% include "_status_message.html" %}
+  	{% include "_announcements.html" %}
+  	{% include "_messages.html" %}
+  	{% block body_outer %}
+  	<div class="row">
+  		<div class="col-md-8">
+  		{% block body %}{% endblock %}
+          </div>
+          <div class="col-md-4">
+          {% block sidebar %}{% endblock %}
+          </div>
+  	</div>
+  	{% endblock %}
+  </div>
+  {% endblock middle %}

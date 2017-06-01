@@ -1,0 +1,32 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block title %}{{ block.super }} {% trans "Messages" %}{% endblock %}
+{% block page-title %}
+{% trans "Create Message" %}
+<div class="btn-group pull-right">
+  <a class="btn btn-primary btn-icon" href="{% url "messages_inbox" %}">
+    <i class="fa fa-align-justify" title="List"></i>
+  </a>
+  <a class="btn btn-primary" href="{% url "messages_inbox" %}">
+    {% trans "Message Inbox" %}
+  </a>
+</div>
+{% endblock %}
+
+{% block body %}
+<form method="post" action="{% url "message_create" %}">
+  {% csrf_token %}
+  <table width=100%>
+    {{ form|as_bootstrap }}
+  </table>
+  <div class="form-actions">
+    <input type="submit" value="{% trans "Send message" %}"  class="btn btn-primary" type="button"/>
+  </div>
+</form>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
