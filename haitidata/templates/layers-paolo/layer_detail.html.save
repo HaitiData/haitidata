@@ -8,7 +8,8 @@
 {% load base_tags %}
 {% load guardian_tags %}
 
-{% block title %}{{ resource.title|default:resource.typename }} — {{ block.super }}{% endblock %}
+{% block title %}{{ block.super }} {% trans "Layers" %} | {{ resource.title|default:resource.typename }}{% endblock %}
+{% block page-title %}{% trans "Explore Layers" %}{% endblock %}
 
 {% block head %}
 
@@ -35,11 +36,36 @@
 
 {% block body_class %}layers{% endblock %}
 
-{% block body_outer %}
-<div class="page-header">
-  <h2 class="page-title">{{ resource.title|default:resource.typename }}</h2>
-</div>
+{% block subheader %}
+<section id="subheader">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{ resource.title|default:resource.typename }}</h2>
+        <p>
+				    {{ resource.service_type }}
+				    {% if resource.category %}
+					  {% trans "in" %} <a href="{% url "search" %}?category__identifier__in={{ resource.category.identifier }}">{{ resource.category }}</a> |
+				    {% endif %}
+					  {% if resource.date %}
+					    {% if resource.date_type == 'creation' %} {% trans "Created on" %} {{ resource.date }}
+					    {% elif resource.date_type == 'publication' %} {% trans "Published on" %} {{ resource.date }}
+					    {% else %} {% trans "Updated on" %} {{ resource.date }}
+						{% endif %}
+					{% endif %}
+				</p>
+				{% block social_links %}
+				{% if SOCIAL_BUTTONS %}
+				{% include "social_links.html" %}
+				{% endif %}
+				{% endblock %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
 
+{% block body_outer %}
 <div class="row">
   <div class="col-md-8">
 
@@ -201,24 +227,6 @@
         {% endif %}
       </article>
 
-      {% block social_links %}
-      {% if SOCIAL_BUTTONS %}
-        {% include "social_links.html" %}
-      {% endif %}
-      {% endblock %}
-
-      <article id="charts" class="tab-pane">
-      <ul>
-      {% for chart in resource.chart_set.all %}
-        <li><a href="{% url 'chart_detail' chart.id %}">{{ chart.get_type_display }}</a>, Category field = {{chart.category}}, Quantity field = {{chart.quantity}}</li>
-      {% empty %}
-        <li><h4>No charts available at this time</h4></li>
-      {% endfor %}
-      </ul>
-
-      <a href="{% url 'chart_add' resource.id %}">Generate New Chart</a>
-      </article>
-
       <article id="comments" class="tab-pane">
         {% with resource as obj %}
           {% include "_comments.html" %}
@@ -258,8 +266,8 @@
       {% if resource.storeType != "remoteStore" %}
         <li class="list-group-item">
         {% if links or links_download %}
-          <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download-layer">{% trans "Download Layer" %}</button>
-          {% else %}
+           <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download-layer">{% trans "Download Layer" %}</button>
+        {% else %}
           {% if request.user.is_authenticated %}
           <button class="btn btn-primary btn-md btn-block" id="request-download">{% trans "Request Download" %}</button>
           {% endif %}
@@ -271,7 +279,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">{% trans "Downloajnjnjjnd Layer" %}</h4>
+            <h4 class="modal-title" id="myModalLabel">{% trans "Download Layer" %}</h4>
           </div>
           <div class="modal-body">
             <div class="tabbable">
@@ -469,203 +477,6 @@
         <a href="{% url "new_map" %}?layer={{resource.service_typename}}" class="btn btn-primary btn-block">{% trans "Create a Map" %}</a>
     </li>
 
-    <li class="list-group-item">
-      <h4>{% trans "Charts with this layer" %}</h4>
-      {% if resource.maps %}
-        <p>{% trans "List of chart with this layer:" %}</p>
-        {% endif %}
-        <ul class="list-unstyled">
-        {% for chart in resource.chart_set.all %}
-            <li><a href="{% url 'chart_detail' chart.id %}">{{ chart.get_type_display }}</a>, Category field = {{chart.category}}, Quantity field = {{chart.quantity}}</li>
-        {% empty %}
-            <li><h4>No charts available at this time</h4></li>
-        {% endfor %}
-        </ul>
-    </li>
-    <li class="list-group-item">
-      <h4>{% trans "Create a chart using this layer" %}</h4>
-      <p>{% trans "Click the button below to generate a new chart based on this layer, choosing a quantity and a category field." %}</p>
-            <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">Create a chart</button>
-          <div id="form" class="collapse">
-              <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/add/{{ resource.id }}/">
-                    {% csrf_token %}
-                         <div class="form-group">
-                             <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_category">Category:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_category" name="category" >
-                                 {% for attribute in resource.attributes %}
-                                 <option value={{ attribute.attribute }}>{{ attribute.attribute }}</option>
-                                 {% endfor %}
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label  class="control-label col-md-2" for="id_quantity">Quantity:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_quantity" name="quantity">
-                                 {% for attribute in resource.attributes %}
-                                 {% if 'gml:' not in attribute.attribute_type and 'string' not in attribute.attribute_type%}
-                                  <option value={{ attribute.attribute }}>{{ attribute.attribute }}</option>
-                                 {% endif %}
-                                 {% endfor %}
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_type">Type:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_type" name="type">
-                                 <option value="0" selected="selected">Bar chart</option>
-                                 <option value="1">Pie chart</option>
-                                 <option value="2">Donut chart</option>
-                                 <option value="3">Line chart</option>
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label  class="control-label col-md-2" for="id_aggr_type">Aggregation:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_aggr_type" name="aggr_type">
-                                 <option value="0">Sum</option>
-                                 <option value="1">Mean</option>
-                                 <option value="2">Category count</option>
-                                 <option value="3">Max</option>
-                                 <option value="4">Min</option>
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_title">Title:</label>
-                             <div class="col-md-8">
-                                <input id="id_title" maxlength="128" name="title" type="text">
-                                 <p style="font-size: small; margin:0">Suggested title:</p>
-                                 <p  id="title" style="font-size: small; margin:0">Text_di provas</p>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_abstract">Abstract:</label>
-                             <div class="col-md-8">
-                             <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
-
-                             </div>
-                         </div>
-                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart()">Display chart</button>
-                         <button type="submit" class="btn btn-primary btn-block">Save chart</button>
-               </form>
-          </div>
-        </li>
-        <script>
-                    var typename = "{{ resource.typename }}";
-                    var category;
-                    var quantity;
-                    var agg;
-                    var chart_type;
-                    var csv_url;
-                    var dict_title = {0:"Sum",1:"Mean",2:"Count", 3:"Max", 4:"Min"};
-                    var suggestedTitle = "";
-                    var abstractText;
-
-                    function chart_title(){
-
-                        if (agg == dict_title[2]){
-                            suggestedTitle = dict_title[agg] + " of elements for "  + category;
-                        } else {
-                            var title = dict_title[agg]
-                            suggestedTitle = title + " of " + quantity + " for " + category;
-                        }
-                        document.getElementById("title").innerHTML = suggestedTitle;
-                        return suggestedTitle;
-                    };
-
-                    function updateLinkAndTitle(){
-                        update_link();
-                        chart_title();
-                        attachAbstract();
-                    }
-
-                    function update_link_v1(){
-                        csv_url = '/table?lyrname=' + typename;
-                        csv_url = csv_url + '&category=' + category;
-                        csv_url = csv_url + '&quantity=' + quantity;
-                        return;
-                    }
-                    update_link_v1();
-                    function update_link(){
-                        csv_url = '/table?lyrname=' + typename;
-                        category = document.f.category.value;
-                        csv_url = csv_url + '&category=' + category;
-                        quantity = document.f.quantity.value;
-                        csv_url = csv_url + '&quantity=' + quantity;
-                        agg = document.f.aggr_type.value;
-                        chart_type = document.f.type.value;
-                        return;
-                    }
-
-                    function attachAbstract(){
-                        abstractText = document.getElementById("id_abstract").value;
-                        console.log(abstractText);
-                        document.getElementById('abstract').innerHTML = abstractText;
-                    }
-
-                    function get_chart(){
-                    //create area for chart
-                    var createChartArea =  function() {
-                        var chartArea = document.getElementById("chart_area");
-                        chartArea.style= "display:table";
-                    };
-
-
-                    // update chart
-                    var replaceChart = function(){
-                        doc_chart = document.getElementById('chart_area');
-                        if(doc_chart.childElementCount >= 1){
-                            doc_chart.removeChild(doc_chart.childNodes[1]);
-                            createChartArea();
-                         };
-                    };
-                    if (document.getElementById("id_title").value == ""){
-                        document.getElementById("chart_title").innerHTML = suggestedTitle;
-                        }else document.getElementById("chart_title").innerHTML = document.getElementById("id_title").value;
-                    createChartArea();
-                    replaceChart();
-                    attachAbstract();
-                    getCsv(csv_url, category, quantity, agg, chart_type, abstractText);
-                   }
-              </script>
-    <div id="chart_popup" class="modal fade" role="dialog" >
-        <script src="/static/js/csv.js"></script>
-        <script src="/static/js/donut.js"></script>
-        <script src="/static/js/bar.js"></script>
-        <script src="/static/js/pie.js"></script>
-        <script src="/static/js/line.js"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="/static/css/index.css">
-          <div class="modal-dialog" id="chart" style="width: 55%">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 id="chart_title" class="modal-title"></h4>
-              </div>
-              <div class="modal-body">
-                <div id="chart_area" style="display: table; float: inherit;  width: 50%;">
-              </div>
-                  <div>
-                      <h5>Abstract</h5>
-                      <p id="abstract"></p>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-    </div>
-
-
     {% if documents.count > 0 %}
     <li class="list-group-item">
       <h4>{% trans "Documents related to this layer" %}</h4>
@@ -731,7 +542,6 @@
 {% endblock %}
 
 {% block extra_script %}
-{{ block.super }}
 
     {% if GEOGIG_ENABLED and resource.link_set.geogig %}
         {% with "_geogig_scripts.html" as geogig_scripts_template %}

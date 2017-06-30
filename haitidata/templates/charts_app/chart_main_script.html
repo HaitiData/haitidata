@@ -1,0 +1,24 @@
+<script>
+function get_chart(){
+
+    //create area for chart
+    var createChartArea =  function() {
+        var chartArea = document.getElementById("chart_area");
+        chartArea.style= "display:table; float:right; height:100%; width:70%";
+    };
+
+    // update chart
+    var replaceChart = function(){
+        doc_chart = document.getElementById('chart_area');
+        if(doc_chart.childElementCount >= 1){
+            doc_chart.removeChild(doc_chart.childNodes[1]);
+            createChartArea();
+         };
+    };
+
+    createChartArea();
+    replaceChart();
+    getCsv(csv_url, category, quantity, agg, chart_type);
+}
+
+</script>

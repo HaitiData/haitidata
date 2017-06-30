@@ -6882,7 +6882,7 @@ form input {
   max-height: none;
 }
 .navbar-header i {
-  color: white;
+  color: #ff5722;
   font-size: 2em;
 }
 .navbar-header button {
@@ -7326,6 +7326,35 @@ footer select {
 }
 .grid-spacer {
   margin-top: 30px;
+}
+#accordion .panel {
+  border-radius: 0;
+  border-top: 2px solid #b0bec5;
+  line-height: 1em;
+}
+#accordion .panel-heading {
+  background: none;
+  border: 0;
+}
+#accordion .panel-body img {
+  margin-bottom: 1em;
+}
+#accordion .panel-body small {
+  color: #78909c;
+  font-size: 0.825em;
+}
+#accordion .panel-body form {
+  font-size: 0.825em;
+}
+#accordion .panel-body form .form-control {
+  background: none;
+  color: #546e7a;
+  font-size: 0.825em;
+  height: 24px;
+  line-height: 1;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 /* ------ OSGeo Importer
 ------------------------------ */

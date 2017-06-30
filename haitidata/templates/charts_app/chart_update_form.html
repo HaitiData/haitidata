@@ -1,0 +1,94 @@
+<body onload="update_link();">
+<script src="/static/js/csv.js"></script>
+<script src="/static/js/donut.js"></script>
+<script src="/static/js/bar.js"></script>
+<script src="/static/js/pie.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/index.css">
+
+<h1>{{ object.layer.title }}</h1>
+
+<div id="chart_area">
+</div>
+
+<form name="f" method="post" onchange="update_link();">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+<div class="fieldWrapper">
+    {{ form.layer.as_hidden }}
+</div>
+<div class="fieldWrapper">
+    {{ form.category.as_hidden }}
+</div>
+<div class="fieldWrapper">
+    {{ form.quantity.as_hidden }}
+</div>
+<div class="fieldWrapper">
+    {{ form.title.errors }}
+    <label for="{{ form.title.id_for_label }}">Title:</label>
+    {{ form.title }}
+</div>
+<div class="fieldWrapper">
+    {{ form.type.errors }}
+    <label for="{{ form.type.id_for_label }}">Type:</label>
+    {{ form.type }}
+</div>
+<div class="fieldWrapper">
+    {{ form.aggr_type.errors }}
+    <label for="{{ form.aggr_type.id_for_label }}">Aggregation:</label>
+    {{ form.aggr_type }}
+</div>
+<div class="fieldWrapper">
+    {{ form.abstract.errors }}
+    <label for="{{ form.abstract.id_for_label }}">Abstract:</label>
+    {{ form.abstract }}
+</div>
+    <input type="submit" value="Update Chart in DB"/>
+</form>
+
+<a href="/table?" id="link">Download CSV</a>
+<br>
+<input type="button" onclick="get_chart()" value="Visualize graph">
+<br>
+<a href="{% url 'chart_delete' object.id %}">Delete this Chart</a>
+
+
+<script>
+var typename = "{{ object.layer.typename }}";
+var category = "{{ object.category }}";
+var quantity = "{{ object.quantity }}";
+var agg = "{{ object.aggr_type }}";
+var chart_type = "{{ object.type }}";
+var csv_url;
+
+function update_link_v1(){
+    csv_url = '/table?lyrname=' + typename;
+    csv_url = csv_url + '&category=' + category;
+    csv_url = csv_url + '&quantity=' + quantity;
+    document.getElementById('link').href = csv_url;
+    return;
+}
+update_link_v1();
+
+function update_link(){
+    csv_url = '/table?lyrname=' + typename;
+    category = document.f.category.value;
+    csv_url = csv_url + '&category=' + category;
+    quantity = document.f.quantity.value;
+    csv_url = csv_url + '&quantity=' + quantity;
+    document.getElementById('link').href = csv_url;
+    agg = document.f.aggr_type.value;
+    chart_type = document.f.type.value;
+    return;
+}
+
+</script>
+
+{% include "charts_app/chart_main_script.html" %}
+
+<script>
+get_chart();
+</script>
+
+</body>

@@ -1,0 +1,106 @@
+{% extends "charts_app/chart_base.html" %}
+{% load i18n %}
+{% load dialogos_tags %}
+{% load agon_ratings_tags %}
+{% load bootstrap_tags %}
+{% load url from future %}
+{% load base_tags %}
+{% load guardian_tags %}
+
+{% block page-title %}
+  {% trans "Explore Graphs" %}
+  <div class="btn-group pull-right">
+    <a class="btn btn-primary btn-icon" href="#">
+      <i class="fa fa-align-justify" title="List"></i>
+    </a>
+    <a class="btn btn-primary" href="#">
+      {% trans "Graphs" %}
+    </a>
+  </div>
+{% endblock %}
+
+{% block subheader %}
+<section id="subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{ object.title }} Title</h2>
+                <p>
+                  <span  style="text-transform: capitalize;">Chart</span> based on {{ object.layer.title }} layer (Category field: {{ object.category }}, Quantity field: {{ object.quantity }})
+
+				    {% if resource.category %}
+					       {% trans "in" %} <a href="{% url "search" %}?category__identifier__in={{ resource.category.identifier }}">{{ resource.category }}</a> |
+				    {% endif %}
+					{% if resource.date %}
+					    {% if resource.date_type == 'creation' %} {% trans "Created on" %} {{ resource.date }}
+					    {% elif resource.date_type == 'publication' %} {% trans "Published on" %} {{ resource.date }}
+					    {% else %} {% trans "Updated on" %} {{ resource.date }}
+						{% endif %}
+					{% endif %}
+				</p>
+				{% block social_links %}
+				{% if SOCIAL_BUTTONS %}
+				{% include "social_links.html" %}
+				{% endif %}
+				{% endblock %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+{% block body_outer %}
+<script src="/static/js/csv.js"></script>
+<script src="/static/js/donut.js"></script>
+<script src="/static/js/bar.js"></script>
+<script src="/static/js/pie.js"></script>
+<script src="/static/js/line.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" href="/static/css/index.css">
+
+<div class="row">
+  <div class="col-md-8">
+    <div id="chart_area"></div>
+    <h2>Abstract</h2>
+    <p>{{ object.abstract }}</p>
+  </div>
+
+  <div class="col-md-4">
+    <a href="/table?" id="link">Download CSV</a>
+    <br>
+    <a href="{% url 'chart_update' object.id %}">Modify this Chart</a>
+    <br>
+    <a href="{% url 'chart_delete' object.id %}">Delete this Chart</a>
+
+  </div>
+</div>
+
+
+<script>
+var typename = "{{ object.layer.typename }}";
+var category = "{{ object.category }}";
+var quantity = "{{ object.quantity }}";
+var agg = "{{ object.aggr_type }}";
+var chart_type = "{{ object.type }}";
+var csv_url;
+
+function update_link(){
+    csv_url = '/table?lyrname=' + typename;
+    csv_url = csv_url + '&category=' + category;
+    csv_url = csv_url + '&quantity=' + quantity;
+    document.getElementById('link').href = csv_url;
+    return;
+}
+update_link();
+
+</script>
+
+{% include "charts_app/chart_main_script.html" %}
+
+<script>
+get_chart();
+</script>
+
+{% endblock %}
