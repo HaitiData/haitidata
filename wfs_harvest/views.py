@@ -7,6 +7,8 @@ from django.conf import settings
 
 from geonode.layers.models import Layer
 
+from utils import get_featno
+
 
 def get_fields(request):
     lyrname = request.GET['lyrname']
@@ -50,6 +52,16 @@ def get_wfs_csv(request):
     category_field = qdict['category']
     quantity_field = qdict['quantity']
 
+    lyr = Layer.objects.get(typename=typename)
+    featno = get_featno(lyr.id)
+    if featno > settings.MAX_CSV_RECORDS:
+        response = HttpResponse('{0} has too many records; csv download'
+                                ' is not available for very large '
+                                'datasets'.format(lyr.title))
+        response.status_code = 413
+        response.reason_phrase = 'REQUEST ENTITY TOO LARGE'
+        return response
+
     params = urllib.urlencode({
         'service':'WFS',
         'version':'1.1.0',
@@ -60,7 +72,6 @@ def get_wfs_csv(request):
         'maxFeatures': str(settings.MAX_CSV_RECORDS)
     })
 
-    lyr = Layer.objects.get(typename=typename)
     wfs_baseurl = lyr.link_set.get(link_type='OGC:WFS').url
     wfs_request = urllib.urlopen(wfs_baseurl + '?%s' % params)
     content = wfs_request.read()    
