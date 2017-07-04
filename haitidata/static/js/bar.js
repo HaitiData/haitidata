@@ -1,5 +1,5 @@
-function barChart(cat, qnt, title, abs){
-        var width = 900,
+function barChart(cat, qnt, title){
+        var width = function(){ return document.getElementById("chart_area").offsetWidth},
             height = 500,
             padding = 5,
             xScale = d3.scaleBand(),
@@ -7,7 +7,7 @@ function barChart(cat, qnt, title, abs){
             colour = d3.scaleOrdinal(d3.schemeCategory20),
             x,
             y,
-            margin = { top: 30, bottom: 30, left: 30, right: 150 },
+            margin = { top: 30, bottom: 30, left: 30, right: 120 },
             floatFormat = d3.format("." + d3.precisionFixed(0.5) + "f"),
             xAxis = d3.axisBottom(xScale),
             yAxis = d3.axisLeft(yScale);
@@ -18,7 +18,7 @@ function barChart(cat, qnt, title, abs){
 
             var svg = selection.append('svg')
                 .attr("id", "chart_svg")
-                .attr("width", width)
+                .attr("width", width())
                 .attr("height", height);
 
             var g = svg.selectAll("g")
@@ -29,7 +29,7 @@ function barChart(cat, qnt, title, abs){
                       "translate(" + margin.left + "," + margin.top +")");
 
 
-            var innerWidth = width - margin.left - margin.right ;
+            var innerWidth = width() - margin.left - margin.right ;
             var innerHeight = function(){ return height - margin.top - margin.bottom} ;
 
 
@@ -133,29 +133,17 @@ function barChart(cat, qnt, title, abs){
                 .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
             legend.append("rect")
-                .attr("x", width - 18)
+                .attr("x", width() - 18)
                 .attr("width", 18)
                 .attr("height", 18)
                 .style("fill", function(d) { return colour(xScale(d[x]))} );
 
             legend.append("text")
-                .attr("x", width - 24)
+                .attr("x", width() - 24)
                 .attr("y", 9)
                 .attr("dy", ".35em")
                 .style("text-anchor", "end")
                 .text(function (d){ return d[x] + ": " + floatFormat(d[y]); });
-
-/*            //chart abstract
-            var abstract = svg.selectAll(".abstract").data(data).enter().append("g")
-                .attr("class", "abstract")
-                .attr("transform", "translate(0," + 450 + ")");
-
-            abstract.append("text")
-                .attr("x", width - 24)
-                .attr("y", 9)
-                .attr("dy", ".35em")
-                .style("text-anchor", "end")
-                .text(abs);*/
 
           });
         }

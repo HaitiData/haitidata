@@ -24,9 +24,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>{{ object.title }} Title</h2>
+                <h2>{{ object.title }}</h2>
                 <p>
-                  <span  style="text-transform: capitalize;">Chart</span> based on {{ object.layer.title }} layer (Category field: {{ object.category }}, Quantity field: {{ object.quantity }})
+                  <span  style="text-transform: capitalize;">{{ object.type }} Chart</span> based on {{ object.layer.title }} layer (Category field: {{ object.category }}, Quantity field: {{ object.quantity }})
 
 				    {% if resource.category %}
 					       {% trans "in" %} <a href="{% url "search" %}?category__identifier__in={{ resource.category.identifier }}">{{ resource.category }}</a> |
@@ -65,15 +65,101 @@
     <div id="chart_area"></div>
     <h2>Abstract</h2>
     <p>{{ object.abstract }}</p>
+    <div class="documents-actions">
+      {% include "_actions.html" %}
+    </div>
+
+    <div class="tab-content">
+
+      <article id="info" class="tab-pane active">
+
+      </article>
+
+      <article id="comments" class="tab-pane">
+
+      </article>
+
+      <article id="rate" class="tab-pane">
+        <!-- TODO: Move this to a reusable template snippet -->
+
+        <h4>{% trans "Rate this document" %}</h4>
+
+        <div id="user_rating" class="category-layer" data-score="{{user_document_rating}}"></div>
+
+        <h4>{% trans 'Average Rating' %}</h4>
+
+        <div class="overall_rating" style="float:left" data-score="{{ document_rating }}"></div> ({{num_votes}})
+        <!-- TODO: Add display of who gave what rating based -->
+      </article>
+    </div>
   </div>
 
   <div class="col-md-4">
-    <a href="/table?" id="link">Download CSV</a>
-    <br>
-    <a href="{% url 'chart_update' object.id %}">Modify this Chart</a>
-    <br>
-    <a href="{% url 'chart_delete' object.id %}">Delete this Chart</a>
+      <li class="list-group-item">
+         <a href="/table?" id="link">
+              <button class="btn btn-primary btn-md btn-block">{% trans "Download CSV" %}</button>
+         </a>
+      </li>
+      <li class="list-group-item">
+            <h4>{% trans "Modify this Chart" %}</h4>
+            <p>{% trans "Change type of the chart or type of aggregation." %}</p>
+            <a id="updt_chart">
+                <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateParams();">{% trans "Modify this Chart" %}</button>
+            </a>
+            <div id="form" class="collapse">
+                <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/update/{{ resource.id }}/">
+                    {% csrf_token %}
+                         <div class="form-group">
+                             <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label col-md-2" for="id_type">Type:</label>
+                             <div class="col-md-8">
+                                <select class="form-control" id="id_type" name="type">
+                                 <option value="0">Bar chart</option>
+                                 <option value="1">Pie chart</option>
+                                 <option value="2">Donut chart</option>
+                                 <option value="3">Line chart</option>
+                             </select>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label  class="control-label col-md-2" for="id_aggr_type">Aggregation:</label>
+                             <div class="col-md-8">
+                                <select class="form-control" id="id_aggr_type" name="aggr_type">
+                                 <option value="0">Sum</option>
+                                 <option value="1">Mean</option>
+                                 <option value="2">Category count</option>
+                                 <option value="3">Max</option>
+                                 <option value="4">Min</option>
+                             </select>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label col-md-2" for="id_title">Title:</label>
+                             <div class="col-md-8">
+                                <input id="id_title" maxlength="128" name="title" type="text">
+                                 <p style="font-size: small; margin:0">Suggested title:</p>
+                                 <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
+                             </div>
+                         </div>
+                         <div class="form-group">
+                             <label class="control-label col-md-2" for="id_abstract">Abstract:</label>
+                             <div class="col-md-8">
+                             <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
 
+                             </div>
+                         </div>
+                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart()">Display chart</button>
+                         <button type="submit" class="btn btn-primary btn-block">Update chart in db</button>
+               </form>
+          </div>
+      </li>
+      <li class="list-group-item">
+         <a href="{% url 'chart_delete' object.id %}" id="del_chart">
+              <button class="btn btn-primary btn-md btn-block">{% trans "Delete this Chart" %}</button>
+         </a>
+      </li>
   </div>
 </div>
 
@@ -86,6 +172,7 @@ var agg = "{{ object.aggr_type }}";
 var chart_type = "{{ object.type }}";
 var csv_url;
 
+
 function update_link(){
     csv_url = '/table?lyrname=' + typename;
     csv_url = csv_url + '&category=' + category;
@@ -93,7 +180,8 @@ function update_link(){
     document.getElementById('link').href = csv_url;
     return;
 }
-update_link();
+
+update_link()
 
 </script>
 

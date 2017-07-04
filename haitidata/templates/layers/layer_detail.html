@@ -271,7 +271,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">{% trans "Downloajnjnjjnd Layer" %}</h4>
+            <h4 class="modal-title" id="myModalLabel">{% trans "Download Layer" %}</h4>
           </div>
           <div class="modal-body">
             <div class="tabbable">
@@ -493,6 +493,7 @@
                              <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
                          </div>
                          <div class="form-group">
+                             {{ form.category.errors }}
                              <label class="control-label col-md-2" for="id_category">Category:</label>
                              <div class="col-md-8">
                                 <select class="form-control" id="id_category" name="category" >
@@ -503,6 +504,7 @@
                              </div>
                          </div>
                          <div class="form-group">
+                             {{ form.quantity.errors }}
                              <label  class="control-label col-md-2" for="id_quantity">Quantity:</label>
                              <div class="col-md-8">
                                 <select class="form-control" id="id_quantity" name="quantity">
@@ -515,7 +517,8 @@
                              </div>
                          </div>
                          <div class="form-group">
-                             <label class="control-label col-md-2" for="id_type">Type:</label>
+                             {{ form.type.errors }}
+                             <label class="control-label col-md-2" for="{{ form.type.id_for_label }}">Type:</label>
                              <div class="col-md-8">
                                 <select class="form-control" id="id_type" name="type">
                                  <option value="0" selected="selected">Bar chart</option>
@@ -523,10 +526,13 @@
                                  <option value="2">Donut chart</option>
                                  <option value="3">Line chart</option>
                              </select>
+                             {{ form.type }}
                              </div>
                          </div>
                          <div class="form-group">
-                             <label  class="control-label col-md-2" for="id_aggr_type">Aggregation:</label>
+                             {{ form.aggr_type.errors }}
+                             <label  class="control-label col-md-2" for="{{ form.aggr_type.id_for_label }}">Aggregation:</label>
+                             {{ form.aggr_type }}
                              <div class="col-md-8">
                                 <select class="form-control" id="id_aggr_type" name="aggr_type">
                                  <option value="0">Sum</option>
@@ -538,7 +544,9 @@
                              </div>
                          </div>
                          <div class="form-group">
-                             <label class="control-label col-md-2" for="id_title">Title:</label>
+                              {{ form.title.errors }}
+                             <label class="control-label col-md-2" for="{{ form.title.id_for_label }}">Title:</label>
+                             {{ form.title }}
                              <div class="col-md-8">
                                 <input id="id_title" maxlength="128" name="title" type="text">
                                  <p style="font-size: small; margin:0">Suggested title:</p>
@@ -546,7 +554,9 @@
                              </div>
                          </div>
                          <div class="form-group">
-                             <label class="control-label col-md-2" for="id_abstract">Abstract:</label>
+                             {{ form.abstract.errors }}
+                             <label class="control-label col-md-2" for="{{ form.abstract.id_for_label }}">Abstract:</label>
+                              {{ form.abstract }}
                              <div class="col-md-8">
                              <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
 
@@ -557,7 +567,37 @@
                </form>
           </div>
         </li>
-        <script>
+
+    <div id="chart_popup" class="modal fade" role="dialog" >
+        <script src="/static/js/csv.js"></script>
+        <script src="/static/js/donut.js"></script>
+        <script src="/static/js/bar.js"></script>
+        <script src="/static/js/pie.js"></script>
+        <script src="/static/js/line.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="/static/css/index.css">
+          <div class="modal-dialog" id="chart" style="width: 55%">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 id="chart_title" class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <div id="chart_area" style="display: table; float: inherit;  width: 50%;">
+              </div>
+                  <div>
+                      <h5>Abstract</h5>
+                      <p id="abstract"></p>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script>
                     var typename = "{{ resource.typename }}";
                     var category;
                     var quantity;
@@ -606,64 +646,34 @@
 
                     function attachAbstract(){
                         abstractText = document.getElementById("id_abstract").value;
-                        console.log(abstractText);
                         document.getElementById('abstract').innerHTML = abstractText;
                     }
 
                     function get_chart(){
-                    //create area for chart
-                    var createChartArea =  function() {
-                        var chartArea = document.getElementById("chart_area");
-                        chartArea.style= "display:table";
-                    };
+                        //create area for chart
+                        var createChartArea =  function() {
+                            var chartArea = document.getElementById("chart_area");
+                            chartArea.style= "display:table";
+                        };
 
 
-                    // update chart
-                    var replaceChart = function(){
-                        doc_chart = document.getElementById('chart_area');
-                        if(doc_chart.childElementCount >= 1){
-                            doc_chart.removeChild(doc_chart.childNodes[1]);
-                            createChartArea();
-                         };
-                    };
-                    if (document.getElementById("id_title").value == ""){
-                        document.getElementById("chart_title").innerHTML = suggestedTitle;
-                        }else document.getElementById("chart_title").innerHTML = document.getElementById("id_title").value;
-                    createChartArea();
-                    replaceChart();
-                    attachAbstract();
-                    getCsv(csv_url, category, quantity, agg, chart_type, abstractText);
+                        // update chart
+                        var replaceChart = function(){
+                            doc_chart = document.getElementById('chart_area');
+                            if(doc_chart.childElementCount >= 1){
+                                doc_chart.removeChild(doc_chart.childNodes[1]);
+                                createChartArea();
+                             };
+                        };
+                        if (document.getElementById("id_title").value == ""){
+                            document.getElementById("chart_title").innerHTML = suggestedTitle;
+                            }else document.getElementById("chart_title").innerHTML = document.getElementById("id_title").value;
+                        createChartArea();
+                        replaceChart();
+                        attachAbstract();
+                        getCsv(csv_url, category, quantity, agg, chart_type);
                    }
               </script>
-    <div id="chart_popup" class="modal fade" role="dialog" >
-        <script src="/static/js/csv.js"></script>
-        <script src="/static/js/donut.js"></script>
-        <script src="/static/js/bar.js"></script>
-        <script src="/static/js/pie.js"></script>
-        <script src="/static/js/line.js"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="/static/css/index.css">
-          <div class="modal-dialog" id="chart" style="width: 55%">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 id="chart_title" class="modal-title"></h4>
-              </div>
-              <div class="modal-body">
-                <div id="chart_area" style="display: table; float: inherit;  width: 50%;">
-              </div>
-                  <div>
-                      <h5>Abstract</h5>
-                      <p id="abstract"></p>
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-    </div>
 
 
     {% if documents.count > 0 %}

@@ -1,5 +1,5 @@
 function lineChart(cat, qnt, title){
-        var width = 900,
+        var width = function(){ return document.getElementById("chart_area").offsetWidth},
             height = 500,
             xScale = d3.scaleBand(),
             yScale = d3.scaleLinear(),
@@ -17,7 +17,7 @@ function lineChart(cat, qnt, title){
 
             var svg = selection.append('svg')
                 .attr("id", "chart_svg")
-                .attr("width", width)
+                .attr("width", width())
                 .attr("height", height);
 
             var g = svg.selectAll("g")
@@ -28,7 +28,7 @@ function lineChart(cat, qnt, title){
                       "translate(" + margin.left + "," + margin.top +")");
 
 
-            var innerWidth = width - margin.left - margin.right ;
+            var innerWidth = width() - margin.left - margin.right ;
             var innerHeight = function(){ return height - margin.top - margin.bottom} ;
 
 
@@ -110,7 +110,10 @@ function lineChart(cat, qnt, title){
                 .style("text-anchor", "middle")
                 .text(yLabel);
             //div for tooltip
+            //div for tooltip
             var div = d3.select("body").append("div")
+                        .style("width","auto")
+                        .style("height", "auto")
                         .attr("class", "tooltip")
                         .style("opacity", 0);
 

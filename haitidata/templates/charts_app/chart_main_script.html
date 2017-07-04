@@ -4,7 +4,7 @@ function get_chart(){
     //create area for chart
     var createChartArea =  function() {
         var chartArea = document.getElementById("chart_area");
-        chartArea.style= "display:table; float:right; height:100%; width:70%";
+        chartArea.style= "display:table; height:100%";
     };
 
     // update chart
@@ -16,6 +16,7 @@ function get_chart(){
          };
     };
 
+    var chartArea = document.getElementById("chart_area");
     createChartArea();
     replaceChart();
     getCsv(csv_url, category, quantity, agg, chart_type);

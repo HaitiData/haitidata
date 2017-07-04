@@ -1,7 +1,7 @@
 function donutChart(cat, qnt, title){
-    var width = 900,
+    var width = function(){ return document.getElementById("chart_area").parentNode.offsetWidth},
         height = 500,
-        margin = {top: 70, right: 10, bottom: 10, left: 10},
+        margin = {top: 80, right: 10, bottom: 10, left: 10},
         colour = d3.scaleOrdinal(d3.schemeCategory20c), // colour scheme
         variable, // value in data that will dictate proportions on chart
         category, // compare data by
@@ -16,7 +16,7 @@ function donutChart(cat, qnt, title){
             // generate chart
             // ===========================================================================================
             // Set up constructors for making donut. See https://github.com/d3/d3-shape/blob/master/README.md
-            var radius = Math.min(width, (height - margin.top)) / 2;
+            var radius = Math.min(width(), (height - margin.top)) / 2;
 
             // creates a new pie generator
             var pie = d3.pie()
@@ -42,10 +42,10 @@ function donutChart(cat, qnt, title){
             // var svg = selection.append('svg')
             var svg = selection.append('svg')
                 .attr("id", "chart_svg")
-                .attr('width', width + margin.left + margin.right)
+                .attr('width', width() + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
               .append('g')
-                .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+                .attr('transform', 'translate(' + width() / 2 + ',' + height / 2 + ')');
             // ===========================================================================================
 
             // ===========================================================================================

@@ -1,4 +1,4 @@
-var getCsv = function(csv_link, category, quantity, agg, chartType, abs){
+var getCsv = function(csv_link, category, quantity, agg, chartType){
                var data = [];
                d3.csv(csv_link, function(error, csv) {
                         if (error) throw error;
@@ -92,10 +92,12 @@ var getCsv = function(csv_link, category, quantity, agg, chartType, abs){
                if (chartType == 0){
                    aggregateData(data, agg);
                    if (dati.length > 20){
-                        while (dati.length >= 21) { dati.pop(); };
-                        window.alert("Output limited to 20 categories");
+                        var firstSet = dati.slice(0,19);
+                        var lastSet = dati.slice(19,).reduce(function(a, b){ return {key: 'others', value: a.value + b.value }});
+                        firstSet.push(lastSet);
+                        dati = firstSet;
                    };
-                   var bar = barChart(category, quantity, title, abs)
+                   var bar = barChart(category, quantity, title)
                    .x('key')
                    .y('value')
                    d3.select("#chart_area")
@@ -104,10 +106,12 @@ var getCsv = function(csv_link, category, quantity, agg, chartType, abs){
                } else if (chartType == 1){
                    aggregateData(data, agg)
                    if (dati.length > 10){
-                        while (dati.length >= 11) { dati.pop(); };
-                        window.alert("Output limited to 10 categories");
+                        var firstSet = dati.slice(0,9);
+                        var lastSet = dati.slice(9,).reduce(function(a, b){ return {key: 'others', value: a.value + b.value }});
+                        firstSet.push(lastSet);
+                        dati = firstSet;
                    };
-                   var pie = pieChart(category, quantity, title, abs)
+                   var pie = pieChart(category, quantity, title)
                    .variable('value')
                    .category('key')
                    d3.select('#chart_area')
@@ -116,10 +120,12 @@ var getCsv = function(csv_link, category, quantity, agg, chartType, abs){
                } else if (chartType == 2){
                    aggregateData(data, agg)
                    if (dati.length > 10){
-                        while (dati.length >= 11) { dati.pop(); };
-                        window.alert("Output limited to 10 categories");
+                        var firstSet = dati.slice(0,9);
+                        var lastSet = dati.slice(9,).reduce(function(a, b){ return {key: 'others', value: a.value + b.value }});
+                        firstSet.push(lastSet);
+                        dati = firstSet;
                    };
-                   var donut = donutChart(category, quantity, title, abs)
+                   var donut = donutChart(category, quantity, title)
                    .variable('value')
                    .category('key')
                    d3.select('#chart_area')
@@ -128,10 +134,12 @@ var getCsv = function(csv_link, category, quantity, agg, chartType, abs){
                } else if (chartType == 3){
                    aggregateData(data, agg)
                    if (dati.length > 20){
-                        while (dati.length >= 21) { dati.pop(); };
-                        window.alert("Output limited to 20 categories");
+                        var firstSet = dati.slice(0,19);
+                        var lastSet = dati.slice(19,).reduce(function(a, b){ return {key: 'others', value: a.value + b.value }});
+                        firstSet.push(lastSet);
+                        dati = firstSet;
                    };
-                   var line = lineChart(category, quantity, title, abs)
+                   var line = lineChart(category, quantity, title)
                    .x('key')
                    .y('value')
                    d3.select('#chart_area')
