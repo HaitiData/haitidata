@@ -18,19 +18,40 @@
   {% endif %}
 {% endblock %}
 
-{% block body_class %}charts{% endblock %}
+{% block body_class %}charts
+
+{% endblock %}
 
 {% block body %}
+
   {% with include_type_filter='true' %}
-  {% with facet_type='documents' %}
-  {% with header='Document Type' %}
+  {% with facet_type='charts' %}
+  {% with header='Chart Type' %}
   {% with filter='doc_type__in' %}
   {% include "search/_search_content.html" %}
+
   {% endwith %}
   {% endwith %}
   {% endwith %}
   {% endwith %}
+  <div class="col-md-9">
+<h1>CHARTS</h1>
+<ul>
+  {% for chart in object_list %}
+  <li>{{ chart.title }}</li>
+  <li>{{ chart.layer }} - {{ chart.category }} - {{ chart.quantity }}</li>
+  <li>{{ chart.type }} - {{ chart.agg_type }}</li>
+  <li>{{ chart.abstract }}</li>
+  <br>
+  {% empty %}
+  <li>No Charts yet!</li>
+  {% endfor %}
+</ul>
+  </div>
   {% include "_bulk_permissions_form.html" %}
+
+
+
 {% endblock %}
 
 {% block extra_script %}
@@ -40,6 +61,5 @@
   <script type="text/javascript">
   </script>
   {% with include_spatial='true' %}
-  {% include 'search/search_scripts.html' %}
   {% endwith %}
 {% endblock extra_script %}

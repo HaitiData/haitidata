@@ -1,4 +1,4 @@
-var getCsv = function(csv_link, category, quantity, agg, chartType){
+var getCsv = function(csv_link, category, quantity, agg, chartType, id){
                var data = [];
                d3.csv(csv_link, function(error, csv) {
                         if (error) throw error;
@@ -97,10 +97,11 @@ var getCsv = function(csv_link, category, quantity, agg, chartType){
                         firstSet.push(lastSet);
                         dati = firstSet;
                    };
-                   var bar = barChart(category, quantity, title)
+                   var chartArea = "#" + id;
+                   var bar = barChart(category, quantity, title, id)
                    .x('key')
                    .y('value')
-                   d3.select("#chart_area")
+                   d3.select(chartArea)
                         .datum(dati)
                         .call(bar);
                } else if (chartType == 1){
@@ -111,10 +112,11 @@ var getCsv = function(csv_link, category, quantity, agg, chartType){
                         firstSet.push(lastSet);
                         dati = firstSet;
                    };
-                   var pie = pieChart(category, quantity, title)
+                   var chartArea = "#" + id;
+                   var pie = pieChart(category, quantity, title, id)
                    .variable('value')
                    .category('key')
-                   d3.select('#chart_area')
+                   d3.select(chartArea)
                       .datum(dati)
                       .call(pie);
                } else if (chartType == 2){
@@ -125,10 +127,11 @@ var getCsv = function(csv_link, category, quantity, agg, chartType){
                         firstSet.push(lastSet);
                         dati = firstSet;
                    };
-                   var donut = donutChart(category, quantity, title)
+                   var chartArea = "#" + id;
+                   var donut = donutChart(category, quantity, title, id)
                    .variable('value')
                    .category('key')
-                   d3.select('#chart_area')
+                   d3.select(chartArea)
                       .datum(dati)
                       .call(donut);
                } else if (chartType == 3){
@@ -139,10 +142,11 @@ var getCsv = function(csv_link, category, quantity, agg, chartType){
                         firstSet.push(lastSet);
                         dati = firstSet;
                    };
-                   var line = lineChart(category, quantity, title)
+                   var chartArea = "#" + id;
+                   var line = lineChart(category, quantity, title, id)
                    .x('key')
                    .y('value')
-                   d3.select('#chart_area')
+                   d3.select(chartArea)
                       .datum(dati)
                       .call(line);
                }

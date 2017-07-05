@@ -8,13 +8,13 @@
 {% load guardian_tags %}
 
 {% block page-title %}
-  {% trans "Explore Graphs" %}
+  {% trans "Explore Charts" %}
   <div class="btn-group pull-right">
-    <a class="btn btn-primary btn-icon" href="#">
+    <a class="btn btn-primary btn-icon" href="{% url 'chart_list' %}">
       <i class="fa fa-align-justify" title="List"></i>
     </a>
-    <a class="btn btn-primary" href="#">
-      {% trans "Graphs" %}
+    <a class="btn btn-primary" href="{% url 'chart_list' %}">
+      {% trans "Charts" %}
     </a>
   </div>
 {% endblock %}
@@ -25,18 +25,8 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>{{ object.title }}</h2>
-                <p>
-                  <span  style="text-transform: capitalize;">{{ object.type }} Chart</span> based on {{ object.layer.title }} layer (Category field: {{ object.category }}, Quantity field: {{ object.quantity }})
-
-				    {% if resource.category %}
-					       {% trans "in" %} <a href="{% url "search" %}?category__identifier__in={{ resource.category.identifier }}">{{ resource.category }}</a> |
-				    {% endif %}
-					{% if resource.date %}
-					    {% if resource.date_type == 'creation' %} {% trans "Created on" %} {{ resource.date }}
-					    {% elif resource.date_type == 'publication' %} {% trans "Published on" %} {{ resource.date }}
-					    {% else %} {% trans "Updated on" %} {{ resource.date }}
-						{% endif %}
-					{% endif %}
+                <p id="title_detail">
+                  <span  style="text-transform: capitalize;"></span>
 				</p>
 				{% block social_links %}
 				{% if SOCIAL_BUTTONS %}
@@ -57,12 +47,13 @@
 <script src="/static/js/bar.js"></script>
 <script src="/static/js/pie.js"></script>
 <script src="/static/js/line.js"></script>
+<script src="/static/js/getChart.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <link rel="stylesheet" href="/static/css/index.css">
 
 <div class="row">
   <div class="col-md-8">
-    <div id="chart_area"></div>
+    <div id="chart_area_plain"></div>
     <h2>Abstract</h2>
     <p>{{ object.abstract }}</p>
     <div class="documents-actions">
@@ -104,10 +95,10 @@
             <h4>{% trans "Modify this Chart" %}</h4>
             <p>{% trans "Change type of the chart or type of aggregation." %}</p>
             <a id="updt_chart">
-                <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateParams();">{% trans "Modify this Chart" %}</button>
+                <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="update_params();" >{% trans "Modify this Chart" %}</button>
             </a>
             <div id="form" class="collapse">
-                <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/update/{{ resource.id }}/">
+                <form name="f" method="post" class="form-horizontal" onchange="update_params();"action="/chart/{{ chart.id }}/update/" >
                     {% csrf_token %}
                          <div class="form-group">
                              <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
@@ -138,7 +129,7 @@
                          <div class="form-group">
                              <label class="control-label col-md-2" for="id_title">Title:</label>
                              <div class="col-md-8">
-                                <input id="id_title" maxlength="128" name="title" type="text">
+                                <input class="form-control" id="id_title" maxlength="128" name="title" type="text">
                                  <p style="font-size: small; margin:0">Suggested title:</p>
                                  <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
                              </div>
@@ -150,8 +141,8 @@
 
                              </div>
                          </div>
-                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart()">Display chart</button>
-                         <button type="submit" class="btn btn-primary btn-block">Update chart in db</button>
+                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Display chart</button>
+                         <button type="submit" class="btn btn-primary btn-block" value="Update">Update chart in db</button>
                </form>
           </div>
       </li>
@@ -163,15 +154,49 @@
   </div>
 </div>
 
+<div id="chart_popup" class="modal fade" role="dialog" >
+        <script src="/static/js/csv.js"></script>
+        <script src="/static/js/donut.js"></script>
+        <script src="/static/js/bar.js"></script>
+        <script src="/static/js/pie.js"></script>
+        <script src="/static/js/line.js"></script>
+        <script src="/static/js/getChart.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+	    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+        <link rel="stylesheet" href="/static/css/index.css">
+          <div class="modal-dialog" id="chart" style="width: 55%">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 id="chart_title" class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <div id="chart_area" style="display: table; float: inherit;  width: 50%;">
+              </div>
+                  <div>
+                      <h5>Abstract</h5>
+                      <p id="abstract"></p>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
 
 <script>
 var typename = "{{ object.layer.typename }}";
+var lyr = "{{ object.layer.name }}"
 var category = "{{ object.category }}";
 var quantity = "{{ object.quantity }}";
 var agg = "{{ object.aggr_type }}";
 var chart_type = "{{ object.type }}";
 var csv_url;
-
+var suggestedTitle = "";
+var dict_title_agg = {0:"Sum",1:"Mean",2:"Count", 3:"Max", 4:"Min"};
 
 function update_link(){
     csv_url = '/table?lyrname=' + typename;
@@ -181,14 +206,42 @@ function update_link(){
     return;
 }
 
-update_link()
+function attachAbstract(){
+    var abstractText = document.getElementById("id_abstract").value;
+    document.getElementById('abstract').innerHTML = abstractText;
+}
+
+function chart_title(){
+    if (agg == dict_title_agg[2]){
+        suggestedTitle = dict_title_agg[agg] + " of elements for "  + category;
+    } else {
+        var title = dict_title_agg[agg]
+        suggestedTitle = title + " of " + quantity + " for " + category;
+    }
+        document.getElementById("title").innerHTML = suggestedTitle;
+        return suggestedTitle;
+};
+
+
+function title_eval(){
+    if (document.getElementById("id_title").textLength == 0){
+        document.getElementById("id_title").value = suggestedTitle;
+    }
+}
+
+function update_params(){
+    agg = document.f.aggr_type.value;
+    chart_type = document.f.type.value;
+    chart_title();
+}
+
+update_link();
+get_chart_detail();
+title_detail();
+
+
 
 </script>
 
-{% include "charts_app/chart_main_script.html" %}
-
-<script>
-get_chart();
-</script>
 
 {% endblock %}

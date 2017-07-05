@@ -1,5 +1,5 @@
-function barChart(cat, qnt, title){
-        var width = function(){ return document.getElementById("chart_area").offsetWidth},
+function barChart(cat, qnt, title,id){
+        var width = function(){ return document.getElementById(id).offsetWidth},
             height = 500,
             padding = 5,
             xScale = d3.scaleBand(),
@@ -48,22 +48,24 @@ function barChart(cat, qnt, title){
 
             // labels X axis
             // rotate text if is longer than...
-
+            var rotate = 0;
             d3.select(this).select(".x-axis").selectAll("text").each(function(){
-                if (this.getBBox().width > (xScale.bandwidth() - (padding*2)))
+                if (this.getBBox().width > (xScale.bandwidth() - (padding*2))){
+                    rotate = 1;
                     d3.selectAll("text").attr("transform", "rotate(-90)")
                                         .attr("y", 0)
                                         .attr("x", -10)
                                         .attr("dy", ".35em")
                                         .style("text-anchor", "end");
-            });
+            }});
 
             // adjust margin and x axis title
             var maxh = 0;
-            d3.select(this).select(".x-axis").selectAll("text").each(function(){
-                if (this.getBBox().width > maxh)
-                    maxh = this.getBBox().width;
-            });
+            if (rotate == 1) {
+                d3.select(this).select(".x-axis").selectAll("text").each(function(){
+                    if (this.getBBox().width > maxh)
+                        maxh = this.getBBox().width;
+            });};
             margin.bottom = margin.bottom + maxh;
             d3.select(".x-axis").attr("transform", "translate(0," + (innerHeight()) + ")");
 

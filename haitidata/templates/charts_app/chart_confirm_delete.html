@@ -14,7 +14,7 @@
           Are you sure you want to remove <a href="{{ object.get_absolute_url }}">{{ object_title }}</a> chart?
         {% endblocktrans %}
       </p>
-    <form method="POST">
+    <form method="POST" "{% url "chart_delete" chart.id %}">
       {% csrf_token %}
       <div class="form-actions">
         <input type="submit" value="{% trans "Yes, I am sure" %}" class="btn btn-danger" />

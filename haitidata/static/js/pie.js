@@ -1,5 +1,5 @@
-function pieChart(cat, qnt, title){
-    var width = function(){ return document.getElementById("chart_area").parentNode.offsetWidth},
+function pieChart(cat, qnt, title, id){
+    var width = function(){ return document.getElementById(id).parentNode.offsetWidth},
         height = 500,
         margin = {top: 80, right: 100, bottom: 10, left: 10},
         colour = d3.scaleOrdinal(d3.schemeCategory20c), // colour scheme

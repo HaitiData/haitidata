@@ -49,7 +49,7 @@
 
 <a href="/table?" id="link">Download CSV</a>
 <br>
-<input type="button" onclick="get_chart()" value="Visualize graph">
+<input type="button"  value="Visualize graph">
 <br>
 <a href="{% url 'chart_delete' object.id %}">Delete this Chart</a>
 
@@ -85,10 +85,9 @@ function update_link(){
 
 </script>
 
-{% include "charts_app/chart_main_script.html" %}
 
 <script>
-get_chart();
+
 </script>
 
 </body>

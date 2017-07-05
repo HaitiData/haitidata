@@ -49,6 +49,7 @@ class Chart(models.Model):
     type = models.SmallIntegerField(choices=CHART_TYPES, default=0)
     aggr_type = models.SmallIntegerField(choices=AGGREGATION_TYPES, default=3)
     abstract = models.TextField(blank=True)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null = True)
 
     def get_absolute_url(self):
         return reverse('chart_detail', kwargs={'pk': self.pk})
