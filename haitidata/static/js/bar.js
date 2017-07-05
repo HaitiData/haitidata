@@ -60,7 +60,7 @@ function barChart(cat, qnt, title,id){
             }});
 
             // adjust margin and x axis title
-            var maxh = 0;
+            var maxh = 15;
             if (rotate == 1) {
                 d3.select(this).select(".x-axis").selectAll("text").each(function(){
                     if (this.getBBox().width > maxh)
