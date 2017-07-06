@@ -15,8 +15,9 @@ function lineChart(cat, qnt, title, id){
 
           selection.each(function(data) {
 
+            var svg_name = "chart_svg" + id;
             var svg = selection.append('svg')
-                .attr("id", "chart_svg")
+                .attr("id", svg_name)
                 .attr("width", width())
                 .attr("height", height);
 
@@ -24,6 +25,7 @@ function lineChart(cat, qnt, title, id){
               .data([1]);
             g = g.enter().append("g")
               .merge(g)
+                .attr("class", svg_name)
                 .attr("transform",
                       "translate(" + margin.left + "," + margin.top +")");
 
@@ -38,9 +40,11 @@ function lineChart(cat, qnt, title, id){
 
 
             // X axis
-            var xAxisG = g.selectAll(".x-axis").data([1]);
+            var xAxis_name = "x-axis_" + id;
+            var xAxis_call = "." + xAxis_name;
+            var xAxisG = g.selectAll(xAxis_call).data([1]);
             xAxisG.enter().append("g")
-                .attr("class", "x-axis")
+                .attr("class", xAxis_name)
               .merge(xAxisG)
                 .attr("transform", "translate(0," + innerHeight()  +")")
                 .call(xAxis);
@@ -48,10 +52,10 @@ function lineChart(cat, qnt, title, id){
             // labels X ax,is
             // rotate text if is longer than...
             var rotate = 0;
-            d3.select(this).select(".x-axis").selectAll("text").each(function(){
+            d3.select(this).select(xAxis_call).selectAll("text").each(function(){
                 if (this.getBBox().width > xScale.bandwidth()){
                     rotate = 1
-                    d3.selectAll("text").attr("transform", "rotate(-90)")
+                    d3.select(xAxis_call).selectAll("text").attr("transform", "rotate(-90)")
                                         .attr("y", 0)
                                         .attr("x", -10)
                                         .attr("dy", ".35em")
@@ -59,17 +63,18 @@ function lineChart(cat, qnt, title, id){
             }});
 
             // adjust margin and x axis title
-            var maxh = 0;
+            var maxh = 15;
             if (rotate == 1) {
                 d3.select(this).select(".x-axis").selectAll("text").each(function(){
                     if (this.getBBox().width > maxh)
                         maxh = this.getBBox().width;
             });};
             margin.bottom = margin.bottom + maxh;
-            d3.select(".x-axis").attr("transform", "translate(0," + (innerHeight()) + ")");
+            d3.select(xAxis_call).attr("transform", "translate(0," + (innerHeight()) + ")");
 
-
+            var text_name = "text_" + id;
             g.append("text")
+                .attr("class", text_name)
                 .attr("transform", "translate(" + (innerWidth/2) + ", " + (innerHeight() + margin.bottom - 5) + ")")
                 .style("font-size", "12px")
                 .style("text-anchor", "middle")
@@ -80,15 +85,17 @@ function lineChart(cat, qnt, title, id){
               .range([innerHeight(), 0]);
 
             // Y axis
-            var yAxisG = g.selectAll(".y-axis").data([1]);
+            var yAxis_name = "y-axis_" + id;
+            var yAxis_call = "." + yAxis_name;
+            var yAxisG = g.selectAll(yAxis_call).data([1]);
             yAxisG.enter().append("g")
-                .attr("class", "y-axis")
+                .attr("class", yAxis_name)
                .merge(yAxisG)
                .call(yAxis);
 
             //labels Y axis
             var maxw = 0;
-            d3.select(this).select(".y-axis").selectAll("text").each(function(){
+            d3.select(this).select(yAxis_call).selectAll("text").each(function(){
                 if (this.getBBox().width > maxw) {
                     maxw = this.getBBox().width;
                 }
@@ -104,6 +111,7 @@ function lineChart(cat, qnt, title, id){
                          }};
 
             g.append("text")
+                .attr("class", text_name)
                 .attr("transform", "rotate(-90)")
                 .attr("x", 0 - (innerHeight()/2))
                 .attr("y", 0 - (margin.left))
@@ -111,7 +119,7 @@ function lineChart(cat, qnt, title, id){
                 .style("font-size", "12px")
                 .style("text-anchor", "middle")
                 .text(yLabel);
-            //div for tooltip
+
             //div for tooltip
             var div = d3.select("body").append("div")
                         .style("width","auto")
