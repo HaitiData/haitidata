@@ -1,5 +1,5 @@
-function pieChart(cat, qnt, title){
-    var width = 900,
+function pieChart(cat, qnt, title, id){
+    var width = function(){ return document.getElementById(id).parentNode.offsetWidth},
         height = 500,
         margin = {top: 80, right: 100, bottom: 10, left: 10},
         colour = d3.scaleOrdinal(d3.schemeCategory20c), // colour scheme
@@ -16,7 +16,7 @@ function pieChart(cat, qnt, title){
             // generate chart
             // ===========================================================================================
             // Set up constructors for making donut. See https://github.com/d3/d3-shape/blob/master/README.md
-            var radius = Math.min(width, (height - margin.top)) / 2;
+            var radius = Math.min(width(), (height - margin.top)) / 2;
 
             // creates a new pie generator
             var pie = d3.pie()
@@ -41,10 +41,10 @@ function pieChart(cat, qnt, title){
             // append the svg object to the selection
             var svg = selection.append('svg')
                 .attr("id", "chart_svg")
-                .attr('width', width + margin.left + margin.right)
+                .attr('width', width() + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
               .append('g')
-                .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+                .attr('transform', 'translate(' + width() / 2 + ',' + height / 2 + ')');
             // ===========================================================================================
 
             // ===========================================================================================
@@ -173,7 +173,7 @@ function pieChart(cat, qnt, title){
                 selection.on('mouseenter', function (data) {
 
                     svg.append('rect')
-                        .attr('transform', "translate(250, -200)")
+                        .attr('transform', "translate(-320, 230)")
                         .attr('class', 'toolRect')
                         .attr("width", 190)
                         .attr("height", 60)
@@ -181,11 +181,10 @@ function pieChart(cat, qnt, title){
                         .style('fill-opacity', 0.35);
 
                     svg.append('text')
-                        .attr('transform', "translate(400,-175)")
+                        .attr('transform', "translate(-310, 255)")
                         .attr('class', 'toolRect')
                         .html(toolTipHTML(data)) // add text to the rect
-                        .style('font-size', '.9em')
-                        .style('text-anchor', 'end'); // centres text in tooltip
+                        .style('font-size', '.9em'); // centres text in tooltip
                 });
 
                 // remove the tooltip when mouse leaves the slice/label
@@ -210,7 +209,7 @@ function pieChart(cat, qnt, title){
                     // leave off 'dy' attr for first tspan so the 'dy' attr on text element works. The 'dy' attr on
                     // tspan effectively imitates a line break.
                     if (i === 0) tip += '<tspan x="0">' + cat + ': ' + value + '</tspan>';
-                    else tip += '<tspan x="0" dy="1.2em">' + qnt + ': ' + parseFloat(value) + '</tspan>';
+                    else tip += '<tspan x="0" dy="1.2em">' + qnt + ': ' + floatFormat(value) + '</tspan>';
                     i++;
                 }
 

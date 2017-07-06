@@ -271,7 +271,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">{% trans "Downloajnjnjjnd Layer" %}</h4>
+            <h4 class="modal-title" id="myModalLabel">{% trans "Download Layer" %}</h4>
           </div>
           <div class="modal-body">
             <div class="tabbable">
@@ -482,11 +482,12 @@
         {% endfor %}
         </ul>
     </li>
+    {% if "download_resourcebase" in perms_list %}
     <li class="list-group-item">
       <h4>{% trans "Create a chart using this layer" %}</h4>
       <p>{% trans "Click the button below to generate a new chart based on this layer, choosing a quantity and a category field." %}</p>
             <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">Create a chart</button>
-          <div id="form" class="collapse">
+                    <div id="form" class="collapse">
               <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/add/{{ resource.id }}/">
                     {% csrf_token %}
                          <div class="form-group">
@@ -540,9 +541,9 @@
                          <div class="form-group">
                              <label class="control-label col-md-2" for="id_title">Title:</label>
                              <div class="col-md-8">
-                                <input id="id_title" maxlength="128" name="title" type="text">
+                                <input id="id_title" maxlength="128" name="title" type="text" class="form-control" >
                                  <p style="font-size: small; margin:0">Suggested title:</p>
-                                 <p  id="title" style="font-size: small; margin:0">Text_di provas</p>
+                                 <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
                              </div>
                          </div>
                          <div class="form-group">
@@ -552,97 +553,22 @@
 
                              </div>
                          </div>
-                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart()">Display chart</button>
-                         <button type="submit" class="btn btn-primary btn-block">Save chart</button>
+                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Display chart</button>
+                         <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Save chart</button>
                </form>
           </div>
         </li>
-        <script>
-                    var typename = "{{ resource.typename }}";
-                    var category;
-                    var quantity;
-                    var agg;
-                    var chart_type;
-                    var csv_url;
-                    var dict_title = {0:"Sum",1:"Mean",2:"Count", 3:"Max", 4:"Min"};
-                    var suggestedTitle = "";
-                    var abstractText;
-
-                    function chart_title(){
-
-                        if (agg == dict_title[2]){
-                            suggestedTitle = dict_title[agg] + " of elements for "  + category;
-                        } else {
-                            var title = dict_title[agg]
-                            suggestedTitle = title + " of " + quantity + " for " + category;
-                        }
-                        document.getElementById("title").innerHTML = suggestedTitle;
-                        return suggestedTitle;
-                    };
-
-                    function updateLinkAndTitle(){
-                        update_link();
-                        chart_title();
-                        attachAbstract();
-                    }
-
-                    function update_link_v1(){
-                        csv_url = '/table?lyrname=' + typename;
-                        csv_url = csv_url + '&category=' + category;
-                        csv_url = csv_url + '&quantity=' + quantity;
-                        return;
-                    }
-                    update_link_v1();
-                    function update_link(){
-                        csv_url = '/table?lyrname=' + typename;
-                        category = document.f.category.value;
-                        csv_url = csv_url + '&category=' + category;
-                        quantity = document.f.quantity.value;
-                        csv_url = csv_url + '&quantity=' + quantity;
-                        agg = document.f.aggr_type.value;
-                        chart_type = document.f.type.value;
-                        return;
-                    }
-
-                    function attachAbstract(){
-                        abstractText = document.getElementById("id_abstract").value;
-                        console.log(abstractText);
-                        document.getElementById('abstract').innerHTML = abstractText;
-                    }
-
-                    function get_chart(){
-                    //create area for chart
-                    var createChartArea =  function() {
-                        var chartArea = document.getElementById("chart_area");
-                        chartArea.style= "display:table";
-                    };
-
-
-                    // update chart
-                    var replaceChart = function(){
-                        doc_chart = document.getElementById('chart_area');
-                        if(doc_chart.childElementCount >= 1){
-                            doc_chart.removeChild(doc_chart.childNodes[1]);
-                            createChartArea();
-                         };
-                    };
-                    if (document.getElementById("id_title").value == ""){
-                        document.getElementById("chart_title").innerHTML = suggestedTitle;
-                        }else document.getElementById("chart_title").innerHTML = document.getElementById("id_title").value;
-                    createChartArea();
-                    replaceChart();
-                    attachAbstract();
-                    getCsv(csv_url, category, quantity, agg, chart_type, abstractText);
-                   }
-              </script>
+    {% endif %}
     <div id="chart_popup" class="modal fade" role="dialog" >
         <script src="/static/js/csv.js"></script>
         <script src="/static/js/donut.js"></script>
         <script src="/static/js/bar.js"></script>
         <script src="/static/js/pie.js"></script>
         <script src="/static/js/line.js"></script>
+        <script src="/static/js/getChart.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+	    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
         <link rel="stylesheet" href="/static/css/index.css">
           <div class="modal-dialog" id="chart" style="width: 55%">
             <div class="modal-content">
@@ -664,6 +590,62 @@
             </div>
           </div>
     </div>
+
+<script>
+var typename = "{{ resource.typename }}";
+var lyr;
+var category;
+var quantity;
+var agg;
+var chart_type;
+var csv_url;
+var suggestedTitle = "";
+
+
+function update_link(){
+    csv_url = '/table?lyrname=' + typename;
+    category = document.f.category.value;
+    csv_url = csv_url + '&category=' + category;
+    quantity = document.f.quantity.value;
+    csv_url = csv_url + '&quantity=' + quantity;
+    agg = document.f.aggr_type.value;
+    chart_type = document.f.type.value;
+    return;
+}
+
+function attachAbstract(){
+    var abstractText = document.getElementById("id_abstract").value;
+    document.getElementById('abstract').innerHTML = abstractText;
+}
+
+
+function chart_title(){
+    if (agg == dict_title_agg[2]){
+        suggestedTitle = dict_title_agg[agg] + " of elements for "  + category;
+    } else {
+        var title = dict_title_agg[agg]
+        suggestedTitle = title + " of " + quantity + " for " + category;
+    }
+        document.getElementById("title").innerHTML = suggestedTitle;
+        return suggestedTitle;
+};
+
+
+function title_eval(){
+    if (document.getElementById("id_title").textLength == 0){
+        document.getElementById("id_title").value = suggestedTitle;
+    }
+}
+
+function updateLinkAndTitle(){
+    update_link();
+    chart_title();
+    attachAbstract();
+}
+
+
+
+</script>
 
 
     {% if documents.count > 0 %}

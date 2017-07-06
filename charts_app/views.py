@@ -1,23 +1,41 @@
-import csv
-
-from django.http import HttpResponse
-from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.list import ListView
+from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
+
 
 from geonode.layers.models import Layer
 
-from .models import Chart
+from .models import Chart, ChartForm
 from wfs_harvest.utils import get_fields
 
 
-class ChartDetailView(DetailView):
-    model = Chart
+class LoginRequiredMixin(object):
+    @classmethod
+    def as_view(cls, **initkwargs):
+        view = super(LoginRequiredMixin, cls).as_view(**initkwargs)
+        return login_required(view)
 
 
-class ChartCreate(CreateView):
+class ChartDetail(DetailView):
     model = Chart
-    fields = '__all__'
+
+    def get_object(self, queryset=None):
+        obj = super(ChartDetail, self).get_object(queryset=queryset)
+        lyr_obj = Layer.objects.get(pk=obj.layer)
+        if not self.request.user.has_perm('download_resourcebase', lyr_obj.get_self_resource()):
+            raise PermissionDenied
+        return obj
+
+    def get_context_data(self, **kwargs):
+        context = super(ChartDetail, self).get_context_data(**kwargs)
+        return context
+
+
+class ChartCreate(LoginRequiredMixin, CreateView):
+    form_class = ChartForm
+    template_name_suffix = 'charts_app/chart_update_form.html'
 
     def get_initial(self):
         layer_id = self.kwargs['layer_id']
@@ -28,6 +46,8 @@ class ChartCreate(CreateView):
     def get_context_data(self, **kwargs):
         layer_id = self.kwargs['layer_id']
         layer = Layer.objects.get(pk=layer_id)
+        if not self.request.user.has_perm('download_resourcebase', layer.get_self_resource()):
+            raise PermissionDenied
         fieldnames, num_fieldnames = get_fields(layer_id)
         ctx = super(ChartCreate, self).get_context_data(**kwargs)
         ctx['fieldnames'] = fieldnames
@@ -35,89 +55,51 @@ class ChartCreate(CreateView):
         ctx['layer'] = layer
         return ctx
 
+    def form_valid(self, form):
+        if not self.request.user.has_perm('download_resourcebase', form.instance.layer.get_self_resource()):
+            raise PermissionDenied
+        form.instance.created_by = self.request.user
+        return super(ChartCreate, self).form_valid(form)
 
-class ChartUpdate(UpdateView):
+
+class ChartUpdate(LoginRequiredMixin, UpdateView):
     model = Chart
     fields = '__all__'
-    template_name_suffix = '_update_form'
+    template_name = 'charts_app/chart_update_form.html'
+
+    def get_object(self, queryset=None):
+        obj = super(ChartUpdate, self).get_object(queryset=queryset)
+        is_chart_owner = (self.request.user == obj.created_by)
+        lyr_obj = Layer.objects.get(pk=obj.layer)
+        is_lyr_owner = (self.request.user == lyr_obj.owner)
+        if not (self.request.user.is_superuser or is_chart_owner or is_lyr_owner):
+            raise PermissionDenied
+        return obj
+
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super(ChartUpdate, self).form_valid(form)
 
 
-class ChartDelete(DeleteView):
+class ChartDelete(LoginRequiredMixin, DeleteView):
     model = Chart
-    success_url = '/'
+    success_url = '/layers/'
+
+    def get_object(self, queryset=None):
+        obj = super(ChartDelete, self).get_object(queryset=queryset)
+        is_chart_owner = (self.request.user == obj.created_by)
+        lyr_obj = Layer.objects.get(pk=obj.layer)
+        is_lyr_owner = (self.request.user == lyr_obj.owner)
+        if not (self.request.user.is_superuser or is_chart_owner or is_lyr_owner):
+            raise PermissionDenied
+        return obj
 
 
-def get_csv(request):
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="table.csv"'
+class ChartList(ListView):
+    model = Chart
+    fields = '__all__'
+    template_name = 'charts_app/chart_list.html'
 
-    writer = csv.writer(response)
-    writer.writerow(['name', 'area'])
-    writer.writerow(['Af', 3.51])
-    writer.writerow(['Ems / ems', 0.00])
-    writer.writerow(['Ep / ep', 0.00])
-    writer.writerow(['Lmst', 4.88])
-    writer.writerow(['Mpb', 18.93])
-    writer.writerow(['Pf', 30.53])
-    writer.writerow(['Ppf', 6.84])
-    writer.writerow(['Qa', 0.49])
-    writer.writerow(['Qhac', 5.91])
-    writer.writerow(['Qhad', 0.00])
-    writer.writerow(['Qham', 11.01])
-    writer.writerow(['Qht1', 1.10])
-    writer.writerow(['Qht2', 27.60])
-    writer.writerow(['Qpf', 34.40])
-    writer.writerow(['Qphf', 42.30])
-
-    return response
-
-def get_csv_aggr(request):
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="table.csv"'
-
-    writer = csv.writer(response)
-    writer.writerow(['name', 'area'])
-    writer.writerow(['Af', 3.51])
-    writer.writerow(['Ems / ems', 0.00])
-    writer.writerow(['Ep / ep', 0.00])
-    writer.writerow(['Lmst', 4.88])
-    writer.writerow(['Mpb', 18.93])
-    writer.writerow(['Pf', 30.53])
-    writer.writerow(['Ppf', 6.84])
-    writer.writerow(['Qa', 0.49])
-    writer.writerow(['Qhac', 5.91])
-    writer.writerow(['Qhad', 0.00])
-    writer.writerow(['Qham', 11.01])
-    writer.writerow(['Qht1', 1.10])
-    writer.writerow(['Qht2', 27.60])
-    writer.writerow(['Qphf', 42.30])
-    writer.writerow(['Af', 6.58])
-    writer.writerow(['Qa', 30.78])
-    writer.writerow(['Af', 16.58])
-
-    return response
-
-
-def pie_chart_v1(request):
-    return render(request, 'pie_chart_v1.html')
-
-
-def donut_chart_v1(request):
-    return render(request, 'donut_chart_v1.html')
-
-
-def pie_chart_v2(request):
-    qdict = request.GET
-    typename = qdict['lyrname']
-    category_field = qdict['category']
-    quantity_field = qdict['quantity']
-    context = {
-        'lyrname': typename,
-        'category': category_field,
-        'quantity': quantity_field
-    }
-    return render(request, 'pie_chart_v2.html', context)
-
-
-def donut_chart_v2(request):
-    return render(request, 'donut_chart_v2.html')
+    def get_context_data(self, **kwargs):
+        context = super(ChartList, self).get_context_data(**kwargs)
+        return context

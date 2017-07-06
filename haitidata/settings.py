@@ -112,7 +112,8 @@ CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
 
 MAX_CSV_RECORDS = 20000
-
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
 SOCIAL_ORIGINS = [{
     "label":"paper-plane-o",

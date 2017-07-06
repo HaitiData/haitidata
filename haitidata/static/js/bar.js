@@ -1,5 +1,5 @@
-function barChart(cat, qnt, title, abs){
-        var width = 900,
+function barChart(cat, qnt, title,id){
+        var width = function(){ return document.getElementById(id).offsetWidth},
             height = 500,
             padding = 5,
             xScale = d3.scaleBand(),
@@ -7,7 +7,7 @@ function barChart(cat, qnt, title, abs){
             colour = d3.scaleOrdinal(d3.schemeCategory20),
             x,
             y,
-            margin = { top: 30, bottom: 30, left: 30, right: 150 },
+            margin = { top: 30, bottom: 30, left: 30, right: 120 },
             floatFormat = d3.format("." + d3.precisionFixed(0.5) + "f"),
             xAxis = d3.axisBottom(xScale),
             yAxis = d3.axisLeft(yScale);
@@ -16,20 +16,22 @@ function barChart(cat, qnt, title, abs){
 
           selection.each(function(data) {
 
+            var svg_name = "chart_svg" + id;
             var svg = selection.append('svg')
-                .attr("id", "chart_svg")
-                .attr("width", width)
+                .attr("id", svg_name)
+                .attr("width", width())
                 .attr("height", height);
 
             var g = svg.selectAll("g")
               .data([1]);
             g = g.enter().append("g")
               .merge(g)
+                .attr("class", svg_name)
                 .attr("transform",
                       "translate(" + margin.left + "," + margin.top +")");
 
 
-            var innerWidth = width - margin.left - margin.right ;
+            var innerWidth = width() - margin.left - margin.right ;
             var innerHeight = function(){ return height - margin.top - margin.bottom} ;
 
 
@@ -39,36 +41,41 @@ function barChart(cat, qnt, title, abs){
 
 
             // X axis
-            var xAxisG = g.selectAll(".x-axis").data([1]);
+            var xAxis_name = "x-axis_" + id;
+            var xAxis_call = "." + xAxis_name;
+            var xAxisG = g.selectAll(xAxis_call).data([1]);
             xAxisG.enter().append("g")
-                .attr("class", "x-axis")
+                .attr("class", xAxis_name)
               .merge(xAxisG)
                 .attr("transform", "translate(0," + innerHeight() +")")
                 .call(xAxis);
 
             // labels X axis
             // rotate text if is longer than...
-
-            d3.select(this).select(".x-axis").selectAll("text").each(function(){
-                if (this.getBBox().width > (xScale.bandwidth() - (padding*2)))
-                    d3.selectAll("text").attr("transform", "rotate(-90)")
+            var rotate = 0;
+            d3.select(this).select(xAxis_call).selectAll("text").each(function(){
+                if (this.getBBox().width > (xScale.bandwidth() - (padding*2))){
+                    rotate = 1;
+                    d3.select(xAxis_call).selectAll("text").attr("transform", "rotate(-90)")
                                         .attr("y", 0)
                                         .attr("x", -10)
                                         .attr("dy", ".35em")
                                         .style("text-anchor", "end");
-            });
+            }});
 
             // adjust margin and x axis title
-            var maxh = 0;
-            d3.select(this).select(".x-axis").selectAll("text").each(function(){
-                if (this.getBBox().width > maxh)
-                    maxh = this.getBBox().width;
-            });
+            var maxh = 15;
+            if (rotate == 1) {
+                d3.select(this).select(xAxis_call).selectAll("text").each(function(){
+                    if (this.getBBox().width > maxh)
+                        maxh = this.getBBox().width;
+            });};
             margin.bottom = margin.bottom + maxh;
-            d3.select(".x-axis").attr("transform", "translate(0," + (innerHeight()) + ")");
+            d3.select(xAxis_call).attr("transform", "translate(0," + (innerHeight()) + ")");
 
-
+            var text_name = "text_" + id;
             g.append("text")
+                .attr("class", text_name)
                 .attr("transform", "translate(" + (innerWidth/2) + ", " + (innerHeight() + margin.bottom - 5) + ")")
                 .style("font-size", "12px")
                 .style("text-anchor", "middle")
@@ -79,15 +86,17 @@ function barChart(cat, qnt, title, abs){
               .range([innerHeight(), 0]);
 
             // Y axis
-            var yAxisG = g.selectAll(".y-axis").data([1]);
+            var yAxis_name = "y-axis_" + id;
+            var yAxis_call = "." + yAxis_name;
+            var yAxisG = g.selectAll(yAxis_call).data([1]);
             yAxisG.enter().append("g")
-                .attr("class", "y-axis")
+                .attr("class", yAxis_name)
                .merge(yAxisG)
                .call(yAxis);
 
             //labels Y axis
             var maxw = 0;
-            d3.select(this).select(".y-axis").selectAll("text").each(function(){
+            d3.select(this).select(yAxis_call).selectAll("text").each(function(){
                 if (this.getBBox().width > maxw) {
                     maxw = this.getBBox().width;
                 }
@@ -103,6 +112,7 @@ function barChart(cat, qnt, title, abs){
                          }};
 
             g.append("text")
+                .attr("class", text_name)
                 .attr("transform", "rotate(-90)")
                 .attr("x", 0 - (innerHeight()/2))
                 .attr("y", 0 - (margin.left))
@@ -126,36 +136,27 @@ function barChart(cat, qnt, title, abs){
                 });
 
             //chart legend
-            var legend = svg.selectAll(".legend")
+            var leg_name = "legend" + id;
+            var leg_call = "." + leg_name;
+            var legend = svg.selectAll("leg_call")
                 .data(data)
                 .enter().append("g")
-                .attr("class", "legend")
+                .attr("class", leg_name)
                 .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
             legend.append("rect")
-                .attr("x", width - 18)
+                .attr("x", width() - 18)
                 .attr("width", 18)
                 .attr("height", 18)
                 .style("fill", function(d) { return colour(xScale(d[x]))} );
 
             legend.append("text")
-                .attr("x", width - 24)
+                .attr("class", text_name)
+                .attr("x", width() - 24)
                 .attr("y", 9)
                 .attr("dy", ".35em")
                 .style("text-anchor", "end")
                 .text(function (d){ return d[x] + ": " + floatFormat(d[y]); });
-
-/*            //chart abstract
-            var abstract = svg.selectAll(".abstract").data(data).enter().append("g")
-                .attr("class", "abstract")
-                .attr("transform", "translate(0," + 450 + ")");
-
-            abstract.append("text")
-                .attr("x", width - 24)
-                .attr("y", 9)
-                .attr("dy", ".35em")
-                .style("text-anchor", "end")
-                .text(abs);*/
 
           });
         }
