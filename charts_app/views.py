@@ -35,7 +35,7 @@ class ChartDetail(DetailView):
 
 class ChartCreate(LoginRequiredMixin, CreateView):
     form_class = ChartForm
-    template_name = 'charts_app/chart_detail.html'
+    template_name_suffix = 'charts_app/chart_update_form.html'
 
     def get_initial(self):
         layer_id = self.kwargs['layer_id']
@@ -65,7 +65,7 @@ class ChartCreate(LoginRequiredMixin, CreateView):
 class ChartUpdate(LoginRequiredMixin, UpdateView):
     model = Chart
     fields = '__all__'
-    template_name = 'charts_app/chart_detail.html'
+    template_name = 'charts_app/chart_update_form.html'
 
     def get_object(self, queryset=None):
         obj = super(ChartUpdate, self).get_object(queryset=queryset)
