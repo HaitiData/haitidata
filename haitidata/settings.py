@@ -53,7 +53,7 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
-INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer','charts_app', 'wfs_harvest')
+INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client', 'charts_app', 'wfs_harvest')
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
