@@ -53,7 +53,7 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
-INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client')
+INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client', 'charts_app', 'wfs_harvest')
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
@@ -111,6 +111,9 @@ BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
 
+MAX_CSV_RECORDS = 20000
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
 SOCIAL_ORIGINS = [{
     "label":"paper-plane-o",
