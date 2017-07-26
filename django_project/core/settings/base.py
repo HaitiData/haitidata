@@ -31,7 +31,7 @@ SITENAME = 'haitidata'
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-WSGI_APPLICATION = "haitidata.wsgi.application"
+WSGI_APPLICATION = "core.wsgi.application"
 
 
 # Load more settings from a file called local_settings.py if it exists
