@@ -22,6 +22,9 @@
 from __future__ import absolute_import, unicode_literals
 import os
 from .utils import absolute_path
+
+# This throws error
+# from geonode.settings import *
 #
 # General Django development settings
 #
