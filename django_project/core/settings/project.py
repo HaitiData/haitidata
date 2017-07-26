@@ -15,17 +15,6 @@ from .contrib import *  # noqa
 INSTALLED_APPS += (
     # Add any additional project apps here
     # symposion
-    "symposion",
-    "symposion.conference",
-    "symposion.proposals",
-    "symposion.reviews",
-    "symposion.schedule",
-    "symposion.speakers",
-    "symposion.sponsorship",
-    "symposion.teams",
-    "proposals",
-    "payment",
-    "pinaxcon_theme",
 )
 
 # Due to profile page does not available,
@@ -78,26 +67,6 @@ else:
 
 from .celery_setting import *  # noqa
 
-CONFERENCE_ID=2
-PROPOSAL_FORMS = {
-    "talk": "proposals.forms.TalkProposalForm",
-    "workshop": "proposals.forms.WorkshopProposalForm",
-    "map": "proposals.forms.MapProposalForm",
-    "academic-presentation" : "proposals.forms.TalkProposalForm",
-    "sagta-workshops" : "proposals.forms.WorkshopProposalForm",
-    "foss4g-general-presentation" : "proposals.forms.TalkProposalForm",
-    "foss4g-workshops" : "proposals.forms.WorkshopProposalForm",
-    "sagta-general-presentation" : "proposals.forms.TalkProposalForm",
-}
-
-# FIXTURE_DIRS = (
-#     absolute_path("symposion","fixtures"),
-# )
-
-SHOP_CURRENCY_LOCALE = "en_ZA.UTF-8"
-
-ACCOUNT_HOOKSET = "core.adapter.PinaxAccountHookset"
-CONFERENCE_DOMAIN = "https://foss4g-africa.org"
 
 # default login url
 LOGIN_URL = '/account/login/'

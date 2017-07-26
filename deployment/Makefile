@@ -1,4 +1,4 @@
-PROJECT_ID := haiti-data
+PROJECT_ID := haitidata
 PRODUCTION_HOST := haitidata.com
 
 SHELL := /bin/bash
@@ -91,13 +91,6 @@ update-migrations:
 	@echo "Running update migrations in production mode"
 	@echo "------------------------------------------------------------------"
 	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral python manage.py makemigrations
-
-collectfixtures:
-	@echo
-	@echo "------------------------------------------------------------------"
-	@echo "Running fixtures migrations in production mode"
-	@echo "------------------------------------------------------------------"
-	@docker exec -t -i qgis-org-za-uwsgi /bin/bash -c "python manage.py loaddata symposion/fixtures/*.json"
 
 
 collectstatic:
@@ -275,16 +268,16 @@ mediasync:
 	@echo "------------------------------------------------------------------"
 	@echo "Syncing media files and secret.py from live server"
 	@echo "------------------------------------------------------------------"
-	@rsync -av --progress $(PRODUCTION_HOST):/home/web/qgis.org.za/deployment/media/ media
-	@rsync -av --progress $(PRODUCTION_HOST):/home/web/qgis.org.za/django_project/core/settings/secret.py ../django_project/core/settings/
+	@rsync -av --progress $(PRODUCTION_HOST):/home/web/haitidata/deployment/media/ media
+	@rsync -av --progress $(PRODUCTION_HOST):/home/web/haitidata/django_project/core/settings/secret.py ../django_project/core/settings/
 
 dbsync:
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Syncing database files from live server"
 	@echo "------------------------------------------------------------------"
-	-@ssh $(PRODUCTION_HOST) "cd /home/web/qgis.org.za/deployment; make dbbackup"
-	@rsync -av --progress $(PRODUCTION_HOST):/home/web/qgis.org.za/deployment/backups/ backups
+	-@ssh $(PRODUCTION_HOST) "cd /home/web/haitidata/deployment; make dbbackup"
+	@rsync -av --progress $(PRODUCTION_HOST):/home/web/haitidata/deployment/backups/ backups
 
 create-machine:
 	@echo

@@ -49,6 +49,10 @@ LOGGING = {
         'django.db.backends': {
             'handlers': ['console'],
             'level': 'INFO',  # switch to DEBUG to show actual SQL
+        },
+        'osgeo_importer': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
         }
     },
     # root logger

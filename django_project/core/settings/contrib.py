@@ -21,8 +21,6 @@ GRAPPELLI_INSTALLED = True
 INSTALLED_APPS += (
      # 'raven.contrib.django.raven_compat',  # enable Raven plugin
      PACKAGE_NAME_GRAPPELLI,
-     "config",
-     "flat_theme",
      "mezzanine",
      "django_comments",
      "compressor",
@@ -38,21 +36,6 @@ INSTALLED_APPS += (
      "mezzanine_references",
      "mezzanine_slides",
      "mdown",  # markdown support in admin
-     "mezzanine_agenda",  # we use a local copy as pip misses migrations
-     # theme
-     "bootstrapform",
-     "easy_thumbnails",
-     "taggit",
-     "reversion",
-     "metron",
-     "sitetree",
-     "pinax_theme_bootstrap",
-     "pinax.boxes",
-     "account",
-     "cartridge.shop",
-     "qgis_mezzanine_model",
-     "social_django",
-     "social_core",
 
 )
 
