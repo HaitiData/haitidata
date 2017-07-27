@@ -44,4 +44,4 @@ git+https://github.com/GeoNode/django-osgeo-importer.git
 django-jsonfield
 
 python-dateutil
-gdal
+gdal==1.10.0

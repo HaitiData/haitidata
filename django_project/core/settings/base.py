@@ -219,7 +219,7 @@ except ImportError:
 ROOT_URLCONF = 'core.urls'
 
 
-INSTALLED_APPS = INSTALLED_APPS + ('osgeo_importer', 'geonode-client', 'charts_app', 'wfs_harvest')
+INSTALLED_APPS = INSTALLED_APPS + ('osgeo_importer', 'geonode-client', 'wfs_harvest')
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
