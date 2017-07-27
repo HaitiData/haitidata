@@ -77,8 +77,6 @@ uwsgi:
     - smtp:smtp
     - db:db
   restart: always
-  ports:
-    - "63310:8080"
 
 dbbackups:
   # Note you cannot scale if you use conteiner_name
@@ -119,7 +117,7 @@ web:
   links:
     - uwsgi:uwsgi
   ports:
-    - "63300:8080"
+    - "33300:8080"
   restart: always
 
 # This is the entry point for a development server.
@@ -153,9 +151,9 @@ devweb:
     - rabbitmq:rabbitmq
   ports:
     # for django test server
-    - "63303:8080"
+    - "33303:8080"
     # for ssh
-    - "63302:22"
+    - "33302:22"
 
 worker:
    build: docker
