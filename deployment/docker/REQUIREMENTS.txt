@@ -45,3 +45,5 @@ django-jsonfield
 
 python-dateutil
 gdal==1.10.0
+django-tastypie
+django-avatar

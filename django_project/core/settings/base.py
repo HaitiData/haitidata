@@ -205,8 +205,6 @@ SITENAME = 'haitidata'
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-WSGI_APPLICATION = "core.wsgi.application"
-
 
 # Load more settings from a file called local_settings.py if it exists
 try:
@@ -215,11 +213,8 @@ except ImportError:
     pass
 
 
-# Location of url mappings
-ROOT_URLCONF = 'core.urls'
 
-
-INSTALLED_APPS = INSTALLED_APPS + ('osgeo_importer', 'geonode-client', 'wfs_harvest')
+# INSTALLED_APPS = INSTALLED_APPS + ('osgeo_importer', 'geonode-client', 'wfs_harvest')
 
 LAYER_PREVIEW_LIBRARY = 'react'
 

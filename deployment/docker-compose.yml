@@ -77,6 +77,8 @@ uwsgi:
     - smtp:smtp
     - db:db
   restart: always
+  ports:
+    - "63310:8080"
 
 dbbackups:
   # Note you cannot scale if you use conteiner_name

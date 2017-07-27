@@ -36,6 +36,7 @@ INSTALLED_APPS += (
      "mezzanine_references",
      "mezzanine_slides",
      "mdown",  # markdown support in admin
+     "avatar",
 
 )
 
