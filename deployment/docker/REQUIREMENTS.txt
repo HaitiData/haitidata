@@ -1,5 +1,5 @@
 celery
-Django==1.8.5
+Django==1.10
 psycopg2
 mezzanine==4.2.3
 mezzanine_people
@@ -43,7 +43,8 @@ django-geonode-client
 git+https://github.com/GeoNode/django-osgeo-importer.git
 django-jsonfield
 
+
 python-dateutil
 gdal==1.10.0
+git+https://github.com/euclidian/GeoNode-1
 django-tastypie
-django-avatar

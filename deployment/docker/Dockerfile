@@ -18,6 +18,7 @@ RUN apt-get update -y
 # the locale to set the correct number of decimal places for the MoneyField
 RUN echo "deb http://ftp.debian.org/debian jessie main" >> /etc/apt/sources.list.d/gdal.list
 RUN apt-get update
+
 RUN apt-get install locales && \
     echo "en_ZA.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen en_ZA.UTF-8
@@ -32,6 +33,12 @@ ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 RUN pip install -r /REQUIREMENTS.txt
 RUN pip uninstall -y South
 RUN pip install uwsgi
+RUN pip uninstall geonode-agon-ratings -y
+RUN pip install git+https://github.com/euclidian/custom-agon-ratings
+RUN pip uninstall requests -y
+RUN pip install requests==2.13.0
+RUN pip uninstall celery -y
+RUN pip install celery==3.1
 
 
 # Open port 8080 as we will be running our uwsgi socket on that

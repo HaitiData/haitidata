@@ -33,6 +33,7 @@ from .utils import absolute_path
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
+# In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'Africa/Johannesburg'
 
 # Language code for this installation. All choices can be found here:
@@ -204,6 +205,8 @@ SITENAME = 'haitidata'
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
+LOCAL_MEDIA_URL = LOCAL_ROOT
+AVATAR_PATH_HANDLER = LOCAL_ROOT
 
 
 # Load more settings from a file called local_settings.py if it exists

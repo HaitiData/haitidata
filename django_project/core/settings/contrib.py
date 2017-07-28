@@ -37,6 +37,43 @@ INSTALLED_APPS += (
      "mezzanine_slides",
      "mdown",  # markdown support in admin
      "avatar",
+     "geonode",
+     "osgeo_importer",
+# Utility
+     'pagination',
+     'taggit',
+     'treebeard',
+     'friendlytagloader',
+     'geoexplorer',
+     'leaflet',
+    'django_extensions',
+    #'geonode-client',
+    # 'haystack',
+    'autocomplete_light',
+    'mptt',
+    # 'modeltranslation',
+    # 'djkombu',
+    'djcelery',
+    # 'kombu.transport.django',
+    'storages',
+
+    # Theme
+    "pinax_theme_bootstrap_account",
+    "pinax_theme_bootstrap",
+    'django_forms_bootstrap',
+
+    # Social
+    'account',
+    'dialogos',
+    'agon_ratings',
+    # 'notification',
+    'announcements',
+    'actstream',
+    'user_messages',
+    'tastypie',
+    'polymorphic',
+    'guardian',
+    'oauth2_provider',
 
 )
 

@@ -14,7 +14,9 @@ from .contrib import *  # noqa
 # Project apps
 INSTALLED_APPS += (
     # Add any additional project apps here
-    # symposion
+    "charts_app",
+    "wfs_harvest",
+
 )
 
 # Due to profile page does not available,
