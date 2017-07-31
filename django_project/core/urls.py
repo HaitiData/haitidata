@@ -11,4 +11,6 @@ urlpatterns = i18n_patterns(
     url(r'^api/home/test', TemplateView.as_view(template_name="site_index.html"), name="home"),
     url(r'^chart/', include('charts_app.urls')),
     url(r'^table/', include('wfs_harvest.urls')),
+    url(r'^geonode/document/', include('geonode.documents.urls')),
+    url(r'^geonode/maps/', include('geonode.maps.urls')),
 )

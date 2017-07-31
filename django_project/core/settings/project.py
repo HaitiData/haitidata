@@ -19,7 +19,7 @@ INSTALLED_APPS += (
     "charts_app",
     "wfs_harvest",
     'geonode.base',
-    'geonode.layers'
+    'geonode.layers',
 
 )
 
@@ -58,3 +58,5 @@ from .celery_setting import *  # noqa
 
 # default login url
 LOGIN_URL = '/account/login/'
+
+ALLOWED_DOCUMENT_TYPES = ["pdf"]
