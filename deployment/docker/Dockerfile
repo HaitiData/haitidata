@@ -43,6 +43,11 @@ RUN pip install git+https://github.com/meomancer/geonode-dialogos.git
 RUN pip uninstall geonode-agon-ratings -y
 RUN pip install git+https://github.com/euclidian/custom-agon-ratings
 
+RUN pip uninstall Django -y
+RUN pip install Django==1.8.18
+
+RUN pip uninstall django-oauth-toolkit -y
+RUN pip install django-oauth-toolkit==0.12.0
 
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
