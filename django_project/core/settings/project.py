@@ -14,16 +14,16 @@ from .contrib import *  # noqa
 # Project apps
 INSTALLED_APPS += (
     # Add any additional project apps here
-    'modeltranslation',
     "geonode",
     "geonode-client",
     "charts_app",
     "wfs_harvest",
-
     'geonode.base',
     'geonode.layers'
 
 )
+
+THESAURI = []
 
 # Due to profile page does not available,
 # this will redirect to home page after login

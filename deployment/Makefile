@@ -79,10 +79,9 @@ migrate:
 	@# We add the '-' prefix to the next line as the migration may fail
 	@# but we want to continue anyway.
 	@#We need to migrate accounts first as it has a reference to user model
-	-@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral python manage.py migrate auth
-	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral python manage.py migrate sites
-	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral python manage.py migrate pages
-	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral python manage.py migrate
+	@docker exec -t -i $(PROJECT_ID)_uwsgi-ephemeral_1 /bin/bash -c "python manage.py makemigrations --merge --noinput \
+	    && python manage.py migrate auth && python manage.py migrate sites && \
+	    python manage.py migrate"
 
 
 update-migrations:
