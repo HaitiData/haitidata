@@ -14,6 +14,8 @@ from .contrib import *  # noqa
 # Project apps
 INSTALLED_APPS += (
     # Add any additional project apps here
+    "geonode",
+    "geonode-client",
     "charts_app",
     "wfs_harvest",
 
