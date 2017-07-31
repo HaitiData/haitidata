@@ -33,12 +33,15 @@ ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 RUN pip install -r /REQUIREMENTS.txt
 RUN pip uninstall -y South
 RUN pip install uwsgi
+
+RUN pip uninstall django-user-accounts -y
+RUN pip install django-user-accounts==2.0.3
+
+RUN pip uninstall geonode-dialogos -y
+RUN pip install git+https://github.com/meomancer/geonode-dialogos.git
+
 RUN pip uninstall geonode-agon-ratings -y
 RUN pip install git+https://github.com/euclidian/custom-agon-ratings
-RUN pip uninstall requests -y
-RUN pip install requests==2.13.0
-RUN pip uninstall celery -y
-RUN pip install celery==3.1
 
 
 # Open port 8080 as we will be running our uwsgi socket on that

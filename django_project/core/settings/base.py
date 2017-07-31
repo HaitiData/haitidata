@@ -132,18 +132,10 @@ TEMPLATES = [
                 "django.core.context_processors.media",
                 "django.core.context_processors.request",
                 "django.core.context_processors.tz",
-                # Dirty hack for now - should be specified in contrib.py
-                "mezzanine.conf.context_processors.settings",
-                "mezzanine.pages.context_processors.page",
             ],
         },
     },
 ]
-
-# Every cache key will get prefixed with this value - here we set it to
-# the name of the directory the project is in to try and use something
-# project specific.
-CACHE_MIDDLEWARE_KEY_PREFIX = 'mezzanine'
 
 MIDDLEWARE_CLASSES = (
     "django.contrib.sessions.middleware.SessionMiddleware",
