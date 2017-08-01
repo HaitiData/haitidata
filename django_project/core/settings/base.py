@@ -132,6 +132,8 @@ TEMPLATES = [
                 "django.core.context_processors.media",
                 "django.core.context_processors.request",
                 "django.core.context_processors.tz",
+                "geonode.context_processors.resource_urls",
+                "geonode.geoserver.context_processors.geoserver_urls",
             ],
         },
     },
