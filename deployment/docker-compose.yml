@@ -76,6 +76,7 @@ uwsgi:
   links:
     - smtp:smtp
     - db:db
+    - geoserver:geoserver
   restart: always
 
 dbbackups:
@@ -181,3 +182,9 @@ worker:
      - db:db
      - rabbitmq:rabbitmq
    restart: on-failure:5
+
+geoserver:
+  image: kartoza/geoserver
+  container_name: haitidata-geoserver
+  ports:
+    - "33308:8080"

@@ -13,4 +13,7 @@ urlpatterns = i18n_patterns(
     url(r'^table/', include('wfs_harvest.urls')),
     url(r'^geonode/document/', include('geonode.documents.urls')),
     url(r'^geonode/maps/', include('geonode.maps.urls')),
+    url(r'^geonode/people/', include('geonode.people.urls')),
+    url(r'^geonode/groups/', include('geonode.groups.urls')),
+    url(r'^geonode/', include('geonode.urls')),
 )
