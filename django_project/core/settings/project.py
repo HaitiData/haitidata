@@ -59,12 +59,33 @@ from .celery_setting import *  # noqa
 # default login url
 LOGIN_URL = '/account/login/'
 
+GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
+GEOSERVER_PUBLIC_LOCATION = 'http://geoserver:8080/geoserver/'
+
 OGC_SERVER = {
-  'default': {
-      'LOCATION' : 'http://geoserver:8080/geoserver/',
-      'USER' : 'admin',
-      'PASSWORD' : 'geoserver',
-  }
+    'default': {
+        'BACKEND': 'geonode.geoserver',
+        'LOCATION': GEOSERVER_LOCATION,
+        'LOGIN_ENDPOINT': 'j_spring_oauth2_geonode_login',
+        'LOGOUT_ENDPOINT': 'j_spring_oauth2_geonode_logout',
+        # PUBLIC_LOCATION needs to be kept like this because in dev mode
+        # the proxy won't work and the integration tests will fail
+        # the entire block has to be overridden in the local_settings
+        'PUBLIC_LOCATION': GEOSERVER_PUBLIC_LOCATION,
+        'USER': 'admin',
+        'PASSWORD': 'geoserver',
+        'MAPFISH_PRINT_ENABLED': True,
+        'PRINT_NG_ENABLED': True,
+        'GEONODE_SECURITY_ENABLED': True,
+        'GEOGIG_ENABLED': False,
+        'WMST_ENABLED': False,
+        'BACKEND_WRITE_ENABLED': True,
+        'WPS_ENABLED': False,
+        # Set to name of database in DATABASES dictionary to enable
+        'DATASTORE': '',  # 'datastore',
+        'PG_GEOGIG': False,
+        'TIMEOUT': 10  # number of seconds to allow for HTTP requests
+    }
 }
 
 ALLOWED_DOCUMENT_TYPES = ["pdf"]

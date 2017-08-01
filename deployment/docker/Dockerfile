@@ -34,9 +34,6 @@ RUN pip install -r /REQUIREMENTS.txt
 RUN pip uninstall -y South
 RUN pip install uwsgi
 
-RUN pip uninstall django-user-accounts -y
-RUN pip install django-user-accounts==2.0.3
-
 RUN pip uninstall geonode-dialogos -y
 RUN pip install git+https://github.com/meomancer/geonode-dialogos.git
 
@@ -48,6 +45,9 @@ RUN pip install Django==1.8.18
 
 RUN pip uninstall django-oauth-toolkit -y
 RUN pip install django-oauth-toolkit==0.12.0
+
+RUN pip uninstall django-user-accounts -y
+RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
 
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
