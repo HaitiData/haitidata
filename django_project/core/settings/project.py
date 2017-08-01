@@ -8,7 +8,7 @@ repository!
 
 import os  # noqa
 from django.utils.translation import ugettext_lazy as _
-from .utils import absolute_path
+from distutils.util import strtobool
 from .contrib import *  # noqa
 
 # Project apps
@@ -89,6 +89,18 @@ OGC_SERVER = {
 }
 
 ALLOWED_DOCUMENT_TYPES = ["pdf"]
+MISSING_THUMBNAIL = os.getenv(
+    'MISSING_THUMBNAIL', 'geonode/img/missing_thumb.png'
+)
+# Whether the uplaoded resources should be public and downloadable by default
+# or not
+DEFAULT_ANONYMOUS_VIEW_PERMISSION = strtobool(
+    os.getenv('DEFAULT_ANONYMOUS_VIEW_PERMISSION', 'True')
+)
+DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION = strtobool(
+    os.getenv('DEFAULT_ANONYMOUS_VIEW_PERMISSION', 'True')
+)
+
 
 API_INCLUDE_REGIONS_COUNT = False
 HAYSTACK_SEARCH = False
@@ -142,10 +154,10 @@ PYCSW = {
         'metadata:main': {
             'identification_title': 'GeoNode Catalogue',
             'identification_abstract': 'GeoNode is an open source platform' \
-            ' that facilitates the creation, sharing, and collaborative use' \
-            ' of geospatial data',
+                                       ' that facilitates the creation, sharing, and collaborative use' \
+                                       ' of geospatial data',
             'identification_keywords': 'sdi, catalogue, discovery, metadata,' \
-            ' GeoNode',
+                                       ' GeoNode',
             'identification_keywords_type': 'theme',
             'identification_fees': 'None',
             'identification_accessconstraints': 'None',
@@ -164,7 +176,7 @@ PYCSW = {
             'contact_url': 'Contact URL',
             'contact_hours': 'Hours of Service',
             'contact_instructions': 'During hours of service. Off on ' \
-            'weekends.',
+                                    'weekends.',
             'contact_role': 'pointOfContact',
         },
         'metadata:inspire': {
@@ -212,7 +224,7 @@ MAP_BASELAYERS = [{
     "name": "background",
     "visibility": False,
     "fixed": True,
-    "group":"background"
+    "group": "background"
 }, {
     "source": {"ptype": "gxp_osmsource"},
     "type": "OpenLayers.Layer.OSM",
