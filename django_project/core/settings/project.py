@@ -59,12 +59,6 @@ from .celery_setting import *  # noqa
 # default login url
 LOGIN_URL = '/account/login/'
 
-# Load more settings from geonode settings
-try:
-    from geonode import settings
-except:
-    pass
-
 OGC_SERVER = {
   'default': {
       'LOCATION' : 'http://geoserver:8080/geoserver/',
@@ -72,6 +66,8 @@ OGC_SERVER = {
       'PASSWORD' : 'geoserver',
   }
 }
+
+ALLOWED_DOCUMENT_TYPES = ["pdf"]
 
 API_INCLUDE_REGIONS_COUNT = False
 HAYSTACK_SEARCH = False
