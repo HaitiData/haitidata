@@ -61,8 +61,8 @@ from .celery_setting import *  # noqa
 # default login url
 LOGIN_URL = '/account/login/'
 
-GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
-GEOSERVER_PUBLIC_LOCATION = 'http://geoserver:8080/geoserver/'
+GEOSERVER_LOCATION = 'http://localhost:33308/geoserver/'
+GEOSERVER_PUBLIC_LOCATION = 'http://localhost:33308/geoserver/'
 
 OGC_SERVER = {
     'default': {

@@ -3,6 +3,8 @@ from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 from django.views.generic import TemplateView
 
+import geonode
+
 admin.autodiscover()
 
 urlpatterns = i18n_patterns(
@@ -17,3 +19,5 @@ urlpatterns = i18n_patterns(
     url(r'^geonode/groups/', include('geonode.groups.urls')),
     url(r'^geonode/', include('geonode.urls')),
 )
+
+urlpatterns += geonode.proxy.urls.urlpatterns

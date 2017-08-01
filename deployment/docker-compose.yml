@@ -150,6 +150,7 @@ devweb:
     - smtp:smtp
     - db:db
     - rabbitmq:rabbitmq
+    - geoserver:geoserver
   ports:
     # for django test server
     - "33303:8080"
