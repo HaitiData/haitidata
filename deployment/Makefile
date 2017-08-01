@@ -84,6 +84,7 @@ migrate:
 	    python manage.py migrate"
 
 
+
 update-migrations:
 	@echo
 	@echo "------------------------------------------------------------------"
@@ -91,6 +92,13 @@ update-migrations:
 	@echo "------------------------------------------------------------------"
 	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral python manage.py makemigrations
 
+
+update-migrations-localization:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Running update migrations in production mode"
+	@echo "------------------------------------------------------------------"
+	@docker-compose -p $(PROJECT_ID) run uwsgi bash -c "python manage.py makemigrations  && python manage.py migrate"
 
 collectstatic:
 	@echo
