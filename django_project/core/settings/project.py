@@ -20,7 +20,8 @@ INSTALLED_APPS += (
     "wfs_harvest",
     'geonode.base',
     'geonode.layers',
-    'geonode.services'
+    'geonode.services',
+    'geonode.maps'
 
 )
 

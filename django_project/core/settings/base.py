@@ -147,6 +147,7 @@ MIDDLEWARE_CLASSES = (
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    "pagination.middleware.PaginationMiddleware",
 )
 
 ROOT_URLCONF = 'core.urls'
