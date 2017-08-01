@@ -20,6 +20,7 @@ INSTALLED_APPS += (
     "wfs_harvest",
     'geonode.base',
     'geonode.layers',
+    'geonode.services'
 
 )
 
@@ -101,6 +102,28 @@ DEFAULT_ANONYMOUS_DOWNLOAD_PERMISSION = strtobool(
     os.getenv('DEFAULT_ANONYMOUS_VIEW_PERMISSION', 'True')
 )
 
+# Available download formats
+DOWNLOAD_FORMATS_METADATA = [
+    'Atom', 'DIF', 'Dublin Core', 'ebRIM', 'FGDC', 'ISO',
+]
+DOWNLOAD_FORMATS_VECTOR = [
+    'JPEG', 'PDF', 'PNG', 'Zipped Shapefile', 'GML 2.0', 'GML 3.1.1', 'CSV',
+    'Excel', 'GeoJSON', 'KML', 'View in Google Earth', 'Tiles',
+]
+DOWNLOAD_FORMATS_RASTER = [
+    'JPEG',
+    'PDF',
+    'PNG',
+    'ArcGrid',
+    'GeoTIFF',
+    'Gtopo30',
+    'ImageMosaic',
+    'KML',
+    'View in Google Earth',
+    'Tiles',
+    'GML',
+    'GZIP'
+]
 
 API_INCLUDE_REGIONS_COUNT = False
 HAYSTACK_SEARCH = False
