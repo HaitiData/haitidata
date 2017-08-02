@@ -86,6 +86,7 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     absolute_path('core', 'base_static'),
+    absolute_path('core', 'geonode_static'),
 )
 
 # Additional locations of static files

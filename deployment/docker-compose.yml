@@ -37,6 +37,8 @@ db:
     - USERNAME=docker
     - PASS=docker
   restart: always
+  ports:
+    - "33305:5432"
 
 uwsgi-base:
   # Note you cannot scale if you use conteiner_name
