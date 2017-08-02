@@ -46,6 +46,30 @@ INSTALLED_APPS += (
     'guardian',
     'oauth2_provider',
 
+# GeoNode internal apps
+    'geonode.people',
+    'geonode.base',
+    'geonode.layers',
+    'geonode.maps',
+    'geonode.proxy',
+    'geonode.security',
+    'geonode.social',
+    'geonode.catalogue',
+    'geonode.documents',
+    'geonode.api',
+    'geonode.groups',
+    'geonode.services',
+
+    # QGIS Server Apps
+    # 'geonode_qgis_server',
+
+    # GeoServer Apps
+    # Geoserver needs to come last because
+    # it's signals may rely on other apps' signals.
+    'geonode.geoserver',
+    'geonode.upload',
+    'geonode.tasks',
+
 )
 
 MARKDOWNIFY_WHITELIST_TAGS = [
@@ -74,3 +98,16 @@ ACCOUNT_USE_AUTH_AUTHENTICATE = True
 HOOKSET = "pinaxcon_theme.hooks.Foss4GAccountHookset"
 MODIFY_TOPICCATEGORY = False
 EXTRA_LANG_INFO = []
+
+
+DEFAULT_WORKSPACE = os.getenv('DEFAULT_WORKSPACE', 'geonode')
+CASCADE_WORKSPACE = os.getenv('CASCADE_WORKSPACE', 'geonode')
+OGP_URL = os.getenv('OGP_URL', "http://geodata.tufts.edu/solr/select")
+
+
+MISSING_THUMBNAIL = os.getenv(
+    'MISSING_THUMBNAIL', 'geonode/img/missing_thumb.png'
+)
+
+# Search Snippet Cache Time in Seconds
+CACHE_TIME = int(os.getenv('CACHE_TIME', '0'))

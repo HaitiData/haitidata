@@ -28,6 +28,7 @@ ENV LANGUAGE en_ZA:en
 ENV LC_ALL en_ZA.UTF-8
 ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
+ENV TEST a
 
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 RUN pip install -r /REQUIREMENTS.txt

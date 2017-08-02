@@ -14,14 +14,8 @@ from .contrib import *  # noqa
 # Project apps
 INSTALLED_APPS += (
     # Add any additional project apps here
-    "geonode",
-    "geonode-client",
     "charts_app",
     "wfs_harvest",
-    'geonode.base',
-    'geonode.layers',
-    'geonode.services',
-    'geonode.maps'
 
 )
 
@@ -61,8 +55,8 @@ from .celery_setting import *  # noqa
 # default login url
 LOGIN_URL = '/account/login/'
 
-GEOSERVER_LOCATION = 'http://localhost:33308/geoserver/'
-GEOSERVER_PUBLIC_LOCATION = 'http://localhost:33308/geoserver/'
+GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
+GEOSERVER_PUBLIC_LOCATION = 'http://127.0.0.1:33308/geoserver/'
 
 OGC_SERVER = {
     'default': {
