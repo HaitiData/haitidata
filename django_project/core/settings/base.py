@@ -216,7 +216,7 @@ except ImportError:
 
 # INSTALLED_APPS = INSTALLED_APPS + ('osgeo_importer', 'geonode-client', 'wfs_harvest')
 
-LAYER_PREVIEW_LIBRARY = 'react'
+LAYER_PREVIEW_LIBRARY = 'leaflet'
 
 IMPORT_HANDLERS = [
           # If GeoServer handlers are enabled, you must have an instance of geoserver running.

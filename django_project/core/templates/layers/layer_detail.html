@@ -274,6 +274,9 @@
   <div class="col-md-4">
 
     <ul class="list-group">
+      <li class="list-group-item">
+          <button class="btn btn-primary btn-md btn-block" id="download-clip">{% trans "Download Clip" %}</button>
+      </li>
       {% if resource.storeType != "remoteStore" %}
         <li class="list-group-item">
         {% if links or links_download %}
@@ -749,6 +752,28 @@ function updateLinkAndTitle(){
     {% include 'rating.html' %}
     {% include 'request_download.html' %}
     <script type="text/javascript">
+
+        var layerMap = layerMap || null;
+        var editableLayers = editableLayers || null;
+        $('#download-clip').click(function () {
+            var url = '';
+            if (editableLayers) {
+                var geojson = editableLayers.toGeoJSON();
+                if (geojson.features.length > 0) {
+                    url += '&GEOJSON=' + JSON.stringify(geojson);
+                } else {
+                    alert('No polygon in map, this will clip from map extent instead.')
+                }
+            } else {
+                alert('No polygon in map, this will clip from map extent instead.')
+            }
+
+            if(layerMap) {
+                var bboxString = layerMap.getBounds().toBBoxString();
+                url += '&BBOX='+bboxString
+            }
+        });
+
        $("#comment_submit_btn").click(function(event) {
             $.ajax({
               type: "POST",
