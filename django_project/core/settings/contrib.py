@@ -49,6 +49,7 @@ INSTALLED_APPS += (
     'oauth2_provider',
 
 # GeoNode internal apps
+    'geonode',
     'geonode.base',
     'geonode.maps',
     'geonode.people',
