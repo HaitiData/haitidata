@@ -118,7 +118,7 @@ CACHE_TIME = int(os.getenv('CACHE_TIME', '0'))
 AUTH_USER_MODEL = os.getenv('AUTH_USER_MODEL', 'people.Profile')
 
 GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
-GEOSERVER_PUBLIC_LOCATION = 'http://127.0.0.1:33308/geoserver/'
+GEOSERVER_PUBLIC_LOCATION = 'http://0.0.0.0:33300/api/geoserver/'
 
 OGC_SERVER = {
     'default': {

@@ -119,6 +119,7 @@ web:
     - ./webroot-path:/home/web/webroot-path
   links:
     - uwsgi:uwsgi
+    - geoserver:geoserver
   ports:
     - "33300:8080"
   restart: always
