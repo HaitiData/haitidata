@@ -50,6 +50,7 @@ RUN pip install django-oauth-toolkit==0.12.0
 RUN pip uninstall django-user-accounts -y
 RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
 
+RUN apt-get install gdal-bin
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
 

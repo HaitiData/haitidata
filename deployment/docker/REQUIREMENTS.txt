@@ -38,5 +38,5 @@ django-jsonfield
 
 python-dateutil
 gdal==1.10.0
-git+https://github.com/euclidian/GeoNode-1
+git+https://github.com/meomancer/GeoNode-1.git
 django-tastypie
