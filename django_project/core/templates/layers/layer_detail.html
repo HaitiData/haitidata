@@ -761,6 +761,8 @@ function updateLinkAndTitle(){
                 var geojson = editableLayers.toGeoJSON();
                 if (geojson.features.length > 0) {
                     url += '&GEOJSON=' + JSON.stringify(geojson);
+                    location.href = location.href + '/download-clip?' + url;
+                    return;
                 } else {
                     alert('No polygon in map, this will clip from map extent instead.')
                 }
@@ -768,9 +770,11 @@ function updateLinkAndTitle(){
                 alert('No polygon in map, this will clip from map extent instead.')
             }
 
-            if(layerMap) {
+            if (layerMap) {
                 var bboxString = layerMap.getBounds().toBBoxString();
-                url += '&BBOX='+bboxString
+                url += '&BBOX=' + bboxString;
+                location.href = location.href + '/download-clip?' + url;
+                return;
             }
         });
 
