@@ -300,6 +300,13 @@ enable-machine:
 	@echo "------------------------------------------------------------------"
 	@echo "eval \"$(docker-machine env mezzanine)\""
 
+create-workspace:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Create geoserver workspace."
+	@echo "------------------------------------------------------------------"
+	@curl -v -u admin:geoserver -XPOST -H "Content-type: text/xml" -d "<workspace><name>geonode</name><default>true</default></workspace>" http://localhost:33308/geoserver/rest/workspaces
+
 # ----------------------------------------------------------------------------
 #    DEVELOPMENT C O M M A N D S
 # --no-deps will attach to prod deps if running
