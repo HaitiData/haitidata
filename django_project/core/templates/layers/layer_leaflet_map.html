@@ -42,7 +42,12 @@
         {% endif %}
 
         {% if resource.get_tiles_url %}
-            tile_layer = L.tileLayer("{{ resource.get_tiles_url|safe }}",
+            var tiles_url = "{{ resource.get_tiles_url|safe }}";
+            var last_letter_url =  tiles_url.charAt(tiles_url.length - 1);
+            if(parseInt(last_letter_url)) {
+                tiles_url = tiles_url.substring(0, tiles_url.length - 1);
+            }
+            tile_layer = L.tileLayer(tiles_url,
                     {
                         'opacity': 0.8
                     });
