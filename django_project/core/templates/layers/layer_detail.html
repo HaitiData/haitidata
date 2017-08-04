@@ -755,6 +755,13 @@ function updateLinkAndTitle(){
 
         var layerMap = layerMap || null;
         var editableLayers = editableLayers || null;
+
+
+        var display_type = "{{ resource.display_type }}";
+        if(display_type !== 'Raster Data') {
+            $('#download-clip').prop('disabled', true);
+        }
+
         $('#download-clip').click(function () {
             var url = '';
             if (editableLayers) {
