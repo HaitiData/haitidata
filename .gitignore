@@ -97,6 +97,4 @@ django_project/celerybeat-schedule
 # local media
 django_project/media
 # OSX Crap
-# Backups
-*.dmp
 deployment/backups
