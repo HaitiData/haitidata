@@ -33,6 +33,7 @@ db:
   volumes:
     - ./pg/postgres_data:/var/lib/postgresql
     - ./backups:/backups
+    - ./fresh-backups:/fresh-backups
   environment:
     - USERNAME=docker
     - PASS=docker

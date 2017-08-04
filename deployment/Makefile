@@ -6,6 +6,15 @@ SHELL := /bin/bash
 # ----------------------------------------------------------------------------
 #    P R O D U C T I O N     C O M M A N D S
 # ----------------------------------------------------------------------------
+fresh-web: build permissions web
+
+# Use this for fresh build (it will restore with empty stable database)
+fresh-deploy: fresh-web
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb gis"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis gis"
+	@docker exec -t -i $(PROJECT_ID)-db pg_restore /fresh-backups/fresh-database.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql gis"
+
+
 default: web
 run: build permissions web migrate collectstatic
 
@@ -73,17 +82,8 @@ migrate:
 	@echo "------------------------------------------------------------------"
 	@echo "Running migrate static in production mode"
 	@echo "------------------------------------------------------------------"
-	@#http://stackoverflow.com/questions/29689365/auth-user-error-with-django-1-8-and-syncdb-migrate
-	@#and
-	@#http://stackoverflow.com/questions/3143635/how-to-ignore-mv-error
-	@# We add the '-' prefix to the next line as the migration may fail
-	@# but we want to continue anyway.
-	@#We need to migrate accounts first as it has a reference to user model
-	@docker exec -t -i $(PROJECT_ID)_uwsgi-ephemeral_1 /bin/bash -c "python manage.py makemigrations --merge --noinput \
-	    && python manage.py migrate auth && python manage.py migrate sites && \
+	@docker exec -t -i $(PROJECT_ID)_uwsgi-ephemeral_1 /bin/bash -c "\
 	    python manage.py migrate"
-
-
 
 update-migrations:
 	@echo
