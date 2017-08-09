@@ -124,12 +124,17 @@
         var url = '';
 
         // Open Popup
+        var map_type_name = "{{ resource.service_typename }}";
+
+        var current_url = location.href;
+        current_url = current_url.replace(current_url.substring(current_url.indexOf(map_type_name), current_url.length), "");
+        current_url +=  map_type_name;
 
         if (editableLayers) {
             var geojson = editableLayers.toGeoJSON();
             if (geojson.features.length > 0) {
                 url += '&GEOJSON=' + JSON.stringify(geojson);
-                location.href = location.href + '/download-clip?' + url;
+                location.href = current_url + '/download-clip?' + url;
                 return;
             } else {
                 alert('No polygon in map, this will clip from map extent instead.')
@@ -138,10 +143,11 @@
             alert('No polygon in map, this will clip from map extent instead.')
         }
 
+
         if (layerMap) {
             var bboxString = layerMap.getBounds().toBBoxString();
             url += '&BBOX=' + bboxString;
-            location.href = location.href + '/download-clip?' + url;
+            location.href = current_url + '/download-clip?' + url;
             return;
         }
     });
