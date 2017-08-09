@@ -275,7 +275,7 @@
 
     <ul class="list-group">
       <li class="list-group-item">
-          <button class="btn btn-primary btn-md btn-block" id="download-clip">{% trans "Download Clip" %}</button>
+          <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download_clip_page" id="download-clip">{% trans "Download Clip" %}</button>
       </li>
       {% if resource.storeType != "remoteStore" %}
         <li class="list-group-item">
@@ -751,39 +751,11 @@ function updateLinkAndTitle(){
     {% endif %}
     {% include 'rating.html' %}
     {% include 'request_download.html' %}
+    {% include 'layers/download_clip.html' %}
     <script type="text/javascript">
 
         var layerMap = layerMap || null;
         var editableLayers = editableLayers || null;
-
-
-        var display_type = "{{ resource.display_type }}";
-        if(display_type !== 'Raster Data') {
-            $('#download-clip').prop('disabled', true);
-        }
-
-        $('#download-clip').click(function () {
-            var url = '';
-            if (editableLayers) {
-                var geojson = editableLayers.toGeoJSON();
-                if (geojson.features.length > 0) {
-                    url += '&GEOJSON=' + JSON.stringify(geojson);
-                    location.href = location.href + '/download-clip?' + url;
-                    return;
-                } else {
-                    alert('No polygon in map, this will clip from map extent instead.')
-                }
-            } else {
-                alert('No polygon in map, this will clip from map extent instead.')
-            }
-
-            if (layerMap) {
-                var bboxString = layerMap.getBounds().toBBoxString();
-                url += '&BBOX=' + bboxString;
-                location.href = location.href + '/download-clip?' + url;
-                return;
-            }
-        });
 
        $("#comment_submit_btn").click(function(event) {
             $.ajax({
