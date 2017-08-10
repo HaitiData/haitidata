@@ -4,6 +4,7 @@ core.settings.contrib
 """
 from .base import *  # noqa
 from distutils.util import strtobool
+import os
 
 # Store these package names here as they may change in the future since
 # at the moment we are using custom forks of them.
@@ -118,7 +119,7 @@ CACHE_TIME = int(os.getenv('CACHE_TIME', '0'))
 AUTH_USER_MODEL = os.getenv('AUTH_USER_MODEL', 'people.Profile')
 
 GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
-GEOSERVER_PUBLIC_LOCATION = 'http://0.0.0.0:33300/api/geoserver/'
+GEOSERVER_PUBLIC_LOCATION = os.environ.get('GEOSERVER_PUBLIC_LOCATION','http://0.0.0.0:33300/api/geoserver/')
 
 OGC_SERVER = {
     'default': {
