@@ -41,10 +41,8 @@ db:
   ports:
     - "33305:5432"
 
-uwsgi-base:
-  # Note you cannot scale if you use conteiner_name
-  build: docker
-  hostname: uwsgi
+uwsgi-ephemeral:
+  image:  muhammadanis/haitidata_uwsgi
   environment:
     - DATABASE_NAME=gis
     - DATABASE_USERNAME=docker
@@ -57,16 +55,6 @@ uwsgi-base:
     - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33300/api/geoserver/
     # Set your locale - you need to ensure this is created in Dockerfile too...
     - LC_ALL=en_ZA.UTF-8
-  volumes:
-    - ../django_project:/home/web/django_project
-    - ./static:/home/web/static:rw
-    - ./media:/home/web/media:rw
-    - ./reports:/home/web/reports
-    - ./logs:/var/log/
-  user: root
-
-uwsgi-ephemeral:
-  extends: uwsgi-base
   links:
     - smtp:smtp
     - db:db
@@ -76,6 +64,19 @@ uwsgi-ephemeral:
 uwsgi:
   # Note you cannot scale if you use conteiner_name
   image:  muhammadanis/haitidata_uwsgi
+  environment:
+    - DATABASE_NAME=gis
+    - DATABASE_USERNAME=docker
+    - DATABASE_PASSWORD=docker
+    - DATABASE_HOST=db
+    - RABBITMQ_HOST=rabbitmq
+    - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
+    - VIRTUAL_HOST=haitidata.com
+    - VIRTUAL_PORT=8080
+    - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33300/api/geoserver/
+    # Set your locale - you need to ensure this is created in Dockerfile too...
+    - LC_ALL=en_ZA.UTF-8
+  user: root
   links:
     - smtp:smtp
     - db:db
