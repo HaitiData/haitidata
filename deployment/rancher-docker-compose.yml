@@ -75,8 +75,7 @@ uwsgi-ephemeral:
 
 uwsgi:
   # Note you cannot scale if you use conteiner_name
-  extends: uwsgi-base
-  container_name: haitidata-uwsgi
+  image:  muhammadanis/haitidata_uwsgi
   links:
     - smtp:smtp
     - db:db
