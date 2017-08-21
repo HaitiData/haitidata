@@ -23,11 +23,10 @@ sitemaps = {
 }
 
 urlpatterns = i18n_patterns(
-    url(r'^home', TemplateView.as_view(template_name="dummy_index.html"), name="layer_browse"),
+    url(r'^$', TemplateView.as_view(template_name="site_index.html"), name='home'),
     url(r'^help/$', TemplateView.as_view(template_name='help.html'), name='help'),
     url(r'^developer/$', TemplateView.as_view(template_name='developer.html'), name='developer'),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
-    url(r'^api/home/test', TemplateView.as_view(template_name="site_index.html"), name="home"),
     url(r'^chart/', include('charts_app.urls')),
     url(r'^table/', include('wfs_harvest.urls')),
     url(r'^layers/', include('geonode.layers.urls')),
