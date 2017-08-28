@@ -1,0 +1,19 @@
+---
+- hosts: 88.99.166.60
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: pull haiti source code from github
+    git:
+      repo: https://github.com/euclidian/haitidata.git
+      dest: /home/web
+  - name: run migrate
+    make:
+      chdir: /home/web/haitidata/deployment
+      target: migrate
+  - name: run collect static
+    make:
+      chdir: /home/web/haitidata/deployment
+      target: collectstatic
