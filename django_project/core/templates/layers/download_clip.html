@@ -15,6 +15,7 @@
                 <h4 class="modal-title" id="myModalLabel">Download Clip</h4>
             </div>
             <div class="modal-body">
+                <div id="download-clip-error-message" class="label label-danger" style="margin-bottom: 50px; display: none">Error message</div>
                 <div id="download-clip-map" ></div>
             </div>
             <div class="modal-footer">
@@ -120,8 +121,29 @@
         {% endif %}
     });
 
+    function download_clip_layer(current_url, geometry_url) {
+        var ship_url = current_url + '/clip-layer?' + geometry_url;
+        $.ajax({
+            url: ship_url,
+            type: 'GET',
+            success: function (result) {
+                $('#download-clip-button').prop('disabled', false);
+                var clip_filename = result['clip_filename'];
+                location.href = current_url + '/' + clip_filename + '/download-clip';
+            },
+            error: function (result) {
+                $('#download-clip-button').prop('disabled', false);
+                var error_message = result['responseJSON']['error'];
+                var $errorMessageDisplay = $('#download-clip-error-message');
+                $errorMessageDisplay.html(error_message);
+                $errorMessageDisplay.show().delay(2000).fadeOut();
+            }
+        });
+    }
+
     $('#download-clip-button').click(function () {
         var url = '';
+        $('#download-clip-button').prop('disabled', true);
 
         // Open Popup
         var map_type_name = "{{ resource.service_typename }}";
@@ -133,8 +155,8 @@
         if (editableLayers) {
             var geojson = editableLayers.toGeoJSON();
             if (geojson.features.length > 0) {
-                url += '&GEOJSON=' + JSON.stringify(geojson);
-                location.href = current_url + '/download-clip?' + url;
+                var geometry_url = '&GEOJSON=' + JSON.stringify(geojson);
+                download_clip_layer(current_url, geometry_url);
                 return;
             } else {
                 alert('No polygon in map, this will clip from map extent instead.')
@@ -146,9 +168,7 @@
 
         if (layerMap) {
             var bboxString = layerMap.getBounds().toBBoxString();
-            url += '&BBOX=' + bboxString;
-            location.href = current_url + '/download-clip?' + url;
-            return;
+            download_clip_layer(current_url, '&BBOX=' + bboxString);
         }
     });
 

@@ -54,6 +54,7 @@ from .celery_setting import *  # noqa
 # default login url
 LOGIN_URL = '/account/login/'
 
-
+# maximum clip size in bytes
+MAXIMUM_CLIP_SIZE = '40000000'
 
 
