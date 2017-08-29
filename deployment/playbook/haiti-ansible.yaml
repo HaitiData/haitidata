@@ -1,5 +1,5 @@
 ---
-- hosts: 88.99.166.60
+- hosts: haitidata
   vars:
     http_port: 80
     max_clients: 200
