@@ -49,8 +49,6 @@ MIDDLEWARE_CLASSES = (
 
 DATABASES = {}
 
-from .celery_setting import *  # noqa
-
 # default login url
 LOGIN_URL = '/account/login/'
 
