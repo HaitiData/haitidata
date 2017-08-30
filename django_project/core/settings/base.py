@@ -264,7 +264,7 @@ try:
 except:
     CELERY_IMPORTS = ('osgeo_importer.tasks',)
 
-LOCKDOWN_GEONODE = True
+LOCKDOWN_GEONODE = False
 
 BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
