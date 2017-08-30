@@ -44,6 +44,10 @@
             $('#download-clip').prop('disabled', true);
         }
 
+        {% if 'download_resourcebase' not in perms_list or not perms_list %}
+            $('#download-clip').prop('disabled', true);
+        {% endif %}
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© <a href="http://www.openstreetmap.org" target="_parent">OpenStreetMap</a> and ' +
             'contributors, under an <a href="http://www.openstreetmap.org/copyright" target="_parent">open license</a>',
