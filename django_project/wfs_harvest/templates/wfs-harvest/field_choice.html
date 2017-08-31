@@ -1,0 +1,41 @@
+<h1>Field choice</h1>
+<p>Choose category field</p>
+
+<form name="f">
+    <select name="category" onchange="update_link();update_add();">
+    {% for fieldname in fieldnames %}
+        <option value="{{ fieldname }}">{{ fieldname }}</option>
+    {% endfor %}
+    </select>
+    <p>Choose quantity field</p>
+    <select name="quantity" onchange="update_link();">
+    {% for fieldname in num_fieldnames %}
+        <option value="{{ fieldname }}">{{ fieldname }}</option>
+    {% endfor %}
+    </select>
+    <br>
+    <br>
+    <a href="/charts" id="link">Build Chart</a>
+    <a href="/charts" id="add_chart">Add Chart</a>
+</form>
+<script>
+function update_link()
+    {
+    var url = '/chart/pie_chart_v2?lyrname={{ lyrname }}';
+    url = url + '&category=' + document.f.category.value;
+    url = url + '&quantity=' + document.f.quantity.value;
+    document.getElementById('link').href = url;
+    return;
+    }
+update_link();
+
+function update_add()
+    {
+    var url = '/chart/add?lyrname={{ lyrname }}';
+    url = url + '&category=' + document.f.category.value;
+    url = url + '&quantity=' + document.f.quantity.value;
+    document.getElementById('add_chart').href = url;
+    return;
+    }
+update_add();
+</script>

@@ -1,0 +1,18 @@
+---
+- hosts: haitidata_swarm
+  vars:
+    http_port: 80
+    max_clients: 200
+  tasks:
+  - name: pull haiti source code from github
+    git:
+      repo: https://github.com/euclidian/haitidata.git
+      dest: /tmp/web_haiti
+  - name: run migrate
+    make:
+      chdir: /tmp/web_haiti/deployment
+      target: migrate
+  - name: run collect static
+    make:
+      chdir: /tmp/web_haiti/deployment
+      target: collectstatic
