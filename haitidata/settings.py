@@ -111,6 +111,12 @@ BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
 
+_HAITI_LANGUAGES = (
+    ('en', 'English'),
+    ('fr', 'Français'),
+)
+
+LANGUAGES = os.getenv('LANGUAGES', _HAITI_LANGUAGES)
 
 SOCIAL_ORIGINS = [{
     "label":"paper-plane-o",
