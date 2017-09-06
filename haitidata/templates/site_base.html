@@ -36,6 +36,7 @@
           <ul class="dropdown-menu">
             <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
             <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
+            <li><a href="{% url "chart_list" %}">{% trans "Charts" %}</a></li>
             {% if user.is_authenticated %}
             <li><a href="/uploads">{% trans "Uploads" %}</a></li>
             <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>

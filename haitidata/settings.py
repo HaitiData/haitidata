@@ -53,7 +53,7 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
-INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client')
+INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client', 'charts_app', 'wfs_harvest')
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
@@ -135,3 +135,7 @@ SOCIAL_ORIGINS = [{
     "url":"https://plus.google.com/share?url={url}",
     "css_class":"gp"
 }]
+
+MAX_CSV_RECORDS = 20000
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True

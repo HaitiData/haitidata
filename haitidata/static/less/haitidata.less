@@ -175,7 +175,7 @@ form {
 
 .navbar-header {
 	i {
-		color: white;
+		color: @brand-primary;
 		font-size: 2em;
 	}
 
@@ -712,6 +712,60 @@ footer {
 .grid-spacer {
 	margin-top: 30px;
 }
+
+#accordion {
+	.panel {
+		border-radius: 0;
+		border-top: 2px solid @gray-light;
+		line-height: 1em;
+	}
+	.panel-heading {
+		background: none;
+		border: 0;
+	}
+	.panel-body {
+		img {
+			margin-bottom: 1em;
+		}
+		small {
+		color: @gray;
+		font-size: 0.825em;
+		}
+		form {
+			font-size: 0.825em;
+			.form-control {
+				background: none;
+				color: @gray-dark;
+				font-size: 0.825em;
+				height: 24px;
+				line-height: 1;
+				-webkit-box-shadow: none;
+				        box-shadow: none;
+			}
+		}
+	}
+}
+
+#create-chart {
+	small {
+		color: @gray;
+		font-size: 0.825em;
+	}
+	form {
+		font-size: 0.825em;
+		.form-control {
+			background: none;
+			color: @gray-dark;
+			font-size: 0.825em;
+			height: 24px;
+			line-height: 1;
+			-webkit-box-shadow: none;
+				      box-shadow: none;
+		}
+	}
+}
+
+
 /* ------ OSGeo Importer
 ------------------------------ */
 body.importer {

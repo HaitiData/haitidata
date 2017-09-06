@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Donut Chart v1</title>
+<h1>Simple Donut Chart v1</h1>
+<h2>Zero values excluded</h2>
+<p>D3js version 4, use canvas</p>
+<canvas width="960" height="500"></canvas>
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+
+var canvas = document.querySelector("canvas"),
+    context = canvas.getContext("2d");
+
+var width = canvas.width,
+    height = canvas.height,
+    radius = Math.min(width, height) / 2;
+
+var colors = ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#800000", "#8E388E",
+"#7171C6", "#7D9EC0", "#388E8E", "#71C671", "#8E8E38", "#C5C1AA", "#C67171"];
+
+var arc = d3.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(radius - 70)
+    .context(context);
+
+var labelArc = d3.arc()
+    .outerRadius(radius - 40)
+    .innerRadius(radius - 40)
+    .context(context);
+
+var pie = d3.pie()
+    .sort(null)
+    .value(function(d) { return d.area; });
+
+context.translate(width / 2, height / 2);
+
+d3.csv("{% url "get_csv" %}", function(d) {
+  d.area = +d.area;
+  if (d.area !== 0) {
+  return d;}
+}, function(error, data) {
+  if (error) throw error;
+
+  var arcs = pie(data);
+
+  arcs.forEach(function(d, i) {
+    context.beginPath();
+    arc(d);
+    context.fillStyle = colors[i];
+    context.fill();
+  });
+
+  context.beginPath();
+  arcs.forEach(arc);
+  context.strokeStyle = "#fff";
+  context.stroke();
+
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillStyle = "#000";
+  arcs.forEach(function(d) {
+    var c = labelArc.centroid(d);
+    context.fillText(d.data.name, c[0], c[1]);
+  });
+});
+
+</script>
+<body></body>
