@@ -655,25 +655,36 @@ footer {
 .item-details {
 	background: white;
 	color: @text-color;
-
+	position: relative;
+	height: 200px;
+  h4 {
+		margin-bottom: 0.25em;
+		margin-top: 0.25em;
+	}
+	p { margin-bottom: 0.25em; }
+	p.abstract {
+		font-size: 0.875em;
+	}
 	.item-meta {
 		margin-top: 1em;
-
 		.item-category {
-			font-size: 12px;
+			font-size: 0.75em;
 			text-transform: uppercase;
 		}
 	}
-
-	.btn-sm {
-		margin-right: -17px;
+	.btn-xs {
+		border-color: @gray-lighter;
+		border-bottom-right-radius: 0;
+		border-top-left-radius: 0;
+		margin-right: -16px;
 		margin-top: -1px;
-		padding: 0.5em 1em;
+		padding: 0.25em 0.5em;
 	}
-
 	.item-items {
 		border-top: 1px solid @gray-lighter;
-
+		position: absolute;
+		bottom: 0;
+		font-size: 0.875em;
 		ul {
 			margin: 0 0 0 -15px;
 			padding: 0.5em;
