@@ -10,7 +10,7 @@ fresh-web: build permissions web
 
 # Use this for fresh build (it will restore with empty stable database)
 fresh-deploy: fresh-web
-	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb gis"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb --if-exists gis"
 	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis gis"
 	@docker exec -t -i $(PROJECT_ID)-db pg_restore /fresh-backups/fresh-database.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql gis"
 
