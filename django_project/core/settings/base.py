@@ -1,33 +1,7 @@
-# -*- coding: utf-8 -*-
-#########################################################################
-#
-# Copyright (C) 2012 OpenPlans
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-#########################################################################
-
-# Django settings for the GeoNode project.
-from __future__ import absolute_import, unicode_literals
 import os
+from .secret import *
+from geonode.settings import *  # Django settings for the GeoNode project.
 from .utils import absolute_path
-
-# This throws error
-# from geonode.settings import *
-#
-# General Django development settings
-#
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -81,10 +55,7 @@ STATIC_URL = '/static/'
 SYMPOSION_STATIC_URL = "/site_media/"
 
 # Additional locations of static files
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+STATICFILES_DIRS += (
     absolute_path('core', 'base_static'),
     absolute_path('core', 'geonode_static'),
 )
@@ -133,7 +104,8 @@ TEMPLATES = [
                 "django.core.context_processors.media",
                 "django.core.context_processors.request",
                 "django.core.context_processors.tz",
-                "geonode.context_processors.resource_urls",
+                'account.context_processors.account',
+                'geonode.context_processors.resource_urls',
                 "geonode.geoserver.context_processors.geoserver_urls",
             ],
         },
@@ -156,47 +128,6 @@ ROOT_URLCONF = 'core.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'core.wsgi.application'
 
-INSTALLED_APPS = (
-    "modeltranslation",
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.redirects",
-    "django.contrib.sessions",
-    "django.contrib.sites",
-    "django.contrib.sitemaps",
-    "django.contrib.staticfiles",
-)
-
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
-}
-
 SITENAME = 'haitidata'
 
 # Defines the directory that contains the settings file as the LOCAL_ROOT
@@ -204,45 +135,32 @@ SITENAME = 'haitidata'
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 LOCAL_MEDIA_URL = LOCAL_ROOT
 AVATAR_PATH_HANDLER = LOCAL_ROOT
-
-
-# Load more settings from a file called local_settings.py if it exists
-try:
-    from local_settings import *
-except ImportError:
-    pass
-
-
-
-# INSTALLED_APPS = INSTALLED_APPS + ('osgeo_importer', 'geonode-client', 'wfs_harvest')
-
 LAYER_PREVIEW_LIBRARY = 'react'
 
 IMPORT_HANDLERS = [
-          # If GeoServer handlers are enabled, you must have an instance of geoserver running.
-          # Warning: the order of the handlers here matters.
-          'osgeo_importer.handlers.FieldConverterHandler',
-          'osgeo_importer.handlers.geoserver.GeoserverPublishHandler',
-          'osgeo_importer.handlers.geoserver.GeoserverPublishCoverageHandler',
-          'osgeo_importer.handlers.geoserver.GeoServerTimeHandler',
-          'osgeo_importer.handlers.geoserver.GeoWebCacheHandler',
-          'osgeo_importer.handlers.geoserver.GeoServerBoundsHandler',
-          'osgeo_importer.handlers.geoserver.GenericSLDHandler',
-          'osgeo_importer.handlers.geonode.GeoNodePublishHandler',
-          'osgeo_importer.handlers.mapproxy.publish_handler.MapProxyGPKGTilePublishHandler',
-          'osgeo_importer.handlers.geoserver.GeoServerStyleHandler',
-          'osgeo_importer.handlers.geonode.GeoNodeMetadataHandler'
-      ]
+    # If GeoServer handlers are enabled, you must have an instance of geoserver running.
+    # Warning: the order of the handlers here matters.
+    'osgeo_importer.handlers.FieldConverterHandler',
+    'osgeo_importer.handlers.geoserver.GeoserverPublishHandler',
+    'osgeo_importer.handlers.geoserver.GeoserverPublishCoverageHandler',
+    'osgeo_importer.handlers.geoserver.GeoServerTimeHandler',
+    'osgeo_importer.handlers.geoserver.GeoWebCacheHandler',
+    'osgeo_importer.handlers.geoserver.GeoServerBoundsHandler',
+    'osgeo_importer.handlers.geoserver.GenericSLDHandler',
+    'osgeo_importer.handlers.geonode.GeoNodePublishHandler',
+    'osgeo_importer.handlers.mapproxy.publish_handler.MapProxyGPKGTilePublishHandler',
+    'osgeo_importer.handlers.geoserver.GeoServerStyleHandler',
+    'osgeo_importer.handlers.geonode.GeoNodeMetadataHandler'
+]
 
 OSGEO_DATASTORE = 'datastore'
 OSGEO_IMPORTER_GEONODE_ENABLED = True
 OSGEO_IMPORTER_VALID_EXTENSIONS = [
     'shp', 'shx', 'prj', 'dbf', 'kml', 'geojson', 'json', 'tif', 'tiff',
     'gpkg', 'csv', 'zip', 'xml', 'sld'
-    ]
+]
 
-
-#DATABASE_ROUTERS = ['{{app_name}}.dbrouters.DefaultOnlyMigrations']
+# DATABASE_ROUTERS = ['{{app_name}}.dbrouters.DefaultOnlyMigrations']
 
 # # === MapProxy settings
 # # This is the location to place additional configuration files for mapproxy to work from.
@@ -255,8 +173,8 @@ MAPPROXY_CONFIG_FILENAME = 'geonode.yaml'
 # set as '<layer_name>_<projection_id>' (by conf_from_geopackage()).
 MAPPROXY_SERVER_LOCATION = 'http://localhost:8088/geonode/tms/1.0.0/{layer_name}/{grid_name}/'
 
-#import pyproj
-#PROJECTION_DIRECTORY = os.path.join(os.path.dirname(pyproj.__file__), 'data/')
+# import pyproj
+# PROJECTION_DIRECTORY = os.path.join(os.path.dirname(pyproj.__file__), 'data/')
 PROJECTION_DIRECTORY = '/tmp/'
 
 try:
@@ -264,30 +182,8 @@ try:
 except:
     CELERY_IMPORTS = ('osgeo_importer.tasks',)
 
-LOCKDOWN_GEONODE = False
-
 BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
 
 MAX_CSV_RECORDS = 20000
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-SOCIAL_ORIGINS = [{
-    "label":"paper-plane-o",
-    "url":"mailto:?subject={name}&body={url}",
-    "css_class":"email"
-}, {
-    "label":"facebook",
-    "url":"http://www.facebook.com/sharer.php?u={url}",
-    "css_class":"fb"
-}, {
-    "label":"twitter",
-    "url":"https://twitter.com/share?url={url}&hashtags={hashtags}",
-    "css_class":"tw"
-}, {
-    "label":"google-plus",
-    "url":"https://plus.google.com/share?url={url}",
-    "css_class":"gp"
-}]

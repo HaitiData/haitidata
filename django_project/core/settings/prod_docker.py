@@ -1,8 +1,8 @@
-
 """Configuration for production server"""
 # noinspection PyUnresolvedReferences
 from .prod import *  # noqa
 import os
+
 print os.environ
 
 DEBUG = False
@@ -10,7 +10,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 ADMINS = (
-    ('Muhammad Anis', 'anis@kartoza.com'),)
+    ('Irwan Fathurrahman', 'irwan@kartoza.com'),)
 
 DATABASES = {
     'default': {
@@ -23,7 +23,6 @@ DATABASES = {
         'TEST_NAME': 'unittests',
     }
 }
-
 
 # See fig.yml file for postfix container definition
 #

@@ -98,3 +98,4 @@ django_project/celerybeat-schedule
 django_project/media
 # OSX Crap
 deployment/backups
+deployment/data_dir
