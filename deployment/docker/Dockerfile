@@ -1,7 +1,7 @@
 #--------- Generic stuff all our Dockerfiles should start with so we get caching ------------
 # Note this base image is based on debian
 FROM kartoza/django-base
-MAINTAINER Muhammad Anis<anis@kartoza.com>
+MAINTAINER Irwan Fathurrahman<irwan@kartoza.com>
 
 #RUN  ln -s /bin/true /sbin/initctl
 
@@ -32,20 +32,7 @@ ENV TEST a
 
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 RUN pip install -r /REQUIREMENTS.txt
-RUN pip uninstall -y South
 RUN pip install uwsgi
-
-RUN pip uninstall geonode-dialogos -y
-RUN pip install git+https://github.com/meomancer/geonode-dialogos.git
-
-RUN pip uninstall geonode-agon-ratings -y
-RUN pip install git+https://github.com/euclidian/custom-agon-ratings
-
-RUN pip uninstall Django -y
-RUN pip install Django==1.8.18
-
-RUN pip uninstall django-oauth-toolkit -y
-RUN pip install django-oauth-toolkit==0.12.0
 
 RUN pip uninstall django-user-accounts -y
 RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user

@@ -54,7 +54,7 @@ uwsgi-base:
     - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
     - VIRTUAL_HOST=haitidata.com
     - VIRTUAL_PORT=8080
-    - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33300/api/geoserver/
+    - SITEURL = http://localhost:33303/
     # Set your locale - you need to ensure this is created in Dockerfile too...
     - LC_ALL=en_ZA.UTF-8
   volumes:
@@ -141,11 +141,11 @@ devweb:
     - DATABASE_PASSWORD=docker
     - DATABASE_HOST=db
     - RABBITMQ_HOST=rabbitmq
-    - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
+    - DJANGO_SETTINGS_MODULE=core.settings.dev_docker
     - PYTHONPATH=/home/web/django_project
+    - SITEURL = http://localhost:33303/
     - VIRTUAL_HOST=haitidata.com
     - VIRTUAL_PORT=8080
-    - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33303/api/geoserver/
   volumes:
     - ../django_project:/home/web/django_project
     - ./static:/home/web/static
