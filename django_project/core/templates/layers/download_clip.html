@@ -126,7 +126,7 @@
     });
 
     function download_clip_layer(current_url, geometry_url) {
-        var ship_url = current_url + '/clip-layer?' + geometry_url;
+        var ship_url = current_url + '/clip?' + geometry_url;
         $.ajax({
             url: ship_url,
             type: 'GET',
