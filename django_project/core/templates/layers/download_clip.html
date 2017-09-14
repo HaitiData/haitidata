@@ -16,7 +16,7 @@
             </div>
             <div class="modal-body">
                 <div id="download-clip-error-message" class="label label-danger" style="margin-bottom: 50px; display: none">Error message</div>
-                <div id="download-clip-map" ></div>
+                <div id="download-clip-map"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download_clip_page" id="download-clip-button">Download Clip</button>
@@ -30,6 +30,10 @@
         height: 400px;
         text-align: center;
     }
+
+    .leaflet-control-zoom {
+        left: 0 !important;
+    }
 </style>
 
 <script type="text/javascript">
@@ -40,7 +44,7 @@
     document.addEventListener("DOMContentLoaded", function (event) {
 
         var display_type = "{{ resource.display_type }}";
-        if(display_type !== 'Raster Data') {
+        if (display_type !== 'Raster Data') {
             $('#download-clip').prop('disabled', true);
         }
 
@@ -85,8 +89,8 @@
 
         {% if resource.get_tiles_url %}
             var tiles_url = "{{ resource.get_tiles_url|safe }}";
-            var last_letter_url =  tiles_url.charAt(tiles_url.length - 1);
-            if(parseInt(last_letter_url)) {
+            var last_letter_url = tiles_url.charAt(tiles_url.length - 1);
+            if (parseInt(last_letter_url)) {
                 tiles_url = tiles_url.substring(0, tiles_url.length - 1);
             }
             tile_layer = L.tileLayer(tiles_url,
@@ -95,7 +99,7 @@
                     });
         {% endif %}
 
-        if(tile_layer) {
+        if (tile_layer) {
             mapToClip.addLayer(tile_layer);
         }
 
@@ -104,7 +108,7 @@
 
         mapToClip.on(L.Draw.Event.CREATED, function (e) {
             var type = e.layerType,
-                layer= e.layer;
+                    layer = e.layer;
 
             editableLayers.addLayer(layer);
         });
@@ -125,15 +129,15 @@
         {% endif %}
     });
 
-    function download_clip_layer(current_url, geometry_url) {
-        var ship_url = current_url + '/clip?' + geometry_url;
+    function download_clip_layer(clipUrl, geometry_url) {
+        var ship_url = clipUrl + '/clip-layer?' + geometry_url;
         $.ajax({
             url: ship_url,
             type: 'GET',
             success: function (result) {
                 $('#download-clip-button').prop('disabled', false);
                 var clip_filename = result['clip_filename'];
-                location.href = current_url + '/' + clip_filename + '/download-clip';
+                location.href = clipUrl + '/' + clip_filename + '/download-clip';
             },
             error: function (result) {
                 $('#download-clip-button').prop('disabled', false);
@@ -152,15 +156,13 @@
         // Open Popup
         var map_type_name = "{{ resource.service_typename }}";
 
-        var current_url = location.href;
-        current_url = current_url.replace(current_url.substring(current_url.indexOf(map_type_name), current_url.length), "");
-        current_url +=  map_type_name;
+        var clipUrl = '/clip/' + map_type_name;
 
         if (editableLayers) {
             var geojson = editableLayers.toGeoJSON();
             if (geojson.features.length > 0) {
                 var geometry_url = '&GEOJSON=' + JSON.stringify(geojson);
-                download_clip_layer(current_url, geometry_url);
+                download_clip_layer(clipUrl, geometry_url);
                 return;
             } else {
                 alert('No polygon in map, this will clip from map extent instead.')
@@ -172,7 +174,7 @@
 
         if (layerMap) {
             var bboxString = layerMap.getBounds().toBBoxString();
-            download_clip_layer(current_url, '&BBOX=' + bboxString);
+            download_clip_layer(clipUrl, '&BBOX=' + bboxString);
         }
     });
 
