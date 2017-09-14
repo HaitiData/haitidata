@@ -16,7 +16,7 @@ RUN apt-get -y update
 
 #-------------Application Specific Stuff ----------------------------------------------------
 
-ENV GS_VERSION 2.10.5
+ENV GS_VERSION 2.10.x
 ENV GEOSERVER_DATA_DIR /opt/geoserver/data_dir
 
 RUN mkdir -p $GEOSERVER_DATA_DIR
@@ -87,11 +87,10 @@ WORKDIR $CATALINA_HOME
 # A little logic that will fetch the geoserver war zip file if it
 # is not available locally in the resources dir
 RUN if [ ! -f /tmp/resources/geoserver.zip ]; then \
-    wget -c http://downloads.sourceforge.net/project/geoserver/GeoServer/${GS_VERSION}/geoserver-${GS_VERSION}-war.zip \
-      -O /tmp/resources/geoserver.zip; \
+    wget -c http://build.geonode.org/geoserver/latest/geoserver-${GS_VERSION}.war \
+      -O /tmp/resources/geoserver.war; \
     fi; \
-    unzip /tmp/resources/geoserver.zip -d /tmp/geoserver \
-    && unzip /tmp/geoserver/geoserver.war -d $CATALINA_HOME/webapps/geoserver \
+    unzip /tmp/resources/geoserver.war -d $CATALINA_HOME/webapps/geoserver \
     && rm -rf $CATALINA_HOME/webapps/geoserver/data \
     && rm -rf /tmp/geoserver
 
