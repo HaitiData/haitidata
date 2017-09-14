@@ -1,10 +1,9 @@
 from .base import *
 from django.utils.translation import ugettext_lazy as _
 
-
 PROJECTION_DIRECTORY = '/tmp/'
 
-GEOSERVER_BASE_URL = 'http://localhost:33308/geoserver/'
+GEOSERVER_BASE_URL = 'http://0.0.0.0:33308/geoserver/'
 GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
 GEOSERVER_PUBLIC_LOCATION = os.environ.get(
     'GEOSERVER_PUBLIC_LOCATION',
@@ -46,6 +45,7 @@ INSTALLED_APPS += (
     # Add any additional project apps here
     "charts_app",
     "wfs_harvest",
+    "clip-and-ship"
 
 )
 
