@@ -191,7 +191,7 @@ worker:
    restart: on-failure:5
 
 geoserver:
-  image: kartoza/geoserver
+  build: docker-geoserver
   container_name: haitidata-geoserver
   ports:
     - "33308:8080"
