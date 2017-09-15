@@ -1,9 +1,9 @@
-git+https://github.com/GeoNode/django-osgeo-importer.git
+git+https://github.com/ppasq/django-osgeo-importer.git
 
-gdal==1.10.0
+gdal==2.1.3
 geonode==2.7
 django-compressor
 django-geonode-client
 django-user-accounts==2.0.2
-django-tastypie==0.13.0
+django-tastypie==0.14.0
 OWSLib==0.14
