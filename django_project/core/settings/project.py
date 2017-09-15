@@ -6,8 +6,8 @@ PROJECTION_DIRECTORY = '/tmp/'
 GEOSERVER_BASE_URL = 'http://0.0.0.0:33300/geoserver/'
 GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'
 GEOSERVER_PUBLIC_LOCATION = os.environ.get(
-    'GEOSERVER_PUBLIC_LOCATION', 'http://localhost:33308/geoserver/'
-    #'http://0.0.0.0:33300/api/geoserver/'
+    'GEOSERVER_PUBLIC_LOCATION',
+    'http://0.0.0.0:33308/api/geoserver/'
 )
 
 OGC_SERVER = {
