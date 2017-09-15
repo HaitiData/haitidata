@@ -54,7 +54,7 @@ INSTALLED_APPS += (
 # Set languages which want to be translated
 LANGUAGES = (
     ('en', _('English')),
-    ('fr', _('Français')),
+    #('fr', _('Français')),
 )
 
 # Set storage path for the translation files
