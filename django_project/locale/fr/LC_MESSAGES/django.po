@@ -2908,7 +2908,7 @@ msgstr ""
 
 #: core/templates/site_index.html:19
 msgid "Haiti Risk and Hazards"
-msgstr ""
+msgstr "Haiti Risques et Dangers"
 
 #: core/templates/site_index.html:22
 msgid "River Flood"

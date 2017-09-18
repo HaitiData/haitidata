@@ -31,6 +31,7 @@ ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
 
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
+
 RUN pip install -r /REQUIREMENTS.txt
 RUN pip install uwsgi
 

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from .base import *
 from django.utils.translation import ugettext_lazy as _
 
@@ -54,8 +56,7 @@ INSTALLED_APPS += (
 # Set languages which want to be translated
 LANGUAGES = (
     ('en', _('English')),
-    ('af', _('Afrikaans')),
-    ('id', _('Indonesian'))
+    ('fr', _('Francais')),
 )
 
 # Set storage path for the translation files

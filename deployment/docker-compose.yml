@@ -56,7 +56,7 @@ uwsgi-base:
     - VIRTUAL_PORT=8080
     - SITEURL=http://localhost:33303/
     # Set your locale - you need to ensure this is created in Dockerfile too...
-    - LC_ALL=en_ZA.UTF-8
+    - LC_ALL=en_US.UTF-8
   volumes:
     - ../django_project:/home/web/django_project
     - ./static:/home/web/static:rw
