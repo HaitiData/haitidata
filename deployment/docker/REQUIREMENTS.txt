@@ -1,6 +1,7 @@
 git+https://github.com/ppasq/django-osgeo-importer.git
 
 gdal==2.1.3
+six==1.10
 geonode==2.7
 django-compressor
 django-geonode-client
