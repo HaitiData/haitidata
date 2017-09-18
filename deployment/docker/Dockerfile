@@ -37,6 +37,9 @@ RUN pip install uwsgi
 RUN pip uninstall django-user-accounts -y
 RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
 
+# Install translation
+RUN apt-get -y --force-yes install gettext
+
 RUN apt-get install gdal-bin
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080

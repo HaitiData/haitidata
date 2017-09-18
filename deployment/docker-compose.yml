@@ -193,5 +193,7 @@ worker:
 geoserver:
   build: docker-geoserver
   container_name: haitidata-geoserver
+  links:
+    - db:db
   ports:
     - "33308:8080"

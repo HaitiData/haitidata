@@ -2,6 +2,8 @@ PROJECT_ID := haitidata
 PRODUCTION_HOST := haitidata.com
 
 SHELL := /bin/bash
+DATABASE_NAME := gis
+DATABASE_GEONODE_NAME := geonode_data
 
 # ----------------------------------------------------------------------------
 #    P R O D U C T I O N     C O M M A N D S
@@ -10,9 +12,9 @@ fresh-web: build permissions web
 
 # Use this for fresh build (it will restore with empty stable database)
 fresh-deploy: fresh-web
-	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb --if-exists gis"
-	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis gis"
-	@docker exec -t -i $(PROJECT_ID)-db pg_restore /fresh-backups/fresh-database.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql gis"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb --if-exists $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-db pg_restore /fresh-backups/fresh-database.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql $(DATABASE_NAME)"
 
 
 default: web
@@ -203,7 +205,7 @@ dbsnapshot:
 	@echo "------------------------------------------------------------------"
 	@echo "Grab a quick snapshot of the database and place in the host filesystem"
 	@echo "------------------------------------------------------------------"
-	@docker exec -t -i $(PROJECT_ID)-db /bin/bash -c "PGPASSWORD=docker pg_dump -Fc -h localhost -U docker -f /tmp/$(PROJECT_ID)-snapshot.dmp gis"
+	@docker exec -t -i $(PROJECT_ID)-db /bin/bash -c "PGPASSWORD=docker pg_dump -Fc -h localhost -U docker -f /tmp/$(PROJECT_ID)-snapshot.dmp $(DATABASE_NAME)"
 	@docker cp $(PROJECT_ID)-db:/tmp/$(PROJECT_ID)-snapshot.dmp .
 	@docker exec -t -i $(PROJECT_ID)-db /bin/bash -c "rm /tmp/$(PROJECT_ID)-snapshot.dmp"
 	@ls -lahtr *.dmp 
@@ -213,14 +215,21 @@ dbschema:
 	@echo "------------------------------------------------------------------"
 	@echo "Print the database schema to stdio"
 	@echo "------------------------------------------------------------------"
-	@docker exec -t -i $(PROJECT_ID)-db /bin/bash -c "PGPASSWORD=docker pg_dump -s -h localhost -U docker gis"
+	@docker exec -t -i $(PROJECT_ID)-db /bin/bash -c "PGPASSWORD=docker pg_dump -s -h localhost -U docker $(DATABASE_NAME)"
 
 dbshell:
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Shelling in in production database"
 	@echo "------------------------------------------------------------------"
-	@docker exec -t -i $(PROJECT_ID)-db psql -U docker -h localhost gis
+	@docker exec -t -i $(PROJECT_ID)-db psql -U docker -h localhost $(DATABASE_NAME)
+
+dbshell-geonode-data:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Shelling in in production database"
+	@echo "------------------------------------------------------------------"
+	@docker exec -t -i $(PROJECT_ID)-db psql -U docker -h localhost $(DATABASE_GEONODE_NAME)
 
 dbrestore:
 	@echo
@@ -228,9 +237,9 @@ dbrestore:
 	@echo "Restore dump from backups/latest.dmp in production mode"
 	@echo "------------------------------------------------------------------"
 	@# - prefix causes command to continue even if it fails
-	-@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb gis"
-	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis gis"
-	@docker exec -t -i $(PROJECT_ID)-db pg_restore /backups/latest.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql gis"
+	-@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-db pg_restore /backups/latest.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql $(DATABASE_NAME)"
 
 dbbackup:
 	@echo
@@ -246,8 +255,8 @@ dbbackup:
 	-@if [ -f "backups/latest.dmp" ]; then rm backups/latest.dmp; fi
 	# backups is intentionally missing from front of first clause below otherwise symlink comes
 	# out with wrong path...
-	@ln -s `date +%Y`/`date +%B`/PG_$(PROJECT_ID)_gis.`date +%d-%B-%Y`.dmp backups/latest.dmp
-	@echo "Backup should be at: backups/`date +%Y`/`date +%B`/PG_$(PROJECT_ID)_gis.`date +%d-%B-%Y`.dmp"
+	@ln -s `date +%Y`/`date +%B`/PG_$(PROJECT_ID)_$(DATABASE_NAME).`date +%d-%B-%Y`.dmp backups/latest.dmp
+	@echo "Backup should be at: backups/`date +%Y`/`date +%B`/PG_$(PROJECT_ID)_$(DATABASE_NAME).`date +%d-%B-%Y`.dmp"
 
 sentry:
 	@echo

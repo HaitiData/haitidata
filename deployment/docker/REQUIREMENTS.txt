@@ -1,5 +1,6 @@
 git+https://github.com/GeoNode/django-osgeo-importer.git
 
+six==1.10.0
 gdal==1.10.0
 geonode==2.7
 django-compressor
