@@ -107,21 +107,11 @@ TEMPLATES = [
                 'account.context_processors.account',
                 'geonode.context_processors.resource_urls',
                 "geonode.geoserver.context_processors.geoserver_urls",
+                "core.context_processors.project_setting.project_setting",
             ],
         },
     },
 ]
-
-MIDDLEWARE_CLASSES = (
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-    "pagination.middleware.PaginationMiddleware",
-)
 
 ROOT_URLCONF = 'core.urls'
 
