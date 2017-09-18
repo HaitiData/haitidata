@@ -19,6 +19,9 @@ RUN apt-get update -y
 RUN echo "deb http://ftp.debian.org/debian jessie main" >> /etc/apt/sources.list.d/gdal.list
 RUN apt-get update
 
+#-------------Application Specific Stuff ----------------------------------------------------
+ENV GDAL_VERSION 2.1.3
+
 RUN apt-get install locales && \
     echo "en_ZA.UTF-8 UTF-8" >> /etc/locale.gen && \
     locale-gen en_ZA.UTF-8
@@ -30,16 +33,20 @@ ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
 
-RUN cd /home/web && wget http://download.osgeo.org/gdal/2.1.3/gdal-2.1.3.tar.gz && tar -xvzf gdal-2.1.3.tar.gz
-RUN cd /home/web/gdal-2.1.3 && ./configure -prefix=/usr/ && make && make install
-RUN cd /home/web/gdal-2.1.3/swig/python && python setup.py install
+RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz
+RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install
+RUN cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install
 
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
+
 RUN pip install -r /REQUIREMENTS.txt
 RUN pip install uwsgi
 
 RUN pip uninstall django-user-accounts -y
 RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
+
+# Install translation
+RUN apt-get -y --force-yes install gettext
 
 RUN apt-get install gdal-bin
 # Open port 8080 as we will be running our uwsgi socket on that

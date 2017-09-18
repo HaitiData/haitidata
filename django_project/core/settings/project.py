@@ -22,8 +22,8 @@ OGC_SERVER = {
         # the proxy won't work and the integration tests will fail
         # the entire block has to be overridden in the local_settings
         'PUBLIC_LOCATION': GEOSERVER_PUBLIC_LOCATION,
-        'USER': 'admin',
-        'PASSWORD': 'geoserver',
+        'USER': OGC_SERVER_DEFAULT_USER,
+        'PASSWORD': OGC_SERVER_DEFAULT_PASSWORD,
         'MAPFISH_PRINT_ENABLED': True,
         'PRINT_NG_ENABLED': True,
         'GEONODE_SECURITY_ENABLED': True,
@@ -31,8 +31,10 @@ OGC_SERVER = {
         'WMST_ENABLED': False,
         'BACKEND_WRITE_ENABLED': True,
         'WPS_ENABLED': False,
+        'LOG_FILE': '%s/geoserver/data/logs/geoserver.log'
+                    % os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir)),
         # Set to name of database in DATABASES dictionary to enable
-        'DATASTORE': '',  # 'datastore',
+        'DATASTORE': 'datastore',
         'PG_GEOGIG': False,
         'TIMEOUT': 10  # number of seconds to allow for HTTP requests
     }
@@ -54,11 +56,13 @@ INSTALLED_APPS += (
 # Set languages which want to be translated
 LANGUAGES = (
     ('en', _('English')),
-    #('fr', _('Français')),
+    ('fr', _('Francais')),
 )
 
 # Set storage path for the translation files
-LOCALE_PATHS = (absolute_path('locale'),)
+LOCALE_PATHS = (
+    absolute_path('locale'),
+)
 
 DATABASES = {}
 
