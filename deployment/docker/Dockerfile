@@ -30,6 +30,10 @@ ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
 
+RUN cd /home/web && wget http://download.osgeo.org/gdal/2.1.3/gdal-2.1.3.tar.gz && tar -xvzf gdal-2.1.3.tar.gz
+RUN cd /home/web/gdal-2.1.3 && ./configure -prefix=/usr/ && make && make install
+RUN cd /home/web/gdal-2.1.3/swig/python && python setup.py install
+
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 
 RUN pip install -r /REQUIREMENTS.txt
