@@ -20,6 +20,15 @@ DATABASES = {
         'HOST': 'db',
         'PORT': 5432,
         'TEST_NAME': 'unittests',
+    },
+    # vector datastore for uploads
+    'datastore': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'geonode_data',
+        'USER': 'docker',
+        'PASSWORD': 'docker',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 

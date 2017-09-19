@@ -26,9 +26,9 @@ DATABASES = {
     'datastore': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'geonode_data',
-        'USER': 'geonode',
-        'PASSWORD': 'geonode',
-        'HOST': 'localhost',
+        'USER': os.environ['DATABASE_USERNAME'],
+        'PASSWORD': os.environ['DATABASE_PASSWORD'],
+        'HOST': os.environ['DATABASE_HOST'],
         'PORT': 5432,
     }
 }
