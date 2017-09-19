@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.conf.urls.i18n import i18n_patterns
 from geonode.sitemap import LayerSitemap, MapSitemap
 
 import autocomplete_light
@@ -20,7 +19,7 @@ from osgeo_importer.urls import urlpatterns as importer_urlpatterns
 
 from geonode.urls import *
 
-urlpatterns = i18n_patterns(
+urlpatterns = patterns(
     '',
     url(r'^/?$', TemplateView.as_view(template_name='site_index.html'), name='home'),
     url(r'^', include('geonode.urls')),
