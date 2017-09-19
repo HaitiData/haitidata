@@ -13,8 +13,15 @@ fresh-web: build permissions web
 # Use this for fresh build (it will restore with empty stable database)
 fresh-deploy: fresh-web
 	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb --if-exists $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "dropdb --if-exists $(DATABASE_GEONODE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-db su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_GEONODE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-db pg_restore /fresh-backups/fresh-database.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql $(DATABASE_NAME)"
+
+	# restore fixtures
+	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral /bin/bash -c "\
+	python manage.py loaddata /home/web/django_project/base/fixtures/initial_data.json &&\
+	python manage.py loaddata /home/web/django_project/base/fixtures/regions.json"
 
 
 default: web
