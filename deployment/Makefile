@@ -42,6 +42,16 @@ build:
 	@docker-compose -p $(PROJECT_ID) build uwsgi
 	@docker-compose -p $(PROJECT_ID) build uwsgi-ephemeral
 
+geoserver:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Building geoserver"
+	@echo "------------------------------------------------------------------"
+	@docker-compose -p $(PROJECT_ID) build geoserver
+	@docker-compose -p $(PROJECT_ID) up -d geoserver
+	@docker-compose -p $(PROJECT_ID) restart geoserver
+	@curl --user tomcat:tomcat http://0.0.0.0:33308/manager/text/stop?path=/geoserver
+	@curl --user tomcat:tomcat http://0.0.0.0:33308/manager/text/start?path=/geoserver
 
 web:
 	@echo
