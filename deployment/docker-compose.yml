@@ -197,16 +197,5 @@ geoserver:
   container_name: haitidata-geoserver
   links:
     - db:db
-  volumes_from:
-    - data_dir_conf
   ports:
     - "33308:8080"
-  environment:
-    - GEONODE_HOST_IP=http://0.0.0.0:33300
-
-data_dir_conf:
-  image: geonode/geoserver_data:2.10.x
-  container_name: geoserver_data_dir # named data container
-  command: /bin/true
-  volumes:
-    - /geoserver_data/data
