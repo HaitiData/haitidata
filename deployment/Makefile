@@ -53,6 +53,14 @@ geoserver:
 	@curl --user tomcat:tomcat http://0.0.0.0:33308/manager/text/stop?path=/geoserver
 	@curl --user tomcat:tomcat http://0.0.0.0:33308/manager/text/start?path=/geoserver
 
+django:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Building django container"
+	@echo "------------------------------------------------------------------"
+	@docker-compose -p $(PROJECT_ID) build django-app
+	@docker-compose -p $(PROJECT_ID) up -d django-app
+
 web:
 	@echo
 	@echo "------------------------------------------------------------------"
