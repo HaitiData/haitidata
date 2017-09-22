@@ -34,30 +34,6 @@ services:
     restart: on-failure
     network_mode: "bridge"
 
-  django-app:
-    build: docker-django
-    hostname: django
-    environment:
-      - DATABASE_URL=postgres://docker:docker@postgis:5432/gis
-      - DATABASE_NAME=gis
-      - DATABASE_USERNAME=docker
-      - DATABASE_PASSWORD=docker
-      - DATABASE_HOST=postgis
-      - RABBITMQ_HOST=rabbitmq
-      - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-      - VIRTUAL_HOST=haitidata.com
-      - VIRTUAL_PORT=8080
-      # Ensure to change these based on server domain
-      - SITEURL=http://0.0.0.0:33300/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://0.0.0.0:33308/geoserver/ # change this to ip or domain geoserver
-    volumes:
-      - ./static:/home/web/static:rw
-      - ./media:/home/web/media:rw
-      - ./reports:/home/web/reports
-      - ./logs:/var/log/
-    user: root
-    network_mode: "bridge"
-
   uwsgi-base:
     # Note you cannot scale if you use conteiner_name
     build: ./docker

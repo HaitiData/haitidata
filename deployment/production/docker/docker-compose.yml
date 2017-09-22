@@ -1,0 +1,52 @@
+version: '2'
+services:
+  geoserver:
+    image: dimasciput/haitidata_geoserver:2.10.x
+    stdin_open: true
+    external_links:
+    - postgis:postgis
+    tty: true
+    ports:
+    - 32208:8080/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  django:
+    image: dimasciput/haitidata_django
+    environment:
+      DATABASE_HOST: postgis
+      DATABASE_NAME: gis
+      DJANGO_SETTINGS_MODULE: core.settings.prod_docker
+      GEOSERVER_PUBLIC_LOCATION: http://88.99.166.60/api/geoserver/
+      LC_ALL: en_US.UTF-8
+      RABBITMQ_HOST: rabbitmq
+      GEOSERVER_BASE_URL: http://88.99.166.60:32208/geoserver/
+      SITEURL: http://88.99.166.60/
+    stdin_open: true
+    volumes:
+    - django-static-data:/home/web/static:rw
+    - django-media-data:/home/web/media:rw
+    tty: true
+    links:
+    - postgis:postgis
+    - geoserver:geoserver
+    labels:
+      io.rancher.container.pull_image: always
+  nginx:
+    image: dimasciput/haitidata_nginx
+    stdin_open: true
+    volumes:
+    - django-static-data:/home/web/static:ro
+    - django-media-data:/home/web/media:ro
+    tty: true
+    links:
+    - django:django
+    - geoserver:geoserver
+    ports:
+    - 33303:8080/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  postgis:
+    image: dimasciput/haitidata_db
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASS: docker
