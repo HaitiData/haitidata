@@ -53,7 +53,15 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
-INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client', 'charts_app', 'wfs_harvest')
+INSTALLED_APPS = INSTALLED_APPS + (
+    "django.contrib.redirects",
+    'haitidata',
+    'osgeo_importer',
+    'geonode-client',
+    'charts_app',
+    'wfs_harvest',
+    "clip-and-ship"
+    )
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
@@ -83,7 +91,7 @@ OSGEO_IMPORTER_VALID_EXTENSIONS = [
     ]
 
 LOGGING['loggers']['osgeo_importer'] = {"handlers": ["console"], "level": "DEBUG"}
-#DATABASE_ROUTERS = ['{{app_name}}.dbrouters.DefaultOnlyMigrations']
+#DATABASE_ROUTERS = ['.dbrouters.DefaultOnlyMigrations']
 
 # # === MapProxy settings
 # # This is the location to place additional configuration files for mapproxy to work from.
@@ -117,6 +125,9 @@ _HAITI_LANGUAGES = (
 )
 
 LANGUAGES = os.getenv('LANGUAGES', _HAITI_LANGUAGES)
+
+# maximum clip size in bytes
+MAXIMUM_CLIP_SIZE = '40000000'
 
 SOCIAL_ORIGINS = [{
     "label":"paper-plane-o",

@@ -10,7 +10,13 @@ urlpatterns = patterns('',
        name='home'),
  ) + urlpatterns + [
     url(r'^chart/', include('charts_app.urls')),
-    url(r'^table/', include('wfs_harvest.urls'))
+    url(r'^table/', include('wfs_harvest.urls')),
+    url(r'^clip/', include('clip-and-ship.urls'))
     ]
 
+urlpatterns += patterns(
+    '',
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+)
 urlpatterns += importer_urlpatterns
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
