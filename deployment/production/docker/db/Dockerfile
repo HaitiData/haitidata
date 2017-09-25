@@ -6,6 +6,8 @@ ENV POSTGRES_PASS=docker
 
 RUN mkdir -p /fresh-backups/
 COPY fresh-database.dmp /fresh-backups/fresh-database.dmp
+COPY script.sh /home/script.sh
+RUN sh /home/script.sh
 #RUN su - postgres -c "dropdb --if-exists gis"
 #RUN su - postgres -c "dropdb --if-exists geonode_data"
 #RUN su - postgres -c "createdb -O docker -T template_postgis gis"

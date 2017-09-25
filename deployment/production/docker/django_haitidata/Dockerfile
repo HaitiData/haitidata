@@ -51,13 +51,8 @@ EXPOSE 8080
 
 WORKDIR /home/web/django_project
 
-ENV DATABASE_NAME=gis
-ENV DATABASE_USERNAME=docker
-ENV DATABASE_PASSWORD=docker
-ENV DATABASE_HOST=postgis
-ENV DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-ENV SITEURL=http://0.0.0.0:33300/
-
 RUN mkdir -p /home/web/media
-RUN cd /home/web/django_project && python manage.py collectstatic --noinput
+ADD entry-point.sh /entry-point.sh
+RUN chmod +x /entry-point.sh
+
 CMD ["uwsgi", "--env", "LC_ALL=en_ZA.UTF-8", "--ini", "/uwsgi.conf"]
