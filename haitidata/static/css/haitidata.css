@@ -7178,6 +7178,10 @@ footer select {
 .filter .fa {
   margin-right: 8px;
 }
+.actions .input-group .fa,
+.filter .input-group .fa {
+  margin-right: 0;
+}
 .items-list {
   padding: 10px 0;
 }
@@ -7741,6 +7745,9 @@ nav.filter li a {
 }
 .filter input.datepicker {
   width: 100%;
+}
+#composerCart {
+  font-size: 14px;
 }
 #composerCart .list-group i {
   margin-right: 0;
