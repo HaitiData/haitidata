@@ -83,7 +83,7 @@ db:
 	@echo "------------------------------------------------------------------"
 	@echo "Running db in production mode"
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) up -d db
+	@docker-compose -p $(PROJECT_ID) up -d postgis
 
 nginx:
 	@echo
