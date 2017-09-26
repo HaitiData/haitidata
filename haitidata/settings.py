@@ -27,6 +27,8 @@ from geonode.settings import *
 
 SITENAME = 'haitidata'
 
+TIME_ZONE = os.getenv('TIME_ZONE', "America/Port-au-Prince")
+
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -148,5 +150,15 @@ SOCIAL_ORIGINS = [{
 }]
 
 MAX_CSV_RECORDS = 20000
+
+UPLOADER = {
+    'BACKEND': 'geonode.rest',
+    'OPTIONS': {
+        'TIME_ENABLED': False,
+        'MOSAIC_ENABLED': True,
+        'GEOGIG_ENABLED': False,
+    }
+}
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
