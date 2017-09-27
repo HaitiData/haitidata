@@ -17,7 +17,7 @@ DATABASES = {
         'NAME': 'gis',
         'USER': 'docker',
         'PASSWORD': 'docker',
-        'HOST': 'db',
+        'HOST': 'postgis',
         'PORT': 5432,
         'TEST_NAME': 'unittests',
     },
@@ -27,7 +27,7 @@ DATABASES = {
         'NAME': 'geonode_data',
         'USER': 'docker',
         'PASSWORD': 'docker',
-        'HOST': 'db',
+        'HOST': 'postgis',
         'PORT': 5432,
     }
 }
