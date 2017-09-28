@@ -33,10 +33,6 @@ ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
 
-RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz
-RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install
-RUN cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install
-
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 
 RUN pip install -r /REQUIREMENTS.txt
@@ -50,6 +46,9 @@ RUN apt-get -y --force-yes install gettext
 
 RUN apt-get install gdal-bin
 # Open port 8080 as we will be running our uwsgi socket on that
+RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
+RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
+
 EXPOSE 8080
 
 #USER www-data

@@ -172,9 +172,13 @@
         }
 
 
-        if (layerMap) {
-            var bboxString = layerMap.getBounds().toBBoxString();
-            download_clip_layer(clipUrl, '&BBOX=' + bboxString);
+        if (mapToClip) {
+            var bboxString = mapToClip.getBounds().toBBoxString();
+            var bboxArray = bboxString.split(',');
+            var southwest_lat = bboxArray[1];
+            bboxArray[1] = bboxArray[3];
+            bboxArray[3] = southwest_lat;
+            download_clip_layer(clipUrl, '&BBOX=' + bboxArray.toString());
         }
     });
 

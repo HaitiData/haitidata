@@ -151,6 +151,8 @@ services:
       - PYTHONPATH=/home/web/django_project
       - VIRTUAL_HOST=haitidata.com
       - VIRTUAL_PORT=8080
+      - SITEURL=http://0.0.0.0:33303/  # change this to ip or domain location
+      - GEOSERVER_BASE_URL=http://0.0.0.0:33308/geoserver/ # change this to ip or domain geoserver
     volumes:
       - ../django_project:/home/web/django_project
       - ./static:/home/web/static
@@ -203,3 +205,14 @@ services:
     ports:
       - "33308:8080"
     network_mode: "bridge"
+
+  geoserver_data:
+    image: geonode/geoserver_data:2.10.x
+    container_name: geoserver_data_dir
+    network_mode: "bridge"
+    volumes:
+      - ./geoserver_data:/geoserver_data/data
+
+volumes:
+  # reference to the named data container that holds the preloaded geoserver data directory
+  geoserver_data_dir:
