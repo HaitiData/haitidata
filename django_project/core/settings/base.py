@@ -12,7 +12,7 @@ TIME_ZONE = 'Africa/Johannesburg'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en_ZA.UTF-8'
+LANGUAGE_CODE = 'en_US.UTF-8'
 
 SITE_ID = 1
 

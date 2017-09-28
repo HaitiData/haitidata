@@ -23,12 +23,12 @@ RUN apt-get update
 ENV GDAL_VERSION 2.1.3
 
 RUN apt-get install locales && \
-    echo "en_ZA.UTF-8 UTF-8" >> /etc/locale.gen && \
-    locale-gen en_ZA.UTF-8
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
+    locale-gen en_US.UTF-8
 RUN apt-get install libgdal-dev -y
-ENV LANG en_ZA.UTF-8
-ENV LANGUAGE en_ZA:en
-ENV LC_ALL en_ZA.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
@@ -54,4 +54,4 @@ EXPOSE 8080
 #USER www-data
 
 WORKDIR /home/web/django_project
-CMD ["uwsgi", "--env", "LC_ALL=en_ZA.UTF-8", "--ini", "/uwsgi.conf"]
+CMD ["uwsgi", "--env", "LC_ALL=en_US.UTF-8", "--ini", "/uwsgi.conf"]
