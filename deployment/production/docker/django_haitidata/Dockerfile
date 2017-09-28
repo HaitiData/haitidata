@@ -23,18 +23,15 @@ RUN apt-get update
 ENV GDAL_VERSION 2.1.3
 
 RUN apt-get install locales && \
-    echo "en_ZA.UTF-8 UTF-8" >> /etc/locale.gen && \
-    locale-gen en_ZA.UTF-8
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && \
+    locale-gen en_US.UTF-8
 RUN apt-get install libgdal-dev -y
-ENV LANG en_ZA.UTF-8
-ENV LANGUAGE en_ZA:en
-ENV LC_ALL en_ZA.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
-
-RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
-RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
 
 ADD REQUIREMENTS.txt /REQUIREMENTS.txt
 RUN pip install -r /REQUIREMENTS.txt && pip install uwsgi && pip uninstall django-user-accounts -y
@@ -44,7 +41,11 @@ RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
 RUN apt-get -y --force-yes install gettext
 
 RUN apt-get install gdal-bin
-RUN cd /home/web && git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin development
+WORKDIR /home/web
+RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin development
+
+RUN wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
+RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
 
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
