@@ -81,7 +81,6 @@ services:
     container_name: haitidata-uwsgi
     links:
       - postgis
-      - geoserver
     restart: always
     network_mode: "bridge"
 
@@ -125,93 +124,11 @@ services:
       - ./webroot-path:/home/web/webroot-path
     links:
       - uwsgi
-      - geoserver
     ports:
       - "33300:8080"
+      - "33308:8000"
     restart: always
     network_mode: "bridge"
-
-  # This is the entry point for a development server.
-  # Run with --no-deps to run attached to the services
-  # from produ environment if wanted
-  devweb:
-    # Note you cannot scale if you use conteiner_name
-    container_name: haitidata-dev-web
-    build:
-      context: ./docker
-      dockerfile: Dockerfile-dev
-    hostname: haitidata-dev-web
-    environment:
-      - DATABASE_NAME=gis
-      - DATABASE_USERNAME=docker
-      - DATABASE_PASSWORD=docker
-      - DATABASE_HOST=postgis
-      - RABBITMQ_HOST=rabbitmq
-      - DJANGO_SETTINGS_MODULE=core.settings.dev_docker
-      - PYTHONPATH=/home/web/django_project
-      - VIRTUAL_HOST=haitidata.com
-      - VIRTUAL_PORT=8080
-      - SITEURL=http://0.0.0.0:33303/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://0.0.0.0:33308/geoserver/ # change this to ip or domain geoserver
-    volumes:
-      - ../django_project:/home/web/django_project
-      - ./static:/home/web/static
-      - ./media:/home/web/media
-      - ./reports:/home/web/reports
-      - ./logs:/var/log/
-    links:
-      - postgis
-      - rabbitmq
-      - geoserver
-    ports:
-      # for django test server
-      - "33303:8080"
-      # for ssh
-      - "33302:22"
-    network_mode: "bridge"
-
-  worker:
-     build: docker
-     hostname: worker
-     command: celery worker -A config.celery -l info  --beat
-     environment:
-       - DATABASE_NAME=gis
-       - DATABASE_USERNAME=docker
-       - DATABASE_PASSWORD=docker
-       - DATABASE_HOST=postgis
-       - DATABASE_QGIS_HOST=postgis_gis
-       - RABBITMQ_HOST=rabbitmq
-       - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-       - VIRTUAL_HOST=haitidata.com
-       - VIRTUAL_PORT=8080
-       - C_FORCE_ROOT=true
-     volumes:
-       - ../django_project:/home/web/django_project
-       - ./static:/home/web/static
-       - ./media:/home/web/media
-       - ./reports:/home/web/reports
-       - ./logs:/var/log/
-     links:
-       - postgis
-       - rabbitmq
-     restart: on-failure:5
-     network_mode: "bridge"
-
-  geoserver:
-    build: docker-geoserver
-    container_name: haitidata-geoserver
-    links:
-      - postgis
-    ports:
-      - "33308:8080"
-    network_mode: "bridge"
-
-  geoserver_data:
-    image: geonode/geoserver_data:2.10.x
-    container_name: geoserver_data_dir
-    network_mode: "bridge"
-    volumes:
-      - ./geoserver_data:/geoserver_data/data
 
 volumes:
   # reference to the named data container that holds the preloaded geoserver data directory

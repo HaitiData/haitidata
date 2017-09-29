@@ -19,9 +19,8 @@ fresh-deploy: fresh-web create-workspace
 	@docker exec -t -i $(PROJECT_ID)-db pg_restore /fresh-backups/fresh-database.geonode-2.6.3.dmp | docker exec -i $(PROJECT_ID)-db su - postgres -c "psql $(DATABASE_NAME)"
 
 	# restore fixtures
-	# @docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral /bin/bash -c "\
-	# python manage.py loaddata /home/web/django_project/base/fixtures/initial_data.json &&\
-	# python manage.py loaddata /home/web/django_project/base/fixtures/regions.json"\
+	@docker-compose -p $(PROJECT_ID) run uwsgi-ephemeral /bin/bash -c "\
+	python manage.py loaddata /home/web/django_project/base/fixtures/base_region.json"
 
 
 default: web

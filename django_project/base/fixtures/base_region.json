@@ -1,0 +1,10082 @@
+[
+{
+  "fields": {
+    "rght": 1440,
+    "code": "0",
+    "name": "Haiti",
+    "parent": null,
+    "level": 0,
+    "lft": 1,
+    "tree_id": 3,
+    "name_en": "Haiti"
+  },
+  "model": "base.region",
+  "pk": 1
+},
+{
+  "fields": {
+    "rght": 159,
+    "code": "5",
+    "name": "Artibonite",
+    "parent": 1,
+    "level": 1,
+    "lft": 2,
+    "tree_id": 3,
+    "name_en": "Artibonite"
+  },
+  "model": "base.region",
+  "pk": 2
+},
+{
+  "fields": {
+    "rght": 255,
+    "code": "6",
+    "name": "Centre",
+    "parent": 1,
+    "level": 1,
+    "lft": 160,
+    "tree_id": 3,
+    "name_en": "Centre"
+  },
+  "model": "base.region",
+  "pk": 3
+},
+{
+  "fields": {
+    "rght": 375,
+    "code": "8",
+    "name": "Grande-Anse",
+    "parent": 1,
+    "level": 1,
+    "lft": 256,
+    "tree_id": 3,
+    "name_en": "Grande-Anse"
+  },
+  "model": "base.region",
+  "pk": 4
+},
+{
+  "fields": {
+    "rght": 473,
+    "code": "10",
+    "name": "Nippes",
+    "parent": 1,
+    "level": 1,
+    "lft": 376,
+    "tree_id": 3,
+    "name_en": "Nippes"
+  },
+  "model": "base.region",
+  "pk": 5
+},
+{
+  "fields": {
+    "rght": 677,
+    "code": "3",
+    "name": "Nord",
+    "parent": 1,
+    "level": 1,
+    "lft": 474,
+    "tree_id": 3,
+    "name_en": "Nord"
+  },
+  "model": "base.region",
+  "pk": 6
+},
+{
+  "fields": {
+    "rght": 777,
+    "code": "4",
+    "name": "Nord-Est",
+    "parent": 1,
+    "level": 1,
+    "lft": 678,
+    "tree_id": 3,
+    "name_en": "Nord-Est"
+  },
+  "model": "base.region",
+  "pk": 7
+},
+{
+  "fields": {
+    "rght": 877,
+    "code": "9",
+    "name": "Nord-Ouest",
+    "parent": 1,
+    "level": 1,
+    "lft": 778,
+    "tree_id": 3,
+    "name_en": "Nord-Ouest"
+  },
+  "model": "base.region",
+  "pk": 8
+},
+{
+  "fields": {
+    "rght": 1143,
+    "code": "1",
+    "name": "Ouest",
+    "parent": 1,
+    "level": 1,
+    "lft": 878,
+    "tree_id": 3,
+    "name_en": "Ouest"
+  },
+  "model": "base.region",
+  "pk": 9
+},
+{
+  "fields": {
+    "rght": 1317,
+    "code": "7",
+    "name": "Sud",
+    "parent": 1,
+    "level": 1,
+    "lft": 1144,
+    "tree_id": 3,
+    "name_en": "Sud"
+  },
+  "model": "base.region",
+  "pk": 10
+},
+{
+  "fields": {
+    "rght": 1439,
+    "code": "2",
+    "name": "Sud-Est",
+    "parent": 1,
+    "level": 1,
+    "lft": 1318,
+    "tree_id": 3,
+    "name_en": "Sud-Est"
+  },
+  "model": "base.region",
+  "pk": 11
+},
+{
+  "fields": {
+    "rght": 8,
+    "code": "523",
+    "name": "Anse-Rouge",
+    "parent": 2,
+    "level": 2,
+    "lft": 3,
+    "tree_id": 3,
+    "name_en": "Anse-Rouge"
+  },
+  "model": "base.region",
+  "pk": 12
+},
+{
+  "fields": {
+    "rght": 12,
+    "code": "544",
+    "name": "Desdunes",
+    "parent": 2,
+    "level": 2,
+    "lft": 9,
+    "tree_id": 3,
+    "name_en": "Desdunes"
+  },
+  "model": "base.region",
+  "pk": 13
+},
+{
+  "fields": {
+    "rght": 5,
+    "code": "52301",
+    "name": "1\u00e8re L'Arbre",
+    "parent": 12,
+    "level": 3,
+    "lft": 4,
+    "tree_id": 3,
+    "name_en": "1\u00e8re L'Arbre"
+  },
+  "model": "base.region",
+  "pk": 14
+},
+{
+  "fields": {
+    "rght": 7,
+    "code": "52302",
+    "name": "2\u00e8me Sources Chaudes",
+    "parent": 12,
+    "level": 3,
+    "lft": 6,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Sources Chaudes"
+  },
+  "model": "base.region",
+  "pk": 15
+},
+{
+  "fields": {
+    "rght": 26,
+    "code": "541",
+    "name": "Dessalines",
+    "parent": 2,
+    "level": 2,
+    "lft": 13,
+    "tree_id": 3,
+    "name_en": "Dessalines"
+  },
+  "model": "base.region",
+  "pk": 16
+},
+{
+  "fields": {
+    "rght": 36,
+    "code": "512",
+    "name": "Ennery",
+    "parent": 2,
+    "level": 2,
+    "lft": 27,
+    "tree_id": 3,
+    "name_en": "Ennery"
+  },
+  "model": "base.region",
+  "pk": 17
+},
+{
+  "fields": {
+    "rght": 48,
+    "code": "511",
+    "name": "Gona\u00efves",
+    "parent": 2,
+    "level": 2,
+    "lft": 37,
+    "tree_id": 3,
+    "name_en": "Gona\u00efves"
+  },
+  "model": "base.region",
+  "pk": 18
+},
+{
+  "fields": {
+    "rght": 52,
+    "code": "543",
+    "name": "Grande Saline",
+    "parent": 2,
+    "level": 2,
+    "lft": 49,
+    "tree_id": 3,
+    "name_en": "Grande Saline"
+  },
+  "model": "base.region",
+  "pk": 19
+},
+{
+  "fields": {
+    "rght": 70,
+    "code": "521",
+    "name": "Gros-Morne",
+    "parent": 2,
+    "level": 2,
+    "lft": 53,
+    "tree_id": 3,
+    "name_en": "Gros-Morne"
+  },
+  "model": "base.region",
+  "pk": 20
+},
+{
+  "fields": {
+    "rght": 76,
+    "code": "533",
+    "name": "La Chapelle",
+    "parent": 2,
+    "level": 2,
+    "lft": 71,
+    "tree_id": 3,
+    "name_en": "La Chapelle"
+  },
+  "model": "base.region",
+  "pk": 21
+},
+{
+  "fields": {
+    "rght": 82,
+    "code": "513",
+    "name": "L'Est\u00e8re",
+    "parent": 2,
+    "level": 2,
+    "lft": 77,
+    "tree_id": 3,
+    "name_en": "L'Est\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 22
+},
+{
+  "fields": {
+    "rght": 90,
+    "code": "552",
+    "name": "Marmelade",
+    "parent": 2,
+    "level": 2,
+    "lft": 83,
+    "tree_id": 3,
+    "name_en": "Marmelade"
+  },
+  "model": "base.region",
+  "pk": 23
+},
+{
+  "fields": {
+    "rght": 104,
+    "code": "542",
+    "name": "Petite Rivi\u00e8re de l'Artibonite",
+    "parent": 2,
+    "level": 2,
+    "lft": 91,
+    "tree_id": 3,
+    "name_en": "Petite Rivi\u00e8re de l'Artibonite"
+  },
+  "model": "base.region",
+  "pk": 24
+},
+{
+  "fields": {
+    "rght": 118,
+    "code": "531",
+    "name": "Saint-Marc",
+    "parent": 2,
+    "level": 2,
+    "lft": 105,
+    "tree_id": 3,
+    "name_en": "Saint-Marc"
+  },
+  "model": "base.region",
+  "pk": 25
+},
+{
+  "fields": {
+    "rght": 136,
+    "code": "551",
+    "name": "Saint-Michel-de-l'Atalaye",
+    "parent": 2,
+    "level": 2,
+    "lft": 119,
+    "tree_id": 3,
+    "name_en": "Saint-Michel-de-l'Atalaye"
+  },
+  "model": "base.region",
+  "pk": 26
+},
+{
+  "fields": {
+    "rght": 144,
+    "code": "522",
+    "name": "Terre-Neuve",
+    "parent": 2,
+    "level": 2,
+    "lft": 137,
+    "tree_id": 3,
+    "name_en": "Terre-Neuve"
+  },
+  "model": "base.region",
+  "pk": 27
+},
+{
+  "fields": {
+    "rght": 158,
+    "code": "532",
+    "name": "Verrettes",
+    "parent": 2,
+    "level": 2,
+    "lft": 145,
+    "tree_id": 3,
+    "name_en": "Verrettes"
+  },
+  "model": "base.region",
+  "pk": 28
+},
+{
+  "fields": {
+    "rght": 168,
+    "code": "632",
+    "name": "Bellad\u00e8re",
+    "parent": 3,
+    "level": 2,
+    "lft": 161,
+    "tree_id": 3,
+    "name_en": "Bellad\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 29
+},
+{
+  "fields": {
+    "rght": 176,
+    "code": "623",
+    "name": "Boucan-Carr\u00e9",
+    "parent": 3,
+    "level": 2,
+    "lft": 169,
+    "tree_id": 3,
+    "name_en": "Boucan-Carr\u00e9"
+  },
+  "model": "base.region",
+  "pk": 30
+},
+{
+  "fields": {
+    "rght": 180,
+    "code": "614",
+    "name": "Cerca-Cavajal",
+    "parent": 3,
+    "level": 2,
+    "lft": 177,
+    "tree_id": 3,
+    "name_en": "Cerca-Cavajal"
+  },
+  "model": "base.region",
+  "pk": 31
+},
+{
+  "fields": {
+    "rght": 188,
+    "code": "641",
+    "name": "Cerca-la-Source",
+    "parent": 3,
+    "level": 2,
+    "lft": 181,
+    "tree_id": 3,
+    "name_en": "Cerca-la-Source"
+  },
+  "model": "base.region",
+  "pk": 32
+},
+{
+  "fields": {
+    "rght": 198,
+    "code": "611",
+    "name": "Hinche",
+    "parent": 3,
+    "level": 2,
+    "lft": 189,
+    "tree_id": 3,
+    "name_en": "Hinche"
+  },
+  "model": "base.region",
+  "pk": 33
+},
+{
+  "fields": {
+    "rght": 206,
+    "code": "631",
+    "name": "Lascahobas",
+    "parent": 3,
+    "level": 2,
+    "lft": 199,
+    "tree_id": 3,
+    "name_en": "Lascahobas"
+  },
+  "model": "base.region",
+  "pk": 34
+},
+{
+  "fields": {
+    "rght": 214,
+    "code": "612",
+    "name": "Ma\u00efssade",
+    "parent": 3,
+    "level": 2,
+    "lft": 207,
+    "tree_id": 3,
+    "name_en": "Ma\u00efssade"
+  },
+  "model": "base.region",
+  "pk": 35
+},
+{
+  "fields": {
+    "rght": 224,
+    "code": "621",
+    "name": "Mirebalais",
+    "parent": 3,
+    "level": 2,
+    "lft": 215,
+    "tree_id": 3,
+    "name_en": "Mirebalais"
+  },
+  "model": "base.region",
+  "pk": 36
+},
+{
+  "fields": {
+    "rght": 234,
+    "code": "622",
+    "name": "Saut-d'Eau",
+    "parent": 3,
+    "level": 2,
+    "lft": 225,
+    "tree_id": 3,
+    "name_en": "Saut-d'Eau"
+  },
+  "model": "base.region",
+  "pk": 37
+},
+{
+  "fields": {
+    "rght": 240,
+    "code": "633",
+    "name": "Savanette",
+    "parent": 3,
+    "level": 2,
+    "lft": 235,
+    "tree_id": 3,
+    "name_en": "Savanette"
+  },
+  "model": "base.region",
+  "pk": 38
+},
+{
+  "fields": {
+    "rght": 246,
+    "code": "642",
+    "name": "Thomassique",
+    "parent": 3,
+    "level": 2,
+    "lft": 241,
+    "tree_id": 3,
+    "name_en": "Thomassique"
+  },
+  "model": "base.region",
+  "pk": 39
+},
+{
+  "fields": {
+    "rght": 254,
+    "code": "613",
+    "name": "Thomonde",
+    "parent": 3,
+    "level": 2,
+    "lft": 247,
+    "tree_id": 3,
+    "name_en": "Thomonde"
+  },
+  "model": "base.region",
+  "pk": 40
+},
+{
+  "fields": {
+    "rght": 1126,
+    "code": "111",
+    "name": "Port-au-Prince",
+    "parent": 9,
+    "level": 2,
+    "lft": 1119,
+    "tree_id": 3,
+    "name_en": "Port-au-Prince"
+  },
+  "model": "base.region",
+  "pk": 41
+},
+{
+  "fields": {
+    "rght": 988,
+    "code": "112",
+    "name": "Delmas",
+    "parent": 9,
+    "level": 2,
+    "lft": 985,
+    "tree_id": 3,
+    "name_en": "Delmas"
+  },
+  "model": "base.region",
+  "pk": 42
+},
+{
+  "fields": {
+    "rght": 944,
+    "code": "113",
+    "name": "Carrefour",
+    "parent": 9,
+    "level": 2,
+    "lft": 917,
+    "tree_id": 3,
+    "name_en": "Carrefour"
+  },
+  "model": "base.region",
+  "pk": 43
+},
+{
+  "fields": {
+    "rght": 1080,
+    "code": "114",
+    "name": "P\u00e9tion-Ville",
+    "parent": 9,
+    "level": 2,
+    "lft": 1069,
+    "tree_id": 3,
+    "name_en": "P\u00e9tion-Ville"
+  },
+  "model": "base.region",
+  "pk": 44
+},
+{
+  "fields": {
+    "rght": 1040,
+    "code": "115",
+    "name": "Kenscoff",
+    "parent": 9,
+    "level": 2,
+    "lft": 1029,
+    "tree_id": 3,
+    "name_en": "Kenscoff"
+  },
+  "model": "base.region",
+  "pk": 45
+},
+{
+  "fields": {
+    "rght": 1028,
+    "code": "116",
+    "name": "Gressier",
+    "parent": 9,
+    "level": 2,
+    "lft": 1021,
+    "tree_id": 3,
+    "name_en": "Gressier"
+  },
+  "model": "base.region",
+  "pk": 46
+},
+{
+  "fields": {
+    "rght": 950,
+    "code": "117",
+    "name": "Cit\u00e9 Soleil",
+    "parent": 9,
+    "level": 2,
+    "lft": 945,
+    "tree_id": 3,
+    "name_en": "Cit\u00e9 Soleil"
+  },
+  "model": "base.region",
+  "pk": 47
+},
+{
+  "fields": {
+    "rght": 1132,
+    "code": "118",
+    "name": "Tabarre",
+    "parent": 9,
+    "level": 2,
+    "lft": 1127,
+    "tree_id": 3,
+    "name_en": "Tabarre"
+  },
+  "model": "base.region",
+  "pk": 48
+},
+{
+  "fields": {
+    "rght": 1068,
+    "code": "121",
+    "name": "L\u00e9og\u00e2ne",
+    "parent": 9,
+    "level": 2,
+    "lft": 1041,
+    "tree_id": 3,
+    "name_en": "L\u00e9og\u00e2ne"
+  },
+  "model": "base.region",
+  "pk": 49
+},
+{
+  "fields": {
+    "rght": 1106,
+    "code": "122",
+    "name": "Petit-Go\u00e2ve",
+    "parent": 9,
+    "level": 2,
+    "lft": 1081,
+    "tree_id": 3,
+    "name_en": "Petit-Go\u00e2ve"
+  },
+  "model": "base.region",
+  "pk": 50
+},
+{
+  "fields": {
+    "rght": 1020,
+    "code": "123",
+    "name": "Grand-Go\u00e2ve",
+    "parent": 9,
+    "level": 2,
+    "lft": 1005,
+    "tree_id": 3,
+    "name_en": "Grand-Go\u00e2ve"
+  },
+  "model": "base.region",
+  "pk": 51
+},
+{
+  "fields": {
+    "rght": 984,
+    "code": "131",
+    "name": "Croix-Des-Bouquets",
+    "parent": 9,
+    "level": 2,
+    "lft": 963,
+    "tree_id": 3,
+    "name_en": "Croix-Des-Bouquets"
+  },
+  "model": "base.region",
+  "pk": 52
+},
+{
+  "fields": {
+    "rght": 1142,
+    "code": "132",
+    "name": "Thomazeau",
+    "parent": 9,
+    "level": 2,
+    "lft": 1133,
+    "tree_id": 3,
+    "name_en": "Thomazeau"
+  },
+  "model": "base.region",
+  "pk": 53
+},
+{
+  "fields": {
+    "rght": 1004,
+    "code": "133",
+    "name": "Ganthier",
+    "parent": 9,
+    "level": 2,
+    "lft": 993,
+    "tree_id": 3,
+    "name_en": "Ganthier"
+  },
+  "model": "base.region",
+  "pk": 54
+},
+{
+  "fields": {
+    "rght": 962,
+    "code": "134",
+    "name": "Cornillon/Grand-Bois",
+    "parent": 9,
+    "level": 2,
+    "lft": 951,
+    "tree_id": 3,
+    "name_en": "Cornillon/Grand-Bois"
+  },
+  "model": "base.region",
+  "pk": 55
+},
+{
+  "fields": {
+    "rght": 992,
+    "code": "135",
+    "name": "Fonds Verrettes",
+    "parent": 9,
+    "level": 2,
+    "lft": 989,
+    "tree_id": 3,
+    "name_en": "Fonds Verrettes"
+  },
+  "model": "base.region",
+  "pk": 56
+},
+{
+  "fields": {
+    "rght": 906,
+    "code": "141",
+    "name": "Arcahaie",
+    "parent": 9,
+    "level": 2,
+    "lft": 893,
+    "tree_id": 3,
+    "name_en": "Arcahaie"
+  },
+  "model": "base.region",
+  "pk": 57
+},
+{
+  "fields": {
+    "rght": 916,
+    "code": "142",
+    "name": "Cabaret",
+    "parent": 9,
+    "level": 2,
+    "lft": 907,
+    "tree_id": 3,
+    "name_en": "Cabaret"
+  },
+  "model": "base.region",
+  "pk": 58
+},
+{
+  "fields": {
+    "rght": 892,
+    "code": "151",
+    "name": "Anse-\u00e0-Galets",
+    "parent": 9,
+    "level": 2,
+    "lft": 879,
+    "tree_id": 3,
+    "name_en": "Anse-\u00e0-Galets"
+  },
+  "model": "base.region",
+  "pk": 59
+},
+{
+  "fields": {
+    "rght": 1118,
+    "code": "152",
+    "name": "Pointe-\u00e0-Raquette",
+    "parent": 9,
+    "level": 2,
+    "lft": 1107,
+    "tree_id": 3,
+    "name_en": "Pointe-\u00e0-Raquette"
+  },
+  "model": "base.region",
+  "pk": 60
+},
+{
+  "fields": {
+    "rght": 1412,
+    "code": "211",
+    "name": "Jacmel",
+    "parent": 11,
+    "level": 2,
+    "lft": 1389,
+    "tree_id": 3,
+    "name_en": "Jacmel"
+  },
+  "model": "base.region",
+  "pk": 61
+},
+{
+  "fields": {
+    "rght": 1432,
+    "code": "212",
+    "name": "Marigot",
+    "parent": 11,
+    "level": 2,
+    "lft": 1421,
+    "tree_id": 3,
+    "name_en": "Marigot"
+  },
+  "model": "base.region",
+  "pk": 62
+},
+{
+  "fields": {
+    "rght": 1370,
+    "code": "213",
+    "name": "Cayes-Jacmel",
+    "parent": 11,
+    "level": 2,
+    "lft": 1361,
+    "tree_id": 3,
+    "name_en": "Cayes-Jacmel"
+  },
+  "model": "base.region",
+  "pk": 63
+},
+{
+  "fields": {
+    "rght": 1420,
+    "code": "214",
+    "name": "La Vall\u00e9e",
+    "parent": 11,
+    "level": 2,
+    "lft": 1413,
+    "tree_id": 3,
+    "name_en": "La Vall\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 64
+},
+{
+  "fields": {
+    "rght": 1344,
+    "code": "221",
+    "name": "Bainet",
+    "parent": 11,
+    "level": 2,
+    "lft": 1325,
+    "tree_id": 3,
+    "name_en": "Bainet"
+  },
+  "model": "base.region",
+  "pk": 65
+},
+{
+  "fields": {
+    "rght": 1384,
+    "code": "222",
+    "name": "C\u00f4tes-de-Fer",
+    "parent": 11,
+    "level": 2,
+    "lft": 1371,
+    "tree_id": 3,
+    "name_en": "C\u00f4tes-de-Fer"
+  },
+  "model": "base.region",
+  "pk": 66
+},
+{
+  "fields": {
+    "rght": 1360,
+    "code": "231",
+    "name": "Belle-Anse",
+    "parent": 11,
+    "level": 2,
+    "lft": 1345,
+    "tree_id": 3,
+    "name_en": "Belle-Anse"
+  },
+  "model": "base.region",
+  "pk": 67
+},
+{
+  "fields": {
+    "rght": 1388,
+    "code": "232",
+    "name": "Grand-Gosier",
+    "parent": 11,
+    "level": 2,
+    "lft": 1385,
+    "tree_id": 3,
+    "name_en": "Grand-Gosier"
+  },
+  "model": "base.region",
+  "pk": 68
+},
+{
+  "fields": {
+    "rght": 1438,
+    "code": "233",
+    "name": "Thiotte",
+    "parent": 11,
+    "level": 2,
+    "lft": 1433,
+    "tree_id": 3,
+    "name_en": "Thiotte"
+  },
+  "model": "base.region",
+  "pk": 69
+},
+{
+  "fields": {
+    "rght": 1324,
+    "code": "234",
+    "name": "Anse-\u00e0-Pitres",
+    "parent": 11,
+    "level": 2,
+    "lft": 1319,
+    "tree_id": 3,
+    "name_en": "Anse-\u00e0-Pitres"
+  },
+  "model": "base.region",
+  "pk": 70
+},
+{
+  "fields": {
+    "rght": 526,
+    "code": "311",
+    "name": "Cap-Ha\u00eftien",
+    "parent": 6,
+    "level": 2,
+    "lft": 519,
+    "tree_id": 3,
+    "name_en": "Cap-Ha\u00eftien"
+  },
+  "model": "base.region",
+  "pk": 71
+},
+{
+  "fields": {
+    "rght": 658,
+    "code": "312",
+    "name": "Quartier-Morin",
+    "parent": 6,
+    "level": 2,
+    "lft": 653,
+    "tree_id": 3,
+    "name_en": "Quartier-Morin"
+  },
+  "model": "base.region",
+  "pk": 72
+},
+{
+  "fields": {
+    "rght": 578,
+    "code": "313",
+    "name": "Limonade",
+    "parent": 6,
+    "level": 2,
+    "lft": 571,
+    "tree_id": 3,
+    "name_en": "Limonade"
+  },
+  "model": "base.region",
+  "pk": 73
+},
+{
+  "fields": {
+    "rght": 488,
+    "code": "321",
+    "name": "Acul-du-Nord",
+    "parent": 6,
+    "level": 2,
+    "lft": 475,
+    "tree_id": 3,
+    "name_en": "Acul-du-Nord"
+  },
+  "model": "base.region",
+  "pk": 74
+},
+{
+  "fields": {
+    "rght": 620,
+    "code": "322",
+    "name": "Plaine-du-Nord",
+    "parent": 6,
+    "level": 2,
+    "lft": 611,
+    "tree_id": 3,
+    "name_en": "Plaine-du-Nord"
+  },
+  "model": "base.region",
+  "pk": 75
+},
+{
+  "fields": {
+    "rght": 586,
+    "code": "323",
+    "name": "Milot",
+    "parent": 6,
+    "level": 2,
+    "lft": 579,
+    "tree_id": 3,
+    "name_en": "Milot"
+  },
+  "model": "base.region",
+  "pk": 76
+},
+{
+  "fields": {
+    "rght": 552,
+    "code": "331",
+    "name": "Grande-Rivi\u00e8re-du-Nord",
+    "parent": 6,
+    "level": 2,
+    "lft": 539,
+    "tree_id": 3,
+    "name_en": "Grande-Rivi\u00e8re-du-Nord"
+  },
+  "model": "base.region",
+  "pk": 77
+},
+{
+  "fields": {
+    "rght": 496,
+    "code": "332",
+    "name": "Bahon",
+    "parent": 6,
+    "level": 2,
+    "lft": 489,
+    "tree_id": 3,
+    "name_en": "Bahon"
+  },
+  "model": "base.region",
+  "pk": 78
+},
+{
+  "fields": {
+    "rght": 676,
+    "code": "341",
+    "name": "Saint-Rapha\u00ebl",
+    "parent": 6,
+    "level": 2,
+    "lft": 667,
+    "tree_id": 3,
+    "name_en": "Saint-Rapha\u00ebl"
+  },
+  "model": "base.region",
+  "pk": 79
+},
+{
+  "fields": {
+    "rght": 538,
+    "code": "342",
+    "name": "Dondon",
+    "parent": 6,
+    "level": 2,
+    "lft": 527,
+    "tree_id": 3,
+    "name_en": "Dondon"
+  },
+  "model": "base.region",
+  "pk": 80
+},
+{
+  "fields": {
+    "rght": 666,
+    "code": "343",
+    "name": "Ranquitte",
+    "parent": 6,
+    "level": 2,
+    "lft": 659,
+    "tree_id": 3,
+    "name_en": "Ranquitte"
+  },
+  "model": "base.region",
+  "pk": 81
+},
+{
+  "fields": {
+    "rght": 592,
+    "code": "344",
+    "name": "Pignon",
+    "parent": 6,
+    "level": 2,
+    "lft": 587,
+    "tree_id": 3,
+    "name_en": "Pignon"
+  },
+  "model": "base.region",
+  "pk": 82
+},
+{
+  "fields": {
+    "rght": 556,
+    "code": "345",
+    "name": "La Victoire",
+    "parent": 6,
+    "level": 2,
+    "lft": 553,
+    "tree_id": 3,
+    "name_en": "La Victoire"
+  },
+  "model": "base.region",
+  "pk": 83
+},
+{
+  "fields": {
+    "rght": 518,
+    "code": "351",
+    "name": "Borgne",
+    "parent": 6,
+    "level": 2,
+    "lft": 503,
+    "tree_id": 3,
+    "name_en": "Borgne"
+  },
+  "model": "base.region",
+  "pk": 84
+},
+{
+  "fields": {
+    "rght": 652,
+    "code": "352",
+    "name": "Port-Margot",
+    "parent": 6,
+    "level": 2,
+    "lft": 639,
+    "tree_id": 3,
+    "name_en": "Port-Margot"
+  },
+  "model": "base.region",
+  "pk": 85
+},
+{
+  "fields": {
+    "rght": 570,
+    "code": "361",
+    "name": "Limb\u00e9",
+    "parent": 6,
+    "level": 2,
+    "lft": 557,
+    "tree_id": 3,
+    "name_en": "Limb\u00e9"
+  },
+  "model": "base.region",
+  "pk": 86
+},
+{
+  "fields": {
+    "rght": 502,
+    "code": "362",
+    "name": "Bas-Limb\u00e9",
+    "parent": 6,
+    "level": 2,
+    "lft": 497,
+    "tree_id": 3,
+    "name_en": "Bas-Limb\u00e9"
+  },
+  "model": "base.region",
+  "pk": 87
+},
+{
+  "fields": {
+    "rght": 638,
+    "code": "371",
+    "name": "Plaisance",
+    "parent": 6,
+    "level": 2,
+    "lft": 621,
+    "tree_id": 3,
+    "name_en": "Plaisance"
+  },
+  "model": "base.region",
+  "pk": 88
+},
+{
+  "fields": {
+    "rght": 610,
+    "code": "372",
+    "name": "Pilate",
+    "parent": 6,
+    "level": 2,
+    "lft": 593,
+    "tree_id": 3,
+    "name_en": "Pilate"
+  },
+  "model": "base.region",
+  "pk": 89
+},
+{
+  "fields": {
+    "rght": 710,
+    "code": "411",
+    "name": "Fort-Libert\u00e9",
+    "parent": 7,
+    "level": 2,
+    "lft": 701,
+    "tree_id": 3,
+    "name_en": "Fort-Libert\u00e9"
+  },
+  "model": "base.region",
+  "pk": 90
+},
+{
+  "fields": {
+    "rght": 700,
+    "code": "412",
+    "name": "Ferrier",
+    "parent": 7,
+    "level": 2,
+    "lft": 697,
+    "tree_id": 3,
+    "name_en": "Ferrier"
+  },
+  "model": "base.region",
+  "pk": 91
+},
+{
+  "fields": {
+    "rght": 740,
+    "code": "413",
+    "name": "Perches",
+    "parent": 7,
+    "level": 2,
+    "lft": 735,
+    "tree_id": 3,
+    "name_en": "Perches"
+  },
+  "model": "base.region",
+  "pk": 92
+},
+{
+  "fields": {
+    "rght": 734,
+    "code": "421",
+    "name": "Ouanaminthe",
+    "parent": 7,
+    "level": 2,
+    "lft": 723,
+    "tree_id": 3,
+    "name_en": "Ouanaminthe"
+  },
+  "model": "base.region",
+  "pk": 93
+},
+{
+  "fields": {
+    "rght": 684,
+    "code": "422",
+    "name": "Capotille",
+    "parent": 7,
+    "level": 2,
+    "lft": 679,
+    "tree_id": 3,
+    "name_en": "Capotille"
+  },
+  "model": "base.region",
+  "pk": 94
+},
+{
+  "fields": {
+    "rght": 722,
+    "code": "423",
+    "name": "Mont-Organis\u00e9",
+    "parent": 7,
+    "level": 2,
+    "lft": 717,
+    "tree_id": 3,
+    "name_en": "Mont-Organis\u00e9"
+  },
+  "model": "base.region",
+  "pk": 95
+},
+{
+  "fields": {
+    "rght": 768,
+    "code": "431",
+    "name": "Trou-du-Nord",
+    "parent": 7,
+    "level": 2,
+    "lft": 761,
+    "tree_id": 3,
+    "name_en": "Trou-du-Nord"
+  },
+  "model": "base.region",
+  "pk": 96
+},
+{
+  "fields": {
+    "rght": 754,
+    "code": "432",
+    "name": "Sainte-Suzanne",
+    "parent": 7,
+    "level": 2,
+    "lft": 741,
+    "tree_id": 3,
+    "name_en": "Sainte-Suzanne"
+  },
+  "model": "base.region",
+  "pk": 97
+},
+{
+  "fields": {
+    "rght": 760,
+    "code": "433",
+    "name": "Terrier-Rouge",
+    "parent": 7,
+    "level": 2,
+    "lft": 755,
+    "tree_id": 3,
+    "name_en": "Terrier-Rouge"
+  },
+  "model": "base.region",
+  "pk": 98
+},
+{
+  "fields": {
+    "rght": 690,
+    "code": "434",
+    "name": "Caracol",
+    "parent": 7,
+    "level": 2,
+    "lft": 685,
+    "tree_id": 3,
+    "name_en": "Caracol"
+  },
+  "model": "base.region",
+  "pk": 99
+},
+{
+  "fields": {
+    "rght": 776,
+    "code": "441",
+    "name": "Valli\u00e8res",
+    "parent": 7,
+    "level": 2,
+    "lft": 769,
+    "tree_id": 3,
+    "name_en": "Valli\u00e8res"
+  },
+  "model": "base.region",
+  "pk": 100
+},
+{
+  "fields": {
+    "rght": 696,
+    "code": "442",
+    "name": "Carice",
+    "parent": 7,
+    "level": 2,
+    "lft": 691,
+    "tree_id": 3,
+    "name_en": "Carice"
+  },
+  "model": "base.region",
+  "pk": 101
+},
+{
+  "fields": {
+    "rght": 716,
+    "code": "443",
+    "name": "Mombin-Crochu",
+    "parent": 7,
+    "level": 2,
+    "lft": 711,
+    "tree_id": 3,
+    "name_en": "Mombin-Crochu"
+  },
+  "model": "base.region",
+  "pk": 102
+},
+{
+  "fields": {
+    "rght": 1244,
+    "code": "711",
+    "name": "Les Cayes",
+    "parent": 10,
+    "level": 2,
+    "lft": 1231,
+    "tree_id": 3,
+    "name_en": "Les Cayes"
+  },
+  "model": "base.region",
+  "pk": 103
+},
+{
+  "fields": {
+    "rght": 1316,
+    "code": "712",
+    "name": "Torbeck",
+    "parent": 10,
+    "level": 2,
+    "lft": 1307,
+    "tree_id": 3,
+    "name_en": "Torbeck"
+  },
+  "model": "base.region",
+  "pk": 104
+},
+{
+  "fields": {
+    "rght": 1202,
+    "code": "713",
+    "name": "Chantal",
+    "parent": 10,
+    "level": 2,
+    "lft": 1195,
+    "tree_id": 3,
+    "name_en": "Chantal"
+  },
+  "model": "base.region",
+  "pk": 105
+},
+{
+  "fields": {
+    "rght": 1182,
+    "code": "714",
+    "name": "Camp-Perrin",
+    "parent": 10,
+    "level": 2,
+    "lft": 1175,
+    "tree_id": 3,
+    "name_en": "Camp-Perrin"
+  },
+  "model": "base.region",
+  "pk": 106
+},
+{
+  "fields": {
+    "rght": 1252,
+    "code": "715",
+    "name": "Maniche",
+    "parent": 10,
+    "level": 2,
+    "lft": 1245,
+    "tree_id": 3,
+    "name_en": "Maniche"
+  },
+  "model": "base.region",
+  "pk": 107
+},
+{
+  "fields": {
+    "rght": 1222,
+    "code": "716",
+    "name": "\u00cele \u00e0 Vache",
+    "parent": 10,
+    "level": 2,
+    "lft": 1219,
+    "tree_id": 3,
+    "name_en": "\u00cele \u00e0 Vache"
+  },
+  "model": "base.region",
+  "pk": 108
+},
+{
+  "fields": {
+    "rght": 1264,
+    "code": "721",
+    "name": "Port-Salut",
+    "parent": 10,
+    "level": 2,
+    "lft": 1259,
+    "tree_id": 3,
+    "name_en": "Port-Salut"
+  },
+  "model": "base.region",
+  "pk": 109
+},
+{
+  "fields": {
+    "rght": 1280,
+    "code": "722",
+    "name": "Saint-Jean-du-Sud",
+    "parent": 10,
+    "level": 2,
+    "lft": 1273,
+    "tree_id": 3,
+    "name_en": "Saint-Jean-du-Sud"
+  },
+  "model": "base.region",
+  "pk": 110
+},
+{
+  "fields": {
+    "rght": 1174,
+    "code": "723",
+    "name": "Arniquet",
+    "parent": 10,
+    "level": 2,
+    "lft": 1167,
+    "tree_id": 3,
+    "name_en": "Arniquet"
+  },
+  "model": "base.region",
+  "pk": 111
+},
+{
+  "fields": {
+    "rght": 1166,
+    "code": "731",
+    "name": "Aquin",
+    "parent": 10,
+    "level": 2,
+    "lft": 1145,
+    "tree_id": 3,
+    "name_en": "Aquin"
+  },
+  "model": "base.region",
+  "pk": 112
+},
+{
+  "fields": {
+    "rght": 1298,
+    "code": "732",
+    "name": "Saint-Louis du Sud",
+    "parent": 10,
+    "level": 2,
+    "lft": 1281,
+    "tree_id": 3,
+    "name_en": "Saint-Louis du Sud"
+  },
+  "model": "base.region",
+  "pk": 113
+},
+{
+  "fields": {
+    "rght": 1194,
+    "code": "733",
+    "name": "Cavaillon",
+    "parent": 10,
+    "level": 2,
+    "lft": 1183,
+    "tree_id": 3,
+    "name_en": "Cavaillon"
+  },
+  "model": "base.region",
+  "pk": 114
+},
+{
+  "fields": {
+    "rght": 1218,
+    "code": "741",
+    "name": "C\u00f4teaux",
+    "parent": 10,
+    "level": 2,
+    "lft": 1211,
+    "tree_id": 3,
+    "name_en": "C\u00f4teaux"
+  },
+  "model": "base.region",
+  "pk": 115
+},
+{
+  "fields": {
+    "rght": 1258,
+    "code": "742",
+    "name": "Port-\u00e0-Piment",
+    "parent": 10,
+    "level": 2,
+    "lft": 1253,
+    "tree_id": 3,
+    "name_en": "Port-\u00e0-Piment"
+  },
+  "model": "base.region",
+  "pk": 116
+},
+{
+  "fields": {
+    "rght": 1272,
+    "code": "743",
+    "name": "Roche-\u00e0-Bateaux",
+    "parent": 10,
+    "level": 2,
+    "lft": 1265,
+    "tree_id": 3,
+    "name_en": "Roche-\u00e0-Bateaux"
+  },
+  "model": "base.region",
+  "pk": 117
+},
+{
+  "fields": {
+    "rght": 1210,
+    "code": "751",
+    "name": "Chardonni\u00e8res",
+    "parent": 10,
+    "level": 2,
+    "lft": 1203,
+    "tree_id": 3,
+    "name_en": "Chardonni\u00e8res"
+  },
+  "model": "base.region",
+  "pk": 118
+},
+{
+  "fields": {
+    "rght": 1230,
+    "code": "752",
+    "name": "Les Anglais",
+    "parent": 10,
+    "level": 2,
+    "lft": 1223,
+    "tree_id": 3,
+    "name_en": "Les Anglais"
+  },
+  "model": "base.region",
+  "pk": 119
+},
+{
+  "fields": {
+    "rght": 1306,
+    "code": "753",
+    "name": "Tiburon",
+    "parent": 10,
+    "level": 2,
+    "lft": 1299,
+    "tree_id": 3,
+    "name_en": "Tiburon"
+  },
+  "model": "base.region",
+  "pk": 120
+},
+{
+  "fields": {
+    "rght": 334,
+    "code": "811",
+    "name": "J\u00e9r\u00e9mie",
+    "parent": 4,
+    "level": 2,
+    "lft": 315,
+    "tree_id": 3,
+    "name_en": "J\u00e9r\u00e9mie"
+  },
+  "model": "base.region",
+  "pk": 121
+},
+{
+  "fields": {
+    "rght": 266,
+    "code": "812",
+    "name": "Abricots",
+    "parent": 4,
+    "level": 2,
+    "lft": 257,
+    "tree_id": 3,
+    "name_en": "Abricots"
+  },
+  "model": "base.region",
+  "pk": 122
+},
+{
+  "fields": {
+    "rght": 288,
+    "code": "813",
+    "name": "Bonbon",
+    "parent": 4,
+    "level": 2,
+    "lft": 285,
+    "tree_id": 3,
+    "name_en": "Bonbon"
+  },
+  "model": "base.region",
+  "pk": 123
+},
+{
+  "fields": {
+    "rght": 350,
+    "code": "814",
+    "name": "Moron",
+    "parent": 4,
+    "level": 2,
+    "lft": 343,
+    "tree_id": 3,
+    "name_en": "Moron"
+  },
+  "model": "base.region",
+  "pk": 124
+},
+{
+  "fields": {
+    "rght": 294,
+    "code": "815",
+    "name": "Chambellan",
+    "parent": 4,
+    "level": 2,
+    "lft": 289,
+    "tree_id": 3,
+    "name_en": "Chambellan"
+  },
+  "model": "base.region",
+  "pk": 125
+},
+{
+  "fields": {
+    "rght": 276,
+    "code": "821",
+    "name": "Anse-d'Hainault",
+    "parent": 4,
+    "level": 2,
+    "lft": 267,
+    "tree_id": 3,
+    "name_en": "Anse-d'Hainault"
+  },
+  "model": "base.region",
+  "pk": 126
+},
+{
+  "fields": {
+    "rght": 314,
+    "code": "822",
+    "name": "Dame-Marie",
+    "parent": 4,
+    "level": 2,
+    "lft": 303,
+    "tree_id": 3,
+    "name_en": "Dame-Marie"
+  },
+  "model": "base.region",
+  "pk": 127
+},
+{
+  "fields": {
+    "rght": 342,
+    "code": "823",
+    "name": "Les Irois",
+    "parent": 4,
+    "level": 2,
+    "lft": 335,
+    "tree_id": 3,
+    "name_en": "Les Irois"
+  },
+  "model": "base.region",
+  "pk": 128
+},
+{
+  "fields": {
+    "rght": 302,
+    "code": "831",
+    "name": "Corail",
+    "parent": 4,
+    "level": 2,
+    "lft": 295,
+    "tree_id": 3,
+    "name_en": "Corail"
+  },
+  "model": "base.region",
+  "pk": 129
+},
+{
+  "fields": {
+    "rght": 374,
+    "code": "832",
+    "name": "Roseaux",
+    "parent": 4,
+    "level": 2,
+    "lft": 365,
+    "tree_id": 3,
+    "name_en": "Roseaux"
+  },
+  "model": "base.region",
+  "pk": 130
+},
+{
+  "fields": {
+    "rght": 284,
+    "code": "833",
+    "name": "Beaumont",
+    "parent": 4,
+    "level": 2,
+    "lft": 277,
+    "tree_id": 3,
+    "name_en": "Beaumont"
+  },
+  "model": "base.region",
+  "pk": 131
+},
+{
+  "fields": {
+    "rght": 364,
+    "code": "834",
+    "name": "Pestel",
+    "parent": 4,
+    "level": 2,
+    "lft": 351,
+    "tree_id": 3,
+    "name_en": "Pestel"
+  },
+  "model": "base.region",
+  "pk": 132
+},
+{
+  "fields": {
+    "rght": 862,
+    "code": "911",
+    "name": "Port-de-Paix",
+    "parent": 8,
+    "level": 2,
+    "lft": 849,
+    "tree_id": 3,
+    "name_en": "Port-de-Paix"
+  },
+  "model": "base.region",
+  "pk": 133
+},
+{
+  "fields": {
+    "rght": 840,
+    "code": "912",
+    "name": "La Tortue",
+    "parent": 8,
+    "level": 2,
+    "lft": 835,
+    "tree_id": 3,
+    "name_en": "La Tortue"
+  },
+  "model": "base.region",
+  "pk": 134
+},
+{
+  "fields": {
+    "rght": 804,
+    "code": "913",
+    "name": "Bassin Bleu",
+    "parent": 8,
+    "level": 2,
+    "lft": 797,
+    "tree_id": 3,
+    "name_en": "Bassin Bleu"
+  },
+  "model": "base.region",
+  "pk": 135
+},
+{
+  "fields": {
+    "rght": 818,
+    "code": "914",
+    "name": "Chansolme",
+    "parent": 8,
+    "level": 2,
+    "lft": 813,
+    "tree_id": 3,
+    "name_en": "Chansolme"
+  },
+  "model": "base.region",
+  "pk": 136
+},
+{
+  "fields": {
+    "rght": 876,
+    "code": "921",
+    "name": "Saint-Louis du Nord",
+    "parent": 8,
+    "level": 2,
+    "lft": 863,
+    "tree_id": 3,
+    "name_en": "Saint-Louis du Nord"
+  },
+  "model": "base.region",
+  "pk": 137
+},
+{
+  "fields": {
+    "rght": 786,
+    "code": "922",
+    "name": "Anse-\u00e0-Foleur",
+    "parent": 8,
+    "level": 2,
+    "lft": 779,
+    "tree_id": 3,
+    "name_en": "Anse-\u00e0-Foleur"
+  },
+  "model": "base.region",
+  "pk": 138
+},
+{
+  "fields": {
+    "rght": 848,
+    "code": "931",
+    "name": "M\u00f4le-Saint-Nicolas",
+    "parent": 8,
+    "level": 2,
+    "lft": 841,
+    "tree_id": 3,
+    "name_en": "M\u00f4le-Saint-Nicolas"
+  },
+  "model": "base.region",
+  "pk": 139
+},
+{
+  "fields": {
+    "rght": 796,
+    "code": "932",
+    "name": "Baie de Henne",
+    "parent": 8,
+    "level": 2,
+    "lft": 787,
+    "tree_id": 3,
+    "name_en": "Baie de Henne"
+  },
+  "model": "base.region",
+  "pk": 140
+},
+{
+  "fields": {
+    "rght": 812,
+    "code": "933",
+    "name": "Bombardopolis",
+    "parent": 8,
+    "level": 2,
+    "lft": 805,
+    "tree_id": 3,
+    "name_en": "Bombardopolis"
+  },
+  "model": "base.region",
+  "pk": 141
+},
+{
+  "fields": {
+    "rght": 834,
+    "code": "934",
+    "name": "Jean-Rabel",
+    "parent": 8,
+    "level": 2,
+    "lft": 819,
+    "tree_id": 3,
+    "name_en": "Jean-Rabel"
+  },
+  "model": "base.region",
+  "pk": 142
+},
+{
+  "fields": {
+    "rght": 440,
+    "code": "1011",
+    "name": "Mirago\u00e2ne",
+    "parent": 5,
+    "level": 2,
+    "lft": 431,
+    "tree_id": 3,
+    "name_en": "Mirago\u00e2ne"
+  },
+  "model": "base.region",
+  "pk": 143
+},
+{
+  "fields": {
+    "rght": 456,
+    "code": "1012",
+    "name": "Petite-Rivi\u00e8re-de-Nippes",
+    "parent": 5,
+    "level": 2,
+    "lft": 447,
+    "tree_id": 3,
+    "name_en": "Petite-Rivi\u00e8re-de-Nippes"
+  },
+  "model": "base.region",
+  "pk": 144
+},
+{
+  "fields": {
+    "rght": 414,
+    "code": "1013",
+    "name": "Fonds-des-N\u00e8gres",
+    "parent": 5,
+    "level": 2,
+    "lft": 405,
+    "tree_id": 3,
+    "name_en": "Fonds-des-N\u00e8gres"
+  },
+  "model": "base.region",
+  "pk": 145
+},
+{
+  "fields": {
+    "rght": 446,
+    "code": "1014",
+    "name": "Paillant",
+    "parent": 5,
+    "level": 2,
+    "lft": 441,
+    "tree_id": 3,
+    "name_en": "Paillant"
+  },
+  "model": "base.region",
+  "pk": 146
+},
+{
+  "fields": {
+    "rght": 384,
+    "code": "1021",
+    "name": "Anse-\u00e0-Veau",
+    "parent": 5,
+    "level": 2,
+    "lft": 377,
+    "tree_id": 3,
+    "name_en": "Anse-\u00e0-Veau"
+  },
+  "model": "base.region",
+  "pk": 147
+},
+{
+  "fields": {
+    "rght": 464,
+    "code": "1022",
+    "name": "Petit-Trou-de-Nippes",
+    "parent": 5,
+    "level": 2,
+    "lft": 457,
+    "tree_id": 3,
+    "name_en": "Petit-Trou-de-Nippes"
+  },
+  "model": "base.region",
+  "pk": 148
+},
+{
+  "fields": {
+    "rght": 430,
+    "code": "1023",
+    "name": "L'Asile",
+    "parent": 5,
+    "level": 2,
+    "lft": 421,
+    "tree_id": 3,
+    "name_en": "L'Asile"
+  },
+  "model": "base.region",
+  "pk": 149
+},
+{
+  "fields": {
+    "rght": 392,
+    "code": "1024",
+    "name": "Arnaud",
+    "parent": 5,
+    "level": 2,
+    "lft": 385,
+    "tree_id": 3,
+    "name_en": "Arnaud"
+  },
+  "model": "base.region",
+  "pk": 150
+},
+{
+  "fields": {
+    "rght": 472,
+    "code": "1025",
+    "name": "Plaisance-du-Sud",
+    "parent": 5,
+    "level": 2,
+    "lft": 465,
+    "tree_id": 3,
+    "name_en": "Plaisance-du-Sud"
+  },
+  "model": "base.region",
+  "pk": 151
+},
+{
+  "fields": {
+    "rght": 404,
+    "code": "1031",
+    "name": "Barad\u00e8res",
+    "parent": 5,
+    "level": 2,
+    "lft": 393,
+    "tree_id": 3,
+    "name_en": "Barad\u00e8res"
+  },
+  "model": "base.region",
+  "pk": 152
+},
+{
+  "fields": {
+    "rght": 420,
+    "code": "1032",
+    "name": "Grand-Boucan",
+    "parent": 5,
+    "level": 2,
+    "lft": 415,
+    "tree_id": 3,
+    "name_en": "Grand-Boucan"
+  },
+  "model": "base.region",
+  "pk": 153
+},
+{
+  "fields": {
+    "rght": 1121,
+    "code": "11101",
+    "name": "6\u00e8me Turgeau",
+    "parent": 41,
+    "level": 3,
+    "lft": 1120,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Turgeau"
+  },
+  "model": "base.region",
+  "pk": 154
+},
+{
+  "fields": {
+    "rght": 1123,
+    "code": "11102",
+    "name": "7\u00e8me Morne l'Hopital",
+    "parent": 41,
+    "level": 3,
+    "lft": 1122,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Morne l'Hopital"
+  },
+  "model": "base.region",
+  "pk": 155
+},
+{
+  "fields": {
+    "rght": 1125,
+    "code": "11103",
+    "name": "8\u00e8me Martissant",
+    "parent": 41,
+    "level": 3,
+    "lft": 1124,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Martissant"
+  },
+  "model": "base.region",
+  "pk": 156
+},
+{
+  "fields": {
+    "rght": 987,
+    "code": "11201",
+    "name": "1\u00e8re Saint martin",
+    "parent": 42,
+    "level": 3,
+    "lft": 986,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Saint martin"
+  },
+  "model": "base.region",
+  "pk": 157
+},
+{
+  "fields": {
+    "rght": 925,
+    "code": "11301",
+    "name": "14\u00e8me Morne Chandelle",
+    "parent": 43,
+    "level": 3,
+    "lft": 924,
+    "tree_id": 3,
+    "name_en": "14\u00e8me Morne Chandelle"
+  },
+  "model": "base.region",
+  "pk": 158
+},
+{
+  "fields": {
+    "rght": 927,
+    "code": "11302",
+    "name": "15\u00e8me Platon Dufr\u00e9n\u00e9",
+    "parent": 43,
+    "level": 3,
+    "lft": 926,
+    "tree_id": 3,
+    "name_en": "15\u00e8me Platon Dufr\u00e9n\u00e9"
+  },
+  "model": "base.region",
+  "pk": 159
+},
+{
+  "fields": {
+    "rght": 929,
+    "code": "11303",
+    "name": "16\u00e8me Taifer",
+    "parent": 43,
+    "level": 3,
+    "lft": 928,
+    "tree_id": 3,
+    "name_en": "16\u00e8me Taifer"
+  },
+  "model": "base.region",
+  "pk": 160
+},
+{
+  "fields": {
+    "rght": 931,
+    "code": "11304",
+    "name": "17\u00e8me Procy",
+    "parent": 43,
+    "level": 3,
+    "lft": 930,
+    "tree_id": 3,
+    "name_en": "17\u00e8me Procy"
+  },
+  "model": "base.region",
+  "pk": 161
+},
+{
+  "fields": {
+    "rght": 933,
+    "code": "11305",
+    "name": "18\u00e8me Coupeau",
+    "parent": 43,
+    "level": 3,
+    "lft": 932,
+    "tree_id": 3,
+    "name_en": "18\u00e8me Coupeau"
+  },
+  "model": "base.region",
+  "pk": 162
+},
+{
+  "fields": {
+    "rght": 935,
+    "code": "11306",
+    "name": "19\u00e8me Bouvier",
+    "parent": 43,
+    "level": 3,
+    "lft": 934,
+    "tree_id": 3,
+    "name_en": "19\u00e8me Bouvier"
+  },
+  "model": "base.region",
+  "pk": 163
+},
+{
+  "fields": {
+    "rght": 937,
+    "code": "11307",
+    "name": "20\u00e8me Laval",
+    "parent": 43,
+    "level": 3,
+    "lft": 936,
+    "tree_id": 3,
+    "name_en": "20\u00e8me Laval"
+  },
+  "model": "base.region",
+  "pk": 164
+},
+{
+  "fields": {
+    "rght": 939,
+    "code": "11308",
+    "name": "21\u00e8me Berly",
+    "parent": 43,
+    "level": 3,
+    "lft": 938,
+    "tree_id": 3,
+    "name_en": "21\u00e8me Berly"
+  },
+  "model": "base.region",
+  "pk": 165
+},
+{
+  "fields": {
+    "rght": 943,
+    "code": "11309",
+    "name": "9\u00e8me Bizoton",
+    "parent": 43,
+    "level": 3,
+    "lft": 942,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Bizoton"
+  },
+  "model": "base.region",
+  "pk": 166
+},
+{
+  "fields": {
+    "rght": 919,
+    "code": "11310",
+    "name": "10\u00e8me Thor",
+    "parent": 43,
+    "level": 3,
+    "lft": 918,
+    "tree_id": 3,
+    "name_en": "10\u00e8me Thor"
+  },
+  "model": "base.region",
+  "pk": 167
+},
+{
+  "fields": {
+    "rght": 921,
+    "code": "11311",
+    "name": "11\u00e8me Rivi\u00e8re Froide",
+    "parent": 43,
+    "level": 3,
+    "lft": 920,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Rivi\u00e8re Froide"
+  },
+  "model": "base.region",
+  "pk": 168
+},
+{
+  "fields": {
+    "rght": 941,
+    "code": "11312",
+    "name": "22\u00e8me Malanga",
+    "parent": 43,
+    "level": 3,
+    "lft": 940,
+    "tree_id": 3,
+    "name_en": "22\u00e8me Malanga"
+  },
+  "model": "base.region",
+  "pk": 169
+},
+{
+  "fields": {
+    "rght": 923,
+    "code": "11313",
+    "name": "13\u00e8me Corail Thor",
+    "parent": 43,
+    "level": 3,
+    "lft": 922,
+    "tree_id": 3,
+    "name_en": "13\u00e8me Corail Thor"
+  },
+  "model": "base.region",
+  "pk": 170
+},
+{
+  "fields": {
+    "rght": 1071,
+    "code": "11401",
+    "name": "1\u00e8re Montagne Noire",
+    "parent": 44,
+    "level": 3,
+    "lft": 1070,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Montagne Noire"
+  },
+  "model": "base.region",
+  "pk": 171
+},
+{
+  "fields": {
+    "rght": 1077,
+    "code": "11402",
+    "name": "6\u00e8me Aux Cadets",
+    "parent": 44,
+    "level": 3,
+    "lft": 1076,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Aux Cadets"
+  },
+  "model": "base.region",
+  "pk": 172
+},
+{
+  "fields": {
+    "rght": 1073,
+    "code": "11403",
+    "name": "3\u00e8me Etang du Jong",
+    "parent": 44,
+    "level": 3,
+    "lft": 1072,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Etang du Jong"
+  },
+  "model": "base.region",
+  "pk": 173
+},
+{
+  "fields": {
+    "rght": 1075,
+    "code": "11404",
+    "name": "4\u00e8me Bellevue la Montagne",
+    "parent": 44,
+    "level": 3,
+    "lft": 1074,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Bellevue la Montagne"
+  },
+  "model": "base.region",
+  "pk": 174
+},
+{
+  "fields": {
+    "rght": 1079,
+    "code": "11405",
+    "name": "7\u00e8me Bellevue Chardonni\u00e8re",
+    "parent": 44,
+    "level": 3,
+    "lft": 1078,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Bellevue Chardonni\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 175
+},
+{
+  "fields": {
+    "rght": 1033,
+    "code": "11501",
+    "name": "2\u00e8me Nouvelle Tourraine",
+    "parent": 45,
+    "level": 3,
+    "lft": 1032,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Nouvelle Tourraine"
+  },
+  "model": "base.region",
+  "pk": 176
+},
+{
+  "fields": {
+    "rght": 1031,
+    "code": "11502",
+    "name": "2\u00e8me Bongars",
+    "parent": 45,
+    "level": 3,
+    "lft": 1030,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bongars"
+  },
+  "model": "base.region",
+  "pk": 177
+},
+{
+  "fields": {
+    "rght": 1035,
+    "code": "11503",
+    "name": "3\u00e8me Sourcailles",
+    "parent": 45,
+    "level": 3,
+    "lft": 1034,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Sourcailles"
+  },
+  "model": "base.region",
+  "pk": 178
+},
+{
+  "fields": {
+    "rght": 1037,
+    "code": "11504",
+    "name": "4\u00e8me Belle Fontaine",
+    "parent": 45,
+    "level": 3,
+    "lft": 1036,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Belle Fontaine"
+  },
+  "model": "base.region",
+  "pk": 179
+},
+{
+  "fields": {
+    "rght": 1039,
+    "code": "11505",
+    "name": "4\u00e8me Grand Fond",
+    "parent": 45,
+    "level": 3,
+    "lft": 1038,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Grand Fond"
+  },
+  "model": "base.region",
+  "pk": 180
+},
+{
+  "fields": {
+    "rght": 1023,
+    "code": "11601",
+    "name": "1\u00e8re Morne \u00e0Bateau",
+    "parent": 46,
+    "level": 3,
+    "lft": 1022,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Morne \u00e0Bateau"
+  },
+  "model": "base.region",
+  "pk": 181
+},
+{
+  "fields": {
+    "rght": 1025,
+    "code": "11602",
+    "name": "23\u00e8me Morne Chandelle",
+    "parent": 46,
+    "level": 3,
+    "lft": 1024,
+    "tree_id": 3,
+    "name_en": "23\u00e8me Morne Chandelle"
+  },
+  "model": "base.region",
+  "pk": 182
+},
+{
+  "fields": {
+    "rght": 1027,
+    "code": "11603",
+    "name": "24\u00e8me Petit Boucan",
+    "parent": 46,
+    "level": 3,
+    "lft": 1026,
+    "tree_id": 3,
+    "name_en": "24\u00e8me Petit Boucan"
+  },
+  "model": "base.region",
+  "pk": 183
+},
+{
+  "fields": {
+    "rght": 947,
+    "code": "11701",
+    "name": "1\u00e8re Varreux",
+    "parent": 47,
+    "level": 3,
+    "lft": 946,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Varreux"
+  },
+  "model": "base.region",
+  "pk": 184
+},
+{
+  "fields": {
+    "rght": 949,
+    "code": "11702",
+    "name": "2\u00e8me Varreux",
+    "parent": 47,
+    "level": 3,
+    "lft": 948,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Varreux"
+  },
+  "model": "base.region",
+  "pk": 185
+},
+{
+  "fields": {
+    "rght": 1129,
+    "code": "11803",
+    "name": "3\u00e8me Bellevue",
+    "parent": 48,
+    "level": 3,
+    "lft": 1128,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Bellevue"
+  },
+  "model": "base.region",
+  "pk": 186
+},
+{
+  "fields": {
+    "rght": 1131,
+    "code": "11804",
+    "name": "4\u00e8me Bellevue",
+    "parent": 48,
+    "level": 3,
+    "lft": 1130,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Bellevue"
+  },
+  "model": "base.region",
+  "pk": 187
+},
+{
+  "fields": {
+    "rght": 1051,
+    "code": "12101",
+    "name": "1\u00e8re Dessources",
+    "parent": 49,
+    "level": 3,
+    "lft": 1050,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Dessources"
+  },
+  "model": "base.region",
+  "pk": 188
+},
+{
+  "fields": {
+    "rght": 1053,
+    "code": "12102",
+    "name": "2\u00e8me Petite Rivi\u00e8re",
+    "parent": 49,
+    "level": 3,
+    "lft": 1052,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Petite Rivi\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 189
+},
+{
+  "fields": {
+    "rght": 1055,
+    "code": "12103",
+    "name": "3\u00e8me Grande Riv\u00e8re",
+    "parent": 49,
+    "level": 3,
+    "lft": 1054,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Grande Riv\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 190
+},
+{
+  "fields": {
+    "rght": 1057,
+    "code": "12104",
+    "name": "4\u00e8me Fond de Boudin",
+    "parent": 49,
+    "level": 3,
+    "lft": 1056,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Fond de Boudin"
+  },
+  "model": "base.region",
+  "pk": 191
+},
+{
+  "fields": {
+    "rght": 1059,
+    "code": "12105",
+    "name": "5\u00e8me Palmiste \u00e0 Vins",
+    "parent": 49,
+    "level": 3,
+    "lft": 1058,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Palmiste \u00e0 Vins"
+  },
+  "model": "base.region",
+  "pk": 192
+},
+{
+  "fields": {
+    "rght": 1061,
+    "code": "12106",
+    "name": "6\u00e8me Oranger",
+    "parent": 49,
+    "level": 3,
+    "lft": 1060,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Oranger"
+  },
+  "model": "base.region",
+  "pk": 193
+},
+{
+  "fields": {
+    "rght": 1063,
+    "code": "12107",
+    "name": "7\u00e8me Parques",
+    "parent": 49,
+    "level": 3,
+    "lft": 1062,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Parques"
+  },
+  "model": "base.region",
+  "pk": 194
+},
+{
+  "fields": {
+    "rght": 1065,
+    "code": "12108",
+    "name": "8\u00e8me Beaus\u00e9jour",
+    "parent": 49,
+    "level": 3,
+    "lft": 1064,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Beaus\u00e9jour"
+  },
+  "model": "base.region",
+  "pk": 195
+},
+{
+  "fields": {
+    "rght": 1067,
+    "code": "12109",
+    "name": "9\u00e8me Citronniers",
+    "parent": 49,
+    "level": 3,
+    "lft": 1066,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Citronniers"
+  },
+  "model": "base.region",
+  "pk": 196
+},
+{
+  "fields": {
+    "rght": 1043,
+    "code": "12110",
+    "name": "10\u00e8me Fonds d'Oie",
+    "parent": 49,
+    "level": 3,
+    "lft": 1042,
+    "tree_id": 3,
+    "name_en": "10\u00e8me Fonds d'Oie"
+  },
+  "model": "base.region",
+  "pk": 197
+},
+{
+  "fields": {
+    "rght": 1045,
+    "code": "12111",
+    "name": "11\u00e8me Gros Morne",
+    "parent": 49,
+    "level": 3,
+    "lft": 1044,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Gros Morne"
+  },
+  "model": "base.region",
+  "pk": 198
+},
+{
+  "fields": {
+    "rght": 1047,
+    "code": "12112",
+    "name": "12\u00e8me Cormiers",
+    "parent": 49,
+    "level": 3,
+    "lft": 1046,
+    "tree_id": 3,
+    "name_en": "12\u00e8me Cormiers"
+  },
+  "model": "base.region",
+  "pk": 199
+},
+{
+  "fields": {
+    "rght": 1049,
+    "code": "12113",
+    "name": "13\u00e8me Petit Harpon",
+    "parent": 49,
+    "level": 3,
+    "lft": 1048,
+    "tree_id": 3,
+    "name_en": "13\u00e8me Petit Harpon"
+  },
+  "model": "base.region",
+  "pk": 200
+},
+{
+  "fields": {
+    "rght": 1089,
+    "code": "12201",
+    "name": "1\u00e8re Bino",
+    "parent": 50,
+    "level": 3,
+    "lft": 1088,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bino"
+  },
+  "model": "base.region",
+  "pk": 201
+},
+{
+  "fields": {
+    "rght": 1091,
+    "code": "12202",
+    "name": "2\u00e8me Delatre",
+    "parent": 50,
+    "level": 3,
+    "lft": 1090,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Delatre"
+  },
+  "model": "base.region",
+  "pk": 202
+},
+{
+  "fields": {
+    "rght": 1093,
+    "code": "12203",
+    "name": "3\u00e8me Trou Chouchou",
+    "parent": 50,
+    "level": 3,
+    "lft": 1092,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Trou Chouchou"
+  },
+  "model": "base.region",
+  "pk": 203
+},
+{
+  "fields": {
+    "rght": 1095,
+    "code": "12204",
+    "name": "4\u00e8me Fonds Arabie",
+    "parent": 50,
+    "level": 3,
+    "lft": 1094,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Fonds Arabie"
+  },
+  "model": "base.region",
+  "pk": 204
+},
+{
+  "fields": {
+    "rght": 1097,
+    "code": "12205",
+    "name": "5\u00e8me Trou Canari",
+    "parent": 50,
+    "level": 3,
+    "lft": 1096,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Trou Canari"
+  },
+  "model": "base.region",
+  "pk": 205
+},
+{
+  "fields": {
+    "rght": 1099,
+    "code": "12206",
+    "name": "6\u00e8me Trou Canari",
+    "parent": 50,
+    "level": 3,
+    "lft": 1098,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Trou Canari"
+  },
+  "model": "base.region",
+  "pk": 206
+},
+{
+  "fields": {
+    "rght": 1101,
+    "code": "12207",
+    "name": "7\u00e8me des Platons",
+    "parent": 50,
+    "level": 3,
+    "lft": 1100,
+    "tree_id": 3,
+    "name_en": "7\u00e8me des Platons"
+  },
+  "model": "base.region",
+  "pk": 207
+},
+{
+  "fields": {
+    "rght": 1103,
+    "code": "12208",
+    "name": "8\u00e8me des Platons",
+    "parent": 50,
+    "level": 3,
+    "lft": 1102,
+    "tree_id": 3,
+    "name_en": "8\u00e8me des Platons"
+  },
+  "model": "base.region",
+  "pk": 208
+},
+{
+  "fields": {
+    "rght": 1105,
+    "code": "12209",
+    "name": "9\u00e8me des Palmes",
+    "parent": 50,
+    "level": 3,
+    "lft": 1104,
+    "tree_id": 3,
+    "name_en": "9\u00e8me des Palmes"
+  },
+  "model": "base.region",
+  "pk": 209
+},
+{
+  "fields": {
+    "rght": 1083,
+    "code": "12210",
+    "name": "10\u00e8me des Palmes",
+    "parent": 50,
+    "level": 3,
+    "lft": 1082,
+    "tree_id": 3,
+    "name_en": "10\u00e8me des Palmes"
+  },
+  "model": "base.region",
+  "pk": 210
+},
+{
+  "fields": {
+    "rght": 1085,
+    "code": "12211",
+    "name": "11\u00e8me Ravine S\u00e8che",
+    "parent": 50,
+    "level": 3,
+    "lft": 1084,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Ravine S\u00e8che"
+  },
+  "model": "base.region",
+  "pk": 211
+},
+{
+  "fields": {
+    "rght": 1087,
+    "code": "12212",
+    "name": "12\u00e8me des Fouques",
+    "parent": 50,
+    "level": 3,
+    "lft": 1086,
+    "tree_id": 3,
+    "name_en": "12\u00e8me des Fouques"
+  },
+  "model": "base.region",
+  "pk": 212
+},
+{
+  "fields": {
+    "rght": 983,
+    "code": "13105",
+    "name": "3\u00e8me Petit Bois",
+    "parent": 52,
+    "level": 3,
+    "lft": 982,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Petit Bois"
+  },
+  "model": "base.region",
+  "pk": 213
+},
+{
+  "fields": {
+    "rght": 967,
+    "code": "13106",
+    "name": "1\u00e8re Belle Fontaine",
+    "parent": 52,
+    "level": 3,
+    "lft": 966,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Belle Fontaine"
+  },
+  "model": "base.region",
+  "pk": 214
+},
+{
+  "fields": {
+    "rght": 971,
+    "code": "13107",
+    "name": "2\u00e8me Belle Fontaine",
+    "parent": 52,
+    "level": 3,
+    "lft": 970,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Belle Fontaine"
+  },
+  "model": "base.region",
+  "pk": 215
+},
+{
+  "fields": {
+    "rght": 981,
+    "code": "13108",
+    "name": "3\u00e8me Belle Fontaine",
+    "parent": 52,
+    "level": 3,
+    "lft": 980,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Belle Fontaine"
+  },
+  "model": "base.region",
+  "pk": 216
+},
+{
+  "fields": {
+    "rght": 973,
+    "code": "13109",
+    "name": "2\u00e8me Crochus",
+    "parent": 52,
+    "level": 3,
+    "lft": 972,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Crochus"
+  },
+  "model": "base.region",
+  "pk": 217
+},
+{
+  "fields": {
+    "rght": 965,
+    "code": "13110",
+    "name": "10\u00e8me des Orangers",
+    "parent": 52,
+    "level": 3,
+    "lft": 964,
+    "tree_id": 3,
+    "name_en": "10\u00e8me des Orangers"
+  },
+  "model": "base.region",
+  "pk": 218
+},
+{
+  "fields": {
+    "rght": 975,
+    "code": "13104",
+    "name": "2\u00e8me Petit Bois",
+    "parent": 52,
+    "level": 3,
+    "lft": 974,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Petit Bois"
+  },
+  "model": "base.region",
+  "pk": 219
+},
+{
+  "fields": {
+    "rght": 969,
+    "code": "13103",
+    "name": "1\u00e8re Petit Bois",
+    "parent": 52,
+    "level": 3,
+    "lft": 968,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Petit Bois"
+  },
+  "model": "base.region",
+  "pk": 220
+},
+{
+  "fields": {
+    "rght": 977,
+    "code": "13102",
+    "name": "2\u00e8me Varreux",
+    "parent": 52,
+    "level": 3,
+    "lft": 976,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Varreux"
+  },
+  "model": "base.region",
+  "pk": 221
+},
+{
+  "fields": {
+    "rght": 979,
+    "code": "13101",
+    "name": "2\u00e8me Varreux",
+    "parent": 52,
+    "level": 3,
+    "lft": 978,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Varreux"
+  },
+  "model": "base.region",
+  "pk": 222
+},
+{
+  "fields": {
+    "rght": 1007,
+    "code": "12301",
+    "name": "1\u00e8re T\u00eate \u00e0 Boeuf",
+    "parent": 51,
+    "level": 3,
+    "lft": 1006,
+    "tree_id": 3,
+    "name_en": "1\u00e8re T\u00eate \u00e0 Boeuf"
+  },
+  "model": "base.region",
+  "pk": 223
+},
+{
+  "fields": {
+    "rght": 1009,
+    "code": "12302",
+    "name": "2\u00e8me T\u00eate \u00e0 Boeuf",
+    "parent": 51,
+    "level": 3,
+    "lft": 1008,
+    "tree_id": 3,
+    "name_en": "2\u00e8me T\u00eate \u00e0 Boeuf"
+  },
+  "model": "base.region",
+  "pk": 224
+},
+{
+  "fields": {
+    "rght": 1011,
+    "code": "12303",
+    "name": "3\u00e8me Moussambe",
+    "parent": 51,
+    "level": 3,
+    "lft": 1010,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Moussambe"
+  },
+  "model": "base.region",
+  "pk": 225
+},
+{
+  "fields": {
+    "rght": 1013,
+    "code": "12304",
+    "name": "4\u00e8me Moussambe",
+    "parent": 51,
+    "level": 3,
+    "lft": 1012,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Moussambe"
+  },
+  "model": "base.region",
+  "pk": 226
+},
+{
+  "fields": {
+    "rght": 1015,
+    "code": "12305",
+    "name": "5\u00e8me Grande Colline",
+    "parent": 51,
+    "level": 3,
+    "lft": 1014,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Grande Colline"
+  },
+  "model": "base.region",
+  "pk": 227
+},
+{
+  "fields": {
+    "rght": 1017,
+    "code": "12306",
+    "name": "6\u00e8me Grande Colline",
+    "parent": 51,
+    "level": 3,
+    "lft": 1016,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Grande Colline"
+  },
+  "model": "base.region",
+  "pk": 228
+},
+{
+  "fields": {
+    "rght": 1019,
+    "code": "12307",
+    "name": "7\u00e8me G\u00e9rard",
+    "parent": 51,
+    "level": 3,
+    "lft": 1018,
+    "tree_id": 3,
+    "name_en": "7\u00e8me G\u00e9rard"
+  },
+  "model": "base.region",
+  "pk": 229
+},
+{
+  "fields": {
+    "rght": 1137,
+    "code": "13201",
+    "name": "1\u00e8re Grande Plaine",
+    "parent": 53,
+    "level": 3,
+    "lft": 1136,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Grande Plaine"
+  },
+  "model": "base.region",
+  "pk": 230
+},
+{
+  "fields": {
+    "rght": 1139,
+    "code": "13202",
+    "name": "2\u00e8me Grande Plaine",
+    "parent": 53,
+    "level": 3,
+    "lft": 1138,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Grande Plaine"
+  },
+  "model": "base.region",
+  "pk": 231
+},
+{
+  "fields": {
+    "rght": 1141,
+    "code": "13203",
+    "name": "6\u00e8me Trou d'Eau",
+    "parent": 53,
+    "level": 3,
+    "lft": 1140,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Trou d'Eau"
+  },
+  "model": "base.region",
+  "pk": 232
+},
+{
+  "fields": {
+    "rght": 1135,
+    "code": "13204",
+    "name": "1\u00e8re Crochus",
+    "parent": 53,
+    "level": 3,
+    "lft": 1134,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Crochus"
+  },
+  "model": "base.region",
+  "pk": 233
+},
+{
+  "fields": {
+    "rght": 1001,
+    "code": "13305",
+    "name": "4\u00e8me Mare Roseaux",
+    "parent": 54,
+    "level": 3,
+    "lft": 1000,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Mare Roseaux"
+  },
+  "model": "base.region",
+  "pk": 234
+},
+{
+  "fields": {
+    "rght": 1003,
+    "code": "13304",
+    "name": "5\u00e8me Pays Pourri",
+    "parent": 54,
+    "level": 3,
+    "lft": 1002,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Pays Pourri"
+  },
+  "model": "base.region",
+  "pk": 235
+},
+{
+  "fields": {
+    "rght": 999,
+    "code": "13303",
+    "name": "3\u00e8me Fonds Parisien",
+    "parent": 54,
+    "level": 3,
+    "lft": 998,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Fonds Parisien"
+  },
+  "model": "base.region",
+  "pk": 236
+},
+{
+  "fields": {
+    "rght": 997,
+    "code": "13302",
+    "name": "2\u00e8me Balan",
+    "parent": 54,
+    "level": 3,
+    "lft": 996,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Balan"
+  },
+  "model": "base.region",
+  "pk": 237
+},
+{
+  "fields": {
+    "rght": 995,
+    "code": "13301",
+    "name": "1\u00e8re Galette Chambon",
+    "parent": 54,
+    "level": 3,
+    "lft": 994,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Galette Chambon"
+  },
+  "model": "base.region",
+  "pk": 238
+},
+{
+  "fields": {
+    "rght": 955,
+    "code": "13401",
+    "name": "1\u00e8re Plaine C\u00e9leste",
+    "parent": 55,
+    "level": 3,
+    "lft": 954,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Plaine C\u00e9leste"
+  },
+  "model": "base.region",
+  "pk": 239
+},
+{
+  "fields": {
+    "rght": 959,
+    "code": "13402",
+    "name": "2\u00e8me Plaine C\u00e9leste",
+    "parent": 55,
+    "level": 3,
+    "lft": 958,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Plaine C\u00e9leste"
+  },
+  "model": "base.region",
+  "pk": 240
+},
+{
+  "fields": {
+    "rght": 953,
+    "code": "13403",
+    "name": "1\u00e8re Boucan Bois Pin",
+    "parent": 55,
+    "level": 3,
+    "lft": 952,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Boucan Bois Pin"
+  },
+  "model": "base.region",
+  "pk": 241
+},
+{
+  "fields": {
+    "rght": 957,
+    "code": "13404",
+    "name": "2\u00e8me Boucan Bois Pin",
+    "parent": 55,
+    "level": 3,
+    "lft": 956,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Boucan Bois Pin"
+  },
+  "model": "base.region",
+  "pk": 242
+},
+{
+  "fields": {
+    "rght": 961,
+    "code": "13405",
+    "name": "5\u00e8me G\u00e9nipailler",
+    "parent": 55,
+    "level": 3,
+    "lft": 960,
+    "tree_id": 3,
+    "name_en": "5\u00e8me G\u00e9nipailler"
+  },
+  "model": "base.region",
+  "pk": 243
+},
+{
+  "fields": {
+    "rght": 991,
+    "code": "13501",
+    "name": "4\u00e8me Fonds-Verrettes",
+    "parent": 56,
+    "level": 3,
+    "lft": 990,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Fonds-Verrettes"
+  },
+  "model": "base.region",
+  "pk": 244
+},
+{
+  "fields": {
+    "rght": 895,
+    "code": "14101",
+    "name": "1\u00e8re Boucassin",
+    "parent": 57,
+    "level": 3,
+    "lft": 894,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Boucassin"
+  },
+  "model": "base.region",
+  "pk": 245
+},
+{
+  "fields": {
+    "rght": 903,
+    "code": "14102",
+    "name": "7\u00e8me Fonds Baptiste",
+    "parent": 57,
+    "level": 3,
+    "lft": 902,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Fonds Baptiste"
+  },
+  "model": "base.region",
+  "pk": 246
+},
+{
+  "fields": {
+    "rght": 897,
+    "code": "14103",
+    "name": "2\u00e8me des Vases",
+    "parent": 57,
+    "level": 3,
+    "lft": 896,
+    "tree_id": 3,
+    "name_en": "2\u00e8me des Vases"
+  },
+  "model": "base.region",
+  "pk": 247
+},
+{
+  "fields": {
+    "rght": 905,
+    "code": "14104",
+    "name": "8\u00e8me Montrouis",
+    "parent": 57,
+    "level": 3,
+    "lft": 904,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Montrouis"
+  },
+  "model": "base.region",
+  "pk": 248
+},
+{
+  "fields": {
+    "rght": 899,
+    "code": "14105",
+    "name": "5\u00e8me D\u00e9lices",
+    "parent": 57,
+    "level": 3,
+    "lft": 898,
+    "tree_id": 3,
+    "name_en": "5\u00e8me D\u00e9lices"
+  },
+  "model": "base.region",
+  "pk": 249
+},
+{
+  "fields": {
+    "rght": 901,
+    "code": "14106",
+    "name": "6\u00e8me des Matheux",
+    "parent": 57,
+    "level": 3,
+    "lft": 900,
+    "tree_id": 3,
+    "name_en": "6\u00e8me des Matheux"
+  },
+  "model": "base.region",
+  "pk": 250
+},
+{
+  "fields": {
+    "rght": 909,
+    "code": "14201",
+    "name": "1\u00e8re Boucassin",
+    "parent": 58,
+    "level": 3,
+    "lft": 908,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Boucassin"
+  },
+  "model": "base.region",
+  "pk": 251
+},
+{
+  "fields": {
+    "rght": 911,
+    "code": "14202",
+    "name": "2\u00e8me Boucassin",
+    "parent": 58,
+    "level": 3,
+    "lft": 910,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Boucassin"
+  },
+  "model": "base.region",
+  "pk": 252
+},
+{
+  "fields": {
+    "rght": 913,
+    "code": "14203",
+    "name": "3\u00e8me Source Matelas",
+    "parent": 58,
+    "level": 3,
+    "lft": 912,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Source Matelas"
+  },
+  "model": "base.region",
+  "pk": 253
+},
+{
+  "fields": {
+    "rght": 915,
+    "code": "14204",
+    "name": "4\u00e8me Fonds des Blancs",
+    "parent": 58,
+    "level": 3,
+    "lft": 914,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Fonds des Blancs"
+  },
+  "model": "base.region",
+  "pk": 254
+},
+{
+  "fields": {
+    "rght": 885,
+    "code": "15101",
+    "name": "1\u00e8re Palma",
+    "parent": 59,
+    "level": 3,
+    "lft": 884,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Palma"
+  },
+  "model": "base.region",
+  "pk": 255
+},
+{
+  "fields": {
+    "rght": 887,
+    "code": "15102",
+    "name": "2\u00e8me Petite Source",
+    "parent": 59,
+    "level": 3,
+    "lft": 886,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Petite Source"
+  },
+  "model": "base.region",
+  "pk": 256
+},
+{
+  "fields": {
+    "rght": 889,
+    "code": "15103",
+    "name": "3\u00e8me Grande Source",
+    "parent": 59,
+    "level": 3,
+    "lft": 888,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Grande Source"
+  },
+  "model": "base.region",
+  "pk": 257
+},
+{
+  "fields": {
+    "rght": 891,
+    "code": "15104",
+    "name": "4\u00e8me Grand Lagon",
+    "parent": 59,
+    "level": 3,
+    "lft": 890,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Grand Lagon"
+  },
+  "model": "base.region",
+  "pk": 258
+},
+{
+  "fields": {
+    "rght": 881,
+    "code": "15105",
+    "name": "10\u00e8me Pickmy",
+    "parent": 59,
+    "level": 3,
+    "lft": 880,
+    "tree_id": 3,
+    "name_en": "10\u00e8me Pickmy"
+  },
+  "model": "base.region",
+  "pk": 259
+},
+{
+  "fields": {
+    "rght": 883,
+    "code": "15106",
+    "name": "11\u00e8me Petite Anse",
+    "parent": 59,
+    "level": 3,
+    "lft": 882,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Petite Anse"
+  },
+  "model": "base.region",
+  "pk": 260
+},
+{
+  "fields": {
+    "rght": 1111,
+    "code": "15201",
+    "name": "6\u00e8me La Source",
+    "parent": 60,
+    "level": 3,
+    "lft": 1110,
+    "tree_id": 3,
+    "name_en": "6\u00e8me La Source"
+  },
+  "model": "base.region",
+  "pk": 261
+},
+{
+  "fields": {
+    "rght": 1113,
+    "code": "15202",
+    "name": "7\u00e8me Grand Vide",
+    "parent": 60,
+    "level": 3,
+    "lft": 1112,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Grand Vide"
+  },
+  "model": "base.region",
+  "pk": 262
+},
+{
+  "fields": {
+    "rght": 1115,
+    "code": "15203",
+    "name": "8\u00e8me Trou Louis",
+    "parent": 60,
+    "level": 3,
+    "lft": 1114,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Trou Louis"
+  },
+  "model": "base.region",
+  "pk": 263
+},
+{
+  "fields": {
+    "rght": 1117,
+    "code": "15204",
+    "name": "9\u00e8me Pointe \u00e0Raquette",
+    "parent": 60,
+    "level": 3,
+    "lft": 1116,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Pointe \u00e0Raquette"
+  },
+  "model": "base.region",
+  "pk": 264
+},
+{
+  "fields": {
+    "rght": 1109,
+    "code": "15205",
+    "name": "5\u00e8me Gros Mangle",
+    "parent": 60,
+    "level": 3,
+    "lft": 1108,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Gros Mangle"
+  },
+  "model": "base.region",
+  "pk": 265
+},
+{
+  "fields": {
+    "rght": 1395,
+    "code": "21101",
+    "name": "1\u00e8re Bas Cap Rouge",
+    "parent": 61,
+    "level": 3,
+    "lft": 1394,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bas Cap Rouge"
+  },
+  "model": "base.region",
+  "pk": 266
+},
+{
+  "fields": {
+    "rght": 1397,
+    "code": "21102",
+    "name": "2\u00e8me Fond Melon",
+    "parent": 61,
+    "level": 3,
+    "lft": 1396,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Fond Melon"
+  },
+  "model": "base.region",
+  "pk": 267
+},
+{
+  "fields": {
+    "rght": 1399,
+    "code": "21103",
+    "name": "3\u00e8me Cochon Gras",
+    "parent": 61,
+    "level": 3,
+    "lft": 1398,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Cochon Gras"
+  },
+  "model": "base.region",
+  "pk": 268
+},
+{
+  "fields": {
+    "rght": 1401,
+    "code": "21104",
+    "name": "4\u00e8me La Gosseline",
+    "parent": 61,
+    "level": 3,
+    "lft": 1400,
+    "tree_id": 3,
+    "name_en": "4\u00e8me La Gosseline"
+  },
+  "model": "base.region",
+  "pk": 269
+},
+{
+  "fields": {
+    "rght": 1403,
+    "code": "21105",
+    "name": "5\u00e8me Marbial",
+    "parent": 61,
+    "level": 3,
+    "lft": 1402,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Marbial"
+  },
+  "model": "base.region",
+  "pk": 270
+},
+{
+  "fields": {
+    "rght": 1405,
+    "code": "21106",
+    "name": "6\u00e8me Montagne La Voute",
+    "parent": 61,
+    "level": 3,
+    "lft": 1404,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Montagne La Voute"
+  },
+  "model": "base.region",
+  "pk": 271
+},
+{
+  "fields": {
+    "rght": 1407,
+    "code": "21107",
+    "name": "7\u00e8me Grande Rivi\u00e8re de Jacmel",
+    "parent": 61,
+    "level": 3,
+    "lft": 1406,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Grande Rivi\u00e8re de Jacmel"
+  },
+  "model": "base.region",
+  "pk": 272
+},
+{
+  "fields": {
+    "rght": 1409,
+    "code": "21108",
+    "name": "8\u00e8me Bas Coq Chante",
+    "parent": 61,
+    "level": 3,
+    "lft": 1408,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Bas Coq Chante"
+  },
+  "model": "base.region",
+  "pk": 273
+},
+{
+  "fields": {
+    "rght": 1411,
+    "code": "21109",
+    "name": "9\u00e8me Haut Coq Chante",
+    "parent": 61,
+    "level": 3,
+    "lft": 1410,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Haut Coq Chante"
+  },
+  "model": "base.region",
+  "pk": 274
+},
+{
+  "fields": {
+    "rght": 1391,
+    "code": "21110",
+    "name": "12\u00e8me La vanneau",
+    "parent": 61,
+    "level": 3,
+    "lft": 1390,
+    "tree_id": 3,
+    "name_en": "12\u00e8me La vanneau"
+  },
+  "model": "base.region",
+  "pk": 275
+},
+{
+  "fields": {
+    "rght": 1393,
+    "code": "21111",
+    "name": "13\u00e8me La Montagne",
+    "parent": 61,
+    "level": 3,
+    "lft": 1392,
+    "tree_id": 3,
+    "name_en": "13\u00e8me La Montagne"
+  },
+  "model": "base.region",
+  "pk": 276
+},
+{
+  "fields": {
+    "rght": 1423,
+    "code": "21201",
+    "name": "1\u00e8re Corail Soult",
+    "parent": 62,
+    "level": 3,
+    "lft": 1422,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Corail Soult"
+  },
+  "model": "base.region",
+  "pk": 277
+},
+{
+  "fields": {
+    "rght": 1425,
+    "code": "21202",
+    "name": "2\u00e8me Grande Rivi\u00e8re Fesle",
+    "parent": 62,
+    "level": 3,
+    "lft": 1424,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Grande Rivi\u00e8re Fesle"
+  },
+  "model": "base.region",
+  "pk": 278
+},
+{
+  "fields": {
+    "rght": 1427,
+    "code": "21203",
+    "name": "3\u00e8me Macary",
+    "parent": 62,
+    "level": 3,
+    "lft": 1426,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Macary"
+  },
+  "model": "base.region",
+  "pk": 279
+},
+{
+  "fields": {
+    "rght": 1429,
+    "code": "21204",
+    "name": "4\u00e8me Fond Jean Noel",
+    "parent": 62,
+    "level": 3,
+    "lft": 1428,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Fond Jean Noel"
+  },
+  "model": "base.region",
+  "pk": 280
+},
+{
+  "fields": {
+    "rght": 1431,
+    "code": "21205",
+    "name": "5\u00e8me Savane Dubois",
+    "parent": 62,
+    "level": 3,
+    "lft": 1430,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Savane Dubois"
+  },
+  "model": "base.region",
+  "pk": 281
+},
+{
+  "fields": {
+    "rght": 1363,
+    "code": "21301",
+    "name": "1\u00e8re Ravine Normande",
+    "parent": 63,
+    "level": 3,
+    "lft": 1362,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Ravine Normande"
+  },
+  "model": "base.region",
+  "pk": 282
+},
+{
+  "fields": {
+    "rght": 1365,
+    "code": "21302",
+    "name": "2\u00e8me Gaillard",
+    "parent": 63,
+    "level": 3,
+    "lft": 1364,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Gaillard"
+  },
+  "model": "base.region",
+  "pk": 283
+},
+{
+  "fields": {
+    "rght": 1367,
+    "code": "21303",
+    "name": "3\u00e8me Haut Cap Rouge",
+    "parent": 63,
+    "level": 3,
+    "lft": 1366,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Haut Cap Rouge"
+  },
+  "model": "base.region",
+  "pk": 284
+},
+{
+  "fields": {
+    "rght": 1369,
+    "code": "21304",
+    "name": "4\u00e8me Fond Melon Michineau",
+    "parent": 63,
+    "level": 3,
+    "lft": 1368,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Fond Melon Michineau"
+  },
+  "model": "base.region",
+  "pk": 285
+},
+{
+  "fields": {
+    "rght": 1417,
+    "code": "21401",
+    "name": "11\u00e8me Muzac",
+    "parent": 64,
+    "level": 3,
+    "lft": 1416,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Muzac"
+  },
+  "model": "base.region",
+  "pk": 286
+},
+{
+  "fields": {
+    "rght": 1419,
+    "code": "21402",
+    "name": "3\u00e8me Ternier",
+    "parent": 64,
+    "level": 3,
+    "lft": 1418,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Ternier"
+  },
+  "model": "base.region",
+  "pk": 287
+},
+{
+  "fields": {
+    "rght": 1415,
+    "code": "21403",
+    "name": "10\u00e8me Morne \u00e0Bruler",
+    "parent": 64,
+    "level": 3,
+    "lft": 1414,
+    "tree_id": 3,
+    "name_en": "10\u00e8me Morne \u00e0Bruler"
+  },
+  "model": "base.region",
+  "pk": 288
+},
+{
+  "fields": {
+    "rght": 1327,
+    "code": "22101",
+    "name": "1\u00e8re Br\u00e9silienne",
+    "parent": 65,
+    "level": 3,
+    "lft": 1326,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Br\u00e9silienne"
+  },
+  "model": "base.region",
+  "pk": 289
+},
+{
+  "fields": {
+    "rght": 1329,
+    "code": "22102",
+    "name": "2\u00e8me Trou Mahot",
+    "parent": 65,
+    "level": 3,
+    "lft": 1328,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Trou Mahot"
+  },
+  "model": "base.region",
+  "pk": 290
+},
+{
+  "fields": {
+    "rght": 1331,
+    "code": "22103",
+    "name": "3\u00e8me La Vall\u00e9e",
+    "parent": 65,
+    "level": 3,
+    "lft": 1330,
+    "tree_id": 3,
+    "name_en": "3\u00e8me La Vall\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 291
+},
+{
+  "fields": {
+    "rght": 1333,
+    "code": "22104",
+    "name": "4\u00e8me Haut Grandou",
+    "parent": 65,
+    "level": 3,
+    "lft": 1332,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Haut Grandou"
+  },
+  "model": "base.region",
+  "pk": 292
+},
+{
+  "fields": {
+    "rght": 1335,
+    "code": "22105",
+    "name": "5\u00e8me Bas de Grandou",
+    "parent": 65,
+    "level": 3,
+    "lft": 1334,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bas de Grandou"
+  },
+  "model": "base.region",
+  "pk": 293
+},
+{
+  "fields": {
+    "rght": 1337,
+    "code": "22106",
+    "name": "6\u00e8me Bas de Lacroix",
+    "parent": 65,
+    "level": 3,
+    "lft": 1336,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Bas de Lacroix"
+  },
+  "model": "base.region",
+  "pk": 294
+},
+{
+  "fields": {
+    "rght": 1339,
+    "code": "22107",
+    "name": "7\u00e8me Bras Gauche",
+    "parent": 65,
+    "level": 3,
+    "lft": 1338,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Bras Gauche"
+  },
+  "model": "base.region",
+  "pk": 295
+},
+{
+  "fields": {
+    "rght": 1341,
+    "code": "22108",
+    "name": "8\u00e8me Oranger",
+    "parent": 65,
+    "level": 3,
+    "lft": 1340,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Oranger"
+  },
+  "model": "base.region",
+  "pk": 296
+},
+{
+  "fields": {
+    "rght": 1343,
+    "code": "22109",
+    "name": "9\u00e8me Bas de Gris-gris",
+    "parent": 65,
+    "level": 3,
+    "lft": 1342,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Bas de Gris-gris"
+  },
+  "model": "base.region",
+  "pk": 297
+},
+{
+  "fields": {
+    "rght": 1373,
+    "code": "22201",
+    "name": "1\u00e8re Gris-gris",
+    "parent": 66,
+    "level": 3,
+    "lft": 1372,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Gris-gris"
+  },
+  "model": "base.region",
+  "pk": 298
+},
+{
+  "fields": {
+    "rght": 1375,
+    "code": "22202",
+    "name": "2\u00e8me La Biche",
+    "parent": 66,
+    "level": 3,
+    "lft": 1374,
+    "tree_id": 3,
+    "name_en": "2\u00e8me La Biche"
+  },
+  "model": "base.region",
+  "pk": 299
+},
+{
+  "fields": {
+    "rght": 1377,
+    "code": "22203",
+    "name": "3\u00e8me Bras Gauche",
+    "parent": 66,
+    "level": 3,
+    "lft": 1376,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Bras Gauche"
+  },
+  "model": "base.region",
+  "pk": 300
+},
+{
+  "fields": {
+    "rght": 1379,
+    "code": "22204",
+    "name": "4\u00e8me Amazone",
+    "parent": 66,
+    "level": 3,
+    "lft": 1378,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Amazone"
+  },
+  "model": "base.region",
+  "pk": 301
+},
+{
+  "fields": {
+    "rght": 1381,
+    "code": "22205",
+    "name": "5\u00e8me Boucan B\u00e9lier",
+    "parent": 66,
+    "level": 3,
+    "lft": 1380,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Boucan B\u00e9lier"
+  },
+  "model": "base.region",
+  "pk": 302
+},
+{
+  "fields": {
+    "rght": 1383,
+    "code": "22206",
+    "name": "6\u00e8me Jamais Vu",
+    "parent": 66,
+    "level": 3,
+    "lft": 1382,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Jamais Vu"
+  },
+  "model": "base.region",
+  "pk": 303
+},
+{
+  "fields": {
+    "rght": 1347,
+    "code": "23101",
+    "name": "1\u00e8re Bais d'Orange",
+    "parent": 67,
+    "level": 3,
+    "lft": 1346,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bais d'Orange"
+  },
+  "model": "base.region",
+  "pk": 304
+},
+{
+  "fields": {
+    "rght": 1349,
+    "code": "23102",
+    "name": "2\u00e8me Mabriol",
+    "parent": 67,
+    "level": 3,
+    "lft": 1348,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Mabriol"
+  },
+  "model": "base.region",
+  "pk": 305
+},
+{
+  "fields": {
+    "rght": 1351,
+    "code": "23103",
+    "name": "3\u00e8me Calumette",
+    "parent": 67,
+    "level": 3,
+    "lft": 1350,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Calumette"
+  },
+  "model": "base.region",
+  "pk": 306
+},
+{
+  "fields": {
+    "rght": 1353,
+    "code": "23104",
+    "name": "4\u00e8me Corail Lamothe",
+    "parent": 67,
+    "level": 3,
+    "lft": 1352,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Corail Lamothe"
+  },
+  "model": "base.region",
+  "pk": 307
+},
+{
+  "fields": {
+    "rght": 1355,
+    "code": "23105",
+    "name": "5\u00e8me Bel Air",
+    "parent": 67,
+    "level": 3,
+    "lft": 1354,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bel Air"
+  },
+  "model": "base.region",
+  "pk": 308
+},
+{
+  "fields": {
+    "rght": 1357,
+    "code": "23106",
+    "name": "6\u00e8me Pichon",
+    "parent": 67,
+    "level": 3,
+    "lft": 1356,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Pichon"
+  },
+  "model": "base.region",
+  "pk": 309
+},
+{
+  "fields": {
+    "rght": 1359,
+    "code": "23107",
+    "name": "7\u00e8me Mapou",
+    "parent": 67,
+    "level": 3,
+    "lft": 1358,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Mapou"
+  },
+  "model": "base.region",
+  "pk": 310
+},
+{
+  "fields": {
+    "rght": 1387,
+    "code": "23201",
+    "name": "1\u00e8re Colline des Ch\u00e8nes",
+    "parent": 68,
+    "level": 3,
+    "lft": 1386,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Colline des Ch\u00e8nes"
+  },
+  "model": "base.region",
+  "pk": 311
+},
+{
+  "fields": {
+    "rght": 1437,
+    "code": "23301",
+    "name": "3\u00e8me Thiotte",
+    "parent": 69,
+    "level": 3,
+    "lft": 1436,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Thiotte"
+  },
+  "model": "base.region",
+  "pk": 312
+},
+{
+  "fields": {
+    "rght": 1435,
+    "code": "23302",
+    "name": "2\u00e8me Pot de Chambre",
+    "parent": 69,
+    "level": 3,
+    "lft": 1434,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Pot de Chambre"
+  },
+  "model": "base.region",
+  "pk": 313
+},
+{
+  "fields": {
+    "rght": 1321,
+    "code": "23401",
+    "name": "1\u00e8re Boucan Guillaume",
+    "parent": 70,
+    "level": 3,
+    "lft": 1320,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Boucan Guillaume"
+  },
+  "model": "base.region",
+  "pk": 314
+},
+{
+  "fields": {
+    "rght": 1323,
+    "code": "23402",
+    "name": "2\u00e8me Bois d'Orme",
+    "parent": 70,
+    "level": 3,
+    "lft": 1322,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois d'Orme"
+  },
+  "model": "base.region",
+  "pk": 315
+},
+{
+  "fields": {
+    "rght": 525,
+    "code": "31103",
+    "name": "3\u00e8me Petite Anse",
+    "parent": 71,
+    "level": 3,
+    "lft": 524,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Petite Anse"
+  },
+  "model": "base.region",
+  "pk": 316
+},
+{
+  "fields": {
+    "rght": 523,
+    "code": "31102",
+    "name": "2\u00e8me Haut du Cap",
+    "parent": 71,
+    "level": 3,
+    "lft": 522,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Haut du Cap"
+  },
+  "model": "base.region",
+  "pk": 317
+},
+{
+  "fields": {
+    "rght": 521,
+    "code": "31101",
+    "name": "1\u00e8re Bande du Nord",
+    "parent": 71,
+    "level": 3,
+    "lft": 520,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bande du Nord"
+  },
+  "model": "base.region",
+  "pk": 318
+},
+{
+  "fields": {
+    "rght": 655,
+    "code": "31201",
+    "name": "1\u00e8re Basse Plaine",
+    "parent": 72,
+    "level": 3,
+    "lft": 654,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Basse Plaine"
+  },
+  "model": "base.region",
+  "pk": 319
+},
+{
+  "fields": {
+    "rght": 657,
+    "code": "31202",
+    "name": "3\u00e8me Morne Pel\u00e9",
+    "parent": 72,
+    "level": 3,
+    "lft": 656,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Morne Pel\u00e9"
+  },
+  "model": "base.region",
+  "pk": 320
+},
+{
+  "fields": {
+    "rght": 573,
+    "code": "31301",
+    "name": "1\u00e8re Basse Plaine",
+    "parent": 73,
+    "level": 3,
+    "lft": 572,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Basse Plaine"
+  },
+  "model": "base.region",
+  "pk": 321
+},
+{
+  "fields": {
+    "rght": 575,
+    "code": "31302",
+    "name": "2\u00e8me Bois de Lance",
+    "parent": 73,
+    "level": 3,
+    "lft": 574,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois de Lance"
+  },
+  "model": "base.region",
+  "pk": 322
+},
+{
+  "fields": {
+    "rght": 577,
+    "code": "31303",
+    "name": "3\u00e8me Roucou",
+    "parent": 73,
+    "level": 3,
+    "lft": 576,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Roucou"
+  },
+  "model": "base.region",
+  "pk": 323
+},
+{
+  "fields": {
+    "rght": 477,
+    "code": "32101",
+    "name": "1\u00e8re Camp louise",
+    "parent": 74,
+    "level": 3,
+    "lft": 476,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Camp louise"
+  },
+  "model": "base.region",
+  "pk": 324
+},
+{
+  "fields": {
+    "rght": 479,
+    "code": "32102",
+    "name": "2\u00e8me Bas de l'Acul",
+    "parent": 74,
+    "level": 3,
+    "lft": 478,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bas de l'Acul"
+  },
+  "model": "base.region",
+  "pk": 325
+},
+{
+  "fields": {
+    "rght": 481,
+    "code": "32103",
+    "name": "3\u00e8me Mornet",
+    "parent": 74,
+    "level": 3,
+    "lft": 480,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Mornet"
+  },
+  "model": "base.region",
+  "pk": 326
+},
+{
+  "fields": {
+    "rght": 483,
+    "code": "32104",
+    "name": "4\u00e8me Grande Ravine",
+    "parent": 74,
+    "level": 3,
+    "lft": 482,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Grande Ravine"
+  },
+  "model": "base.region",
+  "pk": 327
+},
+{
+  "fields": {
+    "rght": 485,
+    "code": "32105",
+    "name": "5e Coupe \u00e0 David",
+    "parent": 74,
+    "level": 3,
+    "lft": 484,
+    "tree_id": 3,
+    "name_en": "5e Coupe \u00e0 David"
+  },
+  "model": "base.region",
+  "pk": 328
+},
+{
+  "fields": {
+    "rght": 487,
+    "code": "32106",
+    "name": "6\u00e8me Soufri\u00e8re",
+    "parent": 74,
+    "level": 3,
+    "lft": 486,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Soufri\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 329
+},
+{
+  "fields": {
+    "rght": 613,
+    "code": "32201",
+    "name": "1\u00e8re Morne rouge",
+    "parent": 75,
+    "level": 3,
+    "lft": 612,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Morne rouge"
+  },
+  "model": "base.region",
+  "pk": 330
+},
+{
+  "fields": {
+    "rght": 615,
+    "code": "32202",
+    "name": "2\u00e8me Basse Plaine",
+    "parent": 75,
+    "level": 3,
+    "lft": 614,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Basse Plaine"
+  },
+  "model": "base.region",
+  "pk": 331
+},
+{
+  "fields": {
+    "rght": 617,
+    "code": "32203",
+    "name": "3\u00e8me Grand Boucan",
+    "parent": 75,
+    "level": 3,
+    "lft": 616,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Grand Boucan"
+  },
+  "model": "base.region",
+  "pk": 332
+},
+{
+  "fields": {
+    "rght": 619,
+    "code": "32204",
+    "name": "4\u00e8me Bassin Diamant",
+    "parent": 75,
+    "level": 3,
+    "lft": 618,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Bassin Diamant"
+  },
+  "model": "base.region",
+  "pk": 333
+},
+{
+  "fields": {
+    "rght": 581,
+    "code": "32301",
+    "name": "1\u00e8re Perches du Bonnet",
+    "parent": 76,
+    "level": 3,
+    "lft": 580,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Perches du Bonnet"
+  },
+  "model": "base.region",
+  "pk": 334
+},
+{
+  "fields": {
+    "rght": 583,
+    "code": "32302",
+    "name": "2\u00e8me Bonnet \u00e0l'Ev\u00eaque",
+    "parent": 76,
+    "level": 3,
+    "lft": 582,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bonnet \u00e0l'Ev\u00eaque"
+  },
+  "model": "base.region",
+  "pk": 335
+},
+{
+  "fields": {
+    "rght": 585,
+    "code": "32303",
+    "name": "3\u00e8me G\u00e9nipailler",
+    "parent": 76,
+    "level": 3,
+    "lft": 584,
+    "tree_id": 3,
+    "name_en": "3\u00e8me G\u00e9nipailler"
+  },
+  "model": "base.region",
+  "pk": 336
+},
+{
+  "fields": {
+    "rght": 541,
+    "code": "33101",
+    "name": "1\u00e8re Grand Gilles",
+    "parent": 77,
+    "level": 3,
+    "lft": 540,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Grand Gilles"
+  },
+  "model": "base.region",
+  "pk": 337
+},
+{
+  "fields": {
+    "rght": 543,
+    "code": "33102",
+    "name": "2\u00e8me Solon",
+    "parent": 77,
+    "level": 3,
+    "lft": 542,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Solon"
+  },
+  "model": "base.region",
+  "pk": 338
+},
+{
+  "fields": {
+    "rght": 545,
+    "code": "33103",
+    "name": "3\u00e8me Caracol",
+    "parent": 77,
+    "level": 3,
+    "lft": 544,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Caracol"
+  },
+  "model": "base.region",
+  "pk": 339
+},
+{
+  "fields": {
+    "rght": 547,
+    "code": "33104",
+    "name": "7\u00e8me Gambade",
+    "parent": 77,
+    "level": 3,
+    "lft": 546,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Gambade"
+  },
+  "model": "base.region",
+  "pk": 340
+},
+{
+  "fields": {
+    "rght": 549,
+    "code": "33105",
+    "name": "8\u00e8me Jolitrou",
+    "parent": 77,
+    "level": 3,
+    "lft": 548,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Jolitrou"
+  },
+  "model": "base.region",
+  "pk": 341
+},
+{
+  "fields": {
+    "rght": 551,
+    "code": " 33106",
+    "name": "9\u00e8me Cormiers",
+    "parent": 77,
+    "level": 3,
+    "lft": 550,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Cormiers"
+  },
+  "model": "base.region",
+  "pk": 342
+},
+{
+  "fields": {
+    "rght": 491,
+    "code": "33201",
+    "name": "4\u00e8me Bois Pin",
+    "parent": 78,
+    "level": 3,
+    "lft": 490,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Bois Pin"
+  },
+  "model": "base.region",
+  "pk": 343
+},
+{
+  "fields": {
+    "rght": 493,
+    "code": "33202",
+    "name": "5\u00e8me Bailly",
+    "parent": 78,
+    "level": 3,
+    "lft": 492,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bailly"
+  },
+  "model": "base.region",
+  "pk": 344
+},
+{
+  "fields": {
+    "rght": 495,
+    "code": "33203",
+    "name": "6\u00e8me Montagne Noire",
+    "parent": 78,
+    "level": 3,
+    "lft": 494,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Montagne Noire"
+  },
+  "model": "base.region",
+  "pk": 345
+},
+{
+  "fields": {
+    "rght": 669,
+    "code": "34101",
+    "name": "1\u00e8re Bois Neuf",
+    "parent": 79,
+    "level": 3,
+    "lft": 668,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bois Neuf"
+  },
+  "model": "base.region",
+  "pk": 346
+},
+{
+  "fields": {
+    "rght": 671,
+    "code": "34102",
+    "name": "2\u00e8me Mathurin",
+    "parent": 79,
+    "level": 3,
+    "lft": 670,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Mathurin"
+  },
+  "model": "base.region",
+  "pk": 347
+},
+{
+  "fields": {
+    "rght": 673,
+    "code": "34103",
+    "name": "3\u00e8me Bouyaha",
+    "parent": 79,
+    "level": 3,
+    "lft": 672,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Bouyaha"
+  },
+  "model": "base.region",
+  "pk": 348
+},
+{
+  "fields": {
+    "rght": 675,
+    "code": "34104",
+    "name": "4\u00e8me Sanyago",
+    "parent": 79,
+    "level": 3,
+    "lft": 674,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Sanyago"
+  },
+  "model": "base.region",
+  "pk": 349
+},
+{
+  "fields": {
+    "rght": 529,
+    "code": "34201",
+    "name": "1\u00e8re Brostage",
+    "parent": 80,
+    "level": 3,
+    "lft": 528,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Brostage"
+  },
+  "model": "base.region",
+  "pk": 350
+},
+{
+  "fields": {
+    "rght": 531,
+    "code": "34202",
+    "name": "2\u00e8me Bassin Caiman",
+    "parent": 80,
+    "level": 3,
+    "lft": 530,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bassin Caiman"
+  },
+  "model": "base.region",
+  "pk": 351
+},
+{
+  "fields": {
+    "rght": 533,
+    "code": "34203",
+    "name": "3\u00e8me Matador",
+    "parent": 80,
+    "level": 3,
+    "lft": 532,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Matador"
+  },
+  "model": "base.region",
+  "pk": 352
+},
+{
+  "fields": {
+    "rght": 535,
+    "code": "34204",
+    "name": "4\u00e8me Laguille",
+    "parent": 80,
+    "level": 3,
+    "lft": 534,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Laguille"
+  },
+  "model": "base.region",
+  "pk": 353
+},
+{
+  "fields": {
+    "rght": 537,
+    "code": "34205",
+    "name": "5\u00e8me Haut du Trou",
+    "parent": 80,
+    "level": 3,
+    "lft": 536,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Haut du Trou"
+  },
+  "model": "base.region",
+  "pk": 354
+},
+{
+  "fields": {
+    "rght": 661,
+    "code": "34301",
+    "name": "1\u00e8re Bac \u00e0Soude",
+    "parent": 81,
+    "level": 3,
+    "lft": 660,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bac \u00e0Soude"
+  },
+  "model": "base.region",
+  "pk": 355
+},
+{
+  "fields": {
+    "rght": 663,
+    "code": "34302",
+    "name": "2\u00e8me Bois de Lance",
+    "parent": 81,
+    "level": 3,
+    "lft": 662,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois de Lance"
+  },
+  "model": "base.region",
+  "pk": 356
+},
+{
+  "fields": {
+    "rght": 665,
+    "code": "34303",
+    "name": "3\u00e8me Cracaraille",
+    "parent": 81,
+    "level": 3,
+    "lft": 664,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Cracaraille"
+  },
+  "model": "base.region",
+  "pk": 357
+},
+{
+  "fields": {
+    "rght": 589,
+    "code": "34401",
+    "name": "1\u00e8re Savannette",
+    "parent": 82,
+    "level": 3,
+    "lft": 588,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Savannette"
+  },
+  "model": "base.region",
+  "pk": 358
+},
+{
+  "fields": {
+    "rght": 591,
+    "code": "34402",
+    "name": "2\u00e8me La Belle M\u00e8re",
+    "parent": 82,
+    "level": 3,
+    "lft": 590,
+    "tree_id": 3,
+    "name_en": "2\u00e8me La Belle M\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 359
+},
+{
+  "fields": {
+    "rght": 555,
+    "code": "34501",
+    "name": "1\u00e8re La Victoire",
+    "parent": 83,
+    "level": 3,
+    "lft": 554,
+    "tree_id": 3,
+    "name_en": "1\u00e8re La Victoire"
+  },
+  "model": "base.region",
+  "pk": 360
+},
+{
+  "fields": {
+    "rght": 505,
+    "code": "35101",
+    "name": "1\u00e8re Margot",
+    "parent": 84,
+    "level": 3,
+    "lft": 504,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Margot"
+  },
+  "model": "base.region",
+  "pk": 361
+},
+{
+  "fields": {
+    "rght": 507,
+    "code": "35102",
+    "name": "2\u00e8me Boucan Michel",
+    "parent": 84,
+    "level": 3,
+    "lft": 506,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Boucan Michel"
+  },
+  "model": "base.region",
+  "pk": 362
+},
+{
+  "fields": {
+    "rght": 509,
+    "code": "35103",
+    "name": "3\u00e8me Petit Bourg Du Borgne",
+    "parent": 84,
+    "level": 3,
+    "lft": 508,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Petit Bourg Du Borgne"
+  },
+  "model": "base.region",
+  "pk": 363
+},
+{
+  "fields": {
+    "rght": 511,
+    "code": "35104",
+    "name": "4\u00e8me Trou d'Enfer",
+    "parent": 84,
+    "level": 3,
+    "lft": 510,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Trou d'Enfer"
+  },
+  "model": "base.region",
+  "pk": 364
+},
+{
+  "fields": {
+    "rght": 513,
+    "code": "35105",
+    "name": "5\u00e8me Champagne",
+    "parent": 84,
+    "level": 3,
+    "lft": 512,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Champagne"
+  },
+  "model": "base.region",
+  "pk": 365
+},
+{
+  "fields": {
+    "rght": 515,
+    "code": "35106",
+    "name": "6\u00e8me Molas",
+    "parent": 84,
+    "level": 3,
+    "lft": 514,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Molas"
+  },
+  "model": "base.region",
+  "pk": 366
+},
+{
+  "fields": {
+    "rght": 517,
+    "code": "35107",
+    "name": "7\u00e8me Fond Lagrange",
+    "parent": 84,
+    "level": 3,
+    "lft": 516,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Fond Lagrange"
+  },
+  "model": "base.region",
+  "pk": 367
+},
+{
+  "fields": {
+    "rght": 641,
+    "code": "35201",
+    "name": "1\u00e8re Grande Plaine",
+    "parent": 85,
+    "level": 3,
+    "lft": 640,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Grande Plaine"
+  },
+  "model": "base.region",
+  "pk": 368
+},
+{
+  "fields": {
+    "rght": 643,
+    "code": "35202",
+    "name": "2\u00e8me Bas Petit Borgne",
+    "parent": 85,
+    "level": 3,
+    "lft": 642,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bas Petit Borgne"
+  },
+  "model": "base.region",
+  "pk": 369
+},
+{
+  "fields": {
+    "rght": 645,
+    "code": "35203",
+    "name": "3\u00e8me Corail",
+    "parent": 85,
+    "level": 3,
+    "lft": 644,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Corail"
+  },
+  "model": "base.region",
+  "pk": 370
+},
+{
+  "fields": {
+    "rght": 647,
+    "code": "35204",
+    "name": "4\u00e8me Haut Petit Borgne",
+    "parent": 85,
+    "level": 3,
+    "lft": 646,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Haut Petit Borgne"
+  },
+  "model": "base.region",
+  "pk": 371
+},
+{
+  "fields": {
+    "rght": 649,
+    "code": "35205",
+    "name": "5\u00e8me Bas Quartier",
+    "parent": 85,
+    "level": 3,
+    "lft": 648,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bas Quartier"
+  },
+  "model": "base.region",
+  "pk": 372
+},
+{
+  "fields": {
+    "rght": 651,
+    "code": "35206",
+    "name": "6\u00e8me Bras Gauche",
+    "parent": 85,
+    "level": 3,
+    "lft": 650,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Bras Gauche"
+  },
+  "model": "base.region",
+  "pk": 373
+},
+{
+  "fields": {
+    "rght": 559,
+    "code": "36101",
+    "name": "3\u00e8me Acul Jeannot",
+    "parent": 86,
+    "level": 3,
+    "lft": 558,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Acul Jeannot"
+  },
+  "model": "base.region",
+  "pk": 374
+},
+{
+  "fields": {
+    "rght": 561,
+    "code": "36102",
+    "name": "4\u00e8me Chabotte",
+    "parent": 86,
+    "level": 3,
+    "lft": 560,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Chabotte"
+  },
+  "model": "base.region",
+  "pk": 375
+},
+{
+  "fields": {
+    "rght": 563,
+    "code": "36103",
+    "name": "5\u00e8me Camp Coq",
+    "parent": 86,
+    "level": 3,
+    "lft": 562,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Camp Coq"
+  },
+  "model": "base.region",
+  "pk": 376
+},
+{
+  "fields": {
+    "rght": 565,
+    "code": "36104",
+    "name": "6\u00e8me Soufri\u00e8re",
+    "parent": 86,
+    "level": 3,
+    "lft": 564,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Soufri\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 377
+},
+{
+  "fields": {
+    "rght": 567,
+    "code": "36105",
+    "name": "7\u00e8me Ravine Desroches",
+    "parent": 86,
+    "level": 3,
+    "lft": 566,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Ravine Desroches"
+  },
+  "model": "base.region",
+  "pk": 378
+},
+{
+  "fields": {
+    "rght": 569,
+    "code": "36106",
+    "name": "8\u00e8me Ilot \u00e0Cornes",
+    "parent": 86,
+    "level": 3,
+    "lft": 568,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Ilot \u00e0Cornes"
+  },
+  "model": "base.region",
+  "pk": 379
+},
+{
+  "fields": {
+    "rght": 499,
+    "code": "36201",
+    "name": "1\u00e8re Garde Champ\u00eatre",
+    "parent": 87,
+    "level": 3,
+    "lft": 498,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Garde Champ\u00eatre"
+  },
+  "model": "base.region",
+  "pk": 380
+},
+{
+  "fields": {
+    "rght": 501,
+    "code": "36202",
+    "name": "2\u00e8me Petit Howars",
+    "parent": 87,
+    "level": 3,
+    "lft": 500,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Petit Howars"
+  },
+  "model": "base.region",
+  "pk": 381
+},
+{
+  "fields": {
+    "rght": 623,
+    "code": "37101",
+    "name": "1\u00e8re Gobert",
+    "parent": 88,
+    "level": 3,
+    "lft": 622,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Gobert"
+  },
+  "model": "base.region",
+  "pk": 382
+},
+{
+  "fields": {
+    "rght": 625,
+    "code": "37102",
+    "name": "2\u00e8me Champagne",
+    "parent": 88,
+    "level": 3,
+    "lft": 624,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Champagne"
+  },
+  "model": "base.region",
+  "pk": 383
+},
+{
+  "fields": {
+    "rght": 627,
+    "code": "37103",
+    "name": "3\u00e8me Haut Martineau",
+    "parent": 88,
+    "level": 3,
+    "lft": 626,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Haut Martineau"
+  },
+  "model": "base.region",
+  "pk": 384
+},
+{
+  "fields": {
+    "rght": 629,
+    "code": "37104",
+    "name": "4\u00e8me Mapou",
+    "parent": 88,
+    "level": 3,
+    "lft": 628,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Mapou"
+  },
+  "model": "base.region",
+  "pk": 385
+},
+{
+  "fields": {
+    "rght": 631,
+    "code": "37105",
+    "name": "5\u00e8me La trouble",
+    "parent": 88,
+    "level": 3,
+    "lft": 630,
+    "tree_id": 3,
+    "name_en": "5\u00e8me La trouble"
+  },
+  "model": "base.region",
+  "pk": 386
+},
+{
+  "fields": {
+    "rght": 633,
+    "code": "37106",
+    "name": "6\u00e8me La Ville",
+    "parent": 88,
+    "level": 3,
+    "lft": 632,
+    "tree_id": 3,
+    "name_en": "6\u00e8me La Ville"
+  },
+  "model": "base.region",
+  "pk": 387
+},
+{
+  "fields": {
+    "rght": 637,
+    "code": "37108",
+    "name": "8\u00e8me Grande Rivi\u00e8re",
+    "parent": 88,
+    "level": 3,
+    "lft": 636,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Grande Rivi\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 388
+},
+{
+  "fields": {
+    "rght": 635,
+    "code": "37107",
+    "name": "7\u00e8me Bassin",
+    "parent": 88,
+    "level": 3,
+    "lft": 634,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Bassin"
+  },
+  "model": "base.region",
+  "pk": 389
+},
+{
+  "fields": {
+    "rght": 595,
+    "code": "37201",
+    "name": "1\u00e8re Ballon",
+    "parent": 89,
+    "level": 3,
+    "lft": 594,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Ballon"
+  },
+  "model": "base.region",
+  "pk": 390
+},
+{
+  "fields": {
+    "rght": 597,
+    "code": "37202",
+    "name": "2\u00e8me Baudin",
+    "parent": 89,
+    "level": 3,
+    "lft": 596,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Baudin"
+  },
+  "model": "base.region",
+  "pk": 391
+},
+{
+  "fields": {
+    "rght": 599,
+    "code": "37203",
+    "name": "3\u00e8me Ravine Trompette",
+    "parent": 89,
+    "level": 3,
+    "lft": 598,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Ravine Trompette"
+  },
+  "model": "base.region",
+  "pk": 392
+},
+{
+  "fields": {
+    "rght": 601,
+    "code": "37204",
+    "name": "4\u00e8me Joly",
+    "parent": 89,
+    "level": 3,
+    "lft": 600,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Joly"
+  },
+  "model": "base.region",
+  "pk": 393
+},
+{
+  "fields": {
+    "rght": 603,
+    "code": "37205",
+    "name": "5\u00e8me Dubourgs",
+    "parent": 89,
+    "level": 3,
+    "lft": 602,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Dubourgs"
+  },
+  "model": "base.region",
+  "pk": 394
+},
+{
+  "fields": {
+    "rght": 605,
+    "code": "37206",
+    "name": "6\u00e8me Piment",
+    "parent": 89,
+    "level": 3,
+    "lft": 604,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Piment"
+  },
+  "model": "base.region",
+  "pk": 395
+},
+{
+  "fields": {
+    "rght": 607,
+    "code": "37207",
+    "name": "7\u00e8me Rivi\u00e8re La Porte",
+    "parent": 89,
+    "level": 3,
+    "lft": 606,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Rivi\u00e8re La Porte"
+  },
+  "model": "base.region",
+  "pk": 396
+},
+{
+  "fields": {
+    "rght": 609,
+    "code": "37208",
+    "name": "8\u00e8me Margot",
+    "parent": 89,
+    "level": 3,
+    "lft": 608,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Margot"
+  },
+  "model": "base.region",
+  "pk": 397
+},
+{
+  "fields": {
+    "rght": 703,
+    "code": "41101",
+    "name": "1\u00e8re Dumas",
+    "parent": 90,
+    "level": 3,
+    "lft": 702,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Dumas"
+  },
+  "model": "base.region",
+  "pk": 398
+},
+{
+  "fields": {
+    "rght": 707,
+    "code": "41102",
+    "name": "2\u00e8me Bayaha",
+    "parent": 90,
+    "level": 3,
+    "lft": 706,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bayaha"
+  },
+  "model": "base.region",
+  "pk": 399
+},
+{
+  "fields": {
+    "rght": 705,
+    "code": "41103",
+    "name": "1\u00e8re L'Oiseau",
+    "parent": 90,
+    "level": 3,
+    "lft": 704,
+    "tree_id": 3,
+    "name_en": "1\u00e8re L'Oiseau"
+  },
+  "model": "base.region",
+  "pk": 400
+},
+{
+  "fields": {
+    "rght": 709,
+    "code": "41104",
+    "name": "2\u00e8me Haut Madeleine",
+    "parent": 90,
+    "level": 3,
+    "lft": 708,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Haut Madeleine"
+  },
+  "model": "base.region",
+  "pk": 401
+},
+{
+  "fields": {
+    "rght": 699,
+    "code": "41201",
+    "name": " 3\u00e8me Bas Maribahoux",
+    "parent": 91,
+    "level": 3,
+    "lft": 698,
+    "tree_id": 3,
+    "name_en": " 3\u00e8me Bas Maribahoux"
+  },
+  "model": "base.region",
+  "pk": 402
+},
+{
+  "fields": {
+    "rght": 737,
+    "code": "41301",
+    "name": "1\u00e8re Haut des Perches",
+    "parent": 92,
+    "level": 3,
+    "lft": 736,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Haut des Perches"
+  },
+  "model": "base.region",
+  "pk": 403
+},
+{
+  "fields": {
+    "rght": 739,
+    "code": "41302",
+    "name": "2\u00e8me Haut des Perches",
+    "parent": 92,
+    "level": 3,
+    "lft": 738,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Haut des Perches"
+  },
+  "model": "base.region",
+  "pk": 404
+},
+{
+  "fields": {
+    "rght": 725,
+    "code": "42101",
+    "name": "1\u00e8re Haut Maribahoux",
+    "parent": 93,
+    "level": 3,
+    "lft": 724,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Haut Maribahoux"
+  },
+  "model": "base.region",
+  "pk": 405
+},
+{
+  "fields": {
+    "rght": 727,
+    "code": "42102",
+    "name": "2\u00e8me Acul des Pins",
+    "parent": 93,
+    "level": 3,
+    "lft": 726,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Acul des Pins"
+  },
+  "model": "base.region",
+  "pk": 406
+},
+{
+  "fields": {
+    "rght": 729,
+    "code": "42103",
+    "name": "3\u00e8me Savane Longue",
+    "parent": 93,
+    "level": 3,
+    "lft": 728,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Savane Longue"
+  },
+  "model": "base.region",
+  "pk": 407
+},
+{
+  "fields": {
+    "rght": 733,
+    "code": "42104",
+    "name": "7\u00e8me Savanne Au Lait",
+    "parent": 93,
+    "level": 3,
+    "lft": 732,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Savanne Au Lait"
+  },
+  "model": "base.region",
+  "pk": 408
+},
+{
+  "fields": {
+    "rght": 731,
+    "code": "42105",
+    "name": "5\u00e8me Gens de Nantes",
+    "parent": 93,
+    "level": 3,
+    "lft": 730,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Gens de Nantes"
+  },
+  "model": "base.region",
+  "pk": 409
+},
+{
+  "fields": {
+    "rght": 681,
+    "code": "42201",
+    "name": "4\u00e8me Capotille",
+    "parent": 94,
+    "level": 3,
+    "lft": 680,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Capotille"
+  },
+  "model": "base.region",
+  "pk": 410
+},
+{
+  "fields": {
+    "rght": 683,
+    "code": "42202",
+    "name": "6\u00e8me Lamine",
+    "parent": 94,
+    "level": 3,
+    "lft": 682,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Lamine"
+  },
+  "model": "base.region",
+  "pk": 411
+},
+{
+  "fields": {
+    "rght": 719,
+    "code": "42301",
+    "name": "1\u00e8re Savanette",
+    "parent": 95,
+    "level": 3,
+    "lft": 718,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Savanette"
+  },
+  "model": "base.region",
+  "pk": 412
+},
+{
+  "fields": {
+    "rght": 721,
+    "code": "42302",
+    "name": "2\u00e8me Bois Poux",
+    "parent": 95,
+    "level": 3,
+    "lft": 720,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois Poux"
+  },
+  "model": "base.region",
+  "pk": 413
+},
+{
+  "fields": {
+    "rght": 763,
+    "code": "43101",
+    "name": "1\u00e8re Garcin",
+    "parent": 96,
+    "level": 3,
+    "lft": 762,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Garcin"
+  },
+  "model": "base.region",
+  "pk": 414
+},
+{
+  "fields": {
+    "rght": 765,
+    "code": "43102",
+    "name": "2\u00e8me Roucou",
+    "parent": 96,
+    "level": 3,
+    "lft": 764,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Roucou"
+  },
+  "model": "base.region",
+  "pk": 415
+},
+{
+  "fields": {
+    "rght": 767,
+    "code": "43103",
+    "name": "3\u00e8me Roche Plate",
+    "parent": 96,
+    "level": 3,
+    "lft": 766,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Roche Plate"
+  },
+  "model": "base.region",
+  "pk": 416
+},
+{
+  "fields": {
+    "rght": 743,
+    "code": "43201",
+    "name": "1\u00e8re Foulon",
+    "parent": 97,
+    "level": 3,
+    "lft": 742,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Foulon"
+  },
+  "model": "base.region",
+  "pk": 417
+},
+{
+  "fields": {
+    "rght": 745,
+    "code": "43202",
+    "name": "2\u00e8me Bois Blanc",
+    "parent": 97,
+    "level": 3,
+    "lft": 744,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois Blanc"
+  },
+  "model": "base.region",
+  "pk": 418
+},
+{
+  "fields": {
+    "rght": 747,
+    "code": "43203",
+    "name": "3\u00e8me Cotelette",
+    "parent": 97,
+    "level": 3,
+    "lft": 746,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Cotelette"
+  },
+  "model": "base.region",
+  "pk": 419
+},
+{
+  "fields": {
+    "rght": 749,
+    "code": "43204",
+    "name": "4\u00e8me Sarazin",
+    "parent": 97,
+    "level": 3,
+    "lft": 748,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Sarazin"
+  },
+  "model": "base.region",
+  "pk": 420
+},
+{
+  "fields": {
+    "rght": 751,
+    "code": "43205",
+    "name": "5\u00e8me Moka-Neuf",
+    "parent": 97,
+    "level": 3,
+    "lft": 750,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Moka-Neuf"
+  },
+  "model": "base.region",
+  "pk": 421
+},
+{
+  "fields": {
+    "rght": 753,
+    "code": "43206",
+    "name": "6\u00e8me Fond Bleu",
+    "parent": 97,
+    "level": 3,
+    "lft": 752,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Fond Bleu"
+  },
+  "model": "base.region",
+  "pk": 422
+},
+{
+  "fields": {
+    "rght": 757,
+    "code": "43301",
+    "name": "1\u00e8re Fond Blanc",
+    "parent": 98,
+    "level": 3,
+    "lft": 756,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Fond Blanc"
+  },
+  "model": "base.region",
+  "pk": 423
+},
+{
+  "fields": {
+    "rght": 759,
+    "code": "43302",
+    "name": "2\u00e8me Grand Bassin",
+    "parent": 98,
+    "level": 3,
+    "lft": 758,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Grand Bassin"
+  },
+  "model": "base.region",
+  "pk": 424
+},
+{
+  "fields": {
+    "rght": 687,
+    "code": "43401",
+    "name": "1\u00e8re Champin",
+    "parent": 99,
+    "level": 3,
+    "lft": 686,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Champin"
+  },
+  "model": "base.region",
+  "pk": 425
+},
+{
+  "fields": {
+    "rght": 689,
+    "code": "43402",
+    "name": "2\u00e8me Claudine",
+    "parent": 99,
+    "level": 3,
+    "lft": 688,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Claudine"
+  },
+  "model": "base.region",
+  "pk": 426
+},
+{
+  "fields": {
+    "rght": 771,
+    "code": "44101",
+    "name": "1\u00e8re Trois Palmistes",
+    "parent": 100,
+    "level": 3,
+    "lft": 770,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Trois Palmistes"
+  },
+  "model": "base.region",
+  "pk": 427
+},
+{
+  "fields": {
+    "rght": 773,
+    "code": "44102",
+    "name": "2\u00e8me Grosse Roche",
+    "parent": 100,
+    "level": 3,
+    "lft": 772,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Grosse Roche"
+  },
+  "model": "base.region",
+  "pk": 428
+},
+{
+  "fields": {
+    "rght": 775,
+    "code": "44103",
+    "name": "3\u00e8me Corosse",
+    "parent": 100,
+    "level": 3,
+    "lft": 774,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Corosse"
+  },
+  "model": "base.region",
+  "pk": 429
+},
+{
+  "fields": {
+    "rght": 693,
+    "code": "44201",
+    "name": "1\u00e8re Bois Gamelle",
+    "parent": 101,
+    "level": 3,
+    "lft": 692,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bois Gamelle"
+  },
+  "model": "base.region",
+  "pk": 430
+},
+{
+  "fields": {
+    "rght": 695,
+    "code": "44202",
+    "name": "2\u00e8me Rose Bonite",
+    "parent": 101,
+    "level": 3,
+    "lft": 694,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Rose Bonite"
+  },
+  "model": "base.region",
+  "pk": 431
+},
+{
+  "fields": {
+    "rght": 713,
+    "code": "44301",
+    "name": "1\u00e8re Sans Souci",
+    "parent": 102,
+    "level": 3,
+    "lft": 712,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Sans Souci"
+  },
+  "model": "base.region",
+  "pk": 432
+},
+{
+  "fields": {
+    "rght": 715,
+    "code": "44302",
+    "name": "2\u00e8me Bois Laurence",
+    "parent": 102,
+    "level": 3,
+    "lft": 714,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois Laurence"
+  },
+  "model": "base.region",
+  "pk": 433
+},
+{
+  "fields": {
+    "rght": 39,
+    "code": "51101",
+    "name": "1\u00e8re Pont Tamarin",
+    "parent": 18,
+    "level": 3,
+    "lft": 38,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Pont Tamarin"
+  },
+  "model": "base.region",
+  "pk": 434
+},
+{
+  "fields": {
+    "rght": 47,
+    "code": "51102",
+    "name": "6\u00e8me Bassin",
+    "parent": 18,
+    "level": 3,
+    "lft": 46,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Bassin"
+  },
+  "model": "base.region",
+  "pk": 435
+},
+{
+  "fields": {
+    "rght": 41,
+    "code": "51103",
+    "name": "3\u00e8me Rivi\u00e8re de Bayonnais",
+    "parent": 18,
+    "level": 3,
+    "lft": 40,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Rivi\u00e8re de Bayonnais"
+  },
+  "model": "base.region",
+  "pk": 436
+},
+{
+  "fields": {
+    "rght": 43,
+    "code": "51104",
+    "name": "4\u00e8me Poteaux",
+    "parent": 18,
+    "level": 3,
+    "lft": 42,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Poteaux"
+  },
+  "model": "base.region",
+  "pk": 437
+},
+{
+  "fields": {
+    "rght": 45,
+    "code": "51105",
+    "name": "5\u00e8me Labranle",
+    "parent": 18,
+    "level": 3,
+    "lft": 44,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Labranle"
+  },
+  "model": "base.region",
+  "pk": 438
+},
+{
+  "fields": {
+    "rght": 29,
+    "code": "51201",
+    "name": "1\u00e8re Savane Carr\u00e9e",
+    "parent": 17,
+    "level": 3,
+    "lft": 28,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Savane Carr\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 439
+},
+{
+  "fields": {
+    "rght": 31,
+    "code": "51202",
+    "name": "2\u00e8me Passe Reine",
+    "parent": 17,
+    "level": 3,
+    "lft": 30,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Passe Reine"
+  },
+  "model": "base.region",
+  "pk": 440
+},
+{
+  "fields": {
+    "rght": 33,
+    "code": "51203",
+    "name": "3\u00e8me Chemin Neuf",
+    "parent": 17,
+    "level": 3,
+    "lft": 32,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Chemin Neuf"
+  },
+  "model": "base.region",
+  "pk": 441
+},
+{
+  "fields": {
+    "rght": 35,
+    "code": "51204",
+    "name": "4\u00e8me Puiloreau",
+    "parent": 17,
+    "level": 3,
+    "lft": 34,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Puiloreau"
+  },
+  "model": "base.region",
+  "pk": 442
+},
+{
+  "fields": {
+    "rght": 79,
+    "code": "51301",
+    "name": "1\u00e8re Lacroix Perisse",
+    "parent": 22,
+    "level": 3,
+    "lft": 78,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Lacroix Perisse"
+  },
+  "model": "base.region",
+  "pk": 443
+},
+{
+  "fields": {
+    "rght": 81,
+    "code": "51302",
+    "name": "2\u00e8me Petites Desdunes",
+    "parent": 22,
+    "level": 3,
+    "lft": 80,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Petites Desdunes"
+  },
+  "model": "base.region",
+  "pk": 444
+},
+{
+  "fields": {
+    "rght": 55,
+    "code": "52101",
+    "name": "1\u00e8re Boucan Richard",
+    "parent": 20,
+    "level": 3,
+    "lft": 54,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Boucan Richard"
+  },
+  "model": "base.region",
+  "pk": 445
+},
+{
+  "fields": {
+    "rght": 57,
+    "code": "52102",
+    "name": "2\u00e8me Rivi\u00e8re Mancelle",
+    "parent": 20,
+    "level": 3,
+    "lft": 56,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Rivi\u00e8re Mancelle"
+  },
+  "model": "base.region",
+  "pk": 446
+},
+{
+  "fields": {
+    "rght": 59,
+    "code": "52103",
+    "name": "3\u00e8me Rivi\u00e8re Blanche",
+    "parent": 20,
+    "level": 3,
+    "lft": 58,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Rivi\u00e8re Blanche"
+  },
+  "model": "base.region",
+  "pk": 447
+},
+{
+  "fields": {
+    "rght": 61,
+    "code": "52104",
+    "name": "4\u00e8me L'Acul",
+    "parent": 20,
+    "level": 3,
+    "lft": 60,
+    "tree_id": 3,
+    "name_en": "4\u00e8me L'Acul"
+  },
+  "model": "base.region",
+  "pk": 448
+},
+{
+  "fields": {
+    "rght": 63,
+    "code": "52105",
+    "name": "5\u00e8me Pendu",
+    "parent": 20,
+    "level": 3,
+    "lft": 62,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Pendu"
+  },
+  "model": "base.region",
+  "pk": 449
+},
+{
+  "fields": {
+    "rght": 65,
+    "code": "52106",
+    "name": "6\u00e8me Savane Carr\u00e9e",
+    "parent": 20,
+    "level": 3,
+    "lft": 64,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Savane Carr\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 450
+},
+{
+  "fields": {
+    "rght": 67,
+    "code": "52107",
+    "name": "7\u00e8me Moulin",
+    "parent": 20,
+    "level": 3,
+    "lft": 66,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Moulin"
+  },
+  "model": "base.region",
+  "pk": 451
+},
+{
+  "fields": {
+    "rght": 69,
+    "code": "52108",
+    "name": "8\u00e8me Ravine Gros Morne",
+    "parent": 20,
+    "level": 3,
+    "lft": 68,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Ravine Gros Morne"
+  },
+  "model": "base.region",
+  "pk": 452
+},
+{
+  "fields": {
+    "rght": 139,
+    "code": "52201",
+    "name": "1\u00e8re Dolan",
+    "parent": 27,
+    "level": 3,
+    "lft": 138,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Dolan"
+  },
+  "model": "base.region",
+  "pk": 453
+},
+{
+  "fields": {
+    "rght": 141,
+    "code": "52202",
+    "name": "3\u00e8me Bois-Neuf",
+    "parent": 27,
+    "level": 3,
+    "lft": 140,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Bois-Neuf"
+  },
+  "model": "base.region",
+  "pk": 454
+},
+{
+  "fields": {
+    "rght": 143,
+    "code": "52203",
+    "name": "3\u00e8me Lagon",
+    "parent": 27,
+    "level": 3,
+    "lft": 142,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Lagon"
+  },
+  "model": "base.region",
+  "pk": 455
+},
+{
+  "fields": {
+    "rght": 107,
+    "code": "53101",
+    "name": "1\u00e8re D\u00e9lug\u00e9",
+    "parent": 25,
+    "level": 3,
+    "lft": 106,
+    "tree_id": 3,
+    "name_en": "1\u00e8re D\u00e9lug\u00e9"
+  },
+  "model": "base.region",
+  "pk": 456
+},
+{
+  "fields": {
+    "rght": 109,
+    "code": "53102",
+    "name": "2\u00e8me Bois Neuf",
+    "parent": 25,
+    "level": 3,
+    "lft": 108,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bois Neuf"
+  },
+  "model": "base.region",
+  "pk": 457
+},
+{
+  "fields": {
+    "rght": 111,
+    "code": "53103",
+    "name": "3\u00e8me Goyavier",
+    "parent": 25,
+    "level": 3,
+    "lft": 110,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Goyavier"
+  },
+  "model": "base.region",
+  "pk": 458
+},
+{
+  "fields": {
+    "rght": 113,
+    "code": "53104",
+    "name": "4\u00e8me Lalou\u00e8re",
+    "parent": 25,
+    "level": 3,
+    "lft": 112,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Lalou\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 459
+},
+{
+  "fields": {
+    "rght": 115,
+    "code": "53105",
+    "name": "5\u00e8me Bocozelle",
+    "parent": 25,
+    "level": 3,
+    "lft": 114,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bocozelle"
+  },
+  "model": "base.region",
+  "pk": 460
+},
+{
+  "fields": {
+    "rght": 117,
+    "code": "53106",
+    "name": "6\u00e8me Charrette",
+    "parent": 25,
+    "level": 3,
+    "lft": 116,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Charrette"
+  },
+  "model": "base.region",
+  "pk": 461
+},
+{
+  "fields": {
+    "rght": 147,
+    "code": "53201",
+    "name": "1\u00e8re Liancourt",
+    "parent": 28,
+    "level": 3,
+    "lft": 146,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Liancourt"
+  },
+  "model": "base.region",
+  "pk": 462
+},
+{
+  "fields": {
+    "rght": 149,
+    "code": "53202",
+    "name": "2\u00e8me B\u00e9langer",
+    "parent": 28,
+    "level": 3,
+    "lft": 148,
+    "tree_id": 3,
+    "name_en": "2\u00e8me B\u00e9langer"
+  },
+  "model": "base.region",
+  "pk": 463
+},
+{
+  "fields": {
+    "rght": 151,
+    "code": "53203",
+    "name": "3\u00e8me Guillaume Mog\u00e9",
+    "parent": 28,
+    "level": 3,
+    "lft": 150,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Guillaume Mog\u00e9"
+  },
+  "model": "base.region",
+  "pk": 464
+},
+{
+  "fields": {
+    "rght": 153,
+    "code": "53204",
+    "name": "4\u00e8me D\u00e9sarmes",
+    "parent": 28,
+    "level": 3,
+    "lft": 152,
+    "tree_id": 3,
+    "name_en": "4\u00e8me D\u00e9sarmes"
+  },
+  "model": "base.region",
+  "pk": 465
+},
+{
+  "fields": {
+    "rght": 155,
+    "code": "53205",
+    "name": "5\u00e8me Bastien",
+    "parent": 28,
+    "level": 3,
+    "lft": 154,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bastien"
+  },
+  "model": "base.region",
+  "pk": 466
+},
+{
+  "fields": {
+    "rght": 157,
+    "code": "53206",
+    "name": "6\u00e8me Terre Natte",
+    "parent": 28,
+    "level": 3,
+    "lft": 156,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Terre Natte"
+  },
+  "model": "base.region",
+  "pk": 467
+},
+{
+  "fields": {
+    "rght": 73,
+    "code": "53301",
+    "name": "1\u00e8re Martineau",
+    "parent": 21,
+    "level": 3,
+    "lft": 72,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Martineau"
+  },
+  "model": "base.region",
+  "pk": 468
+},
+{
+  "fields": {
+    "rght": 75,
+    "code": "53302",
+    "name": "2\u00e8me Bossous",
+    "parent": 21,
+    "level": 3,
+    "lft": 74,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bossous"
+  },
+  "model": "base.region",
+  "pk": 469
+},
+{
+  "fields": {
+    "rght": 15,
+    "code": "54101",
+    "name": "1\u00e8re Villars",
+    "parent": 16,
+    "level": 3,
+    "lft": 14,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Villars"
+  },
+  "model": "base.region",
+  "pk": 470
+},
+{
+  "fields": {
+    "rght": 17,
+    "code": "54102",
+    "name": "2\u00e8me Foss\u00e9 Naboth",
+    "parent": 16,
+    "level": 3,
+    "lft": 16,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Foss\u00e9 Naboth"
+  },
+  "model": "base.region",
+  "pk": 471
+},
+{
+  "fields": {
+    "rght": 19,
+    "code": "54103",
+    "name": "3\u00e8me Og\u00e9",
+    "parent": 16,
+    "level": 3,
+    "lft": 18,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Og\u00e9"
+  },
+  "model": "base.region",
+  "pk": 472
+},
+{
+  "fields": {
+    "rght": 23,
+    "code": "54105",
+    "name": "5\u00e8me Fi\u00e9f\u00e9",
+    "parent": 16,
+    "level": 3,
+    "lft": 22,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Fi\u00e9f\u00e9"
+  },
+  "model": "base.region",
+  "pk": 473
+},
+{
+  "fields": {
+    "rght": 25,
+    "code": "54106",
+    "name": "6\u00e8me La Croix",
+    "parent": 16,
+    "level": 3,
+    "lft": 24,
+    "tree_id": 3,
+    "name_en": "6\u00e8me La Croix"
+  },
+  "model": "base.region",
+  "pk": 474
+},
+{
+  "fields": {
+    "rght": 21,
+    "code": "54104",
+    "name": "4\u00e8me Poste Pierrot",
+    "parent": 16,
+    "level": 3,
+    "lft": 20,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Poste Pierrot"
+  },
+  "model": "base.region",
+  "pk": 475
+},
+{
+  "fields": {
+    "rght": 93,
+    "code": "54201",
+    "name": "1\u00e8re Bas Coursin",
+    "parent": 24,
+    "level": 3,
+    "lft": 92,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bas Coursin"
+  },
+  "model": "base.region",
+  "pk": 476
+},
+{
+  "fields": {
+    "rght": 95,
+    "code": "54202",
+    "name": "2\u00e8me Bas Coursin",
+    "parent": 24,
+    "level": 3,
+    "lft": 94,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bas Coursin"
+  },
+  "model": "base.region",
+  "pk": 477
+},
+{
+  "fields": {
+    "rght": 97,
+    "code": "54203",
+    "name": "3\u00e8me Labady",
+    "parent": 24,
+    "level": 3,
+    "lft": 96,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Labady"
+  },
+  "model": "base.region",
+  "pk": 478
+},
+{
+  "fields": {
+    "rght": 99,
+    "code": "54204",
+    "name": "4\u00e8me Savane \u00e0Roche",
+    "parent": 24,
+    "level": 3,
+    "lft": 98,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Savane \u00e0Roche"
+  },
+  "model": "base.region",
+  "pk": 479
+},
+{
+  "fields": {
+    "rght": 101,
+    "code": "54205",
+    "name": "5\u00e8me P\u00e9rodin",
+    "parent": 24,
+    "level": 3,
+    "lft": 100,
+    "tree_id": 3,
+    "name_en": "5\u00e8me P\u00e9rodin"
+  },
+  "model": "base.region",
+  "pk": 480
+},
+{
+  "fields": {
+    "rght": 103,
+    "code": "54206",
+    "name": "6\u00e8me M\u00e9dor",
+    "parent": 24,
+    "level": 3,
+    "lft": 102,
+    "tree_id": 3,
+    "name_en": "6\u00e8me M\u00e9dor"
+  },
+  "model": "base.region",
+  "pk": 481
+},
+{
+  "fields": {
+    "rght": 51,
+    "code": "54301",
+    "name": "1\u00e8re Poteneau",
+    "parent": 19,
+    "level": 3,
+    "lft": 50,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Poteneau"
+  },
+  "model": "base.region",
+  "pk": 482
+},
+{
+  "fields": {
+    "rght": 11,
+    "code": "54401",
+    "name": "2\u00e8me Desdunes",
+    "parent": 13,
+    "level": 3,
+    "lft": 10,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Desdunes"
+  },
+  "model": "base.region",
+  "pk": 483
+},
+{
+  "fields": {
+    "rght": 121,
+    "code": "55101",
+    "name": "1\u00e8re Platana",
+    "parent": 26,
+    "level": 3,
+    "lft": 120,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Platana"
+  },
+  "model": "base.region",
+  "pk": 484
+},
+{
+  "fields": {
+    "rght": 123,
+    "code": "55102",
+    "name": "2\u00e8me Camathe",
+    "parent": 26,
+    "level": 3,
+    "lft": 122,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Camathe"
+  },
+  "model": "base.region",
+  "pk": 485
+},
+{
+  "fields": {
+    "rght": 125,
+    "code": "55103",
+    "name": "3\u00e8me Bas de Sault",
+    "parent": 26,
+    "level": 3,
+    "lft": 124,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Bas de Sault"
+  },
+  "model": "base.region",
+  "pk": 486
+},
+{
+  "fields": {
+    "rght": 127,
+    "code": "55104",
+    "name": "4\u00e8me Lalomas",
+    "parent": 26,
+    "level": 3,
+    "lft": 126,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Lalomas"
+  },
+  "model": "base.region",
+  "pk": 487
+},
+{
+  "fields": {
+    "rght": 129,
+    "code": "55105",
+    "name": "5\u00e8me L'Ermite",
+    "parent": 26,
+    "level": 3,
+    "lft": 128,
+    "tree_id": 3,
+    "name_en": "5\u00e8me L'Ermite"
+  },
+  "model": "base.region",
+  "pk": 488
+},
+{
+  "fields": {
+    "rght": 131,
+    "code": "55106",
+    "name": "6\u00e8me Lacedras",
+    "parent": 26,
+    "level": 3,
+    "lft": 130,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Lacedras"
+  },
+  "model": "base.region",
+  "pk": 489
+},
+{
+  "fields": {
+    "rght": 133,
+    "code": "55107",
+    "name": "7\u00e8me Manon",
+    "parent": 26,
+    "level": 3,
+    "lft": 132,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Manon"
+  },
+  "model": "base.region",
+  "pk": 490
+},
+{
+  "fields": {
+    "rght": 135,
+    "code": "55108",
+    "name": "8\u00e8me l'Attalaye",
+    "parent": 26,
+    "level": 3,
+    "lft": 134,
+    "tree_id": 3,
+    "name_en": "8\u00e8me l'Attalaye"
+  },
+  "model": "base.region",
+  "pk": 491
+},
+{
+  "fields": {
+    "rght": 85,
+    "code": "55201",
+    "name": "1\u00e8re Cr\u00eate \u00e0Pins",
+    "parent": 23,
+    "level": 3,
+    "lft": 84,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Cr\u00eate \u00e0Pins"
+  },
+  "model": "base.region",
+  "pk": 492
+},
+{
+  "fields": {
+    "rght": 87,
+    "code": "55202",
+    "name": "2\u00e8me Bassin",
+    "parent": 23,
+    "level": 3,
+    "lft": 86,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bassin"
+  },
+  "model": "base.region",
+  "pk": 493
+},
+{
+  "fields": {
+    "rght": 89,
+    "code": "55203",
+    "name": "3\u00e8me Platon",
+    "parent": 23,
+    "level": 3,
+    "lft": 88,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Platon"
+  },
+  "model": "base.region",
+  "pk": 494
+},
+{
+  "fields": {
+    "rght": 191,
+    "code": "61101",
+    "name": "1\u00e8re Juanaria",
+    "parent": 33,
+    "level": 3,
+    "lft": 190,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Juanaria"
+  },
+  "model": "base.region",
+  "pk": 495
+},
+{
+  "fields": {
+    "rght": 193,
+    "code": "61102",
+    "name": "2\u00e8me Marmont",
+    "parent": 33,
+    "level": 3,
+    "lft": 192,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Marmont"
+  },
+  "model": "base.region",
+  "pk": 496
+},
+{
+  "fields": {
+    "rght": 195,
+    "code": "61103",
+    "name": "3\u00e8me Aguah\u00e9dionde (Rive Droite)",
+    "parent": 33,
+    "level": 3,
+    "lft": 194,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Aguah\u00e9dionde (Rive Droite)"
+  },
+  "model": "base.region",
+  "pk": 497
+},
+{
+  "fields": {
+    "rght": 197,
+    "code": "61104",
+    "name": "4\u00e8me Aguah\u00e9dionde (Rive Gauche)",
+    "parent": 33,
+    "level": 3,
+    "lft": 196,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Aguah\u00e9dionde (Rive Gauche)"
+  },
+  "model": "base.region",
+  "pk": 498
+},
+{
+  "fields": {
+    "rght": 209,
+    "code": "61201",
+    "name": "1\u00e8re Savane Grande",
+    "parent": 35,
+    "level": 3,
+    "lft": 208,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Savane Grande"
+  },
+  "model": "base.region",
+  "pk": 499
+},
+{
+  "fields": {
+    "rght": 211,
+    "code": "61202",
+    "name": "2\u00e8me Narang",
+    "parent": 35,
+    "level": 3,
+    "lft": 210,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Narang"
+  },
+  "model": "base.region",
+  "pk": 500
+},
+{
+  "fields": {
+    "rght": 213,
+    "code": "61203",
+    "name": "3\u00e8me Hatty",
+    "parent": 35,
+    "level": 3,
+    "lft": 212,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Hatty"
+  },
+  "model": "base.region",
+  "pk": 501
+},
+{
+  "fields": {
+    "rght": 253,
+    "code": "61303",
+    "name": "3\u00e8me Baille Tourrible",
+    "parent": 40,
+    "level": 3,
+    "lft": 252,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Baille Tourrible"
+  },
+  "model": "base.region",
+  "pk": 502
+},
+{
+  "fields": {
+    "rght": 251,
+    "code": "61302",
+    "name": "2\u00e8me Tierra Muscady",
+    "parent": 40,
+    "level": 3,
+    "lft": 250,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Tierra Muscady"
+  },
+  "model": "base.region",
+  "pk": 503
+},
+{
+  "fields": {
+    "rght": 249,
+    "code": "61301",
+    "name": "1\u00e8re Cabral",
+    "parent": 40,
+    "level": 3,
+    "lft": 248,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Cabral"
+  },
+  "model": "base.region",
+  "pk": 504
+},
+{
+  "fields": {
+    "rght": 179,
+    "code": "61401",
+    "name": "1re Rang",
+    "parent": 31,
+    "level": 3,
+    "lft": 178,
+    "tree_id": 3,
+    "name_en": "1re Rang"
+  },
+  "model": "base.region",
+  "pk": 505
+},
+{
+  "fields": {
+    "rght": 217,
+    "code": "62101",
+    "name": "1re Gascogne",
+    "parent": 36,
+    "level": 3,
+    "lft": 216,
+    "tree_id": 3,
+    "name_en": "1re Gascogne"
+  },
+  "model": "base.region",
+  "pk": 506
+},
+{
+  "fields": {
+    "rght": 219,
+    "code": "62102",
+    "name": "2e Sarazin",
+    "parent": 36,
+    "level": 3,
+    "lft": 218,
+    "tree_id": 3,
+    "name_en": "2e Sarazin"
+  },
+  "model": "base.region",
+  "pk": 507
+},
+{
+  "fields": {
+    "rght": 221,
+    "code": "62103",
+    "name": "3\u00e8me Grand Boucan",
+    "parent": 36,
+    "level": 3,
+    "lft": 220,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Grand Boucan"
+  },
+  "model": "base.region",
+  "pk": 508
+},
+{
+  "fields": {
+    "rght": 223,
+    "code": "62104",
+    "name": "4\u00e8me Cr\u00eate Br\u00fbl\u00e9e",
+    "parent": 36,
+    "level": 3,
+    "lft": 222,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Cr\u00eate Br\u00fbl\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 509
+},
+{
+  "fields": {
+    "rght": 227,
+    "code": "62201",
+    "name": "1\u00e8re Rivi\u00e8re Canot",
+    "parent": 37,
+    "level": 3,
+    "lft": 226,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Rivi\u00e8re Canot"
+  },
+  "model": "base.region",
+  "pk": 510
+},
+{
+  "fields": {
+    "rght": 229,
+    "code": "62202",
+    "name": "2\u00e8me La Selle",
+    "parent": 37,
+    "level": 3,
+    "lft": 228,
+    "tree_id": 3,
+    "name_en": "2\u00e8me La Selle"
+  },
+  "model": "base.region",
+  "pk": 511
+},
+{
+  "fields": {
+    "rght": 231,
+    "code": "62203",
+    "name": "3\u00e8me Coupe Mardi Gras",
+    "parent": 37,
+    "level": 3,
+    "lft": 230,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Coupe Mardi Gras"
+  },
+  "model": "base.region",
+  "pk": 512
+},
+{
+  "fields": {
+    "rght": 233,
+    "code": "62204",
+    "name": "4\u00e8me Montagne Terrible",
+    "parent": 37,
+    "level": 3,
+    "lft": 232,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Montagne Terrible"
+  },
+  "model": "base.region",
+  "pk": 513
+},
+{
+  "fields": {
+    "rght": 171,
+    "code": "62301",
+    "name": "1\u00e8re Petite Montagne",
+    "parent": 30,
+    "level": 3,
+    "lft": 170,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Petite Montagne"
+  },
+  "model": "base.region",
+  "pk": 514
+},
+{
+  "fields": {
+    "rght": 173,
+    "code": "62302",
+    "name": "2\u00e8me Boucan Carr\u00e9",
+    "parent": 30,
+    "level": 3,
+    "lft": 172,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Boucan Carr\u00e9"
+  },
+  "model": "base.region",
+  "pk": 515
+},
+{
+  "fields": {
+    "rght": 175,
+    "code": "62303",
+    "name": "3\u00e8me des Bayes",
+    "parent": 30,
+    "level": 3,
+    "lft": 174,
+    "tree_id": 3,
+    "name_en": "3\u00e8me des Bayes"
+  },
+  "model": "base.region",
+  "pk": 516
+},
+{
+  "fields": {
+    "rght": 205,
+    "code": "61304",
+    "name": "3\u00e8me La Hoye",
+    "parent": 34,
+    "level": 3,
+    "lft": 204,
+    "tree_id": 3,
+    "name_en": "3\u00e8me La Hoye"
+  },
+  "model": "base.region",
+  "pk": 517
+},
+{
+  "fields": {
+    "rght": 201,
+    "code": "63101",
+    "name": "1\u00e8re Petit Fond",
+    "parent": 34,
+    "level": 3,
+    "lft": 200,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Petit Fond"
+  },
+  "model": "base.region",
+  "pk": 518
+},
+{
+  "fields": {
+    "rght": 203,
+    "code": "63102",
+    "name": "2\u00e8me Juampas",
+    "parent": 34,
+    "level": 3,
+    "lft": 202,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Juampas"
+  },
+  "model": "base.region",
+  "pk": 519
+},
+{
+  "fields": {
+    "rght": 163,
+    "code": "63201",
+    "name": "1\u00e8re Renth-Mathe",
+    "parent": 29,
+    "level": 3,
+    "lft": 162,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Renth-Mathe"
+  },
+  "model": "base.region",
+  "pk": 520
+},
+{
+  "fields": {
+    "rght": 165,
+    "code": "63202",
+    "name": "2\u00e8me Roye-Sec",
+    "parent": 29,
+    "level": 3,
+    "lft": 164,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Roye-Sec"
+  },
+  "model": "base.region",
+  "pk": 521
+},
+{
+  "fields": {
+    "rght": 167,
+    "code": "63203",
+    "name": "3\u00e8me Riaribes",
+    "parent": 29,
+    "level": 3,
+    "lft": 166,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Riaribes"
+  },
+  "model": "base.region",
+  "pk": 522
+},
+{
+  "fields": {
+    "rght": 237,
+    "code": "63301",
+    "name": "1\u00e8re Colombier",
+    "parent": 38,
+    "level": 3,
+    "lft": 236,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Colombier"
+  },
+  "model": "base.region",
+  "pk": 523
+},
+{
+  "fields": {
+    "rght": 239,
+    "code": "63302",
+    "name": "2\u00e8me La Haye",
+    "parent": 38,
+    "level": 3,
+    "lft": 238,
+    "tree_id": 3,
+    "name_en": "2\u00e8me La Haye"
+  },
+  "model": "base.region",
+  "pk": 524
+},
+{
+  "fields": {
+    "rght": 183,
+    "code": "64101",
+    "name": "1er Acajou Br\u00fbl\u00e9",
+    "parent": 32,
+    "level": 3,
+    "lft": 182,
+    "tree_id": 3,
+    "name_en": "1er Acajou Br\u00fbl\u00e9"
+  },
+  "model": "base.region",
+  "pk": 525
+},
+{
+  "fields": {
+    "rght": 185,
+    "code": "64102",
+    "name": "2\u00e8me Acajou Br\u00fbl\u00e9",
+    "parent": 32,
+    "level": 3,
+    "lft": 184,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Acajou Br\u00fbl\u00e9"
+  },
+  "model": "base.region",
+  "pk": 526
+},
+{
+  "fields": {
+    "rght": 187,
+    "code": "64103",
+    "name": "3\u00e8me Lamielle",
+    "parent": 32,
+    "level": 3,
+    "lft": 186,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Lamielle"
+  },
+  "model": "base.region",
+  "pk": 527
+},
+{
+  "fields": {
+    "rght": 243,
+    "code": "64201",
+    "name": "1\u00e8re Matelgate",
+    "parent": 39,
+    "level": 3,
+    "lft": 242,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Matelgate"
+  },
+  "model": "base.region",
+  "pk": 528
+},
+{
+  "fields": {
+    "rght": 245,
+    "code": "64202",
+    "name": "2\u00e8me Lociane",
+    "parent": 39,
+    "level": 3,
+    "lft": 244,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Lociane"
+  },
+  "model": "base.region",
+  "pk": 529
+},
+{
+  "fields": {
+    "rght": 1233,
+    "code": "71101",
+    "name": "1\u00e8re Bourdet",
+    "parent": 103,
+    "level": 3,
+    "lft": 1232,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bourdet"
+  },
+  "model": "base.region",
+  "pk": 530
+},
+{
+  "fields": {
+    "rght": 1235,
+    "code": "71102",
+    "name": "2\u00e8me Fonfr\u00e8de",
+    "parent": 103,
+    "level": 3,
+    "lft": 1234,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Fonfr\u00e8de"
+  },
+  "model": "base.region",
+  "pk": 531
+},
+{
+  "fields": {
+    "rght": 1237,
+    "code": "71103",
+    "name": "3\u00e8me Laborde",
+    "parent": 103,
+    "level": 3,
+    "lft": 1236,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Laborde"
+  },
+  "model": "base.region",
+  "pk": 532
+},
+{
+  "fields": {
+    "rght": 1239,
+    "code": "71104",
+    "name": "4\u00e8me Laurent",
+    "parent": 103,
+    "level": 3,
+    "lft": 1238,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Laurent"
+  },
+  "model": "base.region",
+  "pk": 533
+},
+{
+  "fields": {
+    "rght": 1241,
+    "code": "71105",
+    "name": "5\u00e8me Mercy",
+    "parent": 103,
+    "level": 3,
+    "lft": 1240,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Mercy"
+  },
+  "model": "base.region",
+  "pk": 534
+},
+{
+  "fields": {
+    "rght": 1243,
+    "code": "71106",
+    "name": "6\u00e8me Boulmier",
+    "parent": 103,
+    "level": 3,
+    "lft": 1242,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Boulmier"
+  },
+  "model": "base.region",
+  "pk": 535
+},
+{
+  "fields": {
+    "rght": 1309,
+    "code": "71201",
+    "name": "1\u00e8re Bourry",
+    "parent": 104,
+    "level": 3,
+    "lft": 1308,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bourry"
+  },
+  "model": "base.region",
+  "pk": 536
+},
+{
+  "fields": {
+    "rght": 1311,
+    "code": "71202",
+    "name": "2\u00e8me B\u00e9rault",
+    "parent": 104,
+    "level": 3,
+    "lft": 1310,
+    "tree_id": 3,
+    "name_en": "2\u00e8me B\u00e9rault"
+  },
+  "model": "base.region",
+  "pk": 537
+},
+{
+  "fields": {
+    "rght": 1313,
+    "code": "71203",
+    "name": "3\u00e8me Solon",
+    "parent": 104,
+    "level": 3,
+    "lft": 1312,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Solon"
+  },
+  "model": "base.region",
+  "pk": 538
+},
+{
+  "fields": {
+    "rght": 1315,
+    "code": "71204",
+    "name": "4\u00e8me Moreau",
+    "parent": 104,
+    "level": 3,
+    "lft": 1314,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Moreau"
+  },
+  "model": "base.region",
+  "pk": 539
+},
+{
+  "fields": {
+    "rght": 1197,
+    "code": "71301",
+    "name": "1\u00e8re Fond-Palmiste",
+    "parent": 105,
+    "level": 3,
+    "lft": 1196,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Fond-Palmiste"
+  },
+  "model": "base.region",
+  "pk": 540
+},
+{
+  "fields": {
+    "rght": 1199,
+    "code": "71302",
+    "name": "2\u00e8me Meloni\u00e8re",
+    "parent": 105,
+    "level": 3,
+    "lft": 1198,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Meloni\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 541
+},
+{
+  "fields": {
+    "rght": 1201,
+    "code": "71303",
+    "name": "3\u00e8me Carrefour Canon",
+    "parent": 105,
+    "level": 3,
+    "lft": 1200,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Carrefour Canon"
+  },
+  "model": "base.region",
+  "pk": 542
+},
+{
+  "fields": {
+    "rght": 1177,
+    "code": "71401",
+    "name": "1\u00e8re L\u00e9vy",
+    "parent": 106,
+    "level": 3,
+    "lft": 1176,
+    "tree_id": 3,
+    "name_en": "1\u00e8re L\u00e9vy"
+  },
+  "model": "base.region",
+  "pk": 543
+},
+{
+  "fields": {
+    "rght": 1179,
+    "code": "71402",
+    "name": "2\u00e8me Champlois",
+    "parent": 106,
+    "level": 3,
+    "lft": 1178,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Champlois"
+  },
+  "model": "base.region",
+  "pk": 544
+},
+{
+  "fields": {
+    "rght": 1181,
+    "code": "71403",
+    "name": "3\u00e8me Tibi Davezac",
+    "parent": 106,
+    "level": 3,
+    "lft": 1180,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Tibi Davezac"
+  },
+  "model": "base.region",
+  "pk": 545
+},
+{
+  "fields": {
+    "rght": 1251,
+    "code": "71501",
+    "name": "1\u00e8re Maniche",
+    "parent": 107,
+    "level": 3,
+    "lft": 1250,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Maniche"
+  },
+  "model": "base.region",
+  "pk": 546
+},
+{
+  "fields": {
+    "rght": 1247,
+    "code": "71502",
+    "name": "10\u00e8me Dory",
+    "parent": 107,
+    "level": 3,
+    "lft": 1246,
+    "tree_id": 3,
+    "name_en": "10\u00e8me Dory"
+  },
+  "model": "base.region",
+  "pk": 547
+},
+{
+  "fields": {
+    "rght": 1249,
+    "code": "71503",
+    "name": "11\u00e8me Melon",
+    "parent": 107,
+    "level": 3,
+    "lft": 1248,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Melon"
+  },
+  "model": "base.region",
+  "pk": 548
+},
+{
+  "fields": {
+    "rght": 1221,
+    "code": "71601",
+    "name": "Ile \u00e0 Vache",
+    "parent": 108,
+    "level": 3,
+    "lft": 1220,
+    "tree_id": 3,
+    "name_en": "Ile \u00e0 Vache"
+  },
+  "model": "base.region",
+  "pk": 549
+},
+{
+  "fields": {
+    "rght": 1261,
+    "code": "72101",
+    "name": "1re Barbois",
+    "parent": 109,
+    "level": 3,
+    "lft": 1260,
+    "tree_id": 3,
+    "name_en": "1re Barbois"
+  },
+  "model": "base.region",
+  "pk": 550
+},
+{
+  "fields": {
+    "rght": 1263,
+    "code": "72102",
+    "name": "2e Dumont",
+    "parent": 109,
+    "level": 3,
+    "lft": 1262,
+    "tree_id": 3,
+    "name_en": "2e Dumont"
+  },
+  "model": "base.region",
+  "pk": 551
+},
+{
+  "fields": {
+    "rght": 1275,
+    "code": "72201",
+    "name": "1\u00e8re Tapion",
+    "parent": 110,
+    "level": 3,
+    "lft": 1274,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Tapion"
+  },
+  "model": "base.region",
+  "pk": 552
+},
+{
+  "fields": {
+    "rght": 1277,
+    "code": "72202",
+    "name": "2\u00e8me D\u00e9bouchette",
+    "parent": 110,
+    "level": 3,
+    "lft": 1276,
+    "tree_id": 3,
+    "name_en": "2\u00e8me D\u00e9bouchette"
+  },
+  "model": "base.region",
+  "pk": 553
+},
+{
+  "fields": {
+    "rght": 1279,
+    "code": "72203",
+    "name": "3\u00e8me Trichet",
+    "parent": 110,
+    "level": 3,
+    "lft": 1278,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Trichet"
+  },
+  "model": "base.region",
+  "pk": 554
+},
+{
+  "fields": {
+    "rght": 1169,
+    "code": "72301",
+    "name": "1\u00e8re Lazare",
+    "parent": 111,
+    "level": 3,
+    "lft": 1168,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Lazare"
+  },
+  "model": "base.region",
+  "pk": 555
+},
+{
+  "fields": {
+    "rght": 1171,
+    "code": "72302",
+    "name": "2\u00e8me Anse \u00e0 Drick",
+    "parent": 111,
+    "level": 3,
+    "lft": 1170,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Anse \u00e0 Drick"
+  },
+  "model": "base.region",
+  "pk": 556
+},
+{
+  "fields": {
+    "rght": 1173,
+    "code": "72303",
+    "name": "3\u00e8me Arniquet",
+    "parent": 111,
+    "level": 3,
+    "lft": 1172,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Arniquet"
+  },
+  "model": "base.region",
+  "pk": 557
+},
+{
+  "fields": {
+    "rght": 1153,
+    "code": "73101",
+    "name": "1\u00e8re Mac\u00e9an",
+    "parent": 112,
+    "level": 3,
+    "lft": 1152,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Mac\u00e9an"
+  },
+  "model": "base.region",
+  "pk": 558
+},
+{
+  "fields": {
+    "rght": 1155,
+    "code": "73102",
+    "name": "2\u00e8me Bellevue",
+    "parent": 112,
+    "level": 3,
+    "lft": 1154,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bellevue"
+  },
+  "model": "base.region",
+  "pk": 559
+},
+{
+  "fields": {
+    "rght": 1157,
+    "code": "73103",
+    "name": "3\u00e8me Brodequin",
+    "parent": 112,
+    "level": 3,
+    "lft": 1156,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Brodequin"
+  },
+  "model": "base.region",
+  "pk": 560
+},
+{
+  "fields": {
+    "rght": 1159,
+    "code": "73104",
+    "name": "4\u00e8me Flamands",
+    "parent": 112,
+    "level": 3,
+    "lft": 1158,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Flamands"
+  },
+  "model": "base.region",
+  "pk": 561
+},
+{
+  "fields": {
+    "rght": 1161,
+    "code": "73105",
+    "name": "5\u00e8me Mare \u00e0 Coiffe",
+    "parent": 112,
+    "level": 3,
+    "lft": 1160,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Mare \u00e0 Coiffe"
+  },
+  "model": "base.region",
+  "pk": 562
+},
+{
+  "fields": {
+    "rght": 1163,
+    "code": "73106",
+    "name": "6\u00e8me La Colline",
+    "parent": 112,
+    "level": 3,
+    "lft": 1162,
+    "tree_id": 3,
+    "name_en": "6\u00e8me La Colline"
+  },
+  "model": "base.region",
+  "pk": 563
+},
+{
+  "fields": {
+    "rght": 1149,
+    "code": "73107",
+    "name": "11\u00e8me Frangipane",
+    "parent": 112,
+    "level": 3,
+    "lft": 1148,
+    "tree_id": 3,
+    "name_en": "11\u00e8me Frangipane"
+  },
+  "model": "base.region",
+  "pk": 564
+},
+{
+  "fields": {
+    "rght": 1151,
+    "code": "73108",
+    "name": "12\u00e8me Colline \u00e0Mongon",
+    "parent": 112,
+    "level": 3,
+    "lft": 1150,
+    "tree_id": 3,
+    "name_en": "12\u00e8me Colline \u00e0Mongon"
+  },
+  "model": "base.region",
+  "pk": 565
+},
+{
+  "fields": {
+    "rght": 1147,
+    "code": "73110",
+    "name": "10\u00e8me Guirand",
+    "parent": 112,
+    "level": 3,
+    "lft": 1146,
+    "tree_id": 3,
+    "name_en": "10\u00e8me Guirand"
+  },
+  "model": "base.region",
+  "pk": 566
+},
+{
+  "fields": {
+    "rght": 1165,
+    "code": "73109",
+    "name": "9\u00e8me Fonds des Blancs",
+    "parent": 112,
+    "level": 3,
+    "lft": 1164,
+    "tree_id": 3,
+    "name_en": "9\u00e8me Fonds des Blancs"
+  },
+  "model": "base.region",
+  "pk": 567
+},
+{
+  "fields": {
+    "rght": 1283,
+    "code": "73201",
+    "name": "1\u00e8re Grands Fonds",
+    "parent": 113,
+    "level": 3,
+    "lft": 1282,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Grands Fonds"
+  },
+  "model": "base.region",
+  "pk": 568
+},
+{
+  "fields": {
+    "rght": 1285,
+    "code": "73202",
+    "name": "2\u00e8me Baie Dumesle",
+    "parent": 113,
+    "level": 3,
+    "lft": 1284,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Baie Dumesle"
+  },
+  "model": "base.region",
+  "pk": 569
+},
+{
+  "fields": {
+    "rght": 1287,
+    "code": "73203",
+    "name": "3\u00e8me Grenodi\u00e8re",
+    "parent": 113,
+    "level": 3,
+    "lft": 1286,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Grenodi\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 570
+},
+{
+  "fields": {
+    "rght": 1289,
+    "code": "73204",
+    "name": "4\u00e8me Zanglais",
+    "parent": 113,
+    "level": 3,
+    "lft": 1288,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Zanglais"
+  },
+  "model": "base.region",
+  "pk": 571
+},
+{
+  "fields": {
+    "rght": 1291,
+    "code": "73205",
+    "name": "5\u00e8me Sucrerie-Henry",
+    "parent": 113,
+    "level": 3,
+    "lft": 1290,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Sucrerie-Henry"
+  },
+  "model": "base.region",
+  "pk": 572
+},
+{
+  "fields": {
+    "rght": 1293,
+    "code": "73206",
+    "name": "6\u00e8me Solon",
+    "parent": 113,
+    "level": 3,
+    "lft": 1292,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Solon"
+  },
+  "model": "base.region",
+  "pk": 573
+},
+{
+  "fields": {
+    "rght": 1295,
+    "code": "73207",
+    "name": "7\u00e8me Cherette",
+    "parent": 113,
+    "level": 3,
+    "lft": 1294,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Cherette"
+  },
+  "model": "base.region",
+  "pk": 574
+},
+{
+  "fields": {
+    "rght": 1297,
+    "code": "73208",
+    "name": "8\u00e8me Corail-Henry",
+    "parent": 113,
+    "level": 3,
+    "lft": 1296,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Corail-Henry"
+  },
+  "model": "base.region",
+  "pk": 575
+},
+{
+  "fields": {
+    "rght": 1185,
+    "code": "73301",
+    "name": "1\u00e8re Boileau",
+    "parent": 114,
+    "level": 3,
+    "lft": 1184,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Boileau"
+  },
+  "model": "base.region",
+  "pk": 576
+},
+{
+  "fields": {
+    "rght": 1187,
+    "code": "73302",
+    "name": "2\u00e8me Martineau",
+    "parent": 114,
+    "level": 3,
+    "lft": 1186,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Martineau"
+  },
+  "model": "base.region",
+  "pk": 577
+},
+{
+  "fields": {
+    "rght": 1189,
+    "code": "73303",
+    "name": "3\u00e8me Gros Marin",
+    "parent": 114,
+    "level": 3,
+    "lft": 1188,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Gros Marin"
+  },
+  "model": "base.region",
+  "pk": 578
+},
+{
+  "fields": {
+    "rght": 1191,
+    "code": "73304",
+    "name": "4\u00e8me Mare Henry",
+    "parent": 114,
+    "level": 3,
+    "lft": 1190,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Mare Henry"
+  },
+  "model": "base.region",
+  "pk": 579
+},
+{
+  "fields": {
+    "rght": 1193,
+    "code": "73305",
+    "name": "5\u00e8me Laroque",
+    "parent": 114,
+    "level": 3,
+    "lft": 1192,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Laroque"
+  },
+  "model": "base.region",
+  "pk": 580
+},
+{
+  "fields": {
+    "rght": 1213,
+    "code": "74101",
+    "name": "1re Cond\u00e9",
+    "parent": 115,
+    "level": 3,
+    "lft": 1212,
+    "tree_id": 3,
+    "name_en": "1re Cond\u00e9"
+  },
+  "model": "base.region",
+  "pk": 581
+},
+{
+  "fields": {
+    "rght": 1215,
+    "code": "74102",
+    "name": "2e Des Pas",
+    "parent": 115,
+    "level": 3,
+    "lft": 1214,
+    "tree_id": 3,
+    "name_en": "2e Des Pas"
+  },
+  "model": "base.region",
+  "pk": 582
+},
+{
+  "fields": {
+    "rght": 1217,
+    "code": "74103",
+    "name": "3e Quentin",
+    "parent": 115,
+    "level": 3,
+    "lft": 1216,
+    "tree_id": 3,
+    "name_en": "3e Quentin"
+  },
+  "model": "base.region",
+  "pk": 583
+},
+{
+  "fields": {
+    "rght": 1255,
+    "code": "74201",
+    "name": "1\u00e8re Paricot",
+    "parent": 116,
+    "level": 3,
+    "lft": 1254,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Paricot"
+  },
+  "model": "base.region",
+  "pk": 584
+},
+{
+  "fields": {
+    "rght": 1257,
+    "code": "74202",
+    "name": "2\u00e8me Balais",
+    "parent": 116,
+    "level": 3,
+    "lft": 1256,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Balais"
+  },
+  "model": "base.region",
+  "pk": 585
+},
+{
+  "fields": {
+    "rght": 1267,
+    "code": "74301",
+    "name": "1\u00e8re Beaulieu",
+    "parent": 117,
+    "level": 3,
+    "lft": 1266,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Beaulieu"
+  },
+  "model": "base.region",
+  "pk": 586
+},
+{
+  "fields": {
+    "rght": 1269,
+    "code": "74302",
+    "name": "2\u00e8me Renaudin",
+    "parent": 117,
+    "level": 3,
+    "lft": 1268,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Renaudin"
+  },
+  "model": "base.region",
+  "pk": 587
+},
+{
+  "fields": {
+    "rght": 1271,
+    "code": "74303",
+    "name": "3\u00e8me Beauclos",
+    "parent": 117,
+    "level": 3,
+    "lft": 1270,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Beauclos"
+  },
+  "model": "base.region",
+  "pk": 588
+},
+{
+  "fields": {
+    "rght": 1205,
+    "code": "75101",
+    "name": "1\u00e8re Randel",
+    "parent": 118,
+    "level": 3,
+    "lft": 1204,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Randel"
+  },
+  "model": "base.region",
+  "pk": 589
+},
+{
+  "fields": {
+    "rght": 1207,
+    "code": "75102",
+    "name": "2\u00e8me D\u00e9joie",
+    "parent": 118,
+    "level": 3,
+    "lft": 1206,
+    "tree_id": 3,
+    "name_en": "2\u00e8me D\u00e9joie"
+  },
+  "model": "base.region",
+  "pk": 590
+},
+{
+  "fields": {
+    "rght": 1209,
+    "code": "75103",
+    "name": "3\u00e8me Bony",
+    "parent": 118,
+    "level": 3,
+    "lft": 1208,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Bony"
+  },
+  "model": "base.region",
+  "pk": 591
+},
+{
+  "fields": {
+    "rght": 1225,
+    "code": "75201",
+    "name": "1\u00e8re V\u00e9rone",
+    "parent": 119,
+    "level": 3,
+    "lft": 1224,
+    "tree_id": 3,
+    "name_en": "1\u00e8re V\u00e9rone"
+  },
+  "model": "base.region",
+  "pk": 592
+},
+{
+  "fields": {
+    "rght": 1227,
+    "code": "75202",
+    "name": "2\u00e8me Edelin",
+    "parent": 119,
+    "level": 3,
+    "lft": 1226,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Edelin"
+  },
+  "model": "base.region",
+  "pk": 593
+},
+{
+  "fields": {
+    "rght": 1229,
+    "code": "75203",
+    "name": "3\u00e8me Cosse",
+    "parent": 119,
+    "level": 3,
+    "lft": 1228,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Cosse"
+  },
+  "model": "base.region",
+  "pk": 594
+},
+{
+  "fields": {
+    "rght": 1301,
+    "code": "75301",
+    "name": "1\u00e8re Blactote",
+    "parent": 120,
+    "level": 3,
+    "lft": 1300,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Blactote"
+  },
+  "model": "base.region",
+  "pk": 595
+},
+{
+  "fields": {
+    "rght": 1303,
+    "code": "75302",
+    "name": "2\u00e8me Nan Sevr\u00e9",
+    "parent": 120,
+    "level": 3,
+    "lft": 1302,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Nan Sevr\u00e9"
+  },
+  "model": "base.region",
+  "pk": 596
+},
+{
+  "fields": {
+    "rght": 1305,
+    "code": "75303",
+    "name": "3\u00e8me Loby",
+    "parent": 120,
+    "level": 3,
+    "lft": 1304,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Loby"
+  },
+  "model": "base.region",
+  "pk": 597
+},
+{
+  "fields": {
+    "rght": 317,
+    "code": "81101",
+    "name": "1\u00e8re Basse Voldrogue",
+    "parent": 121,
+    "level": 3,
+    "lft": 316,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Basse Voldrogue"
+  },
+  "model": "base.region",
+  "pk": 598
+},
+{
+  "fields": {
+    "rght": 319,
+    "code": "81102",
+    "name": "2\u00e8me Haute Voldrogue",
+    "parent": 121,
+    "level": 3,
+    "lft": 318,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Haute Voldrogue"
+  },
+  "model": "base.region",
+  "pk": 599
+},
+{
+  "fields": {
+    "rght": 321,
+    "code": "81103",
+    "name": "3e Haute Guinaud\u00e9e",
+    "parent": 121,
+    "level": 3,
+    "lft": 320,
+    "tree_id": 3,
+    "name_en": "3e Haute Guinaud\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 600
+},
+{
+  "fields": {
+    "rght": 323,
+    "code": "81104",
+    "name": "4e Basse Guinaud\u00e9e",
+    "parent": 121,
+    "level": 3,
+    "lft": 322,
+    "tree_id": 3,
+    "name_en": "4e Basse Guinaud\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 601
+},
+{
+  "fields": {
+    "rght": 325,
+    "code": "81105",
+    "name": "5e Ravine \u00e0 Charles",
+    "parent": 121,
+    "level": 3,
+    "lft": 324,
+    "tree_id": 3,
+    "name_en": "5e Ravine \u00e0 Charles"
+  },
+  "model": "base.region",
+  "pk": 602
+},
+{
+  "fields": {
+    "rght": 327,
+    "code": "81106",
+    "name": "6e \u00celes Blanches",
+    "parent": 121,
+    "level": 3,
+    "lft": 326,
+    "tree_id": 3,
+    "name_en": "6e \u00celes Blanches"
+  },
+  "model": "base.region",
+  "pk": 603
+},
+{
+  "fields": {
+    "rght": 329,
+    "code": "81107",
+    "name": "7e Marfranc",
+    "parent": 121,
+    "level": 3,
+    "lft": 328,
+    "tree_id": 3,
+    "name_en": "7e Marfranc"
+  },
+  "model": "base.region",
+  "pk": 604
+},
+{
+  "fields": {
+    "rght": 331,
+    "code": "81108",
+    "name": "8e Fonds Rouge Dahere",
+    "parent": 121,
+    "level": 3,
+    "lft": 330,
+    "tree_id": 3,
+    "name_en": "8e Fonds Rouge Dahere"
+  },
+  "model": "base.region",
+  "pk": 605
+},
+{
+  "fields": {
+    "rght": 333,
+    "code": "81109",
+    "name": "9e Fonds Rouge Torberck",
+    "parent": 121,
+    "level": 3,
+    "lft": 332,
+    "tree_id": 3,
+    "name_en": "9e Fonds Rouge Torberck"
+  },
+  "model": "base.region",
+  "pk": 606
+},
+{
+  "fields": {
+    "rght": 259,
+    "code": "81201",
+    "name": "1\u00e8re Anse du Clerc",
+    "parent": 122,
+    "level": 3,
+    "lft": 258,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Anse du Clerc"
+  },
+  "model": "base.region",
+  "pk": 607
+},
+{
+  "fields": {
+    "rght": 261,
+    "code": "81202",
+    "name": "2\u00e8me Balisiers",
+    "parent": 122,
+    "level": 3,
+    "lft": 260,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Balisiers"
+  },
+  "model": "base.region",
+  "pk": 608
+},
+{
+  "fields": {
+    "rght": 263,
+    "code": "81203",
+    "name": "3\u00e8me Danglise",
+    "parent": 122,
+    "level": 3,
+    "lft": 262,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Danglise"
+  },
+  "model": "base.region",
+  "pk": 609
+},
+{
+  "fields": {
+    "rght": 265,
+    "code": "81204",
+    "name": "4e La Seringue",
+    "parent": 122,
+    "level": 3,
+    "lft": 264,
+    "tree_id": 3,
+    "name_en": "4e La Seringue"
+  },
+  "model": "base.region",
+  "pk": 610
+},
+{
+  "fields": {
+    "rght": 287,
+    "code": "81301",
+    "name": "1re D\u00e9sormeau",
+    "parent": 123,
+    "level": 3,
+    "lft": 286,
+    "tree_id": 3,
+    "name_en": "1re D\u00e9sormeau"
+  },
+  "model": "base.region",
+  "pk": 611
+},
+{
+  "fields": {
+    "rght": 345,
+    "code": "81401",
+    "name": "1e Anotte",
+    "parent": 124,
+    "level": 3,
+    "lft": 344,
+    "tree_id": 3,
+    "name_en": "1e Anotte"
+  },
+  "model": "base.region",
+  "pk": 612
+},
+{
+  "fields": {
+    "rght": 347,
+    "code": "81402",
+    "name": "2e Sources Chaudes",
+    "parent": 124,
+    "level": 3,
+    "lft": 346,
+    "tree_id": 3,
+    "name_en": "2e Sources Chaudes"
+  },
+  "model": "base.region",
+  "pk": 613
+},
+{
+  "fields": {
+    "rght": 349,
+    "code": "81403",
+    "name": "3e L'Assive",
+    "parent": 124,
+    "level": 3,
+    "lft": 348,
+    "tree_id": 3,
+    "name_en": "3e L'Assive"
+  },
+  "model": "base.region",
+  "pk": 614
+},
+{
+  "fields": {
+    "rght": 291,
+    "code": "81501",
+    "name": "1e D\u00e9jean",
+    "parent": 125,
+    "level": 3,
+    "lft": 290,
+    "tree_id": 3,
+    "name_en": "1e D\u00e9jean"
+  },
+  "model": "base.region",
+  "pk": 615
+},
+{
+  "fields": {
+    "rght": 293,
+    "code": "81502",
+    "name": "2e Boucan",
+    "parent": 125,
+    "level": 3,
+    "lft": 292,
+    "tree_id": 3,
+    "name_en": "2e Boucan"
+  },
+  "model": "base.region",
+  "pk": 616
+},
+{
+  "fields": {
+    "rght": 269,
+    "code": "82101",
+    "name": "1e Grandoit",
+    "parent": 126,
+    "level": 3,
+    "lft": 268,
+    "tree_id": 3,
+    "name_en": "1e Grandoit"
+  },
+  "model": "base.region",
+  "pk": 617
+},
+{
+  "fields": {
+    "rght": 271,
+    "code": "82102",
+    "name": "2\u00e8me Boudon",
+    "parent": 126,
+    "level": 3,
+    "lft": 270,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Boudon"
+  },
+  "model": "base.region",
+  "pk": 618
+},
+{
+  "fields": {
+    "rght": 273,
+    "code": "82103",
+    "name": "3e \u00celet Pierre \u00e0 Joseph",
+    "parent": 126,
+    "level": 3,
+    "lft": 272,
+    "tree_id": 3,
+    "name_en": "3e \u00celet Pierre \u00e0 Joseph"
+  },
+  "model": "base.region",
+  "pk": 619
+},
+{
+  "fields": {
+    "rght": 275,
+    "code": "82104",
+    "name": "4e Mandou",
+    "parent": 126,
+    "level": 3,
+    "lft": 274,
+    "tree_id": 3,
+    "name_en": "4e Mandou"
+  },
+  "model": "base.region",
+  "pk": 620
+},
+{
+  "fields": {
+    "rght": 305,
+    "code": "82201",
+    "name": "1ere Bariadelle",
+    "parent": 127,
+    "level": 3,
+    "lft": 304,
+    "tree_id": 3,
+    "name_en": "1ere Bariadelle"
+  },
+  "model": "base.region",
+  "pk": 621
+},
+{
+  "fields": {
+    "rght": 307,
+    "code": "82202",
+    "name": "2eme Dallier",
+    "parent": 127,
+    "level": 3,
+    "lft": 306,
+    "tree_id": 3,
+    "name_en": "2eme Dallier"
+  },
+  "model": "base.region",
+  "pk": 622
+},
+{
+  "fields": {
+    "rght": 309,
+    "code": "82203",
+    "name": "3e D\u00e9sormeau",
+    "parent": 127,
+    "level": 3,
+    "lft": 308,
+    "tree_id": 3,
+    "name_en": "3e D\u00e9sormeau"
+  },
+  "model": "base.region",
+  "pk": 623
+},
+{
+  "fields": {
+    "rght": 313,
+    "code": "82204",
+    "name": "6e Petite Rivi\u00e8re",
+    "parent": 127,
+    "level": 3,
+    "lft": 312,
+    "tree_id": 3,
+    "name_en": "6e Petite Rivi\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 624
+},
+{
+  "fields": {
+    "rght": 311,
+    "code": "82205",
+    "name": "5e Baliverne",
+    "parent": 127,
+    "level": 3,
+    "lft": 310,
+    "tree_id": 3,
+    "name_en": "5e Baliverne"
+  },
+  "model": "base.region",
+  "pk": 625
+},
+{
+  "fields": {
+    "rght": 337,
+    "code": "82301",
+    "name": "5e Matador",
+    "parent": 128,
+    "level": 3,
+    "lft": 336,
+    "tree_id": 3,
+    "name_en": "5e Matador"
+  },
+  "model": "base.region",
+  "pk": 626
+},
+{
+  "fields": {
+    "rght": 339,
+    "code": "82302",
+    "name": "6e B\u00e9lair",
+    "parent": 128,
+    "level": 3,
+    "lft": 338,
+    "tree_id": 3,
+    "name_en": "6e B\u00e9lair"
+  },
+  "model": "base.region",
+  "pk": 627
+},
+{
+  "fields": {
+    "rght": 341,
+    "code": "82303",
+    "name": "7e Garcasse",
+    "parent": 128,
+    "level": 3,
+    "lft": 340,
+    "tree_id": 3,
+    "name_en": "7e Garcasse"
+  },
+  "model": "base.region",
+  "pk": 628
+},
+{
+  "fields": {
+    "rght": 297,
+    "code": "83101",
+    "name": "1ere Duquillon",
+    "parent": 129,
+    "level": 3,
+    "lft": 296,
+    "tree_id": 3,
+    "name_en": "1ere Duquillon"
+  },
+  "model": "base.region",
+  "pk": 629
+},
+{
+  "fields": {
+    "rght": 299,
+    "code": "83102",
+    "name": "2e Fonds d'Icaque",
+    "parent": 129,
+    "level": 3,
+    "lft": 298,
+    "tree_id": 3,
+    "name_en": "2e Fonds d'Icaque"
+  },
+  "model": "base.region",
+  "pk": 630
+},
+{
+  "fields": {
+    "rght": 301,
+    "code": "83103",
+    "name": "3e Champy",
+    "parent": 129,
+    "level": 3,
+    "lft": 300,
+    "tree_id": 3,
+    "name_en": "3e Champy"
+  },
+  "model": "base.region",
+  "pk": 631
+},
+{
+  "fields": {
+    "rght": 367,
+    "code": "83201",
+    "name": "1ere Carrefour Charles",
+    "parent": 130,
+    "level": 3,
+    "lft": 366,
+    "tree_id": 3,
+    "name_en": "1ere Carrefour Charles"
+  },
+  "model": "base.region",
+  "pk": 632
+},
+{
+  "fields": {
+    "rght": 369,
+    "code": "83202",
+    "name": "2e Fonds Cochon",
+    "parent": 130,
+    "level": 3,
+    "lft": 368,
+    "tree_id": 3,
+    "name_en": "2e Fonds Cochon"
+  },
+  "model": "base.region",
+  "pk": 633
+},
+{
+  "fields": {
+    "rght": 371,
+    "code": "83203",
+    "name": "3e Grand Vicent",
+    "parent": 130,
+    "level": 3,
+    "lft": 370,
+    "tree_id": 3,
+    "name_en": "3e Grand Vicent"
+  },
+  "model": "base.region",
+  "pk": 634
+},
+{
+  "fields": {
+    "rght": 373,
+    "code": "83204",
+    "name": "4e les Gomiers",
+    "parent": 130,
+    "level": 3,
+    "lft": 372,
+    "tree_id": 3,
+    "name_en": "4e les Gomiers"
+  },
+  "model": "base.region",
+  "pk": 635
+},
+{
+  "fields": {
+    "rght": 283,
+    "code": "83301",
+    "name": "4\u00e8me Beaumont",
+    "parent": 131,
+    "level": 3,
+    "lft": 282,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Beaumont"
+  },
+  "model": "base.region",
+  "pk": 636
+},
+{
+  "fields": {
+    "rght": 281,
+    "code": "83302",
+    "name": "3\u00e8me Chardonette",
+    "parent": 131,
+    "level": 3,
+    "lft": 280,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Chardonette"
+  },
+  "model": "base.region",
+  "pk": 637
+},
+{
+  "fields": {
+    "rght": 279,
+    "code": "83303",
+    "name": "2\u00e8me Mouline",
+    "parent": 131,
+    "level": 3,
+    "lft": 278,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Mouline"
+  },
+  "model": "base.region",
+  "pk": 638
+},
+{
+  "fields": {
+    "rght": 353,
+    "code": "83401",
+    "name": "1ere Bernagousse",
+    "parent": 132,
+    "level": 3,
+    "lft": 352,
+    "tree_id": 3,
+    "name_en": "1ere Bernagousse"
+  },
+  "model": "base.region",
+  "pk": 639
+},
+{
+  "fields": {
+    "rght": 355,
+    "code": "83402",
+    "name": "2e Espere",
+    "parent": 132,
+    "level": 3,
+    "lft": 354,
+    "tree_id": 3,
+    "name_en": "2e Espere"
+  },
+  "model": "base.region",
+  "pk": 640
+},
+{
+  "fields": {
+    "rght": 357,
+    "code": "83403",
+    "name": "3e Jean Belune",
+    "parent": 132,
+    "level": 3,
+    "lft": 356,
+    "tree_id": 3,
+    "name_en": "3e Jean Belune"
+  },
+  "model": "base.region",
+  "pk": 641
+},
+{
+  "fields": {
+    "rght": 359,
+    "code": "83404",
+    "name": "4e Tozia",
+    "parent": 132,
+    "level": 3,
+    "lft": 358,
+    "tree_id": 3,
+    "name_en": "4e Tozia"
+  },
+  "model": "base.region",
+  "pk": 642
+},
+{
+  "fields": {
+    "rght": 361,
+    "code": "83405",
+    "name": "5e Duchity",
+    "parent": 132,
+    "level": 3,
+    "lft": 360,
+    "tree_id": 3,
+    "name_en": "5e Duchity"
+  },
+  "model": "base.region",
+  "pk": 643
+},
+{
+  "fields": {
+    "rght": 363,
+    "code": "83406",
+    "name": "6\u00e8me Les Cayemites",
+    "parent": 132,
+    "level": 3,
+    "lft": 362,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Les Cayemites"
+  },
+  "model": "base.region",
+  "pk": 644
+},
+{
+  "fields": {
+    "rght": 851,
+    "code": "91101",
+    "name": "1\u00e8re Baudin",
+    "parent": 133,
+    "level": 3,
+    "lft": 850,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Baudin"
+  },
+  "model": "base.region",
+  "pk": 645
+},
+{
+  "fields": {
+    "rght": 853,
+    "code": "91102",
+    "name": "2\u00e8me La Pointe",
+    "parent": 133,
+    "level": 3,
+    "lft": 852,
+    "tree_id": 3,
+    "name_en": "2\u00e8me La Pointe"
+  },
+  "model": "base.region",
+  "pk": 646
+},
+{
+  "fields": {
+    "rght": 855,
+    "code": "91103",
+    "name": "3\u00e8me Aubert",
+    "parent": 133,
+    "level": 3,
+    "lft": 854,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Aubert"
+  },
+  "model": "base.region",
+  "pk": 647
+},
+{
+  "fields": {
+    "rght": 859,
+    "code": "91104",
+    "name": "7\u00e8me Mahoti\u00e8re",
+    "parent": 133,
+    "level": 3,
+    "lft": 858,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Mahoti\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 648
+},
+{
+  "fields": {
+    "rght": 861,
+    "code": "91105",
+    "name": "8\u00e8me Bas des Moustiques",
+    "parent": 133,
+    "level": 3,
+    "lft": 860,
+    "tree_id": 3,
+    "name_en": "8\u00e8me Bas des Moustiques"
+  },
+  "model": "base.region",
+  "pk": 649
+},
+{
+  "fields": {
+    "rght": 857,
+    "code": "91106",
+    "name": "6\u00e8me La Corne",
+    "parent": 133,
+    "level": 3,
+    "lft": 856,
+    "tree_id": 3,
+    "name_en": "6\u00e8me La Corne"
+  },
+  "model": "base.region",
+  "pk": 650
+},
+{
+  "fields": {
+    "rght": 837,
+    "code": "91201",
+    "name": "1\u00e8re Pointe des Oiseaux",
+    "parent": 134,
+    "level": 3,
+    "lft": 836,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Pointe des Oiseaux"
+  },
+  "model": "base.region",
+  "pk": 651
+},
+{
+  "fields": {
+    "rght": 839,
+    "code": "91202",
+    "name": "2\u00e8me Mare Rouge",
+    "parent": 134,
+    "level": 3,
+    "lft": 838,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Mare Rouge"
+  },
+  "model": "base.region",
+  "pk": 652
+},
+{
+  "fields": {
+    "rght": 799,
+    "code": "91301",
+    "name": "1\u00e8re La Plate",
+    "parent": 135,
+    "level": 3,
+    "lft": 798,
+    "tree_id": 3,
+    "name_en": "1\u00e8re La Plate"
+  },
+  "model": "base.region",
+  "pk": 653
+},
+{
+  "fields": {
+    "rght": 801,
+    "code": "91302",
+    "name": "2\u00e8me Carreau Datty",
+    "parent": 135,
+    "level": 3,
+    "lft": 800,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Carreau Datty"
+  },
+  "model": "base.region",
+  "pk": 654
+},
+{
+  "fields": {
+    "rght": 803,
+    "code": "91303",
+    "name": "3\u00e8me Haut des Moustiques",
+    "parent": 135,
+    "level": 3,
+    "lft": 802,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Haut des Moustiques"
+  },
+  "model": "base.region",
+  "pk": 655
+},
+{
+  "fields": {
+    "rght": 815,
+    "code": "91401",
+    "name": "1\u00e8re Chansolme",
+    "parent": 136,
+    "level": 3,
+    "lft": 814,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Chansolme"
+  },
+  "model": "base.region",
+  "pk": 656
+},
+{
+  "fields": {
+    "rght": 817,
+    "code": "91402",
+    "name": "2\u00e8me Source Beauvoir",
+    "parent": 136,
+    "level": 3,
+    "lft": 816,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Source Beauvoir"
+  },
+  "model": "base.region",
+  "pk": 657
+},
+{
+  "fields": {
+    "rght": 865,
+    "code": "92101",
+    "name": "1\u00e8re Rivi\u00e8re des N\u00e8gres",
+    "parent": 137,
+    "level": 3,
+    "lft": 864,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Rivi\u00e8re des N\u00e8gres"
+  },
+  "model": "base.region",
+  "pk": 658
+},
+{
+  "fields": {
+    "rght": 867,
+    "code": "92102",
+    "name": "2\u00e8me Derouvray",
+    "parent": 137,
+    "level": 3,
+    "lft": 866,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Derouvray"
+  },
+  "model": "base.region",
+  "pk": 659
+},
+{
+  "fields": {
+    "rght": 869,
+    "code": "92103",
+    "name": "3\u00e8me des Granges",
+    "parent": 137,
+    "level": 3,
+    "lft": 868,
+    "tree_id": 3,
+    "name_en": "3\u00e8me des Granges"
+  },
+  "model": "base.region",
+  "pk": 660
+},
+{
+  "fields": {
+    "rght": 871,
+    "code": "92104",
+    "name": "4\u00e8me Rivi\u00e8re de Barre",
+    "parent": 137,
+    "level": 3,
+    "lft": 870,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Rivi\u00e8re de Barre"
+  },
+  "model": "base.region",
+  "pk": 661
+},
+{
+  "fields": {
+    "rght": 873,
+    "code": "92105",
+    "name": "5\u00e8me Bonneau",
+    "parent": 137,
+    "level": 3,
+    "lft": 872,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Bonneau"
+  },
+  "model": "base.region",
+  "pk": 662
+},
+{
+  "fields": {
+    "rght": 875,
+    "code": "92106",
+    "name": "6\u00e8me Chamoise",
+    "parent": 137,
+    "level": 3,
+    "lft": 874,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Chamoise"
+  },
+  "model": "base.region",
+  "pk": 663
+},
+{
+  "fields": {
+    "rght": 781,
+    "code": "92201",
+    "name": "1\u00e8re Bas de Sainte Anne",
+    "parent": 138,
+    "level": 3,
+    "lft": 780,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bas de Sainte Anne"
+  },
+  "model": "base.region",
+  "pk": 664
+},
+{
+  "fields": {
+    "rght": 783,
+    "code": "92202",
+    "name": "2\u00e8me Mayance",
+    "parent": 138,
+    "level": 3,
+    "lft": 782,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Mayance"
+  },
+  "model": "base.region",
+  "pk": 665
+},
+{
+  "fields": {
+    "rght": 785,
+    "code": "92203",
+    "name": "3\u00e8me Cote de Fer",
+    "parent": 138,
+    "level": 3,
+    "lft": 784,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Cote de Fer"
+  },
+  "model": "base.region",
+  "pk": 666
+},
+{
+  "fields": {
+    "rght": 843,
+    "code": "93101",
+    "name": "1\u00e8re Cote de Fer",
+    "parent": 139,
+    "level": 3,
+    "lft": 842,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Cote de Fer"
+  },
+  "model": "base.region",
+  "pk": 667
+},
+{
+  "fields": {
+    "rght": 845,
+    "code": "93102",
+    "name": "2\u00e8me Mare Rouge",
+    "parent": 139,
+    "level": 3,
+    "lft": 844,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Mare Rouge"
+  },
+  "model": "base.region",
+  "pk": 668
+},
+{
+  "fields": {
+    "rght": 847,
+    "code": "93103",
+    "name": "3\u00e8me Dam\u00e9",
+    "parent": 139,
+    "level": 3,
+    "lft": 846,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Dam\u00e9"
+  },
+  "model": "base.region",
+  "pk": 669
+},
+{
+  "fields": {
+    "rght": 789,
+    "code": "93201",
+    "name": "1\u00e8re Citerne R\u00e9my",
+    "parent": 140,
+    "level": 3,
+    "lft": 788,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Citerne R\u00e9my"
+  },
+  "model": "base.region",
+  "pk": 670
+},
+{
+  "fields": {
+    "rght": 791,
+    "code": "93202",
+    "name": "2\u00e8me Dos d'Ane",
+    "parent": 140,
+    "level": 3,
+    "lft": 790,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Dos d'Ane"
+  },
+  "model": "base.region",
+  "pk": 671
+},
+{
+  "fields": {
+    "rght": 793,
+    "code": "93203",
+    "name": "3\u00e8me R\u00e9serve",
+    "parent": 140,
+    "level": 3,
+    "lft": 792,
+    "tree_id": 3,
+    "name_en": "3\u00e8me R\u00e9serve"
+  },
+  "model": "base.region",
+  "pk": 672
+},
+{
+  "fields": {
+    "rght": 795,
+    "code": "93204",
+    "name": "4\u00e8me Est\u00e8re D\u00e9r\u00e9e",
+    "parent": 140,
+    "level": 3,
+    "lft": 794,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Est\u00e8re D\u00e9r\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 673
+},
+{
+  "fields": {
+    "rght": 807,
+    "code": "93301",
+    "name": "1\u00e8re Plate Forme",
+    "parent": 141,
+    "level": 3,
+    "lft": 806,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Plate Forme"
+  },
+  "model": "base.region",
+  "pk": 674
+},
+{
+  "fields": {
+    "rght": 809,
+    "code": "93302",
+    "name": "2\u00e8me des Forges",
+    "parent": 141,
+    "level": 3,
+    "lft": 808,
+    "tree_id": 3,
+    "name_en": "2\u00e8me des Forges"
+  },
+  "model": "base.region",
+  "pk": 675
+},
+{
+  "fields": {
+    "rght": 811,
+    "code": "93303",
+    "name": "3\u00e8me Plaine d'Oranges",
+    "parent": 141,
+    "level": 3,
+    "lft": 810,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Plaine d'Oranges"
+  },
+  "model": "base.region",
+  "pk": 676
+},
+{
+  "fields": {
+    "rght": 821,
+    "code": "93401",
+    "name": "1\u00e8re Lacoma",
+    "parent": 142,
+    "level": 3,
+    "lft": 820,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Lacoma"
+  },
+  "model": "base.region",
+  "pk": 677
+},
+{
+  "fields": {
+    "rght": 823,
+    "code": "93402",
+    "name": " 2\u00e8me Guinaud\u00e9e",
+    "parent": 142,
+    "level": 3,
+    "lft": 822,
+    "tree_id": 3,
+    "name_en": " 2\u00e8me Guinaud\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 678
+},
+{
+  "fields": {
+    "rght": 825,
+    "code": "93403",
+    "name": "3\u00e8me Vielle Hatte",
+    "parent": 142,
+    "level": 3,
+    "lft": 824,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Vielle Hatte"
+  },
+  "model": "base.region",
+  "pk": 679
+},
+{
+  "fields": {
+    "rght": 827,
+    "code": "93404",
+    "name": "4\u00e8me La Montagne",
+    "parent": 142,
+    "level": 3,
+    "lft": 826,
+    "tree_id": 3,
+    "name_en": "4\u00e8me La Montagne"
+  },
+  "model": "base.region",
+  "pk": 680
+},
+{
+  "fields": {
+    "rght": 829,
+    "code": "93405",
+    "name": "5\u00e8me Dessources",
+    "parent": 142,
+    "level": 3,
+    "lft": 828,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Dessources"
+  },
+  "model": "base.region",
+  "pk": 681
+},
+{
+  "fields": {
+    "rght": 831,
+    "code": "93406",
+    "name": "6\u00e8me Grande Source",
+    "parent": 142,
+    "level": 3,
+    "lft": 830,
+    "tree_id": 3,
+    "name_en": "6\u00e8me Grande Source"
+  },
+  "model": "base.region",
+  "pk": 682
+},
+{
+  "fields": {
+    "rght": 833,
+    "code": "93407",
+    "name": "7\u00e8me Diondion",
+    "parent": 142,
+    "level": 3,
+    "lft": 832,
+    "tree_id": 3,
+    "name_en": "7\u00e8me Diondion"
+  },
+  "model": "base.region",
+  "pk": 683
+},
+{
+  "fields": {
+    "rght": 433,
+    "code": "101101",
+    "name": "1\u00e8re Chalon",
+    "parent": 143,
+    "level": 3,
+    "lft": 432,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Chalon"
+  },
+  "model": "base.region",
+  "pk": 684
+},
+{
+  "fields": {
+    "rght": 435,
+    "code": "101102",
+    "name": "2\u00e8me Belle Rivi\u00e8re",
+    "parent": 143,
+    "level": 3,
+    "lft": 434,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Belle Rivi\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 685
+},
+{
+  "fields": {
+    "rght": 437,
+    "code": "101103",
+    "name": "3\u00e8me Dessources",
+    "parent": 143,
+    "level": 3,
+    "lft": 436,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Dessources"
+  },
+  "model": "base.region",
+  "pk": 686
+},
+{
+  "fields": {
+    "rght": 439,
+    "code": "101104",
+    "name": "4\u00e8me Pemerle",
+    "parent": 143,
+    "level": 3,
+    "lft": 438,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Pemerle"
+  },
+  "model": "base.region",
+  "pk": 687
+},
+{
+  "fields": {
+    "rght": 449,
+    "code": "101201",
+    "name": "1\u00e8re Fonds de Lianes",
+    "parent": 144,
+    "level": 3,
+    "lft": 448,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Fonds de Lianes"
+  },
+  "model": "base.region",
+  "pk": 688
+},
+{
+  "fields": {
+    "rght": 451,
+    "code": "101202",
+    "name": "2\u00e8me Cholette",
+    "parent": 144,
+    "level": 3,
+    "lft": 450,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Cholette"
+  },
+  "model": "base.region",
+  "pk": 689
+},
+{
+  "fields": {
+    "rght": 453,
+    "code": "101203",
+    "name": "3\u00e8me Silegue",
+    "parent": 144,
+    "level": 3,
+    "lft": 452,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Silegue"
+  },
+  "model": "base.region",
+  "pk": 690
+},
+{
+  "fields": {
+    "rght": 455,
+    "code": "101204",
+    "name": "4\u00e8me Bezin",
+    "parent": 144,
+    "level": 3,
+    "lft": 454,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Bezin"
+  },
+  "model": "base.region",
+  "pk": 691
+},
+{
+  "fields": {
+    "rght": 409,
+    "code": "101301",
+    "name": "2\u00e8me Fonds des N\u00e8gres",
+    "parent": 145,
+    "level": 3,
+    "lft": 408,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Fonds des N\u00e8gres"
+  },
+  "model": "base.region",
+  "pk": 692
+},
+{
+  "fields": {
+    "rght": 407,
+    "code": "101302",
+    "name": "1\u00e8re Bouz",
+    "parent": 145,
+    "level": 3,
+    "lft": 406,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Bouz"
+  },
+  "model": "base.region",
+  "pk": 693
+},
+{
+  "fields": {
+    "rght": 411,
+    "code": "101303",
+    "name": "4\u00e8me Pemerle",
+    "parent": 145,
+    "level": 3,
+    "lft": 410,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Pemerle"
+  },
+  "model": "base.region",
+  "pk": 694
+},
+{
+  "fields": {
+    "rght": 413,
+    "code": "101304",
+    "name": "5\u00e8me Cocoyers",
+    "parent": 145,
+    "level": 3,
+    "lft": 412,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Cocoyers"
+  },
+  "model": "base.region",
+  "pk": 695
+},
+{
+  "fields": {
+    "rght": 443,
+    "code": "101401",
+    "name": "1\u00e8re Salagnac",
+    "parent": 146,
+    "level": 3,
+    "lft": 442,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Salagnac"
+  },
+  "model": "base.region",
+  "pk": 696
+},
+{
+  "fields": {
+    "rght": 445,
+    "code": "101402",
+    "name": "2\u00e8me Bouzi",
+    "parent": 146,
+    "level": 3,
+    "lft": 444,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Bouzi"
+  },
+  "model": "base.region",
+  "pk": 697
+},
+{
+  "fields": {
+    "rght": 379,
+    "code": "102101",
+    "name": "1\u00e8re Baconnois",
+    "parent": 147,
+    "level": 3,
+    "lft": 378,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Baconnois"
+  },
+  "model": "base.region",
+  "pk": 698
+},
+{
+  "fields": {
+    "rght": 381,
+    "code": "102102",
+    "name": "2e Grande Rivi\u00e8re",
+    "parent": 147,
+    "level": 3,
+    "lft": 380,
+    "tree_id": 3,
+    "name_en": "2e Grande Rivi\u00e8re"
+  },
+  "model": "base.region",
+  "pk": 699
+},
+{
+  "fields": {
+    "rght": 383,
+    "code": "102103",
+    "name": "3e Sault-du-Baril",
+    "parent": 147,
+    "level": 3,
+    "lft": 382,
+    "tree_id": 3,
+    "name_en": "3e Sault-du-Baril"
+  },
+  "model": "base.region",
+  "pk": 700
+},
+{
+  "fields": {
+    "rght": 459,
+    "code": "102201",
+    "name": "1\u00e8re Raymond",
+    "parent": 148,
+    "level": 3,
+    "lft": 458,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Raymond"
+  },
+  "model": "base.region",
+  "pk": 701
+},
+{
+  "fields": {
+    "rght": 461,
+    "code": "102202",
+    "name": "2\u00e8me Tiby",
+    "parent": 148,
+    "level": 3,
+    "lft": 460,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Tiby"
+  },
+  "model": "base.region",
+  "pk": 702
+},
+{
+  "fields": {
+    "rght": 463,
+    "code": "102203",
+    "name": "3\u00e8me Li\u00e8ve",
+    "parent": 148,
+    "level": 3,
+    "lft": 462,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Li\u00e8ve"
+  },
+  "model": "base.region",
+  "pk": 703
+},
+{
+  "fields": {
+    "rght": 423,
+    "code": "102301",
+    "name": "1\u00e8re l'Asile",
+    "parent": 149,
+    "level": 3,
+    "lft": 422,
+    "tree_id": 3,
+    "name_en": "1\u00e8re l'Asile"
+  },
+  "model": "base.region",
+  "pk": 704
+},
+{
+  "fields": {
+    "rght": 425,
+    "code": "102302",
+    "name": "2e Changeux",
+    "parent": 149,
+    "level": 3,
+    "lft": 424,
+    "tree_id": 3,
+    "name_en": "2e Changeux"
+  },
+  "model": "base.region",
+  "pk": 705
+},
+{
+  "fields": {
+    "rght": 427,
+    "code": "102303",
+    "name": "3\u00e8me Tournade",
+    "parent": 149,
+    "level": 3,
+    "lft": 426,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Tournade"
+  },
+  "model": "base.region",
+  "pk": 706
+},
+{
+  "fields": {
+    "rght": 429,
+    "code": "102304",
+    "name": "4\u00e8me Morisseau",
+    "parent": 149,
+    "level": 3,
+    "lft": 428,
+    "tree_id": 3,
+    "name_en": "4\u00e8me Morisseau"
+  },
+  "model": "base.region",
+  "pk": 707
+},
+{
+  "fields": {
+    "rght": 391,
+    "code": "102401",
+    "name": "3\u00e8me Barreau",
+    "parent": 150,
+    "level": 3,
+    "lft": 390,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Barreau"
+  },
+  "model": "base.region",
+  "pk": 708
+},
+{
+  "fields": {
+    "rght": 389,
+    "code": "102402",
+    "name": "2\u00e8me Baquet",
+    "parent": 150,
+    "level": 3,
+    "lft": 388,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Baquet"
+  },
+  "model": "base.region",
+  "pk": 709
+},
+{
+  "fields": {
+    "rght": 387,
+    "code": "102403",
+    "name": "1\u00e8re Arneau",
+    "parent": 150,
+    "level": 3,
+    "lft": 386,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Arneau"
+  },
+  "model": "base.region",
+  "pk": 710
+},
+{
+  "fields": {
+    "rght": 467,
+    "code": "102501",
+    "name": "1re Plaisance",
+    "parent": 151,
+    "level": 3,
+    "lft": 466,
+    "tree_id": 3,
+    "name_en": "1re Plaisance"
+  },
+  "model": "base.region",
+  "pk": 711
+},
+{
+  "fields": {
+    "rght": 469,
+    "code": "102502",
+    "name": "2e Anse aux Pins",
+    "parent": 151,
+    "level": 3,
+    "lft": 468,
+    "tree_id": 3,
+    "name_en": "2e Anse aux Pins"
+  },
+  "model": "base.region",
+  "pk": 712
+},
+{
+  "fields": {
+    "rght": 471,
+    "code": "102503",
+    "name": "3e Vassale",
+    "parent": 151,
+    "level": 3,
+    "lft": 470,
+    "tree_id": 3,
+    "name_en": "3e Vassale"
+  },
+  "model": "base.region",
+  "pk": 713
+},
+{
+  "fields": {
+    "rght": 395,
+    "code": "103101",
+    "name": "1\u00e8re G\u00e9rin",
+    "parent": 152,
+    "level": 3,
+    "lft": 394,
+    "tree_id": 3,
+    "name_en": "1\u00e8re G\u00e9rin"
+  },
+  "model": "base.region",
+  "pk": 714
+},
+{
+  "fields": {
+    "rght": 397,
+    "code": "103102",
+    "name": "2\u00e8me T\u00eate d'Eau",
+    "parent": 152,
+    "level": 3,
+    "lft": 396,
+    "tree_id": 3,
+    "name_en": "2\u00e8me T\u00eate d'Eau"
+  },
+  "model": "base.region",
+  "pk": 715
+},
+{
+  "fields": {
+    "rght": 399,
+    "code": "103103",
+    "name": "3\u00e8me Fonds Tortue",
+    "parent": 152,
+    "level": 3,
+    "lft": 398,
+    "tree_id": 3,
+    "name_en": "3\u00e8me Fonds Tortue"
+  },
+  "model": "base.region",
+  "pk": 716
+},
+{
+  "fields": {
+    "rght": 401,
+    "code": "103104",
+    "name": "4e La Plaine",
+    "parent": 152,
+    "level": 3,
+    "lft": 400,
+    "tree_id": 3,
+    "name_en": "4e La Plaine"
+  },
+  "model": "base.region",
+  "pk": 717
+},
+{
+  "fields": {
+    "rght": 403,
+    "code": "103105",
+    "name": "5\u00e8me Rivi\u00e8re Sal\u00e9e",
+    "parent": 152,
+    "level": 3,
+    "lft": 402,
+    "tree_id": 3,
+    "name_en": "5\u00e8me Rivi\u00e8re Sal\u00e9e"
+  },
+  "model": "base.region",
+  "pk": 718
+},
+{
+  "fields": {
+    "rght": 417,
+    "code": "103201",
+    "name": "1\u00e8re Grand Boucan",
+    "parent": 153,
+    "level": 3,
+    "lft": 416,
+    "tree_id": 3,
+    "name_en": "1\u00e8re Grand Boucan"
+  },
+  "model": "base.region",
+  "pk": 719
+},
+{
+  "fields": {
+    "rght": 419,
+    "code": "103202",
+    "name": "2\u00e8me Eaux Basses",
+    "parent": 153,
+    "level": 3,
+    "lft": 418,
+    "tree_id": 3,
+    "name_en": "2\u00e8me Eaux Basses"
+  },
+  "model": "base.region",
+  "pk": 720
+}
+]
