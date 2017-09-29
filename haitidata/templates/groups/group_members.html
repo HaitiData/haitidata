@@ -2,11 +2,14 @@
 {% load i18n %}
 {% load bootstrap_tags %}
 
+{% block title %}{{ block.super }} {% trans "Update Group Members" %}{% endblock %}
+{% block page-title %}{% trans "Update Group Members" %}{% endblock %}
+
 {% block sidebar %}
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-8">
     <h2 class="page-header">{%  trans "Edit Members for"  %} <a href="{% url "group_detail" group.slug %}">{{ group.title }}</a></h2>
-    <h2 class="page-title">{%  trans "Members" %}</h2>
+    <h3>{%  trans "Members" %}</h3>
     <div class="row">
       <div class="col-md-12">
         <ul class="nav nav-tabs">
@@ -96,13 +99,13 @@
           </article>
         </div>
         {% if member_form %}
-          <h2>{% trans "Add members" %}</h2>
+          <h3>{% trans "Add members" %}</h3>
           <form class="uniForm" method="POST" action="{% url "group_members_add" group.slug %}">
             {% csrf_token %}
             <div id="member_form_container">
               {{ member_form|as_bootstrap }}<br/><br/>
             </div>
-            <input type="submit" value="Add Group Members" class="btn btn-success"/>
+            <input type="submit" value="Add Group Members" class="btn btn-primary"/>
           </form>
         {% endif %}
 

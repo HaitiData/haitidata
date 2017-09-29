@@ -2,8 +2,10 @@
 {% load bootstrap_tags %}
 {% load i18n %}
 
-{% block head_title %}{% trans "Create Group" %}{% endblock %}
-{% block body_class %}groups update{% endblock %}
+{% block title %}{{ block.super }} {% trans "Update Group" %}{% endblock %}
+{% block page-title %}{% trans "Update Group" %}{% endblock %}
+
+{% block body_class %}groups{% endblock %}
 
 {% block body %}
      <div class="block">
@@ -30,5 +32,5 @@
             </div>
         </div>
     </div>
-    
+
 {% endblock %}
