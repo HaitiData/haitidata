@@ -138,6 +138,7 @@
                 $('#download-clip-button').prop('disabled', false);
                 var clip_filename = result['clip_filename'];
                 location.href = clipUrl + '/' + clip_filename + '/download-clip';
+                editableLayers.clearLayers();
             },
             error: function (result) {
                 $('#download-clip-button').prop('disabled', false);
@@ -145,6 +146,7 @@
                 var $errorMessageDisplay = $('#download-clip-error-message');
                 $errorMessageDisplay.html(error_message);
                 $errorMessageDisplay.show().delay(2000).fadeOut();
+                editableLayers.clearLayers();
             }
         });
     }
