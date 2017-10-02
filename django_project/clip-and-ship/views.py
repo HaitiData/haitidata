@@ -107,9 +107,10 @@ def clip_layer(request, layername):
         clipped_size = os.path.getsize(output)
 
         if float(clipped_size) > float(max_clip_size):
+            max_clip_size_mb = int(max_clip_size) / 1000000
             response = JsonResponse({
                 'error': 'Clipped file size is '
-                         'bigger than ' + max_clip_size + ' bytes'
+                         'bigger than ' + str(max_clip_size_mb) + ' mb'
             })
             response.status_code = 403
             return response
