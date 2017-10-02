@@ -165,7 +165,7 @@ def download_clip(request, layername, clip_filename):
     for target_file in file_names:
         if '.tif' in target_file:
             raster_filepath = target_file
-            extention = 'tif'
+            target_filename, extention = os.path.splitext(target_file)
             break
 
     # get temp filename for output
