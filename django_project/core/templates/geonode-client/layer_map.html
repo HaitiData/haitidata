@@ -36,13 +36,24 @@
         localGeoServerBaseUrl: "{{ GEOSERVER_BASE_URL }}",
         localCSWBaseUrl: "{{ CATALOGUE_BASE_URL }}",
         csrfToken: "{{ csrf_token }}",
-        tools: [{ptype: "gxp_getfeedfeatureinfo"}],
+        tools: [{ptype: "gxp_getfeedfeatureinfo"}]
 		};
 		var config = Object.assign( defaultConfig, {{ viewer|safe }});
     var options = {mapConfig: config, zoomToLayer: true};
     if (config.proxy !== '') {
       options.proxy = "{{PROXY_URL}}";
     }
+    {% if resource.get_tiles_url %}
+        var tiles_url = "{{ resource.get_tiles_url|safe }}";
+        var last_letter_url =  tiles_url.charAt(tiles_url.length - 1);
+        if(parseInt(last_letter_url)) {
+            tiles_url = tiles_url.substring(0, tiles_url.length - 1);
+        }
+        tiles_url  = tiles_url.split('?')[0];
+        tiles_url = tiles_url.replace('gmaps','wms');
+        access_token = options.mapConfig.sources[2].url.split('?')[1];
+        options.mapConfig.sources[2].url = tiles_url+'?'+access_token+'&SRS={{ crs }}';
+    {% endif %}
     var viewer = new window.Viewer('preview_map', options);
     viewer.view();
 });
