@@ -32,6 +32,7 @@ ENV LC_ALL en_US.UTF-8
 ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
+WORKDIR /home/web
 
 RUN wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
 RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
@@ -44,7 +45,6 @@ RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
 RUN apt-get -y --force-yes install gettext
 
 RUN apt-get install gdal-bin
-WORKDIR /home/web
 RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin development
 
 # Open port 8080 as we will be running our uwsgi socket on that
