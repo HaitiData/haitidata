@@ -32,7 +32,10 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var mapToClip = L.map('download-clip-map');
+            var mapToClip = L.map('download-clip-map', {
+                center: [18.971187, -72.285215],
+                zoom: 8
+            });
             var editableLayers = new L.FeatureGroup();
 
             var display_type = "{{ resource.display_type }}";
