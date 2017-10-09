@@ -40,7 +40,8 @@
             <li><a href="/uploads">{% trans "Uploads" %}</a></li>
             <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
+            <li><a href="{% url "layer_upload" %}">{% trans "Upload Layer" %}</a></li>
+            <li><a href="/uploads/new">{% trans "Upload ODK exports" %}</a></li>
             <li><a href="{% url "document_upload" %}">Upload Document</a></li>
             <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
             {% endif %}
