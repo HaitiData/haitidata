@@ -43,15 +43,20 @@ def clip_layer(request, layername):
     raster_filepath = None
     extention = ''
 
-    file_names = []
-    for layerfile in layer.upload_session.layerfile_set.all():
-        file_names.append(layerfile.file.path)
+    # get file for raster
+    try:
+        if not raster_filepath:
+            file_names = []
+            for layerfile in layer.upload_session.layerfile_set.all():
+                file_names.append(layerfile.file.path)
 
-    for target_file in file_names:
-        if '.tif' in target_file:
-            raster_filepath = target_file
-            extention = 'tif'
-            break
+            for target_file in file_names:
+                if '.tif' in target_file:
+                    raster_filepath = target_file
+                    extention = 'tif'
+                    break
+    except AttributeError:
+        raise Http404('Project file not found.')
 
     # get temp filename for output
     filename = os.path.basename(raster_filepath)

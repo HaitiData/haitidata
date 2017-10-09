@@ -94,9 +94,9 @@
                 tiles_url = tiles_url.substring(0, tiles_url.length - 1);
             }
             tile_layer = L.tileLayer(tiles_url,
-                    {
-                        'opacity': 0.8
-                    });
+                {
+                    'opacity': 0.8
+                });
         {% endif %}
 
         if (tile_layer) {
@@ -108,7 +108,7 @@
 
         mapToClip.on(L.Draw.Event.CREATED, function (e) {
             var type = e.layerType,
-                    layer = e.layer;
+                layer = e.layer;
 
             editableLayers.addLayer(layer);
         });
@@ -129,6 +129,12 @@
         {% endif %}
     });
 
+    function download_clip_wcs(clipUrl, geometry_url) {
+        var layer_name = clipUrl.replace('/clip/', '');
+        var ship_url = '{{ GEOSERVER_BASE_URL }}/wcs?filename={{ resource.name }}.tif&request=getcoverage&version=1.0.0&service=wcs&coverage=' + layer_name + '&CRS=EPSG:4326&format=geotiff&resx=0.5&resy=0.5' + geometry_url;
+        window.open(ship_url);
+    }
+
     function download_clip_layer(clipUrl, geometry_url) {
         var ship_url = clipUrl + '/clip-layer?' + geometry_url;
         $.ajax({
@@ -141,6 +147,7 @@
                 editableLayers.clearLayers();
             },
             error: function (result) {
+                download_clip_wcs(clipUrl, geometry_url);
                 $('#download-clip-button').prop('disabled', false);
                 var error_message = result['responseJSON']['error'];
                 var $errorMessageDisplay = $('#download-clip-error-message');
@@ -177,9 +184,6 @@
         if (mapToClip) {
             var bboxString = mapToClip.getBounds().toBBoxString();
             var bboxArray = bboxString.split(',');
-            var southwest_lat = bboxArray[1];
-            bboxArray[1] = bboxArray[3];
-            bboxArray[3] = southwest_lat;
             download_clip_layer(clipUrl, '&BBOX=' + bboxArray.toString());
         }
     });
