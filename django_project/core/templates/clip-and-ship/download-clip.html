@@ -1,4 +1,5 @@
 {% load staticfiles %}
+<a id="download-wcs" target="_blank">DOWNLOAD</a>
 
 <link rel="stylesheet" href="{% static 'geonode/css/leaflet.draw.css' %}"/>
 <script src="{% static 'geonode/js/draw/leaflet.draw.js' %}"></script>
@@ -82,8 +83,6 @@
 
             editableLayers.addLayer(layer);
         });
-
-
     });
 
 
@@ -99,19 +98,24 @@
         {% endif %}
     });
 
+    function download_clip_wcs(clipUrl, geometry_url) {
+        var layer_name = clipUrl.replace('/clip/', '');
+        var ship_url = '{{ GEOSERVER_BASE_URL }}/wcs?filename={{ resource.name }}.tif&request=getcoverage&version=1.0.0&service=wcs&coverage=' + layer_name + '&CRS=EPSG:4326&format=geotiff&resx=0.5&resy=0.5' + geometry_url;
+        window.open(ship_url);
+    }
+
     function download_clip_layer(clipUrl, geometry_url) {
         var ship_url = clipUrl + '/clip-layer?' + geometry_url;
         $.ajax({
             url: ship_url,
             type: 'GET',
             success: function (result) {
-                $('#download-clip-button').prop('disabled', false);
                 var clip_filename = result['clip_filename'];
                 location.href = clipUrl + '/' + clip_filename + '/download-clip';
                 editableLayers.clearLayers();
             },
             error: function (result) {
-                $('#download-clip-button').prop('disabled', false);
+                download_clip_wcs(clipUrl, geometry_url);
                 var error_message = result['responseJSON']['error'];
                 var $errorMessageDisplay = $('#download-clip-error-message');
                 $errorMessageDisplay.html(error_message);
@@ -123,8 +127,6 @@
 
     $('#download-clip-button').click(function () {
         var url = '';
-        $('#download-clip-button').prop('disabled', true);
-
         // Open Popup
         var map_type_name = "{{ resource.service_typename }}";
 
@@ -147,9 +149,6 @@
         if (mapToClip) {
             var bboxString = mapToClip.getBounds().toBBoxString();
             var bboxArray = bboxString.split(',');
-            var southwest_lat = bboxArray[1];
-            bboxArray[1] = bboxArray[3];
-            bboxArray[3] = southwest_lat;
             download_clip_layer(clipUrl, '&BBOX=' + bboxArray.toString());
         }
     });
