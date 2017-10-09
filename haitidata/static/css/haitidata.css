@@ -7281,6 +7281,15 @@ footer select {
 .item-thumb img {
   width: 100%;
 }
+.item-thumb .cnigs-logo {
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 42px;
+  width: 42px;
+  z-index: 99;
+}
 .item-details {
   background: white;
   color: #37474f;
@@ -7298,11 +7307,14 @@ footer select {
   font-size: 0.875em;
 }
 .item-details .item-meta {
+  font-size: 0.75em;
   margin-top: 1em;
 }
 .item-details .item-meta .item-category {
-  font-size: 0.75em;
   text-transform: uppercase;
+}
+.item-details .item-meta a {
+  color: #37474f;
 }
 .item-details .btn-xs {
   border-color: #eceff1;
