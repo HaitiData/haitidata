@@ -3,6 +3,8 @@ import os
 import tempfile
 import StringIO
 import zipfile
+import urllib2
+import math
 
 import subprocess
 from django.conf import settings
@@ -56,7 +58,38 @@ def clip_layer(request, layername):
                     extention = 'tif'
                     break
     except AttributeError:
-        raise Http404('Project file not found.')
+        # Call wcs command
+        wcs_url = 'http://geoserver:8080/geoserver/wcs?request=getcoverage&' \
+                  'version=1.0.0&service=WCS&coverage={layer_name}&' \
+                  'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
+                  'height={height}'
+
+        # TODO : Get width & height
+        width = 731
+        height = 484
+
+        wcs_formatted_url = wcs_url.format(
+            layer_name=layername,
+            bbox=bbox_string,
+            width=width,
+            height=height
+        )
+
+        raster_filepath = os.path.join(
+                temporary_folder, layer.title + '.tiff')
+
+        response = urllib2.urlopen(wcs_formatted_url)
+
+        fh = open(raster_filepath, "w")
+        fh.write(response.read())
+        fh.close()
+
+        response = JsonResponse({
+            'success': 'Successfully clipping layer',
+            'clip_filename': layer.title + '.tiff'
+        })
+        response.status_code = 200
+        return response
 
     # get temp filename for output
     filename = os.path.basename(raster_filepath)
@@ -164,17 +197,21 @@ def download_clip(request, layername, clip_filename):
     extention = ''
 
     file_names = []
-    for layerfile in layer.upload_session.layerfile_set.all():
-        file_names.append(layerfile.file.path)
+    try:
+        for layerfile in layer.upload_session.layerfile_set.all():
+            file_names.append(layerfile.file.path)
 
-    for target_file in file_names:
-        if '.tif' in target_file:
-            raster_filepath = target_file
-            target_filename, extention = os.path.splitext(target_file)
-            break
+        for target_file in file_names:
+            if '.tif' in target_file:
+                raster_filepath = target_file
+                target_filename, extention = os.path.splitext(target_file)
+                break
+    except AttributeError:
+        raster_filepath = layername
+        pass
 
     # get temp filename for output
-    filename = os.path.basename(raster_filepath)
+    filename = os.path.basename(clip_filename)
 
     output = os.path.join(
         temporary_folder,
@@ -216,3 +253,39 @@ def download_clip(request, layername, clip_filename):
         return resp
     else:
         raise Http404('Project can not be clipped or masked.')
+
+
+def download_chunk(url):
+    """Helper to download large files
+        the only arg is a url
+       this file will go to a temp directory
+       the file will also be downloaded
+       in chunks and print out how much remains
+       taken from https://gist.github.com/gourneau/1430932
+    """
+
+    baseFile = os.path.basename(url)
+    os.umask(0002)
+    temp_path = "/tmp/"
+    try:
+        file = os.path.join(temp_path,baseFile)
+
+        req = urllib2.urlopen(url)
+        total_size = int(req.info().getheader('Content-Length').strip())
+        downloaded = 0
+        CHUNK = 256 * 10240
+        with open(file, 'wb') as fp:
+            while True:
+                chunk = req.read(CHUNK)
+                downloaded += len(chunk)
+                print math.floor((downloaded / total_size) * 100)
+                if not chunk: break
+                fp.write(chunk)
+    except urllib2.HTTPError, e:
+        print "HTTP Error:",e.code, url
+        return False
+    except urllib2.URLError, e:
+        print "URL Error:",e.reason, url
+        return False
+
+    return file
