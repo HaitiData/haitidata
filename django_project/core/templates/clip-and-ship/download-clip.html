@@ -133,7 +133,9 @@
         if (editableLayers) {
             var geojson = editableLayers.toGeoJSON();
             if (geojson.features.length > 0) {
+                var bboxEditableLayers = editableLayers.getBounds().toBBoxString();
                 var geometry_url = '&GEOJSON=' + JSON.stringify(geojson);
+                geometry_url += '&BBOX=' + bboxEditableLayers.toString();
                 download_clip_layer(clipUrl, geometry_url);
                 return;
             } else {
@@ -147,9 +149,6 @@
         if (mapToClip) {
             var bboxString = mapToClip.getBounds().toBBoxString();
             var bboxArray = bboxString.split(',');
-            var southwest_lat = bboxArray[1];
-            bboxArray[1] = bboxArray[3];
-            bboxArray[3] = southwest_lat;
             download_clip_layer(clipUrl, '&BBOX=' + bboxArray.toString());
         }
     });
