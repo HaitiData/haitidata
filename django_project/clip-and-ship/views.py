@@ -64,7 +64,7 @@ def clip_layer(request, layername):
         bbox_string = ','.join(bbox_array)
     except AttributeError:
         # Call wcs command
-        wcs_url = 'http://geoserver:8080/geoserver/wcs?request=getcoverage&' \
+        wcs_url = settings.GEOSERVER_LOCATION + 'wcs?request=getcoverage&' \
                   'version=1.0.0&service=WCS&coverage={layer_name}&' \
                   'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
                   'height={height}'
