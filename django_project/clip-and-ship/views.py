@@ -57,6 +57,11 @@ def clip_layer(request, layername):
                     raster_filepath = target_file
                     extention = 'tif'
                     break
+        bbox_array = bbox_string.split(',')
+        southwest_lat = bbox_array[1]
+        bbox_array[1] = bbox_array[3]
+        bbox_array[3] = southwest_lat
+        bbox_string = ','.join(bbox_array)
     except AttributeError:
         # Call wcs command
         wcs_url = 'http://geoserver:8080/geoserver/wcs?request=getcoverage&' \

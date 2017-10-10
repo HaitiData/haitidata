@@ -129,13 +129,6 @@
         {% endif %}
     });
 
-    function download_clip_wcs(clipUrl, geometry_url) {
-        var layer_name = clipUrl.replace('/clip/', '');
-        var ship_url = '{{ GEOSERVER_BASE_URL }}/wcs?filename={{ resource.name }}.tif&request=getcoverage&version=1.0.0&service=wcs&coverage=' + layer_name + '&CRS=EPSG:4326&format=geotiff&resx=0.5&resy=0.5' + geometry_url;
-        console.log(ship_url);
-        // window.open(ship_url);
-    }
-
     function download_clip_layer(clipUrl, geometry_url) {
         var ship_url = clipUrl + '/clip-layer?' + geometry_url;
         console.log(ship_url);
@@ -151,7 +144,6 @@
             },
             error: function (result) {
                 console.log(clipUrl + '/' + clip_filename + '/download-clip');
-                download_clip_wcs(clipUrl, geometry_url);
                 $('#download-clip-button').prop('disabled', false);
                 var error_message = result['responseJSON']['error'];
                 var $errorMessageDisplay = $('#download-clip-error-message');
