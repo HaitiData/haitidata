@@ -94,9 +94,9 @@
                 tiles_url = tiles_url.substring(0, tiles_url.length - 1);
             }
             tile_layer = L.tileLayer(tiles_url,
-                    {
-                        'opacity': 0.8
-                    });
+                {
+                    'opacity': 0.8
+                });
         {% endif %}
 
         if (tile_layer) {
@@ -108,7 +108,7 @@
 
         mapToClip.on(L.Draw.Event.CREATED, function (e) {
             var type = e.layerType,
-                    layer = e.layer;
+                layer = e.layer;
 
             editableLayers.addLayer(layer);
         });
@@ -131,6 +131,7 @@
 
     function download_clip_layer(clipUrl, geometry_url) {
         var ship_url = clipUrl + '/clip-layer?' + geometry_url;
+        console.log(ship_url);
         $.ajax({
             url: ship_url,
             type: 'GET',
@@ -138,9 +139,11 @@
                 $('#download-clip-button').prop('disabled', false);
                 var clip_filename = result['clip_filename'];
                 location.href = clipUrl + '/' + clip_filename + '/download-clip';
+                console.log(clipUrl + '/' + clip_filename + '/download-clip');
                 editableLayers.clearLayers();
             },
             error: function (result) {
+                console.log(clipUrl + '/' + clip_filename + '/download-clip');
                 $('#download-clip-button').prop('disabled', false);
                 var error_message = result['responseJSON']['error'];
                 var $errorMessageDisplay = $('#download-clip-error-message');
@@ -163,7 +166,9 @@
         if (editableLayers) {
             var geojson = editableLayers.toGeoJSON();
             if (geojson.features.length > 0) {
+                var bboxEditableLayers = editableLayers.getBounds().toBBoxString();
                 var geometry_url = '&GEOJSON=' + JSON.stringify(geojson);
+                geometry_url += '&BBOX=' + bboxEditableLayers.toString();
                 download_clip_layer(clipUrl, geometry_url);
                 return;
             } else {
@@ -177,9 +182,6 @@
         if (mapToClip) {
             var bboxString = mapToClip.getBounds().toBBoxString();
             var bboxArray = bboxString.split(',');
-            var southwest_lat = bboxArray[1];
-            bboxArray[1] = bboxArray[3];
-            bboxArray[3] = southwest_lat;
             download_clip_layer(clipUrl, '&BBOX=' + bboxArray.toString());
         }
     });
