@@ -2,13 +2,16 @@
 {% load leaflet_tags %}
 {% load staticfiles %}
 
+
 {% block title %}{{ block.super }}{% endblock %}
 {% block page-title %}{{ geotiffname }}{% endblock %}
-
+W
 {% block body_class %}layers{% endblock %}
 
 {% block body_outer %}
     <div id="download-clip-map"></div>
+
+    <button type="button" class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download_clip_page" id="download-clip-button">Download Clip</button>
 
     <style>
         #download-clip-map {
@@ -20,6 +23,10 @@
         .leaflet-control-zoom {
             left: 0 !important;
         }
+
+        #download-clip-button {
+            margin-top: 10px;
+        }
     </style>
 {% endblock %}
 
@@ -30,83 +37,5 @@
     <link rel="stylesheet" href="{% static 'geonode/css/leaflet.draw.css' %}"/>
     <script src="{% static 'geonode/js/draw/leaflet.draw.js' %}"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var mapToClip = L.map('download-clip-map', {
-                center: [18.971187, -72.285215],
-                zoom: 8
-            });
-            var editableLayers = new L.FeatureGroup();
-
-            var display_type = "{{ resource.display_type }}";
-            if (display_type !== 'Raster Data') {
-                $('#download-clip').prop('disabled', true);
-            }
-
-            {% if 'download_resourcebase' not in perms_list or not perms_list %}
-                $('#download-clip').prop('disabled', true);
-            {% endif %}
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© <a href="http://www.openstreetmap.org" target="_parent">OpenStreetMap</a> and ' +
-                'contributors, under an <a href="http://www.openstreetmap.org/copyright" target="_parent">open license</a>',
-                maxZoom: 18,
-                id: 'maptoclip'
-            }).addTo(mapToClip);
-
-
-            // add draw control
-            mapToClip.addLayer(editableLayers);
-            var drawControlOptions = {
-                position: 'topleft',
-                draw: {
-                    polyline: false,
-                    circle: false,
-                    rectangle: true,
-                    marker: false,
-                    polygon: {
-                        allowIntersection: false,
-                        drawError: {
-                            color: '#e1e100',
-                            message: '<strong>You can\'t draw that!</strong>'
-                        },
-                        shapeOptions: {
-                            color: '#bada55'
-                        }
-                    }
-                },
-                edit: {
-                    featureGroup: editableLayers,
-                    remove: true
-                }
-            };
-            var tile_layer = null;
-
-            {% if resource.get_tiles_url %}
-                var tiles_url = "{{ resource.get_tiles_url|safe }}";
-                var last_letter_url = tiles_url.charAt(tiles_url.length - 1);
-                if (parseInt(last_letter_url)) {
-                    tiles_url = tiles_url.substring(0, tiles_url.length - 1);
-                }
-                tile_layer = L.tileLayer(tiles_url,
-                    {
-                        'opacity': 0.8
-                    });
-            {% endif %}
-
-            if (tile_layer) {
-                mapToClip.addLayer(tile_layer);
-            }
-
-            var drawControl = new L.Control.Draw(drawControlOptions);
-            mapToClip.addControl(drawControl);
-
-            mapToClip.on(L.Draw.Event.CREATED, function (e) {
-                var type = e.layerType,
-                    layer = e.layer;
-
-                editableLayers.addLayer(layer);
-            });
-        });
-    </script>
+    {% include 'clip-and-ship/download-clip.html' %}
 {% endblock extra_script %}
