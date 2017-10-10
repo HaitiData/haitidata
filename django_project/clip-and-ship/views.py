@@ -64,9 +64,13 @@ def clip_layer(request, layername):
                   'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
                   'height={height}'
 
-        # TODO : Get width & height
-        width = 731
-        height = 484
+        bbox_array = bbox_string.split(',')
+        offset = 50
+        x = float(bbox_array[2]) - float(bbox_array[0])
+        width = int(x * 43260) + offset
+
+        y = float(bbox_array[3]) - float(bbox_array[1])
+        height = int(y * 43260) + offset
 
         wcs_formatted_url = wcs_url.format(
             layer_name=layername,
