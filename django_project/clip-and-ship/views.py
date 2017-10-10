@@ -274,17 +274,18 @@ def download_clip(request, layername, clip_filename):
         raise Http404('Project can not be clipped or masked.')
 
 
-class ClipVIew(View):
+class ClipView(View):
     template_name = 'clip-and-ship/clip-page.html'
 
     def get(self, request, geotiffname):
         context = {
             'geotiffname': geotiffname,
             'resource': {
-                'get_tiles_url': "%s/gwc/service/gmaps?layers=geonode:'%s'&zoom={z}&x={x}&y={y}&format=image/png8" % (
+                'get_tiles_url': "%sgwc/service/gmaps?layers=geonode:%s&zoom={z}&x={x}&y={y}&format=image/png8" % (
                     settings.GEOSERVER_PUBLIC_LOCATION,
                     geotiffname
-                )
+                ),
+                'service_typename': 'geonode:'+geotiffname
             }
         }
         return render(request, self.template_name, context)

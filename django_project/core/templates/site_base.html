@@ -77,9 +77,7 @@
          <li>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Clip" %}<i class="fa fa-angle-down fa-lg"></i></a>
               <ul class="dropdown-menu">
-                  {% for geotiff in CLIPPED_LAYERNAME %}
-                        <li><a href="/clip/{{ geotiff }}">{{ geotiff }}</a></li>
-                  {% endfor %}
+                <li><a href="/clip/ortho_images">Ortho Images</a></li>
               </ul>
           </li>
           {% block extra_tab %}
