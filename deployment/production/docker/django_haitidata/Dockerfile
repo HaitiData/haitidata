@@ -1,7 +1,7 @@
 #--------- Generic stuff all our Dockerfiles should start with so we get caching ------------
 # Note this base image is based on debian
 FROM kartoza/django-base
-MAINTAINER Kartoza
+MAINTAINER Irwan Fathurrahman<irwan@kartoza.com>
 
 #RUN  ln -s /bin/true /sbin/initctl
 
@@ -32,20 +32,23 @@ ENV LC_ALL en_US.UTF-8
 ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
-WORKDIR /home/web
 
-RUN wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
+RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
 RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
 
-ADD REQUIREMENTS.txt /REQUIREMENTS.txt
-RUN pip install -r /REQUIREMENTS.txt && pip install uwsgi && pip uninstall django-user-accounts -y
-RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
+COPY requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
+
+RUN pip install uwsgi
+
+COPY requirements-haitidata.txt /requirements-haitidata.txt
+RUN pip install -r /requirements-haitidata.txt
 
 # Install translation
 RUN apt-get -y --force-yes install gettext
 
 RUN apt-get install gdal-bin
-RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin development
+RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin new-architecture
 
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
