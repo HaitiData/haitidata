@@ -1,31 +1,12 @@
-#
-# Production server with UWSGI configured to run on port 8080
-#
-# docker-compose build
-# docker-compose up -d web
-#
-# See accompanying Make commands for easy collectstatic etc.
-
-version: "2.2"
+version: '2.2'
 services:
 
-  rabbitmq:
-    image: library/rabbitmq
-    hostname: rabbitmq
-    environment:
-      - RABBIT_PASSWORD=rabbit_test_password
-      - USER=rabbit_user
-      - RABBITMQ_NODENAME=rabbit
-    network_mode: "bridge"
-
-  postgis:
+  postgres:
     # Note you cannot scale if you use conteiner_name
-    container_name: haitidata-db
+    container_name: haitidata-postgres
     image: kartoza/postgis:9.4-2.1
     volumes:
       - ./pg/postgres_data:/var/lib/postgresql
-      - ./backups:/backups
-      - ./fresh-backups:/fresh-backups
     environment:
       - USERNAME=docker
       - PASS=docker
@@ -34,101 +15,46 @@ services:
     restart: on-failure
     network_mode: "bridge"
 
-  uwsgi-base:
-    # Note you cannot scale if you use conteiner_name
+  elasticsearch:
+    container_name: haitidata-elasticsearch
+    image: elasticsearch
+    network_mode: "bridge"
+
+  rabbitmq:
+    container_name: haitidata-rabbitmq
+    image: rabbitmq
+    network_mode: "bridge"
+
+  django:
+    container_name: haitidata-django
     build: ./docker
-    hostname: uwsgi
+    links:
+      - postgres
+      - elasticsearch
+      - rabbitmq
+      - geoserver
+    volumes:
+      - ../django_project:/home/web/django_project
+      - ./static:/home/web/static
+      - ./media:/home/web/media
+      - ./logs:/var/log/
     environment:
-      - DATABASE_URL=postgres://docker:docker@postgis:5432/gis
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
       - DATABASE_NAME=gis
       - DATABASE_USERNAME=docker
       - DATABASE_PASSWORD=docker
-      - DATABASE_HOST=postgis
+      - DATABASE_HOST=postgres
       - RABBITMQ_HOST=rabbitmq
       - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
       - VIRTUAL_HOST=haitidata.com
       - VIRTUAL_PORT=8080
-      - PROXY_ALLOWED_HOSTS=0.0.0.0
+      - PROXY_ALLOWED_HOSTS=192.168.1.6
 
       # Ensure to change these based on server domain
-      - SITEURL=http://0.0.0.0:33300/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://0.0.0.0:33308/geoserver/ # change this to ip or domain geoserver
+      - SITEURL=http://192.168.1.6:33300/  # change this to ip or domain location
+      - GEOSERVER_BASE_URL=http://192.168.1.6:33308/geoserver/ # change this to ip or domain geoserver
       # Set your locale - you need to ensure this is created in Dockerfile too...
       - LC_ALL=en_US.UTF-8
-    volumes:
-      - ../django_project:/home/web/django_project
-      - ./static:/home/web/static:rw
-      - ./media:/home/web/media:rw
-      - ./reports:/home/web/reports
-      - ./logs:/var/log/
-    user: root
-    network_mode: "bridge"
-
-  uwsgi-ephemeral:
-    extends:
-      file: docker-compose.yml
-      service: uwsgi-base
-    links:
-      - postgis
-    user: root
-    restart: on-failure:5
-    network_mode: "bridge"
-
-  uwsgi:
-    # Note you cannot scale if you use conteiner_name
-    extends:
-      file: docker-compose.yml
-      service: uwsgi-base
-    container_name: haitidata-uwsgi
-    links:
-      - postgis
-      - geoserver
-    restart: always
-    network_mode: "bridge"
-
-  dbbackups:
-    # Note you cannot scale if you use conteiner_name
-    container_name: haitidata-db-backups
-    image: kartoza/pg-backup:9.4
-    hostname: pg-backups
-    volumes:
-      - ./backups:/backups
-    links:
-      - postgis
-    environment:
-      # take care to let the project name below match that
-      # declared in the top of the makefile
-      - DUMPPREFIX=PG_haiti
-      - DATABASE_URL=postgres://docker:docker@postgis:5432/gis
-      # These are all defaults anyway, but setting explicitly in
-      # case we ever want to ever use different credentials
-      - PGUSER=docker
-      - PGPASSWORD=docker
-      - PGPORT=5432
-      - PGHOST=postgis
-      - PGDATABASE=gis
-    restart: always
-    network_mode: "bridge"
-
-  # This is normally the main entry point for a production server
-  web:
-    # Note you cannot scale if you use conteiner_name
-    container_name: haitidata-web
-    image: nginx
-    hostname: nginx
-    volumes:
-      - ./sites-enabled:/etc/nginx/conf.d:ro
-      # I dont use volumes_from as I want to use the ro modifier
-      - ./static:/home/web/static:ro
-      - ./media:/home/web/media:ro
-      - ./logs:/var/log/nginx
-      # - /etc/letsencrypt:/etc/letsencrypt
-      - ./webroot-path:/home/web/webroot-path
-    links:
-      - uwsgi
-      - geoserver
-    ports:
-      - "33300:8080"
     restart: always
     network_mode: "bridge"
 
@@ -143,17 +69,7 @@ services:
       dockerfile: Dockerfile-dev
     hostname: haitidata-dev-web
     environment:
-      - DATABASE_NAME=gis
-      - DATABASE_USERNAME=docker
-      - DATABASE_PASSWORD=docker
-      - DATABASE_HOST=postgis
-      - RABBITMQ_HOST=rabbitmq
-      - DJANGO_SETTINGS_MODULE=core.settings.dev_docker
-      - PYTHONPATH=/home/web/django_project
-      - VIRTUAL_HOST=haitidata.com
-      - VIRTUAL_PORT=8080
-      - SITEURL=http://0.0.0.0:33303/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://0.0.0.0:33308/geoserver/ # change this to ip or domain geoserver
+      - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
     volumes:
       - ../django_project:/home/web/django_project
       - ./static:/home/web/static
@@ -161,7 +77,8 @@ services:
       - ./reports:/home/web/reports
       - ./logs:/var/log/
     links:
-      - postgis
+      - postgres
+      - elasticsearch
       - rabbitmq
       - geoserver
     ports:
@@ -171,49 +88,81 @@ services:
       - "33302:22"
     network_mode: "bridge"
 
-  worker:
-     build: docker
-     hostname: worker
-     command: celery worker -A config.celery -l info  --beat
-     environment:
-       - DATABASE_NAME=gis
-       - DATABASE_USERNAME=docker
-       - DATABASE_PASSWORD=docker
-       - DATABASE_HOST=postgis
-       - DATABASE_QGIS_HOST=postgis_gis
-       - RABBITMQ_HOST=rabbitmq
-       - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-       - VIRTUAL_HOST=haitidata.com
-       - VIRTUAL_PORT=8080
-       - C_FORCE_ROOT=true
-     volumes:
-       - ../django_project:/home/web/django_project
-       - ./static:/home/web/static
-       - ./media:/home/web/media
-       - ./reports:/home/web/reports
-       - ./logs:/var/log/
-     links:
-       - postgis
-       - rabbitmq
-     restart: on-failure:5
-     network_mode: "bridge"
+  celery:
+    container_name: haitidata-celery
+    image: geonode/django
+    links:
+      - rabbitmq
+      - postgres
+      - elasticsearch
+    command: celery worker --app=geonode.celery_app:app -B -l INFO
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+      - DATABASE_NAME=gis
+      - DATABASE_USERNAME=docker
+      - DATABASE_PASSWORD=docker
+      - DATABASE_HOST=postgres
+      - RABBITMQ_HOST=rabbitmq
+      - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
+      - VIRTUAL_HOST=haitidata.com
+      - VIRTUAL_PORT=8080
+      - PROXY_ALLOWED_HOSTS=192.168.1.6
+
+      # Ensure to change these based on server domain
+      - SITEURL=http://192.168.1.6:33300/  # change this to ip or domain location
+      - GEOSERVER_BASE_URL=http://192.168.1.6:33308/geoserver/ # change this to ip or domain geoserver
+      # Set your locale - you need to ensure this is created in Dockerfile too...
+      - LC_ALL=en_US.UTF-8
+    network_mode: "bridge"
 
   geoserver:
-    build: docker-geoserver
     container_name: haitidata-geoserver
+    build: ./docker-geoserver
     links:
-      - postgis
+      - postgres
     ports:
       - "33308:8080"
+    volumes_from:
+      - data_dir_conf
+    environment:
+      - DOCKER_HOST
+      - PUBLIC_PORT=80
+      - DOCKER_HOST_IP
+      - DJANGO_URL=http://django:8000/
+      - SITEURL=http://192.168.1.6/
+      - GEOSERVER_BASE_URL=http://192.168.1.6:33308/geoserver/
     network_mode: "bridge"
 
-  geoserver_data:
+  geonode:
+    # Note you cannot scale if you use conteiner_name
+    container_name: haitidata-geonode
+    image: nginx
+    hostname: nginx
+    volumes:
+      - ./sites-enabled:/etc/nginx/conf.d:ro
+      # I dont use volumes_from as I want to use the ro modifier
+      - ./static:/home/web/static:ro
+      - ./media:/home/web/media:ro
+      - ./logs:/var/log/nginx
+      # - /etc/letsencrypt:/etc/letsencrypt
+      - ./webroot-path:/home/web/webroot-path
+    links:
+      - django
+      - geoserver
+    ports:
+      - "33300:8080"
+    restart: always
+    network_mode: "bridge"
+
+  data_dir_conf:
+    container_name: haitidata-data
     image: geonode/geoserver_data:2.10.x
     container_name: geoserver_data_dir
-    network_mode: "bridge"
+    command: /bin/true
     volumes:
-      - ./geoserver_data:/geoserver_data/data
+      - /geoserver_data/data
+    network_mode: "bridge"
 
 volumes:
-  # reference to the named data container that holds the preloaded geoserver data directory
+
   geoserver_data_dir:
