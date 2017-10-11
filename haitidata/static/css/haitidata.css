@@ -6882,7 +6882,7 @@ form input {
   max-height: none;
 }
 .navbar-header i {
-  color: white;
+  color: #ff5722;
   font-size: 2em;
 }
 .navbar-header button {
@@ -6947,7 +6947,7 @@ section#subheader {
   padding-top: 0;
 }
 section#subheader p {
-  color: #b0bec5;
+  color: #78909c;
   display: inline-block;
 }
 section#subheader .btn-group {
@@ -7178,6 +7178,10 @@ footer select {
 .filter .fa {
   margin-right: 8px;
 }
+.actions .input-group .fa,
+.filter .input-group .fa {
+  margin-right: 0;
+}
 .items-list {
   padding: 10px 0;
 }
@@ -7277,24 +7281,54 @@ footer select {
 .item-thumb img {
   width: 100%;
 }
+.item-thumb .cnigs-logo {
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 42px;
+  width: 42px;
+  z-index: 99;
+}
 .item-details {
   background: white;
   color: #37474f;
+  position: relative;
+  height: 200px;
+}
+.item-details h4 {
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+.item-details p {
+  margin-bottom: 0.25em;
+}
+.item-details p.abstract {
+  font-size: 0.875em;
 }
 .item-details .item-meta {
+  font-size: 0.75em;
   margin-top: 1em;
 }
 .item-details .item-meta .item-category {
-  font-size: 12px;
   text-transform: uppercase;
 }
-.item-details .btn-sm {
-  margin-right: -17px;
+.item-details .item-meta a {
+  color: #37474f;
+}
+.item-details .btn-xs {
+  border-color: #eceff1;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-right: -16px;
   margin-top: -1px;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.5em;
 }
 .item-details .item-items {
   border-top: 1px solid #eceff1;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.875em;
 }
 .item-details .item-items ul {
   margin: 0 0 0 -15px;
@@ -7326,6 +7360,50 @@ footer select {
 }
 .grid-spacer {
   margin-top: 30px;
+}
+#accordion .panel {
+  border-radius: 0;
+  border-top: 2px solid #b0bec5;
+  line-height: 1em;
+}
+#accordion .panel-heading {
+  background: none;
+  border: 0;
+}
+#accordion .panel-body img {
+  margin-bottom: 1em;
+}
+#accordion .panel-body small {
+  color: #78909c;
+  font-size: 0.825em;
+}
+#accordion .panel-body form {
+  font-size: 0.825em;
+}
+#accordion .panel-body form .form-control {
+  background: none;
+  color: #546e7a;
+  font-size: 0.825em;
+  height: 24px;
+  line-height: 1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#create-chart small {
+  color: #78909c;
+  font-size: 0.825em;
+}
+#create-chart form {
+  font-size: 0.825em;
+}
+#create-chart form .form-control {
+  background: none;
+  color: #546e7a;
+  font-size: 0.825em;
+  height: 24px;
+  line-height: 1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 /* ------ OSGeo Importer
 ------------------------------ */
@@ -7483,6 +7561,7 @@ nav.filter .closed {
 nav.filter li a {
   border-bottom: 1px solid #eceff1;
   cursor: pointer;
+  font-size: 14px;
   padding: 5px 10px;
 }
 .selections h5 {
@@ -7678,6 +7757,9 @@ nav.filter li a {
 }
 .filter input.datepicker {
   width: 100%;
+}
+#composerCart {
+  font-size: 14px;
 }
 #composerCart .list-group i {
   margin-right: 0;

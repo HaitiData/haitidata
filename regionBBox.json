@@ -1,0 +1,8642 @@
+[
+{
+  "fields": {
+    "bbox_y0": "18.0210300000",
+    "bbox_y1": "20.0878200000",
+    "bbox_x1": "-71.6133500000",
+    "bbox_x0": "-74.4785920000",
+    "region": 1,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 1
+},
+{
+  "fields": {
+    "bbox_y0": "18.8572480000",
+    "bbox_y1": "19.8156730000",
+    "bbox_x1": "-72.2007140000",
+    "bbox_x0": "-73.1363100000",
+    "region": 2,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 2
+},
+{
+  "fields": {
+    "bbox_y0": "18.6853860000",
+    "bbox_y1": "19.3346710000",
+    "bbox_x1": "-71.6221510000",
+    "bbox_x0": "-72.3646850000",
+    "region": 3,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 3
+},
+{
+  "fields": {
+    "bbox_y0": "18.3570230000",
+    "bbox_y1": "18.6756830000",
+    "bbox_x1": "-73.6986810000",
+    "bbox_x0": "-74.4804000000",
+    "region": 4,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 4
+},
+{
+  "fields": {
+    "bbox_y0": "18.2214590000",
+    "bbox_y1": "18.5893050000",
+    "bbox_x1": "-72.9949230000",
+    "bbox_x0": "-73.7800190000",
+    "region": 5,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 5
+},
+{
+  "fields": {
+    "bbox_y0": "19.2549700000",
+    "bbox_y1": "19.8798090000",
+    "bbox_x1": "-71.9702650000",
+    "bbox_x0": "-72.6845980000",
+    "region": 6,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 6
+},
+{
+  "fields": {
+    "bbox_y0": "19.2594300000",
+    "bbox_y1": "19.7348370000",
+    "bbox_x1": "-71.6784840000",
+    "bbox_x0": "-72.1221410000",
+    "region": 7,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 7
+},
+{
+  "fields": {
+    "bbox_y0": "19.6225520000",
+    "bbox_y1": "20.0892270000",
+    "bbox_x1": "-72.5600670000",
+    "bbox_x0": "-73.4557600000",
+    "region": 8,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 8
+},
+{
+  "fields": {
+    "bbox_y0": "18.2582990000",
+    "bbox_y1": "18.9771730000",
+    "bbox_x1": "-71.6952620000",
+    "bbox_x0": "-73.3038160000",
+    "region": 9,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 9
+},
+{
+  "fields": {
+    "bbox_y0": "18.0221400000",
+    "bbox_y1": "18.4333400000",
+    "bbox_x1": "-73.0011570000",
+    "bbox_x0": "-74.4505340000",
+    "region": 10,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 10
+},
+{
+  "fields": {
+    "bbox_y0": "18.0316980000",
+    "bbox_y1": "18.4056930000",
+    "bbox_x1": "-71.7249560000",
+    "bbox_x0": "-73.0156170000",
+    "region": 11,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 11
+},
+{
+  "fields": {
+    "bbox_y0": "19.5011400000",
+    "bbox_y1": "19.7418720000",
+    "bbox_x1": "-72.7829010000",
+    "bbox_x0": "-73.1363100000",
+    "region": 12,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 12
+},
+{
+  "fields": {
+    "bbox_y0": "19.2514320000",
+    "bbox_y1": "19.3759840000",
+    "bbox_x1": "-72.6012250000",
+    "bbox_x0": "-72.7736340000",
+    "region": 13,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 13
+},
+{
+  "fields": {
+    "bbox_y0": "19.5958560000",
+    "bbox_y1": "19.7418720000",
+    "bbox_x1": "-72.8504330000",
+    "bbox_x0": "-73.1363100000",
+    "region": 14,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 14
+},
+{
+  "fields": {
+    "bbox_y0": "19.5011400000",
+    "bbox_y1": "19.6754850000",
+    "bbox_x1": "-72.7829010000",
+    "bbox_x0": "-72.9914680000",
+    "region": 15,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 15
+},
+{
+  "fields": {
+    "bbox_y0": "19.1098930000",
+    "bbox_y1": "19.3376110000",
+    "bbox_x1": "-72.2570710000",
+    "bbox_x0": "-72.6356850000",
+    "region": 16,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 16
+},
+{
+  "fields": {
+    "bbox_y0": "19.3972370000",
+    "bbox_y1": "19.5825710000",
+    "bbox_x1": "-72.3575260000",
+    "bbox_x0": "-72.5942550000",
+    "region": 17,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 17
+},
+{
+  "fields": {
+    "bbox_y0": "19.3367170000",
+    "bbox_y1": "19.6495750000",
+    "bbox_x1": "-72.4522490000",
+    "bbox_x0": "-72.8050910000",
+    "region": 18,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 18
+},
+{
+  "fields": {
+    "bbox_y0": "19.2203760000",
+    "bbox_y1": "19.2939700000",
+    "bbox_x1": "-72.6240030000",
+    "bbox_x0": "-72.7795180000",
+    "region": 19,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 19
+},
+{
+  "fields": {
+    "bbox_y0": "19.5966690000",
+    "bbox_y1": "19.8156730000",
+    "bbox_x1": "-72.5708450000",
+    "bbox_x0": "-72.8328260000",
+    "region": 20,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 20
+},
+{
+  "fields": {
+    "bbox_y0": "18.8572480000",
+    "bbox_y1": "18.9846820000",
+    "bbox_x1": "-72.2408570000",
+    "bbox_x0": "-72.4280910000",
+    "region": 21,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 21
+},
+{
+  "fields": {
+    "bbox_y0": "19.2987340000",
+    "bbox_y1": "19.4313820000",
+    "bbox_x1": "-72.5104120000",
+    "bbox_x0": "-72.7296690000",
+    "region": 22,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 22
+},
+{
+  "fields": {
+    "bbox_y0": "19.4616430000",
+    "bbox_y1": "19.5919240000",
+    "bbox_x1": "-72.3186840000",
+    "bbox_x0": "-72.4472040000",
+    "region": 23,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 23
+},
+{
+  "fields": {
+    "bbox_y0": "18.9143350000",
+    "bbox_y1": "19.2248950000",
+    "bbox_x1": "-72.2195980000",
+    "bbox_x0": "-72.6001800000",
+    "region": 24,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 24
+},
+{
+  "fields": {
+    "bbox_y0": "18.9423360000",
+    "bbox_y1": "19.2614170000",
+    "bbox_x1": "-72.5473530000",
+    "bbox_x0": "-72.8236780000",
+    "region": 25,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 25
+},
+{
+  "fields": {
+    "bbox_y0": "19.2053610000",
+    "bbox_y1": "19.4898160000",
+    "bbox_x1": "-72.2007140000",
+    "bbox_x0": "-72.4977910000",
+    "region": 26,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 26
+},
+{
+  "fields": {
+    "bbox_y0": "19.5133320000",
+    "bbox_y1": "19.7319580000",
+    "bbox_x1": "-72.7120890000",
+    "bbox_x0": "-72.8907470000",
+    "region": 27,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 27
+},
+{
+  "fields": {
+    "bbox_y0": "18.9148170000",
+    "bbox_y1": "19.1586290000",
+    "bbox_x1": "-72.3539930000",
+    "bbox_x0": "-72.6085900000",
+    "region": 28,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 28
+},
+{
+  "fields": {
+    "bbox_y0": "18.7636170000",
+    "bbox_y1": "18.9703910000",
+    "bbox_x1": "-71.7208340000",
+    "bbox_x0": "-71.9155020000",
+    "region": 29,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 29
+},
+{
+  "fields": {
+    "bbox_y0": "18.8380930000",
+    "bbox_y1": "19.0834360000",
+    "bbox_x1": "-71.9967750000",
+    "bbox_x0": "-72.2498740000",
+    "region": 30,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 30
+},
+{
+  "fields": {
+    "bbox_y0": "19.1854730000",
+    "bbox_y1": "19.3346710000",
+    "bbox_x1": "-71.8539160000",
+    "bbox_x0": "-72.0309640000",
+    "region": 31,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 31
+},
+{
+  "fields": {
+    "bbox_y0": "19.0536990000",
+    "bbox_y1": "19.2796800000",
+    "bbox_x1": "-71.6221510000",
+    "bbox_x0": "-71.8865030000",
+    "region": 32,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 32
+},
+{
+  "fields": {
+    "bbox_y0": "19.0159940000",
+    "bbox_y1": "19.3074050000",
+    "bbox_x1": "-71.8546110000",
+    "bbox_x0": "-72.1905350000",
+    "region": 33,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 33
+},
+{
+  "fields": {
+    "bbox_y0": "18.7661310000",
+    "bbox_y1": "18.9686570000",
+    "bbox_x1": "-71.8571910000",
+    "bbox_x0": "-72.0654280000",
+    "region": 34,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 34
+},
+{
+  "fields": {
+    "bbox_y0": "19.0776910000",
+    "bbox_y1": "19.3005500000",
+    "bbox_x1": "-72.0819630000",
+    "bbox_x0": "-72.2657600000",
+    "region": 35,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 35
+},
+{
+  "fields": {
+    "bbox_y0": "18.6946850000",
+    "bbox_y1": "18.9068330000",
+    "bbox_x1": "-71.9382690000",
+    "bbox_x0": "-72.2011650000",
+    "region": 36,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 36
+},
+{
+  "fields": {
+    "bbox_y0": "18.7515160000",
+    "bbox_y1": "18.9054510000",
+    "bbox_x1": "-72.1550610000",
+    "bbox_x0": "-72.3646850000",
+    "region": 37,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 37
+},
+{
+  "fields": {
+    "bbox_y0": "18.6853860000",
+    "bbox_y1": "18.7968670000",
+    "bbox_x1": "-71.7287820000",
+    "bbox_x0": "-71.9969170000",
+    "region": 38,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 38
+},
+{
+  "fields": {
+    "bbox_y0": "18.9765670000",
+    "bbox_y1": "19.1902330000",
+    "bbox_x1": "-71.7233570000",
+    "bbox_x0": "-71.9197370000",
+    "region": 39,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 39
+},
+{
+  "fields": {
+    "bbox_y0": "18.9322390000",
+    "bbox_y1": "19.0652880000",
+    "bbox_x1": "-71.8564150000",
+    "bbox_x0": "-72.1231740000",
+    "region": 40,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 40
+},
+{
+  "fields": {
+    "bbox_y0": "18.4970220000",
+    "bbox_y1": "18.5655040000",
+    "bbox_x1": "-72.2960710000",
+    "bbox_x0": "-72.3711560000",
+    "region": 41,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 41
+},
+{
+  "fields": {
+    "bbox_y0": "18.5221310000",
+    "bbox_y1": "18.5803670000",
+    "bbox_x1": "-72.2566150000",
+    "bbox_x0": "-72.3386030000",
+    "region": 42,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 42
+},
+{
+  "fields": {
+    "bbox_y0": "18.3733250000",
+    "bbox_y1": "18.5558040000",
+    "bbox_x1": "-72.3462190000",
+    "bbox_x0": "-72.4690730000",
+    "region": 43,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 43
+},
+{
+  "fields": {
+    "bbox_y0": "18.4176550000",
+    "bbox_y1": "18.5503010000",
+    "bbox_x1": "-72.1589340000",
+    "bbox_x0": "-72.3748300000",
+    "region": 44,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 44
+},
+{
+  "fields": {
+    "bbox_y0": "18.3399960000",
+    "bbox_y1": "18.4850990000",
+    "bbox_x1": "-72.1948900000",
+    "bbox_x0": "-72.3905830000",
+    "region": 45,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 45
+},
+{
+  "fields": {
+    "bbox_y0": "18.4716480000",
+    "bbox_y1": "18.5499840000",
+    "bbox_x1": "-72.4449360000",
+    "bbox_x0": "-72.5697950000",
+    "region": 46,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 46
+},
+{
+  "fields": {
+    "bbox_y0": "18.5607770000",
+    "bbox_y1": "18.6303770000",
+    "bbox_x1": "-72.2898490000",
+    "bbox_x0": "-72.3590910000",
+    "region": 47,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 47
+},
+{
+  "fields": {
+    "bbox_y0": "18.5364580000",
+    "bbox_y1": "18.6096320000",
+    "bbox_x1": "-72.2233800000",
+    "bbox_x0": "-72.3125940000",
+    "region": 48,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 48
+},
+{
+  "fields": {
+    "bbox_y0": "18.3228700000",
+    "bbox_y1": "18.5653030000",
+    "bbox_x1": "-72.4492760000",
+    "bbox_x0": "-72.7026360000",
+    "region": 49,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 49
+},
+{
+  "fields": {
+    "bbox_y0": "18.2582990000",
+    "bbox_y1": "18.4679560000",
+    "bbox_x1": "-72.8058000000",
+    "bbox_x0": "-73.0547690000",
+    "region": 50,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 50
+},
+{
+  "fields": {
+    "bbox_y0": "18.2667260000",
+    "bbox_y1": "18.4433010000",
+    "bbox_x1": "-72.6485940000",
+    "bbox_x0": "-72.8494380000",
+    "region": 51,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 51
+},
+{
+  "fields": {
+    "bbox_y0": "18.3116400000",
+    "bbox_y1": "18.8182110000",
+    "bbox_x1": "-71.9526670000",
+    "bbox_x0": "-72.3582810000",
+    "region": 52,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 52
+},
+{
+  "fields": {
+    "bbox_y0": "18.5629180000",
+    "bbox_y1": "18.7737520000",
+    "bbox_x1": "-71.9959110000",
+    "bbox_x0": "-72.2442870000",
+    "region": 53,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 53
+},
+{
+  "fields": {
+    "bbox_y0": "18.3487560000",
+    "bbox_y1": "18.6210390000",
+    "bbox_x1": "-71.8807010000",
+    "bbox_x0": "-72.1553360000",
+    "region": 54,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 54
+},
+{
+  "fields": {
+    "bbox_y0": "18.6271620000",
+    "bbox_y1": "18.7468380000",
+    "bbox_x1": "-71.8016350000",
+    "bbox_x0": "-72.0574460000",
+    "region": 55,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 55
+},
+{
+  "fields": {
+    "bbox_y0": "18.2732860000",
+    "bbox_y1": "18.4474300000",
+    "bbox_x1": "-71.6952620000",
+    "bbox_x0": "-71.9692060000",
+    "region": 56,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 56
+},
+{
+  "fields": {
+    "bbox_y0": "18.7646180000",
+    "bbox_y1": "18.9771730000",
+    "bbox_x1": "-72.3603350000",
+    "bbox_x0": "-72.7099940000",
+    "region": 57,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 57
+},
+{
+  "fields": {
+    "bbox_y0": "18.6823610000",
+    "bbox_y1": "18.8561560000",
+    "bbox_x1": "-72.3118920000",
+    "bbox_x0": "-72.4868780000",
+    "region": 58,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 58
+},
+{
+  "fields": {
+    "bbox_y0": "18.6921730000",
+    "bbox_y1": "18.9309690000",
+    "bbox_x1": "-72.7930410000",
+    "bbox_x0": "-73.1224280000",
+    "region": 59,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 59
+},
+{
+  "fields": {
+    "bbox_y0": "18.7436440000",
+    "bbox_y1": "18.9703240000",
+    "bbox_x1": "-72.9943080000",
+    "bbox_x0": "-73.3038160000",
+    "region": 60,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 60
+},
+{
+  "fields": {
+    "bbox_y0": "18.1713610000",
+    "bbox_y1": "18.4056930000",
+    "bbox_x1": "-72.3620970000",
+    "bbox_x0": "-72.6531840000",
+    "region": 61,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 61
+},
+{
+  "fields": {
+    "bbox_y0": "18.2220360000",
+    "bbox_y1": "18.3582940000",
+    "bbox_x1": "-72.2209970000",
+    "bbox_x0": "-72.3738270000",
+    "region": 62,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 62
+},
+{
+  "fields": {
+    "bbox_y0": "18.2248740000",
+    "bbox_y1": "18.3326810000",
+    "bbox_x1": "-72.3565510000",
+    "bbox_x0": "-72.4724440000",
+    "region": 63,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 63
+},
+{
+  "fields": {
+    "bbox_y0": "18.2355430000",
+    "bbox_y1": "18.3303310000",
+    "bbox_x1": "-72.6062760000",
+    "bbox_x0": "-72.7663320000",
+    "region": 64,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 64
+},
+{
+  "fields": {
+    "bbox_y0": "18.1418870000",
+    "bbox_y1": "18.2893520000",
+    "bbox_x1": "-72.6362720000",
+    "bbox_x0": "-72.9028340000",
+    "region": 65,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 65
+},
+{
+  "fields": {
+    "bbox_y0": "18.1561760000",
+    "bbox_y1": "18.3270250000",
+    "bbox_x1": "-72.8593120000",
+    "bbox_x0": "-73.0156170000",
+    "region": 66,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 66
+},
+{
+  "fields": {
+    "bbox_y0": "18.1951580000",
+    "bbox_y1": "18.3573740000",
+    "bbox_x1": "-71.9167230000",
+    "bbox_x0": "-72.2542890000",
+    "region": 67,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 67
+},
+{
+  "fields": {
+    "bbox_y0": "18.1844770000",
+    "bbox_y1": "18.3242360000",
+    "bbox_x1": "-71.8532440000",
+    "bbox_x0": "-71.9573880000",
+    "region": 68,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 68
+},
+{
+  "fields": {
+    "bbox_y0": "18.1278130000",
+    "bbox_y1": "18.2870540000",
+    "bbox_x1": "-71.7803130000",
+    "bbox_x0": "-71.9194610000",
+    "region": 69,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 69
+},
+{
+  "fields": {
+    "bbox_y0": "18.0316980000",
+    "bbox_y1": "18.2927010000",
+    "bbox_x1": "-71.7249560000",
+    "bbox_x0": "-71.8544670000",
+    "region": 70,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 70
+},
+{
+  "fields": {
+    "bbox_y0": "19.7082130000",
+    "bbox_y1": "19.7889000000",
+    "bbox_x1": "-72.1586040000",
+    "bbox_x0": "-72.2687720000",
+    "region": 71,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 71
+},
+{
+  "fields": {
+    "bbox_y0": "19.5962450000",
+    "bbox_y1": "19.7572360000",
+    "bbox_x1": "-72.1310670000",
+    "bbox_x0": "-72.2072530000",
+    "region": 72,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 72
+},
+{
+  "fields": {
+    "bbox_y0": "19.5888210000",
+    "bbox_y1": "19.7524000000",
+    "bbox_x1": "-72.0361290000",
+    "bbox_x0": "-72.1768170000",
+    "region": 73,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 73
+},
+{
+  "fields": {
+    "bbox_y0": "19.5580280000",
+    "bbox_y1": "19.7827790000",
+    "bbox_x1": "-72.2702610000",
+    "bbox_x0": "-72.4118260000",
+    "region": 74,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 74
+},
+{
+  "fields": {
+    "bbox_y0": "19.5704990000",
+    "bbox_y1": "19.7702690000",
+    "bbox_x1": "-72.2309520000",
+    "bbox_x0": "-72.3200330000",
+    "region": 75,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 75
+},
+{
+  "fields": {
+    "bbox_y0": "19.5705090000",
+    "bbox_y1": "19.7230880000",
+    "bbox_x1": "-72.1860140000",
+    "bbox_x0": "-72.2504200000",
+    "region": 76,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 76
+},
+{
+  "fields": {
+    "bbox_y0": "19.4922040000",
+    "bbox_y1": "19.6239560000",
+    "bbox_x1": "-72.0953500000",
+    "bbox_x0": "-72.2251380000",
+    "region": 77,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 77
+},
+{
+  "fields": {
+    "bbox_y0": "19.3846800000",
+    "bbox_y1": "19.5162000000",
+    "bbox_x1": "-72.0621210000",
+    "bbox_x0": "-72.1810520000",
+    "region": 78,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 78
+},
+{
+  "fields": {
+    "bbox_y0": "19.2792110000",
+    "bbox_y1": "19.5138680000",
+    "bbox_x1": "-72.1272320000",
+    "bbox_x0": "-72.2570750000",
+    "region": 79,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 79
+},
+{
+  "fields": {
+    "bbox_y0": "19.4597480000",
+    "bbox_y1": "19.5816310000",
+    "bbox_x1": "-72.2108420000",
+    "bbox_x0": "-72.3316100000",
+    "region": 80,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 80
+},
+{
+  "fields": {
+    "bbox_y0": "19.3572260000",
+    "bbox_y1": "19.4496950000",
+    "bbox_x1": "-71.9889450000",
+    "bbox_x0": "-72.1149610000",
+    "region": 81,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 81
+},
+{
+  "fields": {
+    "bbox_y0": "19.2549700000",
+    "bbox_y1": "19.4043630000",
+    "bbox_x1": "-72.0084480000",
+    "bbox_x0": "-72.1803590000",
+    "region": 82,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 82
+},
+{
+  "fields": {
+    "bbox_y0": "19.3239240000",
+    "bbox_y1": "19.3798700000",
+    "bbox_x1": "-71.9702650000",
+    "bbox_x0": "-72.0798210000",
+    "region": 83,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 83
+},
+{
+  "fields": {
+    "bbox_y0": "19.7329900000",
+    "bbox_y1": "19.8798090000",
+    "bbox_x1": "-72.4640220000",
+    "bbox_x0": "-72.6845980000",
+    "region": 84,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 84
+},
+{
+  "fields": {
+    "bbox_y0": "19.6632040000",
+    "bbox_y1": "19.8341600000",
+    "bbox_x1": "-72.4037200000",
+    "bbox_x0": "-72.5161410000",
+    "region": 85,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 85
+},
+{
+  "fields": {
+    "bbox_y0": "19.5652910000",
+    "bbox_y1": "19.7257930000",
+    "bbox_x1": "-72.3412000000",
+    "bbox_x0": "-72.4613950000",
+    "region": 86,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 86
+},
+{
+  "fields": {
+    "bbox_y0": "19.7070340000",
+    "bbox_y1": "19.8172620000",
+    "bbox_x1": "-72.3540060000",
+    "bbox_x0": "-72.4301360000",
+    "region": 87,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 87
+},
+{
+  "fields": {
+    "bbox_y0": "19.5213950000",
+    "bbox_y1": "19.6771280000",
+    "bbox_x1": "-72.4150740000",
+    "bbox_x0": "-72.5459930000",
+    "region": 88,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 88
+},
+{
+  "fields": {
+    "bbox_y0": "19.6035610000",
+    "bbox_y1": "19.7723030000",
+    "bbox_x1": "-72.4714560000",
+    "bbox_x0": "-72.6485760000",
+    "region": 89,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 89
+},
+{
+  "fields": {
+    "bbox_y0": "19.4241270000",
+    "bbox_y1": "19.7144670000",
+    "bbox_x1": "-71.7839080000",
+    "bbox_x0": "-71.9378680000",
+    "region": 90,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 90
+},
+{
+  "fields": {
+    "bbox_y0": "19.5814870000",
+    "bbox_y1": "19.7089280000",
+    "bbox_x1": "-71.7324590000",
+    "bbox_x0": "-71.8061840000",
+    "region": 91,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 91
+},
+{
+  "fields": {
+    "bbox_y0": "19.4796310000",
+    "bbox_y1": "19.5507780000",
+    "bbox_x1": "-71.8909380000",
+    "bbox_x0": "-71.9775340000",
+    "region": 92,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 92
+},
+{
+  "fields": {
+    "bbox_y0": "19.4027570000",
+    "bbox_y1": "19.5927870000",
+    "bbox_x1": "-71.7042830000",
+    "bbox_x0": "-71.8470360000",
+    "region": 93,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 93
+},
+{
+  "fields": {
+    "bbox_y0": "19.3823980000",
+    "bbox_y1": "19.5420440000",
+    "bbox_x1": "-71.6784840000",
+    "bbox_x0": "-71.7528420000",
+    "region": 94,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 94
+},
+{
+  "fields": {
+    "bbox_y0": "19.3317990000",
+    "bbox_y1": "19.4427550000",
+    "bbox_x1": "-71.6910310000",
+    "bbox_x0": "-71.8597180000",
+    "region": 95,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 95
+},
+{
+  "fields": {
+    "bbox_y0": "19.5082840000",
+    "bbox_y1": "19.6556570000",
+    "bbox_x1": "-71.9353510000",
+    "bbox_x0": "-72.0938820000",
+    "region": 96,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 96
+},
+{
+  "fields": {
+    "bbox_y0": "19.4295940000",
+    "bbox_y1": "19.6350820000",
+    "bbox_x1": "-72.0025950000",
+    "bbox_x0": "-72.1221410000",
+    "region": 97,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 97
+},
+{
+  "fields": {
+    "bbox_y0": "19.5283780000",
+    "bbox_y1": "19.7265850000",
+    "bbox_x1": "-71.8456970000",
+    "bbox_x0": "-71.9915450000",
+    "region": 98,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 98
+},
+{
+  "fields": {
+    "bbox_y0": "19.6361890000",
+    "bbox_y1": "19.7348370000",
+    "bbox_x1": "-71.9204890000",
+    "bbox_x0": "-72.0664970000",
+    "region": 99,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 99
+},
+{
+  "fields": {
+    "bbox_y0": "19.3565750000",
+    "bbox_y1": "19.5258440000",
+    "bbox_x1": "-71.8668310000",
+    "bbox_x0": "-72.0376250000",
+    "region": 100,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 100
+},
+{
+  "fields": {
+    "bbox_y0": "19.2754660000",
+    "bbox_y1": "19.4363880000",
+    "bbox_x1": "-71.7530650000",
+    "bbox_x0": "-71.8850460000",
+    "region": 101,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 101
+},
+{
+  "fields": {
+    "bbox_y0": "19.2594300000",
+    "bbox_y1": "19.4178080000",
+    "bbox_x1": "-71.7653530000",
+    "bbox_x0": "-72.0228410000",
+    "region": 102,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 102
+},
+{
+  "fields": {
+    "bbox_y0": "18.1696330000",
+    "bbox_y1": "18.3507110000",
+    "bbox_x1": "-73.6806620000",
+    "bbox_x0": "-73.8757670000",
+    "region": 103,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 103
+},
+{
+  "fields": {
+    "bbox_y0": "18.1156040000",
+    "bbox_y1": "18.3705240000",
+    "bbox_x1": "-73.7889160000",
+    "bbox_x0": "-73.9883500000",
+    "region": 104,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 104
+},
+{
+  "fields": {
+    "bbox_y0": "18.1740350000",
+    "bbox_y1": "18.3874840000",
+    "bbox_x1": "-73.8750080000",
+    "bbox_x0": "-74.0485960000",
+    "region": 105,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 105
+},
+{
+  "fields": {
+    "bbox_y0": "18.2654940000",
+    "bbox_y1": "18.4131260000",
+    "bbox_x1": "-73.8029420000",
+    "bbox_x0": "-73.9299000000",
+    "region": 106,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 106
+},
+{
+  "fields": {
+    "bbox_y0": "18.3138350000",
+    "bbox_y1": "18.4240700000",
+    "bbox_x1": "-73.6864770000",
+    "bbox_x0": "-73.8212970000",
+    "region": 107,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 107
+},
+{
+  "fields": {
+    "bbox_y0": "18.0561320000",
+    "bbox_y1": "18.1100070000",
+    "bbox_x1": "-73.5713200000",
+    "bbox_x0": "-73.7082150000",
+    "region": 108,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 108
+},
+{
+  "fields": {
+    "bbox_y0": "18.0250280000",
+    "bbox_y1": "18.1525490000",
+    "bbox_x1": "-73.8527200000",
+    "bbox_x0": "-73.9429640000",
+    "region": 109,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 109
+},
+{
+  "fields": {
+    "bbox_y0": "18.0221400000",
+    "bbox_y1": "18.1222890000",
+    "bbox_x1": "-73.7828780000",
+    "bbox_x0": "-73.8874200000",
+    "region": 110,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 110
+},
+{
+  "fields": {
+    "bbox_y0": "18.1082540000",
+    "bbox_y1": "18.1954000000",
+    "bbox_x1": "-73.8729280000",
+    "bbox_x0": "-73.9500000000",
+    "region": 111,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 111
+},
+{
+  "fields": {
+    "bbox_y0": "18.1816090000",
+    "bbox_y1": "18.3707770000",
+    "bbox_x1": "-73.0011570000",
+    "bbox_x0": "-73.4638590000",
+    "region": 112,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 112
+},
+{
+  "fields": {
+    "bbox_y0": "18.2122700000",
+    "bbox_y1": "18.3422820000",
+    "bbox_x1": "-73.4173810000",
+    "bbox_x0": "-73.6443190000",
+    "region": 113,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 113
+},
+{
+  "fields": {
+    "bbox_y0": "18.2099400000",
+    "bbox_y1": "18.4333400000",
+    "bbox_x1": "-73.5386290000",
+    "bbox_x0": "-73.6998350000",
+    "region": 114,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 114
+},
+{
+  "fields": {
+    "bbox_y0": "18.1829160000",
+    "bbox_y1": "18.3037000000",
+    "bbox_x1": "-73.9865640000",
+    "bbox_x0": "-74.0766090000",
+    "region": 115,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 115
+},
+{
+  "fields": {
+    "bbox_y0": "18.2329390000",
+    "bbox_y1": "18.3305780000",
+    "bbox_x1": "-74.0157870000",
+    "bbox_x0": "-74.1062310000",
+    "region": 116,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 116
+},
+{
+  "fields": {
+    "bbox_y0": "18.1317930000",
+    "bbox_y1": "18.2634370000",
+    "bbox_x1": "-73.9405520000",
+    "bbox_x0": "-74.0076050000",
+    "region": 117,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 117
+},
+{
+  "fields": {
+    "bbox_y0": "18.2513270000",
+    "bbox_y1": "18.4076410000",
+    "bbox_x1": "-74.0318830000",
+    "bbox_x0": "-74.1932280000",
+    "region": 118,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 118
+},
+{
+  "fields": {
+    "bbox_y0": "18.2972390000",
+    "bbox_y1": "18.4039620000",
+    "bbox_x1": "-74.1062150000",
+    "bbox_x0": "-74.2520690000",
+    "region": 119,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 119
+},
+{
+  "fields": {
+    "bbox_y0": "18.2849920000",
+    "bbox_y1": "18.3947370000",
+    "bbox_x1": "-74.2217410000",
+    "bbox_x0": "-74.4505340000",
+    "region": 120,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 120
+},
+{
+  "fields": {
+    "bbox_y0": "18.3920160000",
+    "bbox_y1": "18.6756830000",
+    "bbox_x1": "-74.0703680000",
+    "bbox_x0": "-74.2533390000",
+    "region": 121,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 121
+},
+{
+  "fields": {
+    "bbox_y0": "18.5610710000",
+    "bbox_y1": "18.6671030000",
+    "bbox_x1": "-74.2552150000",
+    "bbox_x0": "-74.3897270000",
+    "region": 122,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 122
+},
+{
+  "fields": {
+    "bbox_y0": "18.5889150000",
+    "bbox_y1": "18.6748340000",
+    "bbox_x1": "-74.1899780000",
+    "bbox_x0": "-74.2630510000",
+    "region": 123,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 123
+},
+{
+  "fields": {
+    "bbox_y0": "18.3747950000",
+    "bbox_y1": "18.5949390000",
+    "bbox_x1": "-74.2149920000",
+    "bbox_x0": "-74.3342920000",
+    "region": 124,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 124
+},
+{
+  "fields": {
+    "bbox_y0": "18.4593860000",
+    "bbox_y1": "18.5787680000",
+    "bbox_x1": "-74.2867340000",
+    "bbox_x0": "-74.3748040000",
+    "region": 125,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 125
+},
+{
+  "fields": {
+    "bbox_y0": "18.4184250000",
+    "bbox_y1": "18.5110390000",
+    "bbox_x1": "-74.3044200000",
+    "bbox_x0": "-74.4801790000",
+    "region": 126,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 126
+},
+{
+  "fields": {
+    "bbox_y0": "18.4936410000",
+    "bbox_y1": "18.6372770000",
+    "bbox_x1": "-74.3287960000",
+    "bbox_x0": "-74.4594780000",
+    "region": 127,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 127
+},
+{
+  "fields": {
+    "bbox_y0": "18.3570230000",
+    "bbox_y1": "18.4521510000",
+    "bbox_x1": "-74.2939220000",
+    "bbox_x0": "-74.4804000000",
+    "region": 128,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 128
+},
+{
+  "fields": {
+    "bbox_y0": "18.4850770000",
+    "bbox_y1": "18.6009780000",
+    "bbox_x1": "-73.8361470000",
+    "bbox_x0": "-73.9857450000",
+    "region": 129,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 129
+},
+{
+  "fields": {
+    "bbox_y0": "18.3876030000",
+    "bbox_y1": "18.6164120000",
+    "bbox_x1": "-73.9457270000",
+    "bbox_x0": "-74.1196910000",
+    "region": 130,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 130
+},
+{
+  "fields": {
+    "bbox_y0": "18.3688000000",
+    "bbox_y1": "18.5260580000",
+    "bbox_x1": "-73.8922550000",
+    "bbox_x0": "-74.0422750000",
+    "region": 131,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 131
+},
+{
+  "fields": {
+    "bbox_y0": "18.3621970000",
+    "bbox_y1": "18.6444220000",
+    "bbox_x1": "-73.6986810000",
+    "bbox_x0": "-73.9404410000",
+    "region": 132,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 132
+},
+{
+  "fields": {
+    "bbox_y0": "19.7223770000",
+    "bbox_y1": "19.9526750000",
+    "bbox_x1": "-72.7417760000",
+    "bbox_x0": "-73.0336410000",
+    "region": 133,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 133
+},
+{
+  "fields": {
+    "bbox_y0": "19.9923540000",
+    "bbox_y1": "20.0892270000",
+    "bbox_x1": "-72.6201230000",
+    "bbox_x0": "-72.9677190000",
+    "region": 134,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 134
+},
+{
+  "fields": {
+    "bbox_y0": "19.7090870000",
+    "bbox_y1": "19.8660210000",
+    "bbox_x1": "-72.7245850000",
+    "bbox_x0": "-72.9407670000",
+    "region": 135,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 135
+},
+{
+  "fields": {
+    "bbox_y0": "19.8176270000",
+    "bbox_y1": "19.9005170000",
+    "bbox_x1": "-72.7717260000",
+    "bbox_x0": "-72.8567200000",
+    "region": 136,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 136
+},
+{
+  "fields": {
+    "bbox_y0": "19.8080820000",
+    "bbox_y1": "19.9437030000",
+    "bbox_x1": "-72.6466110000",
+    "bbox_x0": "-72.7722960000",
+    "region": 137,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 137
+},
+{
+  "fields": {
+    "bbox_y0": "19.8116960000",
+    "bbox_y1": "19.9088310000",
+    "bbox_x1": "-72.5600670000",
+    "bbox_x0": "-72.6791370000",
+    "region": 138,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 138
+},
+{
+  "fields": {
+    "bbox_y0": "19.6775510000",
+    "bbox_y1": "19.8642350000",
+    "bbox_x1": "-73.2146540000",
+    "bbox_x0": "-73.4557600000",
+    "region": 139,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 139
+},
+{
+  "fields": {
+    "bbox_y0": "19.6225520000",
+    "bbox_y1": "19.7992230000",
+    "bbox_x1": "-73.1174540000",
+    "bbox_x0": "-73.2956220000",
+    "region": 140,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 140
+},
+{
+  "fields": {
+    "bbox_y0": "19.6231570000",
+    "bbox_y1": "19.7722780000",
+    "bbox_x1": "-73.2699920000",
+    "bbox_x0": "-73.4430270000",
+    "region": 141,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 141
+},
+{
+  "fields": {
+    "bbox_y0": "19.6963670000",
+    "bbox_y1": "19.9303870000",
+    "bbox_x1": "-72.9995460000",
+    "bbox_x0": "-73.2759550000",
+    "region": 142,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 142
+},
+{
+  "fields": {
+    "bbox_y0": "18.2214590000",
+    "bbox_y1": "18.4612470000",
+    "bbox_x1": "-72.9949230000",
+    "bbox_x0": "-73.1746170000",
+    "region": 143,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 143
+},
+{
+  "fields": {
+    "bbox_y0": "18.4081690000",
+    "bbox_y1": "18.4897040000",
+    "bbox_x1": "-73.1037270000",
+    "bbox_x0": "-73.2783700000",
+    "region": 144,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 144
+},
+{
+  "fields": {
+    "bbox_y0": "18.3522970000",
+    "bbox_y1": "18.4200120000",
+    "bbox_x1": "-73.1510450000",
+    "bbox_x0": "-73.3393890000",
+    "region": 145,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 145
+},
+{
+  "fields": {
+    "bbox_y0": "18.3845860000",
+    "bbox_y1": "18.4486460000",
+    "bbox_x1": "-73.1030200000",
+    "bbox_x0": "-73.2599150000",
+    "region": 146,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 146
+},
+{
+  "fields": {
+    "bbox_y0": "18.4011510000",
+    "bbox_y1": "18.5249380000",
+    "bbox_x1": "-73.2574750000",
+    "bbox_x0": "-73.4497640000",
+    "region": 147,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 147
+},
+{
+  "fields": {
+    "bbox_y0": "18.3784230000",
+    "bbox_y1": "18.5292370000",
+    "bbox_x1": "-73.4288710000",
+    "bbox_x0": "-73.5955920000",
+    "region": 148,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 148
+},
+{
+  "fields": {
+    "bbox_y0": "18.3357490000",
+    "bbox_y1": "18.4524030000",
+    "bbox_x1": "-73.3246520000",
+    "bbox_x0": "-73.5643640000",
+    "region": 149,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 149
+},
+{
+  "fields": {
+    "bbox_y0": "18.3946140000",
+    "bbox_y1": "18.5011760000",
+    "bbox_x1": "-73.3206100000",
+    "bbox_x0": "-73.4437760000",
+    "region": 150,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 150
+},
+{
+  "fields": {
+    "bbox_y0": "18.3830450000",
+    "bbox_y1": "18.4677970000",
+    "bbox_x1": "-73.4940650000",
+    "bbox_x0": "-73.6723970000",
+    "region": 151,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 151
+},
+{
+  "fields": {
+    "bbox_y0": "18.3979860000",
+    "bbox_y1": "18.5497130000",
+    "bbox_x1": "-73.5706630000",
+    "bbox_x0": "-73.7800190000",
+    "region": 152,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 152
+},
+{
+  "fields": {
+    "bbox_y0": "18.5440210000",
+    "bbox_y1": "18.5893050000",
+    "bbox_x1": "-73.5636720000",
+    "bbox_x0": "-73.7342900000",
+    "region": 153,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 153
+},
+{
+  "fields": {
+    "bbox_y0": "18.5075610000",
+    "bbox_y1": "18.5655040000",
+    "bbox_x1": "-72.2960710000",
+    "bbox_x0": "-72.3564930000",
+    "region": 154,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 154
+},
+{
+  "fields": {
+    "bbox_y0": "18.4997540000",
+    "bbox_y1": "18.5276730000",
+    "bbox_x1": "-72.3173660000",
+    "bbox_x0": "-72.3508500000",
+    "region": 155,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 155
+},
+{
+  "fields": {
+    "bbox_y0": "18.4970220000",
+    "bbox_y1": "18.5393330000",
+    "bbox_x1": "-72.3465500000",
+    "bbox_x0": "-72.3711560000",
+    "region": 156,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 156
+},
+{
+  "fields": {
+    "bbox_y0": "18.5221310000",
+    "bbox_y1": "18.5806600000",
+    "bbox_x1": "-72.2566150000",
+    "bbox_x0": "-72.3386030000",
+    "region": 157,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 157
+},
+{
+  "fields": {
+    "bbox_y0": "18.4775010000",
+    "bbox_y1": "18.5127040000",
+    "bbox_x1": "-72.4273840000",
+    "bbox_x0": "-72.4519240000",
+    "region": 158,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 158
+},
+{
+  "fields": {
+    "bbox_y0": "18.4817400000",
+    "bbox_y1": "18.5167720000",
+    "bbox_x1": "-72.3508700000",
+    "bbox_x0": "-72.4141730000",
+    "region": 159,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 159
+},
+{
+  "fields": {
+    "bbox_y0": "18.4687280000",
+    "bbox_y1": "18.5099350000",
+    "bbox_x1": "-72.3758850000",
+    "bbox_x0": "-72.4342230000",
+    "region": 160,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 160
+},
+{
+  "fields": {
+    "bbox_y0": "18.4352200000",
+    "bbox_y1": "18.4884650000",
+    "bbox_x1": "-72.3495070000",
+    "bbox_x0": "-72.4070670000",
+    "region": 161,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 161
+},
+{
+  "fields": {
+    "bbox_y0": "18.4211590000",
+    "bbox_y1": "18.4794950000",
+    "bbox_x1": "-72.4300290000",
+    "bbox_x0": "-72.4690730000",
+    "region": 162,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 162
+},
+{
+  "fields": {
+    "bbox_y0": "18.3965810000",
+    "bbox_y1": "18.4794950000",
+    "bbox_x1": "-72.4189930000",
+    "bbox_x0": "-72.4533200000",
+    "region": 163,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 163
+},
+{
+  "fields": {
+    "bbox_y0": "18.4332050000",
+    "bbox_y1": "18.4796550000",
+    "bbox_x1": "-72.3887040000",
+    "bbox_x0": "-72.4270550000",
+    "region": 164,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 164
+},
+{
+  "fields": {
+    "bbox_y0": "18.3780590000",
+    "bbox_y1": "18.4339330000",
+    "bbox_x1": "-72.3462190000",
+    "bbox_x0": "-72.4074830000",
+    "region": 165,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 165
+},
+{
+  "fields": {
+    "bbox_y0": "18.4939980000",
+    "bbox_y1": "18.5339890000",
+    "bbox_x1": "-72.3665920000",
+    "bbox_x0": "-72.3836010000",
+    "region": 166,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 166
+},
+{
+  "fields": {
+    "bbox_y0": "18.5055580000",
+    "bbox_y1": "18.5525150000",
+    "bbox_x1": "-72.3781420000",
+    "bbox_x0": "-72.4145050000",
+    "region": 167,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 167
+},
+{
+  "fields": {
+    "bbox_y0": "18.5053000000",
+    "bbox_y1": "18.5558040000",
+    "bbox_x1": "-72.4070970000",
+    "bbox_x0": "-72.4587220000",
+    "region": 168,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 168
+},
+{
+  "fields": {
+    "bbox_y0": "18.3733250000",
+    "bbox_y1": "18.4446380000",
+    "bbox_x1": "-72.3940370000",
+    "bbox_x0": "-72.4391100000",
+    "region": 169,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 169
+},
+{
+  "fields": {
+    "bbox_y0": "18.4769220000",
+    "bbox_y1": "18.5196390000",
+    "bbox_x1": "-72.4371300000",
+    "bbox_x0": "-72.4649630000",
+    "region": 170,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 170
+},
+{
+  "fields": {
+    "bbox_y0": "18.4448690000",
+    "bbox_y1": "18.4908140000",
+    "bbox_x1": "-72.2964390000",
+    "bbox_x0": "-72.3387160000",
+    "region": 171,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 171
+},
+{
+  "fields": {
+    "bbox_y0": "18.4176550000",
+    "bbox_y1": "18.4992350000",
+    "bbox_x1": "-72.1589340000",
+    "bbox_x0": "-72.2361390000",
+    "region": 172,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 172
+},
+{
+  "fields": {
+    "bbox_y0": "18.4558770000",
+    "bbox_y1": "18.5274790000",
+    "bbox_x1": "-72.2797660000",
+    "bbox_x0": "-72.3748300000",
+    "region": 173,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 173
+},
+{
+  "fields": {
+    "bbox_y0": "18.4572140000",
+    "bbox_y1": "18.5111500000",
+    "bbox_x1": "-72.2105590000",
+    "bbox_x0": "-72.2920500000",
+    "region": 174,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 174
+},
+{
+  "fields": {
+    "bbox_y0": "18.4958140000",
+    "bbox_y1": "18.5497680000",
+    "bbox_x1": "-72.1973380000",
+    "bbox_x0": "-72.3019530000",
+    "region": 175,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 175
+},
+{
+  "fields": {
+    "bbox_y0": "18.3399960000",
+    "bbox_y1": "18.3974170000",
+    "bbox_x1": "-72.2806400000",
+    "bbox_x0": "-72.3697030000",
+    "region": 176,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 176
+},
+{
+  "fields": {
+    "bbox_y0": "18.3936000000",
+    "bbox_y1": "18.4586750000",
+    "bbox_x1": "-72.3046930000",
+    "bbox_x0": "-72.3905830000",
+    "region": 177,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 177
+},
+{
+  "fields": {
+    "bbox_y0": "18.3728930000",
+    "bbox_y1": "18.4850990000",
+    "bbox_x1": "-72.2598780000",
+    "bbox_x0": "-72.3306200000",
+    "region": 178,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 178
+},
+{
+  "fields": {
+    "bbox_y0": "18.3485340000",
+    "bbox_y1": "18.4044850000",
+    "bbox_x1": "-72.1994520000",
+    "bbox_x0": "-72.2882770000",
+    "region": 179,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 179
+},
+{
+  "fields": {
+    "bbox_y0": "18.3860180000",
+    "bbox_y1": "18.4679850000",
+    "bbox_x1": "-72.1948900000",
+    "bbox_x0": "-72.2826510000",
+    "region": 180,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 180
+},
+{
+  "fields": {
+    "bbox_y0": "18.5050710000",
+    "bbox_y1": "18.5486420000",
+    "bbox_x1": "-72.4566070000",
+    "bbox_x0": "-72.5042880000",
+    "region": 181,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 181
+},
+{
+  "fields": {
+    "bbox_y0": "18.4721350000",
+    "bbox_y1": "18.5489750000",
+    "bbox_x1": "-72.4449360000",
+    "bbox_x0": "-72.5337600000",
+    "region": 182,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 182
+},
+{
+  "fields": {
+    "bbox_y0": "18.4716480000",
+    "bbox_y1": "18.5499840000",
+    "bbox_x1": "-72.4961580000",
+    "bbox_x0": "-72.5697950000",
+    "region": 183,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 183
+},
+{
+  "fields": {
+    "bbox_y0": "18.5607770000",
+    "bbox_y1": "18.6303770000",
+    "bbox_x1": "-72.3088470000",
+    "bbox_x0": "-72.3590910000",
+    "region": 184,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 184
+},
+{
+  "fields": {
+    "bbox_y0": "18.5818660000",
+    "bbox_y1": "18.6068260000",
+    "bbox_x1": "-72.2898490000",
+    "bbox_x0": "-72.3206960000",
+    "region": 185,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 185
+},
+{
+  "fields": {
+    "bbox_y0": "18.5595710000",
+    "bbox_y1": "18.6096320000",
+    "bbox_x1": "-72.2482630000",
+    "bbox_x0": "-72.3125940000",
+    "region": 186,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 186
+},
+{
+  "fields": {
+    "bbox_y0": "18.5364580000",
+    "bbox_y1": "18.5813960000",
+    "bbox_x1": "-72.2233800000",
+    "bbox_x0": "-72.2742490000",
+    "region": 187,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 187
+},
+{
+  "fields": {
+    "bbox_y0": "18.4326610000",
+    "bbox_y1": "18.5220220000",
+    "bbox_x1": "-72.6050170000",
+    "bbox_x0": "-72.7026360000",
+    "region": 188,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 188
+},
+{
+  "fields": {
+    "bbox_y0": "18.5051040000",
+    "bbox_y1": "18.5653030000",
+    "bbox_x1": "-72.5460690000",
+    "bbox_x0": "-72.6526500000",
+    "region": 189,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 189
+},
+{
+  "fields": {
+    "bbox_y0": "18.4518680000",
+    "bbox_y1": "18.5315990000",
+    "bbox_x1": "-72.5557950000",
+    "bbox_x0": "-72.6226960000",
+    "region": 190,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 190
+},
+{
+  "fields": {
+    "bbox_y0": "18.3260730000",
+    "bbox_y1": "18.3985360000",
+    "bbox_x1": "-72.5941810000",
+    "bbox_x0": "-72.6845940000",
+    "region": 191,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 191
+},
+{
+  "fields": {
+    "bbox_y0": "18.3789900000",
+    "bbox_y1": "18.4512980000",
+    "bbox_x1": "-72.6323870000",
+    "bbox_x0": "-72.7001420000",
+    "region": 192,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 192
+},
+{
+  "fields": {
+    "bbox_y0": "18.4174320000",
+    "bbox_y1": "18.4746810000",
+    "bbox_x1": "-72.4944110000",
+    "bbox_x0": "-72.5596850000",
+    "region": 193,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 193
+},
+{
+  "fields": {
+    "bbox_y0": "18.4181450000",
+    "bbox_y1": "18.4762850000",
+    "bbox_x1": "-72.4549830000",
+    "bbox_x0": "-72.5291710000",
+    "region": 194,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 194
+},
+{
+  "fields": {
+    "bbox_y0": "18.3970610000",
+    "bbox_y1": "18.4385290000",
+    "bbox_x1": "-72.4492760000",
+    "bbox_x0": "-72.5341590000",
+    "region": 195,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 195
+},
+{
+  "fields": {
+    "bbox_y0": "18.4048160000",
+    "bbox_y1": "18.4759070000",
+    "bbox_x1": "-72.5283730000",
+    "bbox_x0": "-72.5758020000",
+    "region": 196,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 196
+},
+{
+  "fields": {
+    "bbox_y0": "18.3470350000",
+    "bbox_y1": "18.4144490000",
+    "bbox_x1": "-72.5101620000",
+    "bbox_x0": "-72.5968300000",
+    "region": 197,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 197
+},
+{
+  "fields": {
+    "bbox_y0": "18.4029230000",
+    "bbox_y1": "18.4631260000",
+    "bbox_x1": "-72.5554190000",
+    "bbox_x0": "-72.6247870000",
+    "region": 198,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 198
+},
+{
+  "fields": {
+    "bbox_y0": "18.3790320000",
+    "bbox_y1": "18.4491470000",
+    "bbox_x1": "-72.5789330000",
+    "bbox_x0": "-72.6423510000",
+    "region": 199,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 199
+},
+{
+  "fields": {
+    "bbox_y0": "18.3228700000",
+    "bbox_y1": "18.3837960000",
+    "bbox_x1": "-72.5839160000",
+    "bbox_x0": "-72.6407650000",
+    "region": 200,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 200
+},
+{
+  "fields": {
+    "bbox_y0": "18.3710500000",
+    "bbox_y1": "18.4410970000",
+    "bbox_x1": "-72.8886100000",
+    "bbox_x0": "-72.9852010000",
+    "region": 201,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 201
+},
+{
+  "fields": {
+    "bbox_y0": "18.3831110000",
+    "bbox_y1": "18.4515430000",
+    "bbox_x1": "-72.9663800000",
+    "bbox_x0": "-73.0540270000",
+    "region": 202,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 202
+},
+{
+  "fields": {
+    "bbox_y0": "18.4374990000",
+    "bbox_y1": "18.4679560000",
+    "bbox_x1": "-72.8900130000",
+    "bbox_x0": "-73.0547690000",
+    "region": 203,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 203
+},
+{
+  "fields": {
+    "bbox_y0": "18.3154310000",
+    "bbox_y1": "18.3996620000",
+    "bbox_x1": "-72.9569300000",
+    "bbox_x0": "-73.0255720000",
+    "region": 204,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 204
+},
+{
+  "fields": {
+    "bbox_y0": "18.3555880000",
+    "bbox_y1": "18.3935570000",
+    "bbox_x1": "-72.9212950000",
+    "bbox_x0": "-72.9635070000",
+    "region": 205,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 205
+},
+{
+  "fields": {
+    "bbox_y0": "18.2992040000",
+    "bbox_y1": "18.3676910000",
+    "bbox_x1": "-72.9271340000",
+    "bbox_x0": "-72.9873670000",
+    "region": 206,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 206
+},
+{
+  "fields": {
+    "bbox_y0": "18.3481170000",
+    "bbox_y1": "18.4057570000",
+    "bbox_x1": "-72.8850880000",
+    "bbox_x0": "-72.9302840000",
+    "region": 207,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 207
+},
+{
+  "fields": {
+    "bbox_y0": "18.2769970000",
+    "bbox_y1": "18.3623600000",
+    "bbox_x1": "-72.8809470000",
+    "bbox_x0": "-72.9785820000",
+    "region": 208,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 208
+},
+{
+  "fields": {
+    "bbox_y0": "18.2582990000",
+    "bbox_y1": "18.3418490000",
+    "bbox_x1": "-72.8505560000",
+    "bbox_x0": "-72.9140020000",
+    "region": 209,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 209
+},
+{
+  "fields": {
+    "bbox_y0": "18.2812040000",
+    "bbox_y1": "18.3592790000",
+    "bbox_x1": "-72.8275310000",
+    "bbox_x0": "-72.8768680000",
+    "region": 210,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 210
+},
+{
+  "fields": {
+    "bbox_y0": "18.3412580000",
+    "bbox_y1": "18.4377500000",
+    "bbox_x1": "-72.8434560000",
+    "bbox_x0": "-72.9124720000",
+    "region": 211,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 211
+},
+{
+  "fields": {
+    "bbox_y0": "18.3485680000",
+    "bbox_y1": "18.4448510000",
+    "bbox_x1": "-72.8058000000",
+    "bbox_x0": "-72.8672610000",
+    "region": 212,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 212
+},
+{
+  "fields": {
+    "bbox_y0": "18.5629320000",
+    "bbox_y1": "18.6404110000",
+    "bbox_x1": "-72.1506390000",
+    "bbox_x0": "-72.2273870000",
+    "region": 213,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 213
+},
+{
+  "fields": {
+    "bbox_y0": "18.3347720000",
+    "bbox_y1": "18.4297110000",
+    "bbox_x1": "-72.0820940000",
+    "bbox_x0": "-72.2103470000",
+    "region": 214,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 214
+},
+{
+  "fields": {
+    "bbox_y0": "18.3116400000",
+    "bbox_y1": "18.4225870000",
+    "bbox_x1": "-71.9526670000",
+    "bbox_x0": "-72.1031540000",
+    "region": 215,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 215
+},
+{
+  "fields": {
+    "bbox_y0": "18.3651580000",
+    "bbox_y1": "18.5292660000",
+    "bbox_x1": "-72.0640340000",
+    "bbox_x0": "-72.1973380000",
+    "region": 216,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 216
+},
+{
+  "fields": {
+    "bbox_y0": "18.6504000000",
+    "bbox_y1": "18.7892610000",
+    "bbox_x1": "-72.2215430000",
+    "bbox_x0": "-72.2882240000",
+    "region": 217,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 217
+},
+{
+  "fields": {
+    "bbox_y0": "18.6551360000",
+    "bbox_y1": "18.8182110000",
+    "bbox_x1": "-72.2580030000",
+    "bbox_x0": "-72.3582000000",
+    "region": 218,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 218
+},
+{
+  "fields": {
+    "bbox_y0": "18.5249120000",
+    "bbox_y1": "18.5690110000",
+    "bbox_x1": "-72.1405370000",
+    "bbox_x0": "-72.2083260000",
+    "region": 219,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 219
+},
+{
+  "fields": {
+    "bbox_y0": "18.4990950000",
+    "bbox_y1": "18.6032540000",
+    "bbox_x1": "-72.1710940000",
+    "bbox_x0": "-72.2848150000",
+    "region": 220,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 220
+},
+{
+  "fields": {
+    "bbox_y0": "18.5723430000",
+    "bbox_y1": "18.6613820000",
+    "bbox_x1": "-72.2003670000",
+    "bbox_x0": "-72.2854420000",
+    "region": 221,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 221
+},
+{
+  "fields": {
+    "bbox_y0": "18.5976930000",
+    "bbox_y1": "18.6824620000",
+    "bbox_x1": "-72.2656690000",
+    "bbox_x0": "-72.3582810000",
+    "region": 222,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 222
+},
+{
+  "fields": {
+    "bbox_y0": "18.3648220000",
+    "bbox_y1": "18.4433010000",
+    "bbox_x1": "-72.7421130000",
+    "bbox_x0": "-72.8337430000",
+    "region": 223,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 223
+},
+{
+  "fields": {
+    "bbox_y0": "18.2818950000",
+    "bbox_y1": "18.3891600000",
+    "bbox_x1": "-72.7652490000",
+    "bbox_x0": "-72.8494380000",
+    "region": 224,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 224
+},
+{
+  "fields": {
+    "bbox_y0": "18.2667260000",
+    "bbox_y1": "18.3121470000",
+    "bbox_x1": "-72.7609850000",
+    "bbox_x0": "-72.8038950000",
+    "region": 225,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 225
+},
+{
+  "fields": {
+    "bbox_y0": "18.2815090000",
+    "bbox_y1": "18.3783630000",
+    "bbox_x1": "-72.7264670000",
+    "bbox_x0": "-72.7739720000",
+    "region": 226,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 226
+},
+{
+  "fields": {
+    "bbox_y0": "18.3192650000",
+    "bbox_y1": "18.3846550000",
+    "bbox_x1": "-72.6558510000",
+    "bbox_x0": "-72.7374080000",
+    "region": 227,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 227
+},
+{
+  "fields": {
+    "bbox_y0": "18.2959960000",
+    "bbox_y1": "18.3521840000",
+    "bbox_x1": "-72.6485940000",
+    "bbox_x0": "-72.7447000000",
+    "region": 228,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 228
+},
+{
+  "fields": {
+    "bbox_y0": "18.3543290000",
+    "bbox_y1": "18.4380300000",
+    "bbox_x1": "-72.6792680000",
+    "bbox_x0": "-72.7646000000",
+    "region": 229,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 229
+},
+{
+  "fields": {
+    "bbox_y0": "18.5891530000",
+    "bbox_y1": "18.7063960000",
+    "bbox_x1": "-71.9959110000",
+    "bbox_x0": "-72.2043190000",
+    "region": 230,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 230
+},
+{
+  "fields": {
+    "bbox_y0": "18.5629180000",
+    "bbox_y1": "18.6364640000",
+    "bbox_x1": "-72.0818310000",
+    "bbox_x0": "-72.1645360000",
+    "region": 231,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 231
+},
+{
+  "fields": {
+    "bbox_y0": "18.6784000000",
+    "bbox_y1": "18.7369920000",
+    "bbox_x1": "-71.9987430000",
+    "bbox_x0": "-72.1164190000",
+    "region": 232,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 232
+},
+{
+  "fields": {
+    "bbox_y0": "18.6451830000",
+    "bbox_y1": "18.7737520000",
+    "bbox_x1": "-72.1556100000",
+    "bbox_x0": "-72.2442870000",
+    "region": 233,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 233
+},
+{
+  "fields": {
+    "bbox_y0": "18.4125070000",
+    "bbox_y1": "18.5370240000",
+    "bbox_x1": "-72.0053690000",
+    "bbox_x0": "-72.1210710000",
+    "region": 234,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 234
+},
+{
+  "fields": {
+    "bbox_y0": "18.3921040000",
+    "bbox_y1": "18.5335270000",
+    "bbox_x1": "-71.9581250000",
+    "bbox_x0": "-72.0774750000",
+    "region": 235,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 235
+},
+{
+  "fields": {
+    "bbox_y0": "18.3487560000",
+    "bbox_y1": "18.5791840000",
+    "bbox_x1": "-71.8807010000",
+    "bbox_x0": "-72.0356510000",
+    "region": 236,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 236
+},
+{
+  "fields": {
+    "bbox_y0": "18.5260810000",
+    "bbox_y1": "18.6210390000",
+    "bbox_x1": "-71.9551520000",
+    "bbox_x0": "-72.1506920000",
+    "region": 237,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 237
+},
+{
+  "fields": {
+    "bbox_y0": "18.4983190000",
+    "bbox_y1": "18.5632450000",
+    "bbox_x1": "-72.0826370000",
+    "bbox_x0": "-72.1553360000",
+    "region": 238,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 238
+},
+{
+  "fields": {
+    "bbox_y0": "18.6276590000",
+    "bbox_y1": "18.7144500000",
+    "bbox_x1": "-71.9537350000",
+    "bbox_x0": "-72.0574460000",
+    "region": 239,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 239
+},
+{
+  "fields": {
+    "bbox_y0": "18.6348950000",
+    "bbox_y1": "18.7199640000",
+    "bbox_x1": "-71.8981730000",
+    "bbox_x0": "-71.9990570000",
+    "region": 240,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 240
+},
+{
+  "fields": {
+    "bbox_y0": "18.6423800000",
+    "bbox_y1": "18.7193620000",
+    "bbox_x1": "-71.8016350000",
+    "bbox_x0": "-71.9000200000",
+    "region": 241,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 241
+},
+{
+  "fields": {
+    "bbox_y0": "18.6271620000",
+    "bbox_y1": "18.6870040000",
+    "bbox_x1": "-71.8069540000",
+    "bbox_x0": "-71.9240850000",
+    "region": 242,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 242
+},
+{
+  "fields": {
+    "bbox_y0": "18.6845060000",
+    "bbox_y1": "18.7468380000",
+    "bbox_x1": "-71.8820880000",
+    "bbox_x0": "-72.0080450000",
+    "region": 243,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 243
+},
+{
+  "fields": {
+    "bbox_y0": "18.2732860000",
+    "bbox_y1": "18.4474300000",
+    "bbox_x1": "-71.6952620000",
+    "bbox_x0": "-71.9692060000",
+    "region": 244,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 244
+},
+{
+  "fields": {
+    "bbox_y0": "18.7652940000",
+    "bbox_y1": "18.8089560000",
+    "bbox_x1": "-72.4795400000",
+    "bbox_x0": "-72.5059570000",
+    "region": 245,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 245
+},
+{
+  "fields": {
+    "bbox_y0": "18.8331240000",
+    "bbox_y1": "18.9721370000",
+    "bbox_x1": "-72.5200510000",
+    "bbox_x0": "-72.6166800000",
+    "region": 246,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 246
+},
+{
+  "fields": {
+    "bbox_y0": "18.7646180000",
+    "bbox_y1": "18.8546800000",
+    "bbox_x1": "-72.4954840000",
+    "bbox_x0": "-72.5811040000",
+    "region": 247,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 247
+},
+{
+  "fields": {
+    "bbox_y0": "18.8720770000",
+    "bbox_y1": "18.9771730000",
+    "bbox_x1": "-72.5805970000",
+    "bbox_x0": "-72.7099940000",
+    "region": 248,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 248
+},
+{
+  "fields": {
+    "bbox_y0": "18.7860130000",
+    "bbox_y1": "18.9148170000",
+    "bbox_x1": "-72.3603350000",
+    "bbox_x0": "-72.5229980000",
+    "region": 249,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 249
+},
+{
+  "fields": {
+    "bbox_y0": "18.8363070000",
+    "bbox_y1": "18.9616710000",
+    "bbox_x1": "-72.4280910000",
+    "bbox_x0": "-72.5489530000",
+    "region": 250,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 250
+},
+{
+  "fields": {
+    "bbox_y0": "18.7117260000",
+    "bbox_y1": "18.7728080000",
+    "bbox_x1": "-72.3518790000",
+    "bbox_x0": "-72.4517170000",
+    "region": 251,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 251
+},
+{
+  "fields": {
+    "bbox_y0": "18.7293160000",
+    "bbox_y1": "18.7857740000",
+    "bbox_x1": "-72.4293770000",
+    "bbox_x0": "-72.4868780000",
+    "region": 252,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 252
+},
+{
+  "fields": {
+    "bbox_y0": "18.6823610000",
+    "bbox_y1": "18.7480660000",
+    "bbox_x1": "-72.3118920000",
+    "bbox_x0": "-72.4011850000",
+    "region": 253,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 253
+},
+{
+  "fields": {
+    "bbox_y0": "18.7641340000",
+    "bbox_y1": "18.8561560000",
+    "bbox_x1": "-72.3193990000",
+    "bbox_x0": "-72.4799320000",
+    "region": 254,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 254
+},
+{
+  "fields": {
+    "bbox_y0": "18.7360760000",
+    "bbox_y1": "18.8354070000",
+    "bbox_x1": "-72.8161630000",
+    "bbox_x0": "-72.9685520000",
+    "region": 255,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 255
+},
+{
+  "fields": {
+    "bbox_y0": "18.7414530000",
+    "bbox_y1": "18.8616010000",
+    "bbox_x1": "-72.8629820000",
+    "bbox_x0": "-72.9825530000",
+    "region": 256,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 256
+},
+{
+  "fields": {
+    "bbox_y0": "18.7421380000",
+    "bbox_y1": "18.8691570000",
+    "bbox_x1": "-72.9409810000",
+    "bbox_x0": "-72.9973890000",
+    "region": 257,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 257
+},
+{
+  "fields": {
+    "bbox_y0": "18.8006580000",
+    "bbox_y1": "18.9309690000",
+    "bbox_x1": "-72.9659470000",
+    "bbox_x0": "-73.1224280000",
+    "region": 258,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 258
+},
+{
+  "fields": {
+    "bbox_y0": "18.7192740000",
+    "bbox_y1": "18.7657900000",
+    "bbox_x1": "-72.8442910000",
+    "bbox_x0": "-72.9169890000",
+    "region": 259,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 259
+},
+{
+  "fields": {
+    "bbox_y0": "18.6921730000",
+    "bbox_y1": "18.7923200000",
+    "bbox_x1": "-72.7930410000",
+    "bbox_x0": "-72.8608270000",
+    "region": 260,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 260
+},
+{
+  "fields": {
+    "bbox_y0": "18.9079740000",
+    "bbox_y1": "18.9703240000",
+    "bbox_x1": "-73.1457970000",
+    "bbox_x0": "-73.3011500000",
+    "region": 261,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 261
+},
+{
+  "fields": {
+    "bbox_y0": "18.8342420000",
+    "bbox_y1": "18.9341700000",
+    "bbox_x1": "-73.1754260000",
+    "bbox_x0": "-73.3038160000",
+    "region": 262,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 262
+},
+{
+  "fields": {
+    "bbox_y0": "18.8044490000",
+    "bbox_y1": "18.9112680000",
+    "bbox_x1": "-73.1065360000",
+    "bbox_x0": "-73.2159270000",
+    "region": 263,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 263
+},
+{
+  "fields": {
+    "bbox_y0": "18.7436440000",
+    "bbox_y1": "18.8509360000",
+    "bbox_x1": "-72.9943080000",
+    "bbox_x0": "-73.1236080000",
+    "region": 264,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 264
+},
+{
+  "fields": {
+    "bbox_y0": "18.8751030000",
+    "bbox_y1": "18.9444060000",
+    "bbox_x1": "-73.0900320000",
+    "bbox_x0": "-73.1757970000",
+    "region": 265,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 265
+},
+{
+  "fields": {
+    "bbox_y0": "18.2143720000",
+    "bbox_y1": "18.3090950000",
+    "bbox_x1": "-72.4339030000",
+    "bbox_x0": "-72.5364980000",
+    "region": 266,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 266
+},
+{
+  "fields": {
+    "bbox_y0": "18.3079240000",
+    "bbox_y1": "18.3376080000",
+    "bbox_x1": "-72.3792460000",
+    "bbox_x0": "-72.4620530000",
+    "region": 267,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 267
+},
+{
+  "fields": {
+    "bbox_y0": "18.2830730000",
+    "bbox_y1": "18.3759520000",
+    "bbox_x1": "-72.4263620000",
+    "bbox_x0": "-72.5267100000",
+    "region": 268,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 268
+},
+{
+  "fields": {
+    "bbox_y0": "18.3269870000",
+    "bbox_y1": "18.3917680000",
+    "bbox_x1": "-72.3620970000",
+    "bbox_x0": "-72.4628190000",
+    "region": 269,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 269
+},
+{
+  "fields": {
+    "bbox_y0": "18.3269870000",
+    "bbox_y1": "18.3799570000",
+    "bbox_x1": "-72.4316320000",
+    "bbox_x0": "-72.4829520000",
+    "region": 270,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 270
+},
+{
+  "fields": {
+    "bbox_y0": "18.2312280000",
+    "bbox_y1": "18.3411320000",
+    "bbox_x1": "-72.4818190000",
+    "bbox_x0": "-72.5702910000",
+    "region": 271,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 271
+},
+{
+  "fields": {
+    "bbox_y0": "18.3324790000",
+    "bbox_y1": "18.4056930000",
+    "bbox_x1": "-72.4221400000",
+    "bbox_x0": "-72.5649750000",
+    "region": 272,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 272
+},
+{
+  "fields": {
+    "bbox_y0": "18.3018570000",
+    "bbox_y1": "18.3526790000",
+    "bbox_x1": "-72.5447750000",
+    "bbox_x0": "-72.6082650000",
+    "region": 273,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 273
+},
+{
+  "fields": {
+    "bbox_y0": "18.2673990000",
+    "bbox_y1": "18.3455910000",
+    "bbox_x1": "-72.5604890000",
+    "bbox_x0": "-72.6485940000",
+    "region": 274,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 274
+},
+{
+  "fields": {
+    "bbox_y0": "18.2310210000",
+    "bbox_y1": "18.2966760000",
+    "bbox_x1": "-72.5438920000",
+    "bbox_x0": "-72.6414270000",
+    "region": 275,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 275
+},
+{
+  "fields": {
+    "bbox_y0": "18.1713610000",
+    "bbox_y1": "18.2623100000",
+    "bbox_x1": "-72.5412720000",
+    "bbox_x0": "-72.6531840000",
+    "region": 276,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 276
+},
+{
+  "fields": {
+    "bbox_y0": "18.2297140000",
+    "bbox_y1": "18.3150900000",
+    "bbox_x1": "-72.3164310000",
+    "bbox_x0": "-72.3728120000",
+    "region": 277,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 277
+},
+{
+  "fields": {
+    "bbox_y0": "18.2637130000",
+    "bbox_y1": "18.3535840000",
+    "bbox_x1": "-72.3225380000",
+    "bbox_x0": "-72.3738270000",
+    "region": 278,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 278
+},
+{
+  "fields": {
+    "bbox_y0": "18.2575720000",
+    "bbox_y1": "18.3582940000",
+    "bbox_x1": "-72.2529930000",
+    "bbox_x0": "-72.3339000000",
+    "region": 279,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 279
+},
+{
+  "fields": {
+    "bbox_y0": "18.2494740000",
+    "bbox_y1": "18.3521790000",
+    "bbox_x1": "-72.2269170000",
+    "bbox_x0": "-72.3044330000",
+    "region": 280,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 280
+},
+{
+  "fields": {
+    "bbox_y0": "18.2220360000",
+    "bbox_y1": "18.2660700000",
+    "bbox_x1": "-72.2209970000",
+    "bbox_x0": "-72.3397150000",
+    "region": 281,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 281
+},
+{
+  "fields": {
+    "bbox_y0": "18.2248740000",
+    "bbox_y1": "18.2627500000",
+    "bbox_x1": "-72.3950100000",
+    "bbox_x0": "-72.4435830000",
+    "region": 282,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 282
+},
+{
+  "fields": {
+    "bbox_y0": "18.2298330000",
+    "bbox_y1": "18.3066960000",
+    "bbox_x1": "-72.3565510000",
+    "bbox_x0": "-72.4110650000",
+    "region": 283,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 283
+},
+{
+  "fields": {
+    "bbox_y0": "18.2604300000",
+    "bbox_y1": "18.2952350000",
+    "bbox_x1": "-72.3869010000",
+    "bbox_x0": "-72.4724440000",
+    "region": 284,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 284
+},
+{
+  "fields": {
+    "bbox_y0": "18.2849660000",
+    "bbox_y1": "18.3326810000",
+    "bbox_x1": "-72.3678710000",
+    "bbox_x0": "-72.4370260000",
+    "region": 285,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 285
+},
+{
+  "fields": {
+    "bbox_y0": "18.2355430000",
+    "bbox_y1": "18.2993600000",
+    "bbox_x1": "-72.6062760000",
+    "bbox_x0": "-72.7045670000",
+    "region": 286,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 286
+},
+{
+  "fields": {
+    "bbox_y0": "18.2596430000",
+    "bbox_y1": "18.3224210000",
+    "bbox_x1": "-72.6958650000",
+    "bbox_x0": "-72.7663320000",
+    "region": 287,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 287
+},
+{
+  "fields": {
+    "bbox_y0": "18.2892540000",
+    "bbox_y1": "18.3303310000",
+    "bbox_x1": "-72.6278960000",
+    "bbox_x0": "-72.7112650000",
+    "region": 288,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 288
+},
+{
+  "fields": {
+    "bbox_y0": "18.1792990000",
+    "bbox_y1": "18.2596580000",
+    "bbox_x1": "-72.6362720000",
+    "bbox_x0": "-72.7058030000",
+    "region": 289,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 289
+},
+{
+  "fields": {
+    "bbox_y0": "18.1749330000",
+    "bbox_y1": "18.2697350000",
+    "bbox_x1": "-72.6823170000",
+    "bbox_x0": "-72.7468300000",
+    "region": 290,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 290
+},
+{
+  "fields": {
+    "bbox_y0": "18.1895500000",
+    "bbox_y1": "18.2782540000",
+    "bbox_x1": "-72.7173800000",
+    "bbox_x0": "-72.7827110000",
+    "region": 291,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 291
+},
+{
+  "fields": {
+    "bbox_y0": "18.2251060000",
+    "bbox_y1": "18.2873620000",
+    "bbox_x1": "-72.7594300000",
+    "bbox_x0": "-72.8244130000",
+    "region": 292,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 292
+},
+{
+  "fields": {
+    "bbox_y0": "18.1751900000",
+    "bbox_y1": "18.2624840000",
+    "bbox_x1": "-72.7467340000",
+    "bbox_x0": "-72.8281700000",
+    "region": 293,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 293
+},
+{
+  "fields": {
+    "bbox_y0": "18.2501680000",
+    "bbox_y1": "18.2893520000",
+    "bbox_x1": "-72.8181020000",
+    "bbox_x0": "-72.8567980000",
+    "region": 294,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 294
+},
+{
+  "fields": {
+    "bbox_y0": "18.2165690000",
+    "bbox_y1": "18.2765070000",
+    "bbox_x1": "-72.8495650000",
+    "bbox_x0": "-72.9028340000",
+    "region": 295,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 295
+},
+{
+  "fields": {
+    "bbox_y0": "18.1962830000",
+    "bbox_y1": "18.2690470000",
+    "bbox_x1": "-72.8164010000",
+    "bbox_x0": "-72.8931980000",
+    "region": 296,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 296
+},
+{
+  "fields": {
+    "bbox_y0": "18.1418870000",
+    "bbox_y1": "18.2096330000",
+    "bbox_x1": "-72.7472610000",
+    "bbox_x0": "-72.9025310000",
+    "region": 297,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 297
+},
+{
+  "fields": {
+    "bbox_y0": "18.1648170000",
+    "bbox_y1": "18.2549760000",
+    "bbox_x1": "-72.8910770000",
+    "bbox_x0": "-72.9966300000",
+    "region": 298,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 298
+},
+{
+  "fields": {
+    "bbox_y0": "18.1561760000",
+    "bbox_y1": "18.2354300000",
+    "bbox_x1": "-72.8593120000",
+    "bbox_x0": "-72.9303130000",
+    "region": 299,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 299
+},
+{
+  "fields": {
+    "bbox_y0": "18.2425300000",
+    "bbox_y1": "18.2877540000",
+    "bbox_x1": "-72.8831090000",
+    "bbox_x0": "-72.9125640000",
+    "region": 300,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 300
+},
+{
+  "fields": {
+    "bbox_y0": "18.2408560000",
+    "bbox_y1": "18.2951170000",
+    "bbox_x1": "-72.8897040000",
+    "bbox_x0": "-72.9315130000",
+    "region": 301,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 301
+},
+{
+  "fields": {
+    "bbox_y0": "18.2523530000",
+    "bbox_y1": "18.2945660000",
+    "bbox_x1": "-72.9274400000",
+    "bbox_x0": "-72.9573900000",
+    "region": 302,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 302
+},
+{
+  "fields": {
+    "bbox_y0": "18.1768640000",
+    "bbox_y1": "18.3270250000",
+    "bbox_x1": "-72.9467570000",
+    "bbox_x0": "-73.0156170000",
+    "region": 303,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 303
+},
+{
+  "fields": {
+    "bbox_y0": "18.2210230000",
+    "bbox_y1": "18.3573740000",
+    "bbox_x1": "-72.1439770000",
+    "bbox_x0": "-72.2542890000",
+    "region": 304,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 304
+},
+{
+  "fields": {
+    "bbox_y0": "18.2331520000",
+    "bbox_y1": "18.3533290000",
+    "bbox_x1": "-72.1331290000",
+    "bbox_x0": "-72.2025820000",
+    "region": 305,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 305
+},
+{
+  "fields": {
+    "bbox_y0": "18.2289960000",
+    "bbox_y1": "18.3460860000",
+    "bbox_x1": "-72.1044430000",
+    "bbox_x0": "-72.1511620000",
+    "region": 306,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 306
+},
+{
+  "fields": {
+    "bbox_y0": "18.2341050000",
+    "bbox_y1": "18.3376480000",
+    "bbox_x1": "-72.0660270000",
+    "bbox_x0": "-72.1329850000",
+    "region": 307,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 307
+},
+{
+  "fields": {
+    "bbox_y0": "18.2341510000",
+    "bbox_y1": "18.3275990000",
+    "bbox_x1": "-72.0110730000",
+    "bbox_x0": "-72.0846910000",
+    "region": 308,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 308
+},
+{
+  "fields": {
+    "bbox_y0": "18.2055430000",
+    "bbox_y1": "18.3185210000",
+    "bbox_x1": "-71.9635730000",
+    "bbox_x0": "-72.0497460000",
+    "region": 309,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 309
+},
+{
+  "fields": {
+    "bbox_y0": "18.1951580000",
+    "bbox_y1": "18.3173870000",
+    "bbox_x1": "-71.9167230000",
+    "bbox_x0": "-71.9934260000",
+    "region": 310,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 310
+},
+{
+  "fields": {
+    "bbox_y0": "18.1844770000",
+    "bbox_y1": "18.3242360000",
+    "bbox_x1": "-71.8532440000",
+    "bbox_x0": "-71.9573880000",
+    "region": 311,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 311
+},
+{
+  "fields": {
+    "bbox_y0": "18.2151540000",
+    "bbox_y1": "18.2870540000",
+    "bbox_x1": "-71.7803130000",
+    "bbox_x0": "-71.8877340000",
+    "region": 312,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 312
+},
+{
+  "fields": {
+    "bbox_y0": "18.1278130000",
+    "bbox_y1": "18.2321850000",
+    "bbox_x1": "-71.8185730000",
+    "bbox_x0": "-71.9194610000",
+    "region": 313,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 313
+},
+{
+  "fields": {
+    "bbox_y0": "18.0316980000",
+    "bbox_y1": "18.2061250000",
+    "bbox_x1": "-71.7356990000",
+    "bbox_x0": "-71.8544670000",
+    "region": 314,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 314
+},
+{
+  "fields": {
+    "bbox_y0": "18.1770600000",
+    "bbox_y1": "18.2927010000",
+    "bbox_x1": "-71.7249560000",
+    "bbox_x0": "-71.8276040000",
+    "region": 315,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 315
+},
+{
+  "fields": {
+    "bbox_y0": "19.7161500000",
+    "bbox_y1": "19.7508380000",
+    "bbox_x1": "-72.1586040000",
+    "bbox_x0": "-72.2270550000",
+    "region": 316,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 316
+},
+{
+  "fields": {
+    "bbox_y0": "19.7082130000",
+    "bbox_y1": "19.7681140000",
+    "bbox_x1": "-72.1942020000",
+    "bbox_x0": "-72.2687720000",
+    "region": 317,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 317
+},
+{
+  "fields": {
+    "bbox_y0": "19.7474530000",
+    "bbox_y1": "19.7889000000",
+    "bbox_x1": "-72.1890060000",
+    "bbox_x0": "-72.2598540000",
+    "region": 318,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 318
+},
+{
+  "fields": {
+    "bbox_y0": "19.6852150000",
+    "bbox_y1": "19.7572360000",
+    "bbox_x1": "-72.1310670000",
+    "bbox_x0": "-72.2072530000",
+    "region": 319,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 319
+},
+{
+  "fields": {
+    "bbox_y0": "19.5962450000",
+    "bbox_y1": "19.6973150000",
+    "bbox_x1": "-72.1414940000",
+    "bbox_x0": "-72.2070440000",
+    "region": 320,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 320
+},
+{
+  "fields": {
+    "bbox_y0": "19.6660630000",
+    "bbox_y1": "19.7524000000",
+    "bbox_x1": "-72.0361290000",
+    "bbox_x0": "-72.1492120000",
+    "region": 321,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 321
+},
+{
+  "fields": {
+    "bbox_y0": "19.5888210000",
+    "bbox_y1": "19.6687890000",
+    "bbox_x1": "-72.1057500000",
+    "bbox_x0": "-72.1768170000",
+    "region": 322,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 322
+},
+{
+  "fields": {
+    "bbox_y0": "19.6261950000",
+    "bbox_y1": "19.6871380000",
+    "bbox_x1": "-72.0592680000",
+    "bbox_x0": "-72.1312250000",
+    "region": 323,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 323
+},
+{
+  "fields": {
+    "bbox_y0": "19.7036560000",
+    "bbox_y1": "19.7827790000",
+    "bbox_x1": "-72.3266330000",
+    "bbox_x0": "-72.3768420000",
+    "region": 324,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 324
+},
+{
+  "fields": {
+    "bbox_y0": "19.6419370000",
+    "bbox_y1": "19.7197680000",
+    "bbox_x1": "-72.2785940000",
+    "bbox_x0": "-72.3529460000",
+    "region": 325,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 325
+},
+{
+  "fields": {
+    "bbox_y0": "19.5580280000",
+    "bbox_y1": "19.6511490000",
+    "bbox_x1": "-72.2702610000",
+    "bbox_x0": "-72.3135790000",
+    "region": 326,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 326
+},
+{
+  "fields": {
+    "bbox_y0": "19.5580620000",
+    "bbox_y1": "19.6485410000",
+    "bbox_x1": "-72.2927040000",
+    "bbox_x0": "-72.3495530000",
+    "region": 327,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 327
+},
+{
+  "fields": {
+    "bbox_y0": "19.6264760000",
+    "bbox_y1": "19.6856460000",
+    "bbox_x1": "-72.3227010000",
+    "bbox_x0": "-72.3721280000",
+    "region": 328,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 328
+},
+{
+  "fields": {
+    "bbox_y0": "19.5620270000",
+    "bbox_y1": "19.6518240000",
+    "bbox_x1": "-72.3352430000",
+    "bbox_x0": "-72.4118260000",
+    "region": 329,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 329
+},
+{
+  "fields": {
+    "bbox_y0": "19.6956590000",
+    "bbox_y1": "19.7702690000",
+    "bbox_x1": "-72.2450850000",
+    "bbox_x0": "-72.3200330000",
+    "region": 330,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 330
+},
+{
+  "fields": {
+    "bbox_y0": "19.6263260000",
+    "bbox_y1": "19.7140210000",
+    "bbox_x1": "-72.2318650000",
+    "bbox_x0": "-72.2975760000",
+    "region": 331,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 331
+},
+{
+  "fields": {
+    "bbox_y0": "19.5704990000",
+    "bbox_y1": "19.6312000000",
+    "bbox_x1": "-72.2309520000",
+    "bbox_x0": "-72.2791190000",
+    "region": 332,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 332
+},
+{
+  "fields": {
+    "bbox_y0": "19.6303360000",
+    "bbox_y1": "19.6722070000",
+    "bbox_x1": "-72.2332770000",
+    "bbox_x0": "-72.2652340000",
+    "region": 333,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 333
+},
+{
+  "fields": {
+    "bbox_y0": "19.6064950000",
+    "bbox_y1": "19.6782190000",
+    "bbox_x1": "-72.1871280000",
+    "bbox_x0": "-72.2504200000",
+    "region": 334,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 334
+},
+{
+  "fields": {
+    "bbox_y0": "19.5705090000",
+    "bbox_y1": "19.6281650000",
+    "bbox_x1": "-72.1887970000",
+    "bbox_x0": "-72.2473430000",
+    "region": 335,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 335
+},
+{
+  "fields": {
+    "bbox_y0": "19.6600630000",
+    "bbox_y1": "19.7230880000",
+    "bbox_x1": "-72.1860140000",
+    "bbox_x0": "-72.2426300000",
+    "region": 336,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 336
+},
+{
+  "fields": {
+    "bbox_y0": "19.5661530000",
+    "bbox_y1": "19.6239560000",
+    "bbox_x1": "-72.1533170000",
+    "bbox_x0": "-72.2251380000",
+    "region": 337,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 337
+},
+{
+  "fields": {
+    "bbox_y0": "19.5459370000",
+    "bbox_y1": "19.6008430000",
+    "bbox_x1": "-72.1109970000",
+    "bbox_x0": "-72.1686640000",
+    "region": 338,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 338
+},
+{
+  "fields": {
+    "bbox_y0": "19.5019470000",
+    "bbox_y1": "19.5595800000",
+    "bbox_x1": "-72.0953500000",
+    "bbox_x0": "-72.1384460000",
+    "region": 339,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 339
+},
+{
+  "fields": {
+    "bbox_y0": "19.4922040000",
+    "bbox_y1": "19.5557410000",
+    "bbox_x1": "-72.1339280000",
+    "bbox_x0": "-72.1833240000",
+    "region": 340,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 340
+},
+{
+  "fields": {
+    "bbox_y0": "19.4950770000",
+    "bbox_y1": "19.5780040000",
+    "bbox_x1": "-72.1498080000",
+    "bbox_x0": "-72.2199510000",
+    "region": 341,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 341
+},
+{
+  "fields": {
+    "bbox_y0": "19.5392350000",
+    "bbox_y1": "19.5858190000",
+    "bbox_x1": "-72.1655020000",
+    "bbox_x0": "-72.2171780000",
+    "region": 342,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 342
+},
+{
+  "fields": {
+    "bbox_y0": "19.4472410000",
+    "bbox_y1": "19.5162000000",
+    "bbox_x1": "-72.0621210000",
+    "bbox_x0": "-72.1359280000",
+    "region": 343,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 343
+},
+{
+  "fields": {
+    "bbox_y0": "19.3846800000",
+    "bbox_y1": "19.4912740000",
+    "bbox_x1": "-72.0979550000",
+    "bbox_x0": "-72.1597370000",
+    "region": 344,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 344
+},
+{
+  "fields": {
+    "bbox_y0": "19.4643250000",
+    "bbox_y1": "19.5060910000",
+    "bbox_x1": "-72.1310860000",
+    "bbox_x0": "-72.1810520000",
+    "region": 345,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 345
+},
+{
+  "fields": {
+    "bbox_y0": "19.4137040000",
+    "bbox_y1": "19.4923190000",
+    "bbox_x1": "-72.2006430000",
+    "bbox_x0": "-72.2570750000",
+    "region": 346,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 346
+},
+{
+  "fields": {
+    "bbox_y0": "19.3846800000",
+    "bbox_y1": "19.5138680000",
+    "bbox_x1": "-72.1272320000",
+    "bbox_x0": "-72.2158300000",
+    "region": 347,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 347
+},
+{
+  "fields": {
+    "bbox_y0": "19.3629880000",
+    "bbox_y1": "19.4450020000",
+    "bbox_x1": "-72.1337310000",
+    "bbox_x0": "-72.1974700000",
+    "region": 348,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 348
+},
+{
+  "fields": {
+    "bbox_y0": "19.2792110000",
+    "bbox_y1": "19.4552810000",
+    "bbox_x1": "-72.1506910000",
+    "bbox_x0": "-72.2486650000",
+    "region": 349,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 349
+},
+{
+  "fields": {
+    "bbox_y0": "19.5252290000",
+    "bbox_y1": "19.5816310000",
+    "bbox_x1": "-72.2137640000",
+    "bbox_x0": "-72.2717500000",
+    "region": 350,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 350
+},
+{
+  "fields": {
+    "bbox_y0": "19.4769970000",
+    "bbox_y1": "19.5322550000",
+    "bbox_x1": "-72.2108420000",
+    "bbox_x0": "-72.2574580000",
+    "region": 351,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 351
+},
+{
+  "fields": {
+    "bbox_y0": "19.4597480000",
+    "bbox_y1": "19.5113600000",
+    "bbox_x1": "-72.2507320000",
+    "bbox_x0": "-72.3316100000",
+    "region": 352,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 352
+},
+{
+  "fields": {
+    "bbox_y0": "19.5084820000",
+    "bbox_y1": "19.5665030000",
+    "bbox_x1": "-72.2372160000",
+    "bbox_x0": "-72.2991210000",
+    "region": 353,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 353
+},
+{
+  "fields": {
+    "bbox_y0": "19.5058240000",
+    "bbox_y1": "19.5598460000",
+    "bbox_x1": "-72.2840800000",
+    "bbox_x0": "-72.3311950000",
+    "region": 354,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 354
+},
+{
+  "fields": {
+    "bbox_y0": "19.3598520000",
+    "bbox_y1": "19.4421520000",
+    "bbox_x1": "-72.0531010000",
+    "bbox_x0": "-72.1149610000",
+    "region": 355,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 355
+},
+{
+  "fields": {
+    "bbox_y0": "19.3852520000",
+    "bbox_y1": "19.4496950000",
+    "bbox_x1": "-72.0136510000",
+    "bbox_x0": "-72.1034150000",
+    "region": 356,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 356
+},
+{
+  "fields": {
+    "bbox_y0": "19.3572260000",
+    "bbox_y1": "19.4039170000",
+    "bbox_x1": "-71.9889450000",
+    "bbox_x0": "-72.0585910000",
+    "region": 357,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 357
+},
+{
+  "fields": {
+    "bbox_y0": "19.3020390000",
+    "bbox_y1": "19.4043630000",
+    "bbox_x1": "-72.0084480000",
+    "bbox_x0": "-72.1547380000",
+    "region": 358,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 358
+},
+{
+  "fields": {
+    "bbox_y0": "19.2549700000",
+    "bbox_y1": "19.3727520000",
+    "bbox_x1": "-72.0468930000",
+    "bbox_x0": "-72.1803590000",
+    "region": 359,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 359
+},
+{
+  "fields": {
+    "bbox_y0": "19.3239240000",
+    "bbox_y1": "19.3798700000",
+    "bbox_x1": "-71.9702650000",
+    "bbox_x0": "-72.0798210000",
+    "region": 360,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 360
+},
+{
+  "fields": {
+    "bbox_y0": "19.7771300000",
+    "bbox_y1": "19.8518050000",
+    "bbox_x1": "-72.5084400000",
+    "bbox_x0": "-72.5955190000",
+    "region": 361,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 361
+},
+{
+  "fields": {
+    "bbox_y0": "19.7329900000",
+    "bbox_y1": "19.7847060000",
+    "bbox_x1": "-72.5017950000",
+    "bbox_x0": "-72.5786080000",
+    "region": 362,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 362
+},
+{
+  "fields": {
+    "bbox_y0": "19.7648100000",
+    "bbox_y1": "19.8388310000",
+    "bbox_x1": "-72.5405650000",
+    "bbox_x0": "-72.6166130000",
+    "region": 363,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 363
+},
+{
+  "fields": {
+    "bbox_y0": "19.7587940000",
+    "bbox_y1": "19.7883960000",
+    "bbox_x1": "-72.5744520000",
+    "bbox_x0": "-72.6261560000",
+    "region": 364,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 364
+},
+{
+  "fields": {
+    "bbox_y0": "19.7636030000",
+    "bbox_y1": "19.8179890000",
+    "bbox_x1": "-72.6062170000",
+    "bbox_x0": "-72.6396170000",
+    "region": 365,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 365
+},
+{
+  "fields": {
+    "bbox_y0": "19.7760040000",
+    "bbox_y1": "19.8328740000",
+    "bbox_x1": "-72.6299420000",
+    "bbox_x0": "-72.6845980000",
+    "region": 366,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 366
+},
+{
+  "fields": {
+    "bbox_y0": "19.7913420000",
+    "bbox_y1": "19.8798090000",
+    "bbox_x1": "-72.4640220000",
+    "bbox_x0": "-72.5833580000",
+    "region": 367,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 367
+},
+{
+  "fields": {
+    "bbox_y0": "19.6961620000",
+    "bbox_y1": "19.7438080000",
+    "bbox_x1": "-72.4745160000",
+    "bbox_x0": "-72.5161410000",
+    "region": 368,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 368
+},
+{
+  "fields": {
+    "bbox_y0": "19.7400610000",
+    "bbox_y1": "19.7721910000",
+    "bbox_x1": "-72.4143560000",
+    "bbox_x0": "-72.4668430000",
+    "region": 369,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 369
+},
+{
+  "fields": {
+    "bbox_y0": "19.7241110000",
+    "bbox_y1": "19.7645900000",
+    "bbox_x1": "-72.4230190000",
+    "bbox_x0": "-72.5153200000",
+    "region": 370,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 370
+},
+{
+  "fields": {
+    "bbox_y0": "19.7577010000",
+    "bbox_y1": "19.8080690000",
+    "bbox_x1": "-72.4495110000",
+    "bbox_x0": "-72.5127610000",
+    "region": 371,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 371
+},
+{
+  "fields": {
+    "bbox_y0": "19.7666950000",
+    "bbox_y1": "19.8341600000",
+    "bbox_x1": "-72.4037200000",
+    "bbox_x0": "-72.4927340000",
+    "region": 372,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 372
+},
+{
+  "fields": {
+    "bbox_y0": "19.6632040000",
+    "bbox_y1": "19.7378780000",
+    "bbox_x1": "-72.4288110000",
+    "bbox_x0": "-72.4868640000",
+    "region": 373,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 373
+},
+{
+  "fields": {
+    "bbox_y0": "19.6659950000",
+    "bbox_y1": "19.7257930000",
+    "bbox_x1": "-72.3412000000",
+    "bbox_x0": "-72.3985190000",
+    "region": 374,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 374
+},
+{
+  "fields": {
+    "bbox_y0": "19.6565010000",
+    "bbox_y1": "19.6993500000",
+    "bbox_x1": "-72.3888290000",
+    "bbox_x0": "-72.4613950000",
+    "region": 375,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 375
+},
+{
+  "fields": {
+    "bbox_y0": "19.6152950000",
+    "bbox_y1": "19.6647650000",
+    "bbox_x1": "-72.3905460000",
+    "bbox_x0": "-72.4613950000",
+    "region": 376,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 376
+},
+{
+  "fields": {
+    "bbox_y0": "19.6385070000",
+    "bbox_y1": "19.6828970000",
+    "bbox_x1": "-72.3587900000",
+    "bbox_x0": "-72.4211870000",
+    "region": 377,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 377
+},
+{
+  "fields": {
+    "bbox_y0": "19.6849750000",
+    "bbox_y1": "19.7232920000",
+    "bbox_x1": "-72.3916520000",
+    "bbox_x0": "-72.4463970000",
+    "region": 378,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 378
+},
+{
+  "fields": {
+    "bbox_y0": "19.5652910000",
+    "bbox_y1": "19.6282180000",
+    "bbox_x1": "-72.3952210000",
+    "bbox_x0": "-72.4519220000",
+    "region": 379,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 379
+},
+{
+  "fields": {
+    "bbox_y0": "19.7070340000",
+    "bbox_y1": "19.7418290000",
+    "bbox_x1": "-72.3699780000",
+    "bbox_x0": "-72.4301360000",
+    "region": 380,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 380
+},
+{
+  "fields": {
+    "bbox_y0": "19.7326960000",
+    "bbox_y1": "19.8172620000",
+    "bbox_x1": "-72.3540060000",
+    "bbox_x0": "-72.4242780000",
+    "region": 381,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 381
+},
+{
+  "fields": {
+    "bbox_y0": "19.6093550000",
+    "bbox_y1": "19.6631300000",
+    "bbox_x1": "-72.4851040000",
+    "bbox_x0": "-72.5250380000",
+    "region": 382,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 382
+},
+{
+  "fields": {
+    "bbox_y0": "19.6029110000",
+    "bbox_y1": "19.6771280000",
+    "bbox_x1": "-72.4481640000",
+    "bbox_x0": "-72.4787740000",
+    "region": 383,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 383
+},
+{
+  "fields": {
+    "bbox_y0": "19.6158500000",
+    "bbox_y1": "19.6621870000",
+    "bbox_x1": "-72.4668230000",
+    "bbox_x0": "-72.4962580000",
+    "region": 384,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 384
+},
+{
+  "fields": {
+    "bbox_y0": "19.5780410000",
+    "bbox_y1": "19.6219580000",
+    "bbox_x1": "-72.4805190000",
+    "bbox_x0": "-72.5459930000",
+    "region": 385,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 385
+},
+{
+  "fields": {
+    "bbox_y0": "19.5546360000",
+    "bbox_y1": "19.6069410000",
+    "bbox_x1": "-72.4230530000",
+    "bbox_x0": "-72.4723410000",
+    "region": 386,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 386
+},
+{
+  "fields": {
+    "bbox_y0": "19.5253050000",
+    "bbox_y1": "19.5786350000",
+    "bbox_x1": "-72.4150740000",
+    "bbox_x0": "-72.4714880000",
+    "region": 387,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 387
+},
+{
+  "fields": {
+    "bbox_y0": "19.5213950000",
+    "bbox_y1": "19.5933350000",
+    "bbox_x1": "-72.4393220000",
+    "bbox_x0": "-72.5230680000",
+    "region": 388,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 388
+},
+{
+  "fields": {
+    "bbox_y0": "19.5872670000",
+    "bbox_y1": "19.6286870000",
+    "bbox_x1": "-72.4606460000",
+    "bbox_x0": "-72.5118400000",
+    "region": 389,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 389
+},
+{
+  "fields": {
+    "bbox_y0": "19.6291720000",
+    "bbox_y1": "19.7012150000",
+    "bbox_x1": "-72.5290340000",
+    "bbox_x0": "-72.5761470000",
+    "region": 390,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 390
+},
+{
+  "fields": {
+    "bbox_y0": "19.6035610000",
+    "bbox_y1": "19.6645160000",
+    "bbox_x1": "-72.5154810000",
+    "bbox_x0": "-72.5666200000",
+    "region": 391,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 391
+},
+{
+  "fields": {
+    "bbox_y0": "19.6713930000",
+    "bbox_y1": "19.7145010000",
+    "bbox_x1": "-72.5614230000",
+    "bbox_x0": "-72.6158180000",
+    "region": 392,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 392
+},
+{
+  "fields": {
+    "bbox_y0": "19.6853720000",
+    "bbox_y1": "19.7368480000",
+    "bbox_x1": "-72.5497390000",
+    "bbox_x0": "-72.5787190000",
+    "region": 393,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 393
+},
+{
+  "fields": {
+    "bbox_y0": "19.6829390000",
+    "bbox_y1": "19.7438080000",
+    "bbox_x1": "-72.5068220000",
+    "bbox_x0": "-72.5413330000",
+    "region": 394,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 394
+},
+{
+  "fields": {
+    "bbox_y0": "19.6875780000",
+    "bbox_y1": "19.7343860000",
+    "bbox_x1": "-72.5344590000",
+    "bbox_x0": "-72.5596920000",
+    "region": 395,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 395
+},
+{
+  "fields": {
+    "bbox_y0": "19.7071540000",
+    "bbox_y1": "19.7723030000",
+    "bbox_x1": "-72.5620190000",
+    "bbox_x0": "-72.6485760000",
+    "region": 396,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 396
+},
+{
+  "fields": {
+    "bbox_y0": "19.6531090000",
+    "bbox_y1": "19.7037700000",
+    "bbox_x1": "-72.4714560000",
+    "bbox_x0": "-72.5353140000",
+    "region": 397,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 397
+},
+{
+  "fields": {
+    "bbox_y0": "19.5420400000",
+    "bbox_y1": "19.7144670000",
+    "bbox_x1": "-71.7839080000",
+    "bbox_x0": "-71.8721150000",
+    "region": 398,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 398
+},
+{
+  "fields": {
+    "bbox_y0": "19.5533470000",
+    "bbox_y1": "19.6720020000",
+    "bbox_x1": "-71.8336070000",
+    "bbox_x0": "-71.9065660000",
+    "region": 399,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 399
+},
+{
+  "fields": {
+    "bbox_y0": "19.4241270000",
+    "bbox_y1": "19.5574870000",
+    "bbox_x1": "-71.8207160000",
+    "bbox_x0": "-71.8956680000",
+    "region": 400,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 400
+},
+{
+  "fields": {
+    "bbox_y0": "19.4586770000",
+    "bbox_y1": "19.5006180000",
+    "bbox_x1": "-71.8816370000",
+    "bbox_x0": "-71.9378680000",
+    "region": 401,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 401
+},
+{
+  "fields": {
+    "bbox_y0": "19.5814870000",
+    "bbox_y1": "19.7089280000",
+    "bbox_x1": "-71.7324590000",
+    "bbox_x0": "-71.8061840000",
+    "region": 402,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 402
+},
+{
+  "fields": {
+    "bbox_y0": "19.4796310000",
+    "bbox_y1": "19.5215460000",
+    "bbox_x1": "-71.8941010000",
+    "bbox_x0": "-71.9675100000",
+    "region": 403,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 403
+},
+{
+  "fields": {
+    "bbox_y0": "19.5045400000",
+    "bbox_y1": "19.5507780000",
+    "bbox_x1": "-71.8909380000",
+    "bbox_x0": "-71.9775340000",
+    "region": 404,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 404
+},
+{
+  "fields": {
+    "bbox_y0": "19.5214150000",
+    "bbox_y1": "19.5927870000",
+    "bbox_x1": "-71.7119560000",
+    "bbox_x0": "-71.8246090000",
+    "region": 405,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 405
+},
+{
+  "fields": {
+    "bbox_y0": "19.4384350000",
+    "bbox_y1": "19.5405530000",
+    "bbox_x1": "-71.7796040000",
+    "bbox_x0": "-71.8470360000",
+    "region": 406,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 406
+},
+{
+  "fields": {
+    "bbox_y0": "19.4401100000",
+    "bbox_y1": "19.5377100000",
+    "bbox_x1": "-71.7042830000",
+    "bbox_x0": "-71.7807150000",
+    "region": 407,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 407
+},
+{
+  "fields": {
+    "bbox_y0": "19.4500960000",
+    "bbox_y1": "19.5350670000",
+    "bbox_x1": "-71.7523490000",
+    "bbox_x0": "-71.8052890000",
+    "region": 408,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 408
+},
+{
+  "fields": {
+    "bbox_y0": "19.4027570000",
+    "bbox_y1": "19.4605140000",
+    "bbox_x1": "-71.7361360000",
+    "bbox_x0": "-71.8080450000",
+    "region": 409,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 409
+},
+{
+  "fields": {
+    "bbox_y0": "19.4015100000",
+    "bbox_y1": "19.5420440000",
+    "bbox_x1": "-71.6784840000",
+    "bbox_x0": "-71.7206310000",
+    "region": 410,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 410
+},
+{
+  "fields": {
+    "bbox_y0": "19.3823980000",
+    "bbox_y1": "19.4667140000",
+    "bbox_x1": "-71.6946030000",
+    "bbox_x0": "-71.7528420000",
+    "region": 411,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 411
+},
+{
+  "fields": {
+    "bbox_y0": "19.3317990000",
+    "bbox_y1": "19.4188290000",
+    "bbox_x1": "-71.6910310000",
+    "bbox_x0": "-71.8192110000",
+    "region": 412,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 412
+},
+{
+  "fields": {
+    "bbox_y0": "19.3683100000",
+    "bbox_y1": "19.4427550000",
+    "bbox_x1": "-71.7801420000",
+    "bbox_x0": "-71.8597180000",
+    "region": 413,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 413
+},
+{
+  "fields": {
+    "bbox_y0": "19.5987250000",
+    "bbox_y1": "19.6511100000",
+    "bbox_x1": "-71.9833940000",
+    "bbox_x0": "-72.0243850000",
+    "region": 414,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 414
+},
+{
+  "fields": {
+    "bbox_y0": "19.5082840000",
+    "bbox_y1": "19.6129110000",
+    "bbox_x1": "-71.9353510000",
+    "bbox_x0": "-72.0264570000",
+    "region": 415,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 415
+},
+{
+  "fields": {
+    "bbox_y0": "19.5348050000",
+    "bbox_y1": "19.6556570000",
+    "bbox_x1": "-71.9978910000",
+    "bbox_x0": "-72.0938820000",
+    "region": 416,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 416
+},
+{
+  "fields": {
+    "bbox_y0": "19.5798110000",
+    "bbox_y1": "19.6350820000",
+    "bbox_x1": "-72.0685270000",
+    "bbox_x0": "-72.1221410000",
+    "region": 417,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 417
+},
+{
+  "fields": {
+    "bbox_y0": "19.5394850000",
+    "bbox_y1": "19.5854790000",
+    "bbox_x1": "-72.0746990000",
+    "bbox_x0": "-72.1200250000",
+    "region": 418,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 418
+},
+{
+  "fields": {
+    "bbox_y0": "19.5134310000",
+    "bbox_y1": "19.5661540000",
+    "bbox_x1": "-72.0326510000",
+    "bbox_x0": "-72.1036390000",
+    "region": 419,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 419
+},
+{
+  "fields": {
+    "bbox_y0": "19.5529850000",
+    "bbox_y1": "19.5937050000",
+    "bbox_x1": "-72.0480440000",
+    "bbox_x0": "-72.0895400000",
+    "region": 420,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 420
+},
+{
+  "fields": {
+    "bbox_y0": "19.4776820000",
+    "bbox_y1": "19.5387070000",
+    "bbox_x1": "-72.0097230000",
+    "bbox_x0": "-72.0950000000",
+    "region": 421,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 421
+},
+{
+  "fields": {
+    "bbox_y0": "19.4295940000",
+    "bbox_y1": "19.4970790000",
+    "bbox_x1": "-72.0025950000",
+    "bbox_x0": "-72.0919440000",
+    "region": 422,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 422
+},
+{
+  "fields": {
+    "bbox_y0": "19.6006270000",
+    "bbox_y1": "19.7265850000",
+    "bbox_x1": "-71.8456970000",
+    "bbox_x0": "-71.9915450000",
+    "region": 423,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 423
+},
+{
+  "fields": {
+    "bbox_y0": "19.5283780000",
+    "bbox_y1": "19.6091780000",
+    "bbox_x1": "-71.8826740000",
+    "bbox_x0": "-71.9811470000",
+    "region": 424,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 424
+},
+{
+  "fields": {
+    "bbox_y0": "19.6393080000",
+    "bbox_y1": "19.7010060000",
+    "bbox_x1": "-72.0057650000",
+    "bbox_x0": "-72.0664970000",
+    "region": 425,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 425
+},
+{
+  "fields": {
+    "bbox_y0": "19.6361890000",
+    "bbox_y1": "19.7348370000",
+    "bbox_x1": "-71.9204890000",
+    "bbox_x0": "-72.0127330000",
+    "region": 426,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 426
+},
+{
+  "fields": {
+    "bbox_y0": "19.3565750000",
+    "bbox_y1": "19.4985320000",
+    "bbox_x1": "-71.8668310000",
+    "bbox_x0": "-71.9713960000",
+    "region": 427,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 427
+},
+{
+  "fields": {
+    "bbox_y0": "19.4407180000",
+    "bbox_y1": "19.5258440000",
+    "bbox_x1": "-71.9525510000",
+    "bbox_x0": "-72.0252250000",
+    "region": 428,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 428
+},
+{
+  "fields": {
+    "bbox_y0": "19.4040310000",
+    "bbox_y1": "19.4493050000",
+    "bbox_x1": "-71.9540580000",
+    "bbox_x0": "-72.0376250000",
+    "region": 429,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 429
+},
+{
+  "fields": {
+    "bbox_y0": "19.3551050000",
+    "bbox_y1": "19.4363880000",
+    "bbox_x1": "-71.8265490000",
+    "bbox_x0": "-71.8850460000",
+    "region": 430,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 430
+},
+{
+  "fields": {
+    "bbox_y0": "19.2754660000",
+    "bbox_y1": "19.3797710000",
+    "bbox_x1": "-71.7530650000",
+    "bbox_x0": "-71.8368690000",
+    "region": 431,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 431
+},
+{
+  "fields": {
+    "bbox_y0": "19.3070360000",
+    "bbox_y1": "19.4178080000",
+    "bbox_x1": "-71.9051310000",
+    "bbox_x0": "-72.0228410000",
+    "region": 432,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 432
+},
+{
+  "fields": {
+    "bbox_y0": "19.2594300000",
+    "bbox_y1": "19.3945050000",
+    "bbox_x1": "-71.7653530000",
+    "bbox_x0": "-71.9285710000",
+    "region": 433,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 433
+},
+{
+  "fields": {
+    "bbox_y0": "19.3921180000",
+    "bbox_y1": "19.4951160000",
+    "bbox_x1": "-72.5889180000",
+    "bbox_x0": "-72.7033140000",
+    "region": 434,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 434
+},
+{
+  "fields": {
+    "bbox_y0": "19.4448510000",
+    "bbox_y1": "19.6111010000",
+    "bbox_x1": "-72.6311680000",
+    "bbox_x0": "-72.8050910000",
+    "region": 435,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 435
+},
+{
+  "fields": {
+    "bbox_y0": "19.3367170000",
+    "bbox_y1": "19.5287030000",
+    "bbox_x1": "-72.4522490000",
+    "bbox_x0": "-72.6291240000",
+    "region": 436,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 436
+},
+{
+  "fields": {
+    "bbox_y0": "19.4859380000",
+    "bbox_y1": "19.6276270000",
+    "bbox_x1": "-72.5806820000",
+    "bbox_x0": "-72.6578580000",
+    "region": 437,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 437
+},
+{
+  "fields": {
+    "bbox_y0": "19.5434600000",
+    "bbox_y1": "19.6495750000",
+    "bbox_x1": "-72.5358780000",
+    "bbox_x0": "-72.6321130000",
+    "region": 438,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 438
+},
+{
+  "fields": {
+    "bbox_y0": "19.3972370000",
+    "bbox_y1": "19.4770660000",
+    "bbox_x1": "-72.3575260000",
+    "bbox_x0": "-72.4933600000",
+    "region": 439,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 439
+},
+{
+  "fields": {
+    "bbox_y0": "19.4389690000",
+    "bbox_y1": "19.5297100000",
+    "bbox_x1": "-72.4621070000",
+    "bbox_x0": "-72.5942550000",
+    "region": 440,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 440
+},
+{
+  "fields": {
+    "bbox_y0": "19.4992840000",
+    "bbox_y1": "19.5825710000",
+    "bbox_x1": "-72.4711130000",
+    "bbox_x0": "-72.5848600000",
+    "region": 441,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 441
+},
+{
+  "fields": {
+    "bbox_y0": "19.4602270000",
+    "bbox_y1": "19.5339760000",
+    "bbox_x1": "-72.4025210000",
+    "bbox_x0": "-72.4976300000",
+    "region": 442,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 442
+},
+{
+  "fields": {
+    "bbox_y0": "19.2991640000",
+    "bbox_y1": "19.3995210000",
+    "bbox_x1": "-72.5104120000",
+    "bbox_x0": "-72.6104150000",
+    "region": 443,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 443
+},
+{
+  "fields": {
+    "bbox_y0": "19.2987340000",
+    "bbox_y1": "19.4313820000",
+    "bbox_x1": "-72.5821940000",
+    "bbox_x0": "-72.7296690000",
+    "region": 444,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 444
+},
+{
+  "fields": {
+    "bbox_y0": "19.6336650000",
+    "bbox_y1": "19.6944360000",
+    "bbox_x1": "-72.5708450000",
+    "bbox_x0": "-72.6535160000",
+    "region": 445,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 445
+},
+{
+  "fields": {
+    "bbox_y0": "19.6640880000",
+    "bbox_y1": "19.7571930000",
+    "bbox_x1": "-72.5976800000",
+    "bbox_x0": "-72.6789500000",
+    "region": 446,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 446
+},
+{
+  "fields": {
+    "bbox_y0": "19.6682650000",
+    "bbox_y1": "19.7579440000",
+    "bbox_x1": "-72.6227930000",
+    "bbox_x0": "-72.7126170000",
+    "region": 447,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 447
+},
+{
+  "fields": {
+    "bbox_y0": "19.7141430000",
+    "bbox_y1": "19.7886910000",
+    "bbox_x1": "-72.6374010000",
+    "bbox_x0": "-72.7239990000",
+    "region": 448,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 448
+},
+{
+  "fields": {
+    "bbox_y0": "19.7490230000",
+    "bbox_y1": "19.8156730000",
+    "bbox_x1": "-72.6765760000",
+    "bbox_x0": "-72.7552290000",
+    "region": 449,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 449
+},
+{
+  "fields": {
+    "bbox_y0": "19.6691740000",
+    "bbox_y1": "19.7889380000",
+    "bbox_x1": "-72.7055540000",
+    "bbox_x0": "-72.8328260000",
+    "region": 450,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 450
+},
+{
+  "fields": {
+    "bbox_y0": "19.6156510000",
+    "bbox_y1": "19.6879410000",
+    "bbox_x1": "-72.6926300000",
+    "bbox_x0": "-72.8021200000",
+    "region": 451,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 451
+},
+{
+  "fields": {
+    "bbox_y0": "19.5966690000",
+    "bbox_y1": "19.6725340000",
+    "bbox_x1": "-72.6175990000",
+    "bbox_x0": "-72.7133350000",
+    "region": 452,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 452
+},
+{
+  "fields": {
+    "bbox_y0": "19.5133320000",
+    "bbox_y1": "19.6300290000",
+    "bbox_x1": "-72.7120890000",
+    "bbox_x0": "-72.8454390000",
+    "region": 453,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 453
+},
+{
+  "fields": {
+    "bbox_y0": "19.5931810000",
+    "bbox_y1": "19.6604550000",
+    "bbox_x1": "-72.7614490000",
+    "bbox_x0": "-72.8907470000",
+    "region": 454,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 454
+},
+{
+  "fields": {
+    "bbox_y0": "19.6374730000",
+    "bbox_y1": "19.7319580000",
+    "bbox_x1": "-72.7847780000",
+    "bbox_x0": "-72.8787400000",
+    "region": 455,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 455
+},
+{
+  "fields": {
+    "bbox_y0": "18.9423360000",
+    "bbox_y1": "19.0053400000",
+    "bbox_x1": "-72.5889260000",
+    "bbox_x0": "-72.7392700000",
+    "region": 456,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 456
+},
+{
+  "fields": {
+    "bbox_y0": "18.9921650000",
+    "bbox_y1": "19.1024940000",
+    "bbox_x1": "-72.6422550000",
+    "bbox_x0": "-72.8236780000",
+    "region": 457,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 457
+},
+{
+  "fields": {
+    "bbox_y0": "18.9890730000",
+    "bbox_y1": "19.0740990000",
+    "bbox_x1": "-72.5794790000",
+    "bbox_x0": "-72.6703140000",
+    "region": 458,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 458
+},
+{
+  "fields": {
+    "bbox_y0": "19.0412240000",
+    "bbox_y1": "19.1469720000",
+    "bbox_x1": "-72.5473530000",
+    "bbox_x0": "-72.6918500000",
+    "region": 459,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 459
+},
+{
+  "fields": {
+    "bbox_y0": "19.1142370000",
+    "bbox_y1": "19.2614170000",
+    "bbox_x1": "-72.6004850000",
+    "bbox_x0": "-72.7996020000",
+    "region": 460,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 460
+},
+{
+  "fields": {
+    "bbox_y0": "19.0378460000",
+    "bbox_y1": "19.1165890000",
+    "bbox_x1": "-72.6388160000",
+    "bbox_x0": "-72.7058130000",
+    "region": 461,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 461
+},
+{
+  "fields": {
+    "bbox_y0": "19.1014350000",
+    "bbox_y1": "19.1586290000",
+    "bbox_x1": "-72.5122030000",
+    "bbox_x0": "-72.6085900000",
+    "region": 462,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 462
+},
+{
+  "fields": {
+    "bbox_y0": "19.0475460000",
+    "bbox_y1": "19.1357170000",
+    "bbox_x1": "-72.4482170000",
+    "bbox_x0": "-72.5581090000",
+    "region": 463,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 463
+},
+{
+  "fields": {
+    "bbox_y0": "18.9756650000",
+    "bbox_y1": "19.0645100000",
+    "bbox_x1": "-72.3539930000",
+    "bbox_x0": "-72.4619500000",
+    "region": 464,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 464
+},
+{
+  "fields": {
+    "bbox_y0": "18.9148170000",
+    "bbox_y1": "19.0536520000",
+    "bbox_x1": "-72.3778560000",
+    "bbox_x0": "-72.5002810000",
+    "region": 465,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 465
+},
+{
+  "fields": {
+    "bbox_y0": "18.9748840000",
+    "bbox_y1": "19.0671150000",
+    "bbox_x1": "-72.4619500000",
+    "bbox_x0": "-72.5866590000",
+    "region": 466,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 466
+},
+{
+  "fields": {
+    "bbox_y0": "18.9554430000",
+    "bbox_y1": "19.0118120000",
+    "bbox_x1": "-72.4984950000",
+    "bbox_x0": "-72.5941240000",
+    "region": 467,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 467
+},
+{
+  "fields": {
+    "bbox_y0": "18.8572480000",
+    "bbox_y1": "18.9378340000",
+    "bbox_x1": "-72.2408570000",
+    "bbox_x0": "-72.3815410000",
+    "region": 468,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 468
+},
+{
+  "fields": {
+    "bbox_y0": "18.8793090000",
+    "bbox_y1": "18.9846820000",
+    "bbox_x1": "-72.3164510000",
+    "bbox_x0": "-72.4280910000",
+    "region": 469,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 469
+},
+{
+  "fields": {
+    "bbox_y0": "19.1492890000",
+    "bbox_y1": "19.2363060000",
+    "bbox_x1": "-72.5489720000",
+    "bbox_x0": "-72.6290810000",
+    "region": 470,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 470
+},
+{
+  "fields": {
+    "bbox_y0": "19.2045860000",
+    "bbox_y1": "19.3114900000",
+    "bbox_x1": "-72.5470020000",
+    "bbox_x0": "-72.6356850000",
+    "region": 471,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 471
+},
+{
+  "fields": {
+    "bbox_y0": "19.1759080000",
+    "bbox_y1": "19.3376110000",
+    "bbox_x1": "-72.4528120000",
+    "bbox_x0": "-72.5827410000",
+    "region": 472,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 472
+},
+{
+  "fields": {
+    "bbox_y0": "19.1098930000",
+    "bbox_y1": "19.1837160000",
+    "bbox_x1": "-72.3001710000",
+    "bbox_x0": "-72.3968000000",
+    "region": 473,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 473
+},
+{
+  "fields": {
+    "bbox_y0": "19.1512420000",
+    "bbox_y1": "19.2496140000",
+    "bbox_x1": "-72.2570710000",
+    "bbox_x0": "-72.4370660000",
+    "region": 474,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 474
+},
+{
+  "fields": {
+    "bbox_y0": "19.1301610000",
+    "bbox_y1": "19.2883970000",
+    "bbox_x1": "-72.3890070000",
+    "bbox_x0": "-72.5154020000",
+    "region": 475,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 475
+},
+{
+  "fields": {
+    "bbox_y0": "19.1392720000",
+    "bbox_y1": "19.2248950000",
+    "bbox_x1": "-72.4935480000",
+    "bbox_x0": "-72.6001800000",
+    "region": 476,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 476
+},
+{
+  "fields": {
+    "bbox_y0": "19.1195150000",
+    "bbox_y1": "19.1770740000",
+    "bbox_x1": "-72.4426150000",
+    "bbox_x0": "-72.5198650000",
+    "region": 477,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 477
+},
+{
+  "fields": {
+    "bbox_y0": "19.0301600000",
+    "bbox_y1": "19.1409670000",
+    "bbox_x1": "-72.3835360000",
+    "bbox_x0": "-72.4920270000",
+    "region": 478,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 478
+},
+{
+  "fields": {
+    "bbox_y0": "18.9143350000",
+    "bbox_y1": "19.0720180000",
+    "bbox_x1": "-72.2249620000",
+    "bbox_x0": "-72.3920350000",
+    "region": 479,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 479
+},
+{
+  "fields": {
+    "bbox_y0": "19.0619750000",
+    "bbox_y1": "19.1702780000",
+    "bbox_x1": "-72.2195980000",
+    "bbox_x0": "-72.4426150000",
+    "region": 480,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 480
+},
+{
+  "fields": {
+    "bbox_y0": "19.0104770000",
+    "bbox_y1": "19.1030450000",
+    "bbox_x1": "-72.2217600000",
+    "bbox_x0": "-72.4076170000",
+    "region": 481,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 481
+},
+{
+  "fields": {
+    "bbox_y0": "19.2203760000",
+    "bbox_y1": "19.2939700000",
+    "bbox_x1": "-72.6240030000",
+    "bbox_x0": "-72.7795180000",
+    "region": 482,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 482
+},
+{
+  "fields": {
+    "bbox_y0": "19.2514320000",
+    "bbox_y1": "19.3759840000",
+    "bbox_x1": "-72.6012250000",
+    "bbox_x0": "-72.7736340000",
+    "region": 483,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 483
+},
+{
+  "fields": {
+    "bbox_y0": "19.2982860000",
+    "bbox_y1": "19.4164380000",
+    "bbox_x1": "-72.3316390000",
+    "bbox_x0": "-72.4647720000",
+    "region": 484,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 484
+},
+{
+  "fields": {
+    "bbox_y0": "19.3786430000",
+    "bbox_y1": "19.4898160000",
+    "bbox_x1": "-72.3207090000",
+    "bbox_x0": "-72.4135460000",
+    "region": 485,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 485
+},
+{
+  "fields": {
+    "bbox_y0": "19.3703180000",
+    "bbox_y1": "19.4660340000",
+    "bbox_x1": "-72.2970190000",
+    "bbox_x0": "-72.3645530000",
+    "region": 486,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 486
+},
+{
+  "fields": {
+    "bbox_y0": "19.3836010000",
+    "bbox_y1": "19.4771690000",
+    "bbox_x1": "-72.2229210000",
+    "bbox_x0": "-72.3160090000",
+    "region": 487,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 487
+},
+{
+  "fields": {
+    "bbox_y0": "19.2053610000",
+    "bbox_y1": "19.2761010000",
+    "bbox_x1": "-72.2390970000",
+    "bbox_x0": "-72.3375640000",
+    "region": 488,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 488
+},
+{
+  "fields": {
+    "bbox_y0": "19.2219130000",
+    "bbox_y1": "19.3406180000",
+    "bbox_x1": "-72.2742800000",
+    "bbox_x0": "-72.4008780000",
+    "region": 489,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 489
+},
+{
+  "fields": {
+    "bbox_y0": "19.2439600000",
+    "bbox_y1": "19.3905570000",
+    "bbox_x1": "-72.3825030000",
+    "bbox_x0": "-72.4977910000",
+    "region": 490,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 490
+},
+{
+  "fields": {
+    "bbox_y0": "19.2612090000",
+    "bbox_y1": "19.3998890000",
+    "bbox_x1": "-72.2007140000",
+    "bbox_x0": "-72.3408100000",
+    "region": 491,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 491
+},
+{
+  "fields": {
+    "bbox_y0": "19.4631680000",
+    "bbox_y1": "19.5738230000",
+    "bbox_x1": "-72.3186840000",
+    "bbox_x0": "-72.3847720000",
+    "region": 492,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 492
+},
+{
+  "fields": {
+    "bbox_y0": "19.5134830000",
+    "bbox_y1": "19.5919240000",
+    "bbox_x1": "-72.3577630000",
+    "bbox_x0": "-72.4248820000",
+    "region": 493,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 493
+},
+{
+  "fields": {
+    "bbox_y0": "19.4616430000",
+    "bbox_y1": "19.5368640000",
+    "bbox_x1": "-72.3600430000",
+    "bbox_x0": "-72.4472040000",
+    "region": 494,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 494
+},
+{
+  "fields": {
+    "bbox_y0": "19.0159940000",
+    "bbox_y1": "19.1743970000",
+    "bbox_x1": "-71.9917420000",
+    "bbox_x0": "-72.1905350000",
+    "region": 495,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 495
+},
+{
+  "fields": {
+    "bbox_y0": "19.0170710000",
+    "bbox_y1": "19.1335260000",
+    "bbox_x1": "-71.8981590000",
+    "bbox_x0": "-72.0494910000",
+    "region": 496,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 496
+},
+{
+  "fields": {
+    "bbox_y0": "19.0947800000",
+    "bbox_y1": "19.2255930000",
+    "bbox_x1": "-71.8546110000",
+    "bbox_x0": "-72.0054770000",
+    "region": 497,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 497
+},
+{
+  "fields": {
+    "bbox_y0": "19.1470170000",
+    "bbox_y1": "19.3074050000",
+    "bbox_x1": "-71.9726990000",
+    "bbox_x0": "-72.1349850000",
+    "region": 498,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 498
+},
+{
+  "fields": {
+    "bbox_y0": "19.1149130000",
+    "bbox_y1": "19.2357220000",
+    "bbox_x1": "-72.1154850000",
+    "bbox_x0": "-72.2657600000",
+    "region": 499,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 499
+},
+{
+  "fields": {
+    "bbox_y0": "19.0776910000",
+    "bbox_y1": "19.1863540000",
+    "bbox_x1": "-72.0858310000",
+    "bbox_x0": "-72.2406360000",
+    "region": 500,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 500
+},
+{
+  "fields": {
+    "bbox_y0": "19.1748640000",
+    "bbox_y1": "19.3005500000",
+    "bbox_x1": "-72.0819630000",
+    "bbox_x0": "-72.2423260000",
+    "region": 501,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 501
+},
+{
+  "fields": {
+    "bbox_y0": "18.9760570000",
+    "bbox_y1": "19.0652880000",
+    "bbox_x1": "-72.0041700000",
+    "bbox_x0": "-72.1231740000",
+    "region": 502,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 502
+},
+{
+  "fields": {
+    "bbox_y0": "18.9408030000",
+    "bbox_y1": "19.0394950000",
+    "bbox_x1": "-71.8564150000",
+    "bbox_x0": "-71.9744480000",
+    "region": 503,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 503
+},
+{
+  "fields": {
+    "bbox_y0": "18.9322390000",
+    "bbox_y1": "19.0617080000",
+    "bbox_x1": "-71.9264010000",
+    "bbox_x0": "-72.0893670000",
+    "region": 504,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 504
+},
+{
+  "fields": {
+    "bbox_y0": "19.1854730000",
+    "bbox_y1": "19.3346710000",
+    "bbox_x1": "-71.8539160000",
+    "bbox_x0": "-72.0309640000",
+    "region": 505,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 505
+},
+{
+  "fields": {
+    "bbox_y0": "18.7187820000",
+    "bbox_y1": "18.8175780000",
+    "bbox_x1": "-71.9710990000",
+    "bbox_x0": "-72.0912060000",
+    "region": 506,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 506
+},
+{
+  "fields": {
+    "bbox_y0": "18.7528720000",
+    "bbox_y1": "18.9068330000",
+    "bbox_x1": "-71.9382690000",
+    "bbox_x0": "-72.1029960000",
+    "region": 507,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 507
+},
+{
+  "fields": {
+    "bbox_y0": "18.6953310000",
+    "bbox_y1": "18.8618740000",
+    "bbox_x1": "-72.1046170000",
+    "bbox_x0": "-72.2011650000",
+    "region": 508,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 508
+},
+{
+  "fields": {
+    "bbox_y0": "18.6946850000",
+    "bbox_y1": "18.8389700000",
+    "bbox_x1": "-72.0697050000",
+    "bbox_x0": "-72.1493830000",
+    "region": 509,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 509
+},
+{
+  "fields": {
+    "bbox_y0": "18.7515160000",
+    "bbox_y1": "18.8363230000",
+    "bbox_x1": "-72.1553730000",
+    "bbox_x0": "-72.2343250000",
+    "region": 510,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 510
+},
+{
+  "fields": {
+    "bbox_y0": "18.8176330000",
+    "bbox_y1": "18.9054510000",
+    "bbox_x1": "-72.1550610000",
+    "bbox_x0": "-72.2568250000",
+    "region": 511,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 511
+},
+{
+  "fields": {
+    "bbox_y0": "18.7773750000",
+    "bbox_y1": "18.8572480000",
+    "bbox_x1": "-72.2290720000",
+    "bbox_x0": "-72.2973250000",
+    "region": 512,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 512
+},
+{
+  "fields": {
+    "bbox_y0": "18.8116640000",
+    "bbox_y1": "18.8702280000",
+    "bbox_x1": "-72.2568250000",
+    "bbox_x0": "-72.3646850000",
+    "region": 513,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 513
+},
+{
+  "fields": {
+    "bbox_y0": "18.9622080000",
+    "bbox_y1": "19.0834360000",
+    "bbox_x1": "-72.1370370000",
+    "bbox_x0": "-72.2485540000",
+    "region": 514,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 514
+},
+{
+  "fields": {
+    "bbox_y0": "18.8447770000",
+    "bbox_y1": "18.9907150000",
+    "bbox_x1": "-72.1345270000",
+    "bbox_x0": "-72.2498740000",
+    "region": 515,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 515
+},
+{
+  "fields": {
+    "bbox_y0": "18.8380930000",
+    "bbox_y1": "19.0278140000",
+    "bbox_x1": "-71.9967750000",
+    "bbox_x0": "-72.1572750000",
+    "region": 516,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 516
+},
+{
+  "fields": {
+    "bbox_y0": "18.8510730000",
+    "bbox_y1": "18.9686570000",
+    "bbox_x1": "-71.8830890000",
+    "bbox_x0": "-72.0400880000",
+    "region": 517,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 517
+},
+{
+  "fields": {
+    "bbox_y0": "18.8127460000",
+    "bbox_y1": "18.9060960000",
+    "bbox_x1": "-71.9361320000",
+    "bbox_x0": "-72.0654280000",
+    "region": 518,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 518
+},
+{
+  "fields": {
+    "bbox_y0": "18.7661310000",
+    "bbox_y1": "18.8612310000",
+    "bbox_x1": "-71.8571910000",
+    "bbox_x0": "-71.9765150000",
+    "region": 519,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 519
+},
+{
+  "fields": {
+    "bbox_y0": "18.7636170000",
+    "bbox_y1": "18.9276840000",
+    "bbox_x1": "-71.7208340000",
+    "bbox_x0": "-71.8282840000",
+    "region": 520,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 520
+},
+{
+  "fields": {
+    "bbox_y0": "18.8412480000",
+    "bbox_y1": "18.9703910000",
+    "bbox_x1": "-71.7743190000",
+    "bbox_x0": "-71.9155020000",
+    "region": 521,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 521
+},
+{
+  "fields": {
+    "bbox_y0": "18.7800170000",
+    "bbox_y1": "18.8741760000",
+    "bbox_x1": "-71.7843560000",
+    "bbox_x0": "-71.8963730000",
+    "region": 522,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 522
+},
+{
+  "fields": {
+    "bbox_y0": "18.7180850000",
+    "bbox_y1": "18.7838010000",
+    "bbox_x1": "-71.8671510000",
+    "bbox_x0": "-71.9969170000",
+    "region": 523,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 523
+},
+{
+  "fields": {
+    "bbox_y0": "18.6853860000",
+    "bbox_y1": "18.7968670000",
+    "bbox_x1": "-71.7287820000",
+    "bbox_x0": "-71.8732550000",
+    "region": 524,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 524
+},
+{
+  "fields": {
+    "bbox_y0": "19.0536990000",
+    "bbox_y1": "19.2124890000",
+    "bbox_x1": "-71.6404530000",
+    "bbox_x0": "-71.8118410000",
+    "region": 525,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 525
+},
+{
+  "fields": {
+    "bbox_y0": "19.1467990000",
+    "bbox_y1": "19.2759080000",
+    "bbox_x1": "-71.7454280000",
+    "bbox_x0": "-71.8865030000",
+    "region": 526,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 526
+},
+{
+  "fields": {
+    "bbox_y0": "19.1664040000",
+    "bbox_y1": "19.2796800000",
+    "bbox_x1": "-71.6221510000",
+    "bbox_x0": "-71.7672410000",
+    "region": 527,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 527
+},
+{
+  "fields": {
+    "bbox_y0": "18.9818070000",
+    "bbox_y1": "19.1902330000",
+    "bbox_x1": "-71.7855140000",
+    "bbox_x0": "-71.9197370000",
+    "region": 528,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 528
+},
+{
+  "fields": {
+    "bbox_y0": "18.9765670000",
+    "bbox_y1": "19.1292980000",
+    "bbox_x1": "-71.7233570000",
+    "bbox_x0": "-71.8628900000",
+    "region": 529,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 529
+},
+{
+  "fields": {
+    "bbox_y0": "18.1696330000",
+    "bbox_y1": "18.2644850000",
+    "bbox_x1": "-73.7156370000",
+    "bbox_x0": "-73.8094670000",
+    "region": 530,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 530
+},
+{
+  "fields": {
+    "bbox_y0": "18.2102290000",
+    "bbox_y1": "18.3028550000",
+    "bbox_x1": "-73.7726520000",
+    "bbox_x0": "-73.8757670000",
+    "region": 531,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 531
+},
+{
+  "fields": {
+    "bbox_y0": "18.2662820000",
+    "bbox_y1": "18.3507110000",
+    "bbox_x1": "-73.7708560000",
+    "bbox_x0": "-73.8328150000",
+    "region": 532,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 532
+},
+{
+  "fields": {
+    "bbox_y0": "18.2137620000",
+    "bbox_y1": "18.3089320000",
+    "bbox_x1": "-73.7139960000",
+    "bbox_x0": "-73.7644710000",
+    "region": 533,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 533
+},
+{
+  "fields": {
+    "bbox_y0": "18.2390600000",
+    "bbox_y1": "18.3317750000",
+    "bbox_x1": "-73.7227220000",
+    "bbox_x0": "-73.7808590000",
+    "region": 534,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 534
+},
+{
+  "fields": {
+    "bbox_y0": "18.2101280000",
+    "bbox_y1": "18.3200940000",
+    "bbox_x1": "-73.6806620000",
+    "bbox_x0": "-73.7265940000",
+    "region": 535,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 535
+},
+{
+  "fields": {
+    "bbox_y0": "18.1156040000",
+    "bbox_y1": "18.2102290000",
+    "bbox_x1": "-73.7889160000",
+    "bbox_x0": "-73.8779630000",
+    "region": 536,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 536
+},
+{
+  "fields": {
+    "bbox_y0": "18.1575400000",
+    "bbox_y1": "18.2554280000",
+    "bbox_x1": "-73.8094670000",
+    "bbox_x0": "-73.9014660000",
+    "region": 537,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 537
+},
+{
+  "fields": {
+    "bbox_y0": "18.2265890000",
+    "bbox_y1": "18.3131470000",
+    "bbox_x1": "-73.8472010000",
+    "bbox_x0": "-73.9547470000",
+    "region": 538,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 538
+},
+{
+  "fields": {
+    "bbox_y0": "18.2804510000",
+    "bbox_y1": "18.3705240000",
+    "bbox_x1": "-73.8659090000",
+    "bbox_x0": "-73.9883500000",
+    "region": 539,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 539
+},
+{
+  "fields": {
+    "bbox_y0": "18.2002390000",
+    "bbox_y1": "18.2597410000",
+    "bbox_x1": "-73.8750080000",
+    "bbox_x0": "-73.9526420000",
+    "region": 540,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 540
+},
+{
+  "fields": {
+    "bbox_y0": "18.1740350000",
+    "bbox_y1": "18.2490550000",
+    "bbox_x1": "-73.8768770000",
+    "bbox_x0": "-73.9713400000",
+    "region": 541,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 541
+},
+{
+  "fields": {
+    "bbox_y0": "18.2370300000",
+    "bbox_y1": "18.3874840000",
+    "bbox_x1": "-73.9398120000",
+    "bbox_x0": "-74.0485960000",
+    "region": 542,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 542
+},
+{
+  "fields": {
+    "bbox_y0": "18.2654940000",
+    "bbox_y1": "18.3321230000",
+    "bbox_x1": "-73.8115580000",
+    "bbox_x0": "-73.8689270000",
+    "region": 543,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 543
+},
+{
+  "fields": {
+    "bbox_y0": "18.3255220000",
+    "bbox_y1": "18.4131260000",
+    "bbox_x1": "-73.8029420000",
+    "bbox_x0": "-73.9066790000",
+    "region": 544,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 544
+},
+{
+  "fields": {
+    "bbox_y0": "18.3028290000",
+    "bbox_y1": "18.3665100000",
+    "bbox_x1": "-73.8671220000",
+    "bbox_x0": "-73.9299000000",
+    "region": 545,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 545
+},
+{
+  "fields": {
+    "bbox_y0": "18.3138350000",
+    "bbox_y1": "18.3514210000",
+    "bbox_x1": "-73.6884650000",
+    "bbox_x0": "-73.7937000000",
+    "region": 546,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 546
+},
+{
+  "fields": {
+    "bbox_y0": "18.3451200000",
+    "bbox_y1": "18.4211110000",
+    "bbox_x1": "-73.6864770000",
+    "bbox_x0": "-73.7570540000",
+    "region": 547,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 547
+},
+{
+  "fields": {
+    "bbox_y0": "18.3467980000",
+    "bbox_y1": "18.4240700000",
+    "bbox_x1": "-73.7371520000",
+    "bbox_x0": "-73.8212970000",
+    "region": 548,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 548
+},
+{
+  "fields": {
+    "bbox_y0": "18.0561320000",
+    "bbox_y1": "18.1100070000",
+    "bbox_x1": "-73.5713200000",
+    "bbox_x0": "-73.7082150000",
+    "region": 549,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 549
+},
+{
+  "fields": {
+    "bbox_y0": "18.0652470000",
+    "bbox_y1": "18.1525490000",
+    "bbox_x1": "-73.8527200000",
+    "bbox_x0": "-73.9429640000",
+    "region": 550,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 550
+},
+{
+  "fields": {
+    "bbox_y0": "18.0250280000",
+    "bbox_y1": "18.0792390000",
+    "bbox_x1": "-73.8774060000",
+    "bbox_x0": "-73.9208120000",
+    "region": 551,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 551
+},
+{
+  "fields": {
+    "bbox_y0": "18.0510970000",
+    "bbox_y1": "18.1222890000",
+    "bbox_x1": "-73.8123940000",
+    "bbox_x0": "-73.8819510000",
+    "region": 552,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 552
+},
+{
+  "fields": {
+    "bbox_y0": "18.0221400000",
+    "bbox_y1": "18.0689950000",
+    "bbox_x1": "-73.8260330000",
+    "bbox_x0": "-73.8874200000",
+    "region": 553,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 553
+},
+{
+  "fields": {
+    "bbox_y0": "18.0221990000",
+    "bbox_y1": "18.0779910000",
+    "bbox_x1": "-73.7828780000",
+    "bbox_x0": "-73.8395260000",
+    "region": 554,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 554
+},
+{
+  "fields": {
+    "bbox_y0": "18.1621670000",
+    "bbox_y1": "18.1954000000",
+    "bbox_x1": "-73.8963250000",
+    "bbox_x0": "-73.9488200000",
+    "region": 555,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 555
+},
+{
+  "fields": {
+    "bbox_y0": "18.1082540000",
+    "bbox_y1": "18.1824740000",
+    "bbox_x1": "-73.8797840000",
+    "bbox_x0": "-73.9500000000",
+    "region": 556,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 556
+},
+{
+  "fields": {
+    "bbox_y0": "18.1204290000",
+    "bbox_y1": "18.1602640000",
+    "bbox_x1": "-73.8729280000",
+    "bbox_x0": "-73.9101860000",
+    "region": 557,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 557
+},
+{
+  "fields": {
+    "bbox_y0": "18.2160140000",
+    "bbox_y1": "18.3197250000",
+    "bbox_x1": "-73.2679290000",
+    "bbox_x0": "-73.3900670000",
+    "region": 558,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 558
+},
+{
+  "fields": {
+    "bbox_y0": "18.2904700000",
+    "bbox_y1": "18.3521590000",
+    "bbox_x1": "-73.2792700000",
+    "bbox_x0": "-73.3813170000",
+    "region": 559,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 559
+},
+{
+  "fields": {
+    "bbox_y0": "18.2489010000",
+    "bbox_y1": "18.3445100000",
+    "bbox_x1": "-73.3898800000",
+    "bbox_x0": "-73.4638590000",
+    "region": 560,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 560
+},
+{
+  "fields": {
+    "bbox_y0": "18.1890580000",
+    "bbox_y1": "18.2854100000",
+    "bbox_x1": "-73.1052550000",
+    "bbox_x0": "-73.3115900000",
+    "region": 561,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 561
+},
+{
+  "fields": {
+    "bbox_y0": "18.2804280000",
+    "bbox_y1": "18.3475480000",
+    "bbox_x1": "-73.3551550000",
+    "bbox_x0": "-73.4152640000",
+    "region": 562,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 562
+},
+{
+  "fields": {
+    "bbox_y0": "18.2732140000",
+    "bbox_y1": "18.3442570000",
+    "bbox_x1": "-73.1630290000",
+    "bbox_x0": "-73.2844400000",
+    "region": 563,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 563
+},
+{
+  "fields": {
+    "bbox_y0": "18.1816090000",
+    "bbox_y1": "18.3450200000",
+    "bbox_x1": "-73.0011570000",
+    "bbox_x0": "-73.1242190000",
+    "region": 564,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 564
+},
+{
+  "fields": {
+    "bbox_y0": "18.3308590000",
+    "bbox_y1": "18.3707770000",
+    "bbox_x1": "-73.2265460000",
+    "bbox_x0": "-73.3465880000",
+    "region": 565,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 565
+},
+{
+  "fields": {
+    "bbox_y0": "18.3157530000",
+    "bbox_y1": "18.3647540000",
+    "bbox_x1": "-73.0967870000",
+    "bbox_x0": "-73.2281720000",
+    "region": 566,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 566
+},
+{
+  "fields": {
+    "bbox_y0": "18.2445760000",
+    "bbox_y1": "18.3333310000",
+    "bbox_x1": "-73.0921110000",
+    "bbox_x0": "-73.1843860000",
+    "region": 567,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 567
+},
+{
+  "fields": {
+    "bbox_y0": "18.2800890000",
+    "bbox_y1": "18.3332420000",
+    "bbox_x1": "-73.4503520000",
+    "bbox_x0": "-73.5182830000",
+    "region": 568,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 568
+},
+{
+  "fields": {
+    "bbox_y0": "18.2122700000",
+    "bbox_y1": "18.2777880000",
+    "bbox_x1": "-73.5425030000",
+    "bbox_x0": "-73.6198370000",
+    "region": 569,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 569
+},
+{
+  "fields": {
+    "bbox_y0": "18.2324300000",
+    "bbox_y1": "18.2854770000",
+    "bbox_x1": "-73.4851240000",
+    "bbox_x0": "-73.5482870000",
+    "region": 570,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 570
+},
+{
+  "fields": {
+    "bbox_y0": "18.2498240000",
+    "bbox_y1": "18.2954100000",
+    "bbox_x1": "-73.4173810000",
+    "bbox_x0": "-73.4936550000",
+    "region": 571,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 571
+},
+{
+  "fields": {
+    "bbox_y0": "18.2739150000",
+    "bbox_y1": "18.3268420000",
+    "bbox_x1": "-73.5366820000",
+    "bbox_x0": "-73.5938610000",
+    "region": 572,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 572
+},
+{
+  "fields": {
+    "bbox_y0": "18.2266840000",
+    "bbox_y1": "18.3019790000",
+    "bbox_x1": "-73.5712620000",
+    "bbox_x0": "-73.6443190000",
+    "region": 573,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 573
+},
+{
+  "fields": {
+    "bbox_y0": "18.2804960000",
+    "bbox_y1": "18.3422820000",
+    "bbox_x1": "-73.4416530000",
+    "bbox_x0": "-73.5392420000",
+    "region": 574,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 574
+},
+{
+  "fields": {
+    "bbox_y0": "18.2887270000",
+    "bbox_y1": "18.3372570000",
+    "bbox_x1": "-73.4980000000",
+    "bbox_x0": "-73.5666160000",
+    "region": 575,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 575
+},
+{
+  "fields": {
+    "bbox_y0": "18.2099400000",
+    "bbox_y1": "18.3473340000",
+    "bbox_x1": "-73.5544290000",
+    "bbox_x0": "-73.6884020000",
+    "region": 576,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 576
+},
+{
+  "fields": {
+    "bbox_y0": "18.2488510000",
+    "bbox_y1": "18.3664970000",
+    "bbox_x1": "-73.6207160000",
+    "bbox_x0": "-73.6998350000",
+    "region": 577,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 577
+},
+{
+  "fields": {
+    "bbox_y0": "18.3337280000",
+    "bbox_y1": "18.3879710000",
+    "bbox_x1": "-73.5549350000",
+    "bbox_x0": "-73.6720760000",
+    "region": 578,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 578
+},
+{
+  "fields": {
+    "bbox_y0": "18.3659590000",
+    "bbox_y1": "18.4271290000",
+    "bbox_x1": "-73.5386290000",
+    "bbox_x0": "-73.6562850000",
+    "region": 579,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 579
+},
+{
+  "fields": {
+    "bbox_y0": "18.3639840000",
+    "bbox_y1": "18.4333400000",
+    "bbox_x1": "-73.6096510000",
+    "bbox_x0": "-73.6977570000",
+    "region": 580,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 580
+},
+{
+  "fields": {
+    "bbox_y0": "18.1829160000",
+    "bbox_y1": "18.2784950000",
+    "bbox_x1": "-73.9865640000",
+    "bbox_x0": "-74.0340290000",
+    "region": 581,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 581
+},
+{
+  "fields": {
+    "bbox_y0": "18.1971580000",
+    "bbox_y1": "18.2736760000",
+    "bbox_x1": "-74.0106280000",
+    "bbox_x0": "-74.0654890000",
+    "region": 582,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 582
+},
+{
+  "fields": {
+    "bbox_y0": "18.2288820000",
+    "bbox_y1": "18.3037000000",
+    "bbox_x1": "-73.9937810000",
+    "bbox_x0": "-74.0766090000",
+    "region": 583,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 583
+},
+{
+  "fields": {
+    "bbox_y0": "18.2329390000",
+    "bbox_y1": "18.3014760000",
+    "bbox_x1": "-74.0179590000",
+    "bbox_x0": "-74.1062310000",
+    "region": 584,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 584
+},
+{
+  "fields": {
+    "bbox_y0": "18.2628700000",
+    "bbox_y1": "18.3305780000",
+    "bbox_x1": "-74.0157870000",
+    "bbox_x0": "-74.1055950000",
+    "region": 585,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 585
+},
+{
+  "fields": {
+    "bbox_y0": "18.1317930000",
+    "bbox_y1": "18.2037990000",
+    "bbox_x1": "-73.9405520000",
+    "bbox_x0": "-74.0052040000",
+    "region": 586,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 586
+},
+{
+  "fields": {
+    "bbox_y0": "18.1811860000",
+    "bbox_y1": "18.2115250000",
+    "bbox_x1": "-73.9527270000",
+    "bbox_x0": "-74.0076050000",
+    "region": 587,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 587
+},
+{
+  "fields": {
+    "bbox_y0": "18.2029310000",
+    "bbox_y1": "18.2634370000",
+    "bbox_x1": "-73.9608180000",
+    "bbox_x0": "-74.0047540000",
+    "region": 588,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 588
+},
+{
+  "fields": {
+    "bbox_y0": "18.3034790000",
+    "bbox_y1": "18.4076410000",
+    "bbox_x1": "-74.0318830000",
+    "bbox_x0": "-74.1180090000",
+    "region": 589,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 589
+},
+{
+  "fields": {
+    "bbox_y0": "18.2513270000",
+    "bbox_y1": "18.4069190000",
+    "bbox_x1": "-74.0828360000",
+    "bbox_x0": "-74.1476870000",
+    "region": 590,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 590
+},
+{
+  "fields": {
+    "bbox_y0": "18.2639330000",
+    "bbox_y1": "18.3072750000",
+    "bbox_x1": "-74.1248090000",
+    "bbox_x0": "-74.1932280000",
+    "region": 591,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 591
+},
+{
+  "fields": {
+    "bbox_y0": "18.2972390000",
+    "bbox_y1": "18.3326450000",
+    "bbox_x1": "-74.1248700000",
+    "bbox_x0": "-74.2108820000",
+    "region": 592,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 592
+},
+{
+  "fields": {
+    "bbox_y0": "18.3286530000",
+    "bbox_y1": "18.4035020000",
+    "bbox_x1": "-74.1062150000",
+    "bbox_x0": "-74.1847170000",
+    "region": 593,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 593
+},
+{
+  "fields": {
+    "bbox_y0": "18.2979150000",
+    "bbox_y1": "18.4039620000",
+    "bbox_x1": "-74.1660650000",
+    "bbox_x0": "-74.2520690000",
+    "region": 594,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 594
+},
+{
+  "fields": {
+    "bbox_y0": "18.2899320000",
+    "bbox_y1": "18.3321800000",
+    "bbox_x1": "-74.2879550000",
+    "bbox_x0": "-74.4018790000",
+    "region": 595,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 595
+},
+{
+  "fields": {
+    "bbox_y0": "18.3258650000",
+    "bbox_y1": "18.3947370000",
+    "bbox_x1": "-74.2279690000",
+    "bbox_x0": "-74.3160080000",
+    "region": 596,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 596
+},
+{
+  "fields": {
+    "bbox_y0": "18.3158520000",
+    "bbox_y1": "18.3670270000",
+    "bbox_x1": "-74.3086120000",
+    "bbox_x0": "-74.4505340000",
+    "region": 597,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 597
+},
+{
+  "fields": {
+    "bbox_y0": "18.5536350000",
+    "bbox_y1": "18.6285340000",
+    "bbox_x1": "-74.0703680000",
+    "bbox_x0": "-74.1318450000",
+    "region": 598,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 598
+},
+{
+  "fields": {
+    "bbox_y0": "18.4346160000",
+    "bbox_y1": "18.5574990000",
+    "bbox_x1": "-74.0754320000",
+    "bbox_x0": "-74.1480030000",
+    "region": 599,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 599
+},
+{
+  "fields": {
+    "bbox_y0": "18.3920160000",
+    "bbox_y1": "18.5696730000",
+    "bbox_x1": "-74.1065480000",
+    "bbox_x0": "-74.2254050000",
+    "region": 600,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 600
+},
+{
+  "fields": {
+    "bbox_y0": "18.5556950000",
+    "bbox_y1": "18.6323050000",
+    "bbox_x1": "-74.1081790000",
+    "bbox_x0": "-74.1766080000",
+    "region": 601,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 601
+},
+{
+  "fields": {
+    "bbox_y0": "18.4800090000",
+    "bbox_y1": "18.6017980000",
+    "bbox_x1": "-74.1616680000",
+    "bbox_x0": "-74.2141310000",
+    "region": 602,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 602
+},
+{
+  "fields": {
+    "bbox_y0": "18.4568530000",
+    "bbox_y1": "18.5854960000",
+    "bbox_x1": "-74.1869930000",
+    "bbox_x0": "-74.2533390000",
+    "region": 603,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 603
+},
+{
+  "fields": {
+    "bbox_y0": "18.5798450000",
+    "bbox_y1": "18.6391820000",
+    "bbox_x1": "-74.0780760000",
+    "bbox_x0": "-74.2412650000",
+    "region": 604,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 604
+},
+{
+  "fields": {
+    "bbox_y0": "18.6150660000",
+    "bbox_y1": "18.6491950000",
+    "bbox_x1": "-74.1110190000",
+    "bbox_x0": "-74.2274580000",
+    "region": 605,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 605
+},
+{
+  "fields": {
+    "bbox_y0": "18.6319110000",
+    "bbox_y1": "18.6756830000",
+    "bbox_x1": "-74.1088250000",
+    "bbox_x0": "-74.2335210000",
+    "region": 606,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 606
+},
+{
+  "fields": {
+    "bbox_y0": "18.5901640000",
+    "bbox_y1": "18.6671030000",
+    "bbox_x1": "-74.2552150000",
+    "bbox_x0": "-74.2881300000",
+    "region": 607,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 607
+},
+{
+  "fields": {
+    "bbox_y0": "18.5664510000",
+    "bbox_y1": "18.6619190000",
+    "bbox_x1": "-74.2738340000",
+    "bbox_x0": "-74.3183380000",
+    "region": 608,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 608
+},
+{
+  "fields": {
+    "bbox_y0": "18.5610710000",
+    "bbox_y1": "18.6426770000",
+    "bbox_x1": "-74.3022800000",
+    "bbox_x0": "-74.3613110000",
+    "region": 609,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 609
+},
+{
+  "fields": {
+    "bbox_y0": "18.5882120000",
+    "bbox_y1": "18.6559910000",
+    "bbox_x1": "-74.3063760000",
+    "bbox_x0": "-74.3897270000",
+    "region": 610,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 610
+},
+{
+  "fields": {
+    "bbox_y0": "18.5889150000",
+    "bbox_y1": "18.6748340000",
+    "bbox_x1": "-74.1899780000",
+    "bbox_x0": "-74.2630510000",
+    "region": 611,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 611
+},
+{
+  "fields": {
+    "bbox_y0": "18.5399960000",
+    "bbox_y1": "18.5949390000",
+    "bbox_x1": "-74.2270930000",
+    "bbox_x0": "-74.2888420000",
+    "region": 612,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 612
+},
+{
+  "fields": {
+    "bbox_y0": "18.3747950000",
+    "bbox_y1": "18.5727050000",
+    "bbox_x1": "-74.2149920000",
+    "bbox_x0": "-74.2951220000",
+    "region": 613,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 613
+},
+{
+  "fields": {
+    "bbox_y0": "18.3813610000",
+    "bbox_y1": "18.5564520000",
+    "bbox_x1": "-74.2657930000",
+    "bbox_x0": "-74.3342920000",
+    "region": 614,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 614
+},
+{
+  "fields": {
+    "bbox_y0": "18.4935970000",
+    "bbox_y1": "18.5787680000",
+    "bbox_x1": "-74.2867340000",
+    "bbox_x0": "-74.3376170000",
+    "region": 615,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 615
+},
+{
+  "fields": {
+    "bbox_y0": "18.4593860000",
+    "bbox_y1": "18.5695550000",
+    "bbox_x1": "-74.3108170000",
+    "bbox_x0": "-74.3748040000",
+    "region": 616,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 616
+},
+{
+  "fields": {
+    "bbox_y0": "18.4756810000",
+    "bbox_y1": "18.5018560000",
+    "bbox_x1": "-74.3935140000",
+    "bbox_x0": "-74.4628580000",
+    "region": 617,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 617
+},
+{
+  "fields": {
+    "bbox_y0": "18.4186700000",
+    "bbox_y1": "18.5110390000",
+    "bbox_x1": "-74.3044200000",
+    "bbox_x0": "-74.3995530000",
+    "region": 618,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 618
+},
+{
+  "fields": {
+    "bbox_y0": "18.4469990000",
+    "bbox_y1": "18.4841220000",
+    "bbox_x1": "-74.3808050000",
+    "bbox_x0": "-74.4682130000",
+    "region": 619,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 619
+},
+{
+  "fields": {
+    "bbox_y0": "18.4184250000",
+    "bbox_y1": "18.4567120000",
+    "bbox_x1": "-74.3868860000",
+    "bbox_x0": "-74.4801790000",
+    "region": 620,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 620
+},
+{
+  "fields": {
+    "bbox_y0": "18.4955070000",
+    "bbox_y1": "18.5609850000",
+    "bbox_x1": "-74.3982820000",
+    "bbox_x0": "-74.4594780000",
+    "region": 621,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 621
+},
+{
+  "fields": {
+    "bbox_y0": "18.4936410000",
+    "bbox_y1": "18.5363890000",
+    "bbox_x1": "-74.3672910000",
+    "bbox_x0": "-74.4046070000",
+    "region": 622,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 622
+},
+{
+  "fields": {
+    "bbox_y0": "18.5186700000",
+    "bbox_y1": "18.5677000000",
+    "bbox_x1": "-74.3644360000",
+    "bbox_x0": "-74.4240410000",
+    "region": 623,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 623
+},
+{
+  "fields": {
+    "bbox_y0": "18.5865500000",
+    "bbox_y1": "18.6372770000",
+    "bbox_x1": "-74.3692040000",
+    "bbox_x0": "-74.4290190000",
+    "region": 624,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 624
+},
+{
+  "fields": {
+    "bbox_y0": "18.5435820000",
+    "bbox_y1": "18.5909880000",
+    "bbox_x1": "-74.3287960000",
+    "bbox_x0": "-74.4211760000",
+    "region": 625,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 625
+},
+{
+  "fields": {
+    "bbox_y0": "18.3608670000",
+    "bbox_y1": "18.4521510000",
+    "bbox_x1": "-74.2939220000",
+    "bbox_x0": "-74.4804000000",
+    "region": 626,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 626
+},
+{
+  "fields": {
+    "bbox_y0": "18.3601880000",
+    "bbox_y1": "18.4222080000",
+    "bbox_x1": "-74.3403320000",
+    "bbox_x0": "-74.4526020000",
+    "region": 627,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 627
+},
+{
+  "fields": {
+    "bbox_y0": "18.3570230000",
+    "bbox_y1": "18.4031170000",
+    "bbox_x1": "-74.3878720000",
+    "bbox_x0": "-74.4522400000",
+    "region": 628,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 628
+},
+{
+  "fields": {
+    "bbox_y0": "18.4866260000",
+    "bbox_y1": "18.5792600000",
+    "bbox_x1": "-73.8361470000",
+    "bbox_x0": "-73.9327160000",
+    "region": 629,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 629
+},
+{
+  "fields": {
+    "bbox_y0": "18.4850770000",
+    "bbox_y1": "18.5527860000",
+    "bbox_x1": "-73.8976130000",
+    "bbox_x0": "-73.9857450000",
+    "region": 630,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 630
+},
+{
+  "fields": {
+    "bbox_y0": "18.5395200000",
+    "bbox_y1": "18.6009780000",
+    "bbox_x1": "-73.9090400000",
+    "bbox_x0": "-73.9623710000",
+    "region": 631,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 631
+},
+{
+  "fields": {
+    "bbox_y0": "18.5054990000",
+    "bbox_y1": "18.6027940000",
+    "bbox_x1": "-73.9457270000",
+    "bbox_x0": "-74.0394040000",
+    "region": 632,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 632
+},
+{
+  "fields": {
+    "bbox_y0": "18.3876030000",
+    "bbox_y1": "18.5342930000",
+    "bbox_x1": "-74.0277180000",
+    "bbox_x0": "-74.1196910000",
+    "region": 633,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 633
+},
+{
+  "fields": {
+    "bbox_y0": "18.5214590000",
+    "bbox_y1": "18.5917980000",
+    "bbox_x1": "-74.0008550000",
+    "bbox_x0": "-74.0903380000",
+    "region": 634,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 634
+},
+{
+  "fields": {
+    "bbox_y0": "18.5459940000",
+    "bbox_y1": "18.6164120000",
+    "bbox_x1": "-73.9870850000",
+    "bbox_x0": "-74.0782760000",
+    "region": 635,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 635
+},
+{
+  "fields": {
+    "bbox_y0": "18.3688000000",
+    "bbox_y1": "18.5132840000",
+    "bbox_x1": "-73.8922550000",
+    "bbox_x0": "-74.0032260000",
+    "region": 636,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 636
+},
+{
+  "fields": {
+    "bbox_y0": "18.4890890000",
+    "bbox_y1": "18.5260580000",
+    "bbox_x1": "-73.9759070000",
+    "bbox_x0": "-74.0414980000",
+    "region": 637,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 637
+},
+{
+  "fields": {
+    "bbox_y0": "18.3819410000",
+    "bbox_y1": "18.4992990000",
+    "bbox_x1": "-73.9702000000",
+    "bbox_x0": "-74.0422750000",
+    "region": 638,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 638
+},
+{
+  "fields": {
+    "bbox_y0": "18.4929030000",
+    "bbox_y1": "18.5674130000",
+    "bbox_x1": "-73.7908760000",
+    "bbox_x0": "-73.8722910000",
+    "region": 639,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 639
+},
+{
+  "fields": {
+    "bbox_y0": "18.4865160000",
+    "bbox_y1": "18.5503250000",
+    "bbox_x1": "-73.7314290000",
+    "bbox_x0": "-73.8229990000",
+    "region": 640,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 640
+},
+{
+  "fields": {
+    "bbox_y0": "18.4378730000",
+    "bbox_y1": "18.4942110000",
+    "bbox_x1": "-73.7379900000",
+    "bbox_x0": "-73.8089340000",
+    "region": 641,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 641
+},
+{
+  "fields": {
+    "bbox_y0": "18.4062570000",
+    "bbox_y1": "18.5021010000",
+    "bbox_x1": "-73.7791260000",
+    "bbox_x0": "-73.8965750000",
+    "region": 642,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 642
+},
+{
+  "fields": {
+    "bbox_y0": "18.3621970000",
+    "bbox_y1": "18.4784790000",
+    "bbox_x1": "-73.8576100000",
+    "bbox_x0": "-73.9404410000",
+    "region": 643,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 643
+},
+{
+  "fields": {
+    "bbox_y0": "18.5817390000",
+    "bbox_y1": "18.6444220000",
+    "bbox_x1": "-73.6986810000",
+    "bbox_x0": "-73.7967640000",
+    "region": 644,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 644
+},
+{
+  "fields": {
+    "bbox_y0": "19.9044420000",
+    "bbox_y1": "19.9526750000",
+    "bbox_x1": "-72.7697270000",
+    "bbox_x0": "-72.8208430000",
+    "region": 645,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 645
+},
+{
+  "fields": {
+    "bbox_y0": "19.8635440000",
+    "bbox_y1": "19.9490100000",
+    "bbox_x1": "-72.7417760000",
+    "bbox_x0": "-72.7891350000",
+    "region": 646,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 646
+},
+{
+  "fields": {
+    "bbox_y0": "19.8961420000",
+    "bbox_y1": "19.9513200000",
+    "bbox_x1": "-72.7883910000",
+    "bbox_x0": "-72.8663560000",
+    "region": 647,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 647
+},
+{
+  "fields": {
+    "bbox_y0": "19.7223770000",
+    "bbox_y1": "19.8376370000",
+    "bbox_x1": "-72.9221380000",
+    "bbox_x0": "-73.0336410000",
+    "region": 648,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 648
+},
+{
+  "fields": {
+    "bbox_y0": "19.7870050000",
+    "bbox_y1": "19.9321660000",
+    "bbox_x1": "-72.8846140000",
+    "bbox_x0": "-73.0140810000",
+    "region": 649,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 649
+},
+{
+  "fields": {
+    "bbox_y0": "19.8433770000",
+    "bbox_y1": "19.9371600000",
+    "bbox_x1": "-72.8218690000",
+    "bbox_x0": "-72.9215640000",
+    "region": 650,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 650
+},
+{
+  "fields": {
+    "bbox_y0": "19.9923540000",
+    "bbox_y1": "20.0650160000",
+    "bbox_x1": "-72.6201230000",
+    "bbox_x0": "-72.7644400000",
+    "region": 651,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 651
+},
+{
+  "fields": {
+    "bbox_y0": "20.0156070000",
+    "bbox_y1": "20.0892270000",
+    "bbox_x1": "-72.7449890000",
+    "bbox_x0": "-72.9677190000",
+    "region": 652,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 652
+},
+{
+  "fields": {
+    "bbox_y0": "19.7674070000",
+    "bbox_y1": "19.8660210000",
+    "bbox_x1": "-72.7245850000",
+    "bbox_x0": "-72.8101400000",
+    "region": 653,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 653
+},
+{
+  "fields": {
+    "bbox_y0": "19.7315420000",
+    "bbox_y1": "19.8476320000",
+    "bbox_x1": "-72.7907830000",
+    "bbox_x0": "-72.9290110000",
+    "region": 654,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 654
+},
+{
+  "fields": {
+    "bbox_y0": "19.7090870000",
+    "bbox_y1": "19.7993970000",
+    "bbox_x1": "-72.8352910000",
+    "bbox_x0": "-72.9407670000",
+    "region": 655,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 655
+},
+{
+  "fields": {
+    "bbox_y0": "19.8426670000",
+    "bbox_y1": "19.9005170000",
+    "bbox_x1": "-72.7717260000",
+    "bbox_x0": "-72.8409300000",
+    "region": 656,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 656
+},
+{
+  "fields": {
+    "bbox_y0": "19.8176270000",
+    "bbox_y1": "19.8650190000",
+    "bbox_x1": "-72.7717260000",
+    "bbox_x0": "-72.8567200000",
+    "region": 657,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 657
+},
+{
+  "fields": {
+    "bbox_y0": "19.8848570000",
+    "bbox_y1": "19.9437030000",
+    "bbox_x1": "-72.7371430000",
+    "bbox_x0": "-72.7722960000",
+    "region": 658,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 658
+},
+{
+  "fields": {
+    "bbox_y0": "19.8796020000",
+    "bbox_y1": "19.9386640000",
+    "bbox_x1": "-72.7113980000",
+    "bbox_x0": "-72.7498430000",
+    "region": 659,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 659
+},
+{
+  "fields": {
+    "bbox_y0": "19.8450420000",
+    "bbox_y1": "19.9302420000",
+    "bbox_x1": "-72.6998540000",
+    "bbox_x0": "-72.7513290000",
+    "region": 660,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 660
+},
+{
+  "fields": {
+    "bbox_y0": "19.8316300000",
+    "bbox_y1": "19.9288380000",
+    "bbox_x1": "-72.6617140000",
+    "bbox_x0": "-72.7112570000",
+    "region": 661,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 661
+},
+{
+  "fields": {
+    "bbox_y0": "19.8680700000",
+    "bbox_y1": "19.9229850000",
+    "bbox_x1": "-72.6466110000",
+    "bbox_x0": "-72.6957180000",
+    "region": 662,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 662
+},
+{
+  "fields": {
+    "bbox_y0": "19.8080820000",
+    "bbox_y1": "19.8540520000",
+    "bbox_x1": "-72.6772310000",
+    "bbox_x0": "-72.7385450000",
+    "region": 663,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 663
+},
+{
+  "fields": {
+    "bbox_y0": "19.8116960000",
+    "bbox_y1": "19.8585440000",
+    "bbox_x1": "-72.5908940000",
+    "bbox_x0": "-72.6791370000",
+    "region": 664,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 664
+},
+{
+  "fields": {
+    "bbox_y0": "19.8518760000",
+    "bbox_y1": "19.9088310000",
+    "bbox_x1": "-72.6012250000",
+    "bbox_x0": "-72.6711110000",
+    "region": 665,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 665
+},
+{
+  "fields": {
+    "bbox_y0": "19.8399430000",
+    "bbox_y1": "19.8986510000",
+    "bbox_x1": "-72.5600670000",
+    "bbox_x0": "-72.6221560000",
+    "region": 666,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 666
+},
+{
+  "fields": {
+    "bbox_y0": "19.6775510000",
+    "bbox_y1": "19.8642350000",
+    "bbox_x1": "-73.2654010000",
+    "bbox_x0": "-73.4557600000",
+    "region": 667,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 667
+},
+{
+  "fields": {
+    "bbox_y0": "19.7633920000",
+    "bbox_y1": "19.8352200000",
+    "bbox_x1": "-73.2575240000",
+    "bbox_x0": "-73.3123090000",
+    "region": 668,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 668
+},
+{
+  "fields": {
+    "bbox_y0": "19.7123640000",
+    "bbox_y1": "19.7839180000",
+    "bbox_x1": "-73.2146540000",
+    "bbox_x0": "-73.2995990000",
+    "region": 669,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 669
+},
+{
+  "fields": {
+    "bbox_y0": "19.6289740000",
+    "bbox_y1": "19.7295740000",
+    "bbox_x1": "-73.2137830000",
+    "bbox_x0": "-73.2956220000",
+    "region": 670,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 670
+},
+{
+  "fields": {
+    "bbox_y0": "19.6597980000",
+    "bbox_y1": "19.7611840000",
+    "bbox_x1": "-73.1765730000",
+    "bbox_x0": "-73.2549900000",
+    "region": 671,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 671
+},
+{
+  "fields": {
+    "bbox_y0": "19.7063230000",
+    "bbox_y1": "19.7992230000",
+    "bbox_x1": "-73.1391530000",
+    "bbox_x0": "-73.2159730000",
+    "region": 672,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 672
+},
+{
+  "fields": {
+    "bbox_y0": "19.6225520000",
+    "bbox_y1": "19.7351200000",
+    "bbox_x1": "-73.1174540000",
+    "bbox_x0": "-73.2083150000",
+    "region": 673,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 673
+},
+{
+  "fields": {
+    "bbox_y0": "19.6231570000",
+    "bbox_y1": "19.7633920000",
+    "bbox_x1": "-73.2699920000",
+    "bbox_x0": "-73.3738730000",
+    "region": 674,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 674
+},
+{
+  "fields": {
+    "bbox_y0": "19.6300970000",
+    "bbox_y1": "19.7722780000",
+    "bbox_x1": "-73.2995990000",
+    "bbox_x0": "-73.4161880000",
+    "region": 675,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 675
+},
+{
+  "fields": {
+    "bbox_y0": "19.6497250000",
+    "bbox_y1": "19.7399390000",
+    "bbox_x1": "-73.3770690000",
+    "bbox_x0": "-73.4430270000",
+    "region": 676,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 676
+},
+{
+  "fields": {
+    "bbox_y0": "19.7309050000",
+    "bbox_y1": "19.9220480000",
+    "bbox_x1": "-72.9995460000",
+    "bbox_x0": "-73.0915160000",
+    "region": 677,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 677
+},
+{
+  "fields": {
+    "bbox_y0": "19.7363450000",
+    "bbox_y1": "19.9287770000",
+    "bbox_x1": "-73.0591460000",
+    "bbox_x0": "-73.1650670000",
+    "region": 678,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 678
+},
+{
+  "fields": {
+    "bbox_y0": "19.6963670000",
+    "bbox_y1": "19.9303870000",
+    "bbox_x1": "-73.0654810000",
+    "bbox_x0": "-73.1982040000",
+    "region": 679,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 679
+},
+{
+  "fields": {
+    "bbox_y0": "19.7299030000",
+    "bbox_y1": "19.8367430000",
+    "bbox_x1": "-73.1172280000",
+    "bbox_x0": "-73.1881560000",
+    "region": 680,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 680
+},
+{
+  "fields": {
+    "bbox_y0": "19.7510380000",
+    "bbox_y1": "19.8438620000",
+    "bbox_x1": "-73.2034080000",
+    "bbox_x0": "-73.2636320000",
+    "region": 681,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 681
+},
+{
+  "fields": {
+    "bbox_y0": "19.7548530000",
+    "bbox_y1": "19.8531290000",
+    "bbox_x1": "-73.1814690000",
+    "bbox_x0": "-73.2277570000",
+    "region": 682,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 682
+},
+{
+  "fields": {
+    "bbox_y0": "19.8232450000",
+    "bbox_y1": "19.9073320000",
+    "bbox_x1": "-73.1893460000",
+    "bbox_x0": "-73.2759550000",
+    "region": 683,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 683
+},
+{
+  "fields": {
+    "bbox_y0": "18.3770860000",
+    "bbox_y1": "18.4612470000",
+    "bbox_x1": "-73.0358560000",
+    "bbox_x0": "-73.1164720000",
+    "region": 684,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 684
+},
+{
+  "fields": {
+    "bbox_y0": "18.2996570000",
+    "bbox_y1": "18.3977510000",
+    "bbox_x1": "-73.0190130000",
+    "bbox_x0": "-73.1046920000",
+    "region": 685,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 685
+},
+{
+  "fields": {
+    "bbox_y0": "18.2214590000",
+    "bbox_y1": "18.3724860000",
+    "bbox_x1": "-72.9949230000",
+    "bbox_x0": "-73.0523570000",
+    "region": 686,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 686
+},
+{
+  "fields": {
+    "bbox_y0": "18.3501990000",
+    "bbox_y1": "18.4070390000",
+    "bbox_x1": "-73.0941690000",
+    "bbox_x0": "-73.1746170000",
+    "region": 687,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 687
+},
+{
+  "fields": {
+    "bbox_y0": "18.4081690000",
+    "bbox_y1": "18.4836490000",
+    "bbox_x1": "-73.2398240000",
+    "bbox_x0": "-73.2783700000",
+    "region": 688,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 688
+},
+{
+  "fields": {
+    "bbox_y0": "18.4187520000",
+    "bbox_y1": "18.4781290000",
+    "bbox_x1": "-73.1871710000",
+    "bbox_x0": "-73.2470260000",
+    "region": 689,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 689
+},
+{
+  "fields": {
+    "bbox_y0": "18.4367220000",
+    "bbox_y1": "18.4897040000",
+    "bbox_x1": "-73.1512690000",
+    "bbox_x0": "-73.2306670000",
+    "region": 690,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 690
+},
+{
+  "fields": {
+    "bbox_y0": "18.4316130000",
+    "bbox_y1": "18.4866550000",
+    "bbox_x1": "-73.1037270000",
+    "bbox_x0": "-73.1790450000",
+    "region": 691,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 691
+},
+{
+  "fields": {
+    "bbox_y0": "18.3522970000",
+    "bbox_y1": "18.4070700000",
+    "bbox_x1": "-73.2121950000",
+    "bbox_x0": "-73.2679810000",
+    "region": 692,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 692
+},
+{
+  "fields": {
+    "bbox_y0": "18.3627310000",
+    "bbox_y1": "18.4200120000",
+    "bbox_x1": "-73.2832010000",
+    "bbox_x0": "-73.3393890000",
+    "region": 693,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 693
+},
+{
+  "fields": {
+    "bbox_y0": "18.3544510000",
+    "bbox_y1": "18.3966080000",
+    "bbox_x1": "-73.1510450000",
+    "bbox_x0": "-73.2255910000",
+    "region": 694,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 694
+},
+{
+  "fields": {
+    "bbox_y0": "18.3587620000",
+    "bbox_y1": "18.4142950000",
+    "bbox_x1": "-73.2594840000",
+    "bbox_x0": "-73.3110370000",
+    "region": 695,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 695
+},
+{
+  "fields": {
+    "bbox_y0": "18.3871370000",
+    "bbox_y1": "18.4429710000",
+    "bbox_x1": "-73.1385680000",
+    "bbox_x0": "-73.2599150000",
+    "region": 696,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 696
+},
+{
+  "fields": {
+    "bbox_y0": "18.3845860000",
+    "bbox_y1": "18.4486460000",
+    "bbox_x1": "-73.1030200000",
+    "bbox_x0": "-73.1810920000",
+    "region": 697,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 697
+},
+{
+  "fields": {
+    "bbox_y0": "18.4853780000",
+    "bbox_y1": "18.5249380000",
+    "bbox_x1": "-73.3472890000",
+    "bbox_x0": "-73.4497640000",
+    "region": 698,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 698
+},
+{
+  "fields": {
+    "bbox_y0": "18.4190480000",
+    "bbox_y1": "18.5056360000",
+    "bbox_x1": "-73.2984860000",
+    "bbox_x0": "-73.3631620000",
+    "region": 699,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 699
+},
+{
+  "fields": {
+    "bbox_y0": "18.4011510000",
+    "bbox_y1": "18.4873000000",
+    "bbox_x1": "-73.2574750000",
+    "bbox_x0": "-73.3137100000",
+    "region": 700,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 700
+},
+{
+  "fields": {
+    "bbox_y0": "18.4454010000",
+    "bbox_y1": "18.5286880000",
+    "bbox_x1": "-73.4288710000",
+    "bbox_x0": "-73.5115040000",
+    "region": 701,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 701
+},
+{
+  "fields": {
+    "bbox_y0": "18.4344590000",
+    "bbox_y1": "18.5292370000",
+    "bbox_x1": "-73.4892200000",
+    "bbox_x0": "-73.5955920000",
+    "region": 702,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 702
+},
+{
+  "fields": {
+    "bbox_y0": "18.3784230000",
+    "bbox_y1": "18.4501480000",
+    "bbox_x1": "-73.4420870000",
+    "bbox_x0": "-73.5109660000",
+    "region": 703,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 703
+},
+{
+  "fields": {
+    "bbox_y0": "18.3415380000",
+    "bbox_y1": "18.3798120000",
+    "bbox_x1": "-73.3364310000",
+    "bbox_x0": "-73.4291600000",
+    "region": 704,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 704
+},
+{
+  "fields": {
+    "bbox_y0": "18.3357490000",
+    "bbox_y1": "18.3805330000",
+    "bbox_x1": "-73.4234460000",
+    "bbox_x0": "-73.5643640000",
+    "region": 705,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 705
+},
+{
+  "fields": {
+    "bbox_y0": "18.3632900000",
+    "bbox_y1": "18.4524030000",
+    "bbox_x1": "-73.3667380000",
+    "bbox_x0": "-73.5417780000",
+    "region": 706,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 706
+},
+{
+  "fields": {
+    "bbox_y0": "18.3667620000",
+    "bbox_y1": "18.4146200000",
+    "bbox_x1": "-73.3246520000",
+    "bbox_x0": "-73.3837210000",
+    "region": 707,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 707
+},
+{
+  "fields": {
+    "bbox_y0": "18.4446910000",
+    "bbox_y1": "18.5011760000",
+    "bbox_x1": "-73.3542060000",
+    "bbox_x0": "-73.4437760000",
+    "region": 708,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 708
+},
+{
+  "fields": {
+    "bbox_y0": "18.4087410000",
+    "bbox_y1": "18.4738960000",
+    "bbox_x1": "-73.3206100000",
+    "bbox_x0": "-73.3804470000",
+    "region": 709,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 709
+},
+{
+  "fields": {
+    "bbox_y0": "18.3946140000",
+    "bbox_y1": "18.4530050000",
+    "bbox_x1": "-73.3585180000",
+    "bbox_x0": "-73.4131580000",
+    "region": 710,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 710
+},
+{
+  "fields": {
+    "bbox_y0": "18.4188540000",
+    "bbox_y1": "18.4626600000",
+    "bbox_x1": "-73.5779900000",
+    "bbox_x0": "-73.6723970000",
+    "region": 711,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 711
+},
+{
+  "fields": {
+    "bbox_y0": "18.4181120000",
+    "bbox_y1": "18.4677970000",
+    "bbox_x1": "-73.5084600000",
+    "bbox_x0": "-73.5971650000",
+    "region": 712,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 712
+},
+{
+  "fields": {
+    "bbox_y0": "18.3830450000",
+    "bbox_y1": "18.4265900000",
+    "bbox_x1": "-73.4940650000",
+    "bbox_x0": "-73.5795040000",
+    "region": 713,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 713
+},
+{
+  "fields": {
+    "bbox_y0": "18.4388910000",
+    "bbox_y1": "18.5098970000",
+    "bbox_x1": "-73.5706630000",
+    "bbox_x0": "-73.6450690000",
+    "region": 714,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 714
+},
+{
+  "fields": {
+    "bbox_y0": "18.3979860000",
+    "bbox_y1": "18.4607320000",
+    "bbox_x1": "-73.6655660000",
+    "bbox_x0": "-73.7800190000",
+    "region": 715,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 715
+},
+{
+  "fields": {
+    "bbox_y0": "18.4378010000",
+    "bbox_y1": "18.4787450000",
+    "bbox_x1": "-73.6761450000",
+    "bbox_x0": "-73.7758000000",
+    "region": 716,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 716
+},
+{
+  "fields": {
+    "bbox_y0": "18.4414090000",
+    "bbox_y1": "18.5014970000",
+    "bbox_x1": "-73.6393400000",
+    "bbox_x0": "-73.7462360000",
+    "region": 717,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 717
+},
+{
+  "fields": {
+    "bbox_y0": "18.4806690000",
+    "bbox_y1": "18.5497130000",
+    "bbox_x1": "-73.6344280000",
+    "bbox_x0": "-73.7688140000",
+    "region": 718,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 718
+},
+{
+  "fields": {
+    "bbox_y0": "18.5524660000",
+    "bbox_y1": "18.5893050000",
+    "bbox_x1": "-73.5636720000",
+    "bbox_x0": "-73.6767620000",
+    "region": 719,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 719
+},
+{
+  "fields": {
+    "bbox_y0": "18.5440210000",
+    "bbox_y1": "18.5780440000",
+    "bbox_x1": "-73.6739550000",
+    "bbox_x0": "-73.7342900000",
+    "region": 720,
+    "srid": "EPSG:4326"
+  },
+  "model": "filter.regionbbox",
+  "pk": 720
+}
+]

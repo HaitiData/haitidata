@@ -3,12 +3,12 @@
 {% load i18n %}
 {% load bootstrap_tags %}
 
-{% block title %}{% trans "Deleting" %} {{ map.title }} — {{ block.super }}{% endblock %}
+{% block title %}{{ block.super }} {% trans "Remove Map" %}{% endblock %}
+{% block page-title %}
+  {% trans "Remove Map" %}
+{% endblock %}
 
 {% block body %}
-<div class="page-header">
-  <h2 class="page-title">{% trans "Remove Map" %}</h2>
-</div>
 <div class="row">
   <div class="col-md-8">
     <p class="lead">

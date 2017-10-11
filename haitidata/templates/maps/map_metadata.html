@@ -2,9 +2,22 @@
 {% load i18n %}
 {% load bootstrap_tags %}
 
-{% block title %}{{ map.title }} — {{ block.super }}{% endblock %}
+{% block title %}{{ block.super }} {{ map.title }} - {% trans "Edit Metadata" %}{% endblock %}
+{% block page-title %}
+  {% trans "Edit Metadata" %}
+  {% if user.is_authenticated %}
+  <div class="btn-group pull-right">
+    <a class="btn btn-primary btn-icon" href="{% url "new_map" %}">
+      <i class="fa fa-plus" title="Create Map"></i>
+    </a>
+    <a class="btn btn-primary" href="{% url "new_map" %}">
+      {% trans "Create Map" %}
+    </a>
+  </div>
+  {% endif %}
+{% endblock %}
 
-{% block body_class %}data{% endblock %}
+{% block body_class %}metadata{% endblock %}
 
 {% block body_outer %}
 <div class="page-header">
@@ -66,7 +79,7 @@
             <input type="radio" name="category_choice_field" value="{{ choice.0 }}"
               {% ifequal category_form.initial choice.0 %}
               checked="checked"
-              {% endifequal %}> 
+              {% endifequal %}>
               {{ choice.1 }}
             </input>
           </div>
@@ -82,5 +95,5 @@
 </div>
 {% endblock %}
 {% block extra_script %}
- {% include 'metadata_form_js.html' %} 
+ {% include 'metadata_form_js.html' %}
 {% endblock %}

@@ -27,6 +27,8 @@ from geonode.settings import *
 
 SITENAME = 'haitidata'
 
+TIME_ZONE = os.getenv('TIME_ZONE', "America/Port-au-Prince")
+
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -53,7 +55,16 @@ LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
-INSTALLED_APPS = INSTALLED_APPS + ('haitidata', 'osgeo_importer', 'geonode-client')
+INSTALLED_APPS = INSTALLED_APPS + (
+    "django.contrib.redirects",
+    'haitidata',
+    'osgeo_importer',
+    'geonode-client',
+    'charts_app',
+    'wfs_harvest',
+    "clip-and-ship",
+    'filter'
+    )
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
@@ -83,7 +94,7 @@ OSGEO_IMPORTER_VALID_EXTENSIONS = [
     ]
 
 LOGGING['loggers']['osgeo_importer'] = {"handlers": ["console"], "level": "DEBUG"}
-#DATABASE_ROUTERS = ['{{app_name}}.dbrouters.DefaultOnlyMigrations']
+#DATABASE_ROUTERS = ['.dbrouters.DefaultOnlyMigrations']
 
 # # === MapProxy settings
 # # This is the location to place additional configuration files for mapproxy to work from.
@@ -111,6 +122,15 @@ BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
 
+_HAITI_LANGUAGES = (
+    ('en', 'English'),
+    ('fr', 'Français'),
+)
+
+LANGUAGES = os.getenv('LANGUAGES', _HAITI_LANGUAGES)
+
+# maximum clip size in bytes
+MAXIMUM_CLIP_SIZE = '40000000'
 
 SOCIAL_ORIGINS = [{
     "label":"paper-plane-o",
@@ -129,3 +149,17 @@ SOCIAL_ORIGINS = [{
     "url":"https://plus.google.com/share?url={url}",
     "css_class":"gp"
 }]
+
+MAX_CSV_RECORDS = 20000
+
+UPLOADER = {
+    'BACKEND': 'geonode.rest',
+    'OPTIONS': {
+        'TIME_ENABLED': False,
+        'MOSAIC_ENABLED': True,
+        'GEOGIG_ENABLED': False,
+    }
+}
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True

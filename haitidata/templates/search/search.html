@@ -3,14 +3,13 @@
 {% load staticfiles %}
 {% load url from future %}
 
-{% block title %} {% trans "Search" %} - {{ block.super }} {% endblock %}
+{% block page-title %}
+  {% trans "Search" %} <span ng-if="text_query != ''"></span> <span ng-bind="text_query"></span>
+{% endblock %}
 
 {% block body_class %}search{% endblock %}
 
 {% block body_outer %}
-  <div class="page-header">
-    <h2>{% trans "Search" %} <span ng-if="text_query != ''">:</span> <span ng-bind="text_query"></span></h2>
-  </div>
   {% with include_type_filter='true' %}
   {% with header='Type' %}
   {% with filter='type__in' %}
@@ -21,6 +20,7 @@
 {% endblock %}
 
 {% block extra_script %}
+{{ block.super }}
   {% if GEONODE_SECURITY_ENABLED %}
     {% include "_permissions_form_js.html" %}
   {% endif %}

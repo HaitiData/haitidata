@@ -1,0 +1,181 @@
+{% load leaflet_tags %}
+{% load staticfiles %}
+
+{% leaflet_js %}
+{% leaflet_css %}
+
+<link rel="stylesheet" href="{% static 'geonode/css/leaflet.draw.css' %}"/>
+<script src="{% static 'geonode/js/draw/leaflet.draw.js' %}"></script>
+
+<div class="modal fade" id="download_clip_page" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Download Clip</h4>
+            </div>
+            <div class="modal-body">
+                <div id="download-clip-error-message" class="label label-danger" style="margin-bottom: 50px; display: none">Error message</div>
+                <div id="download-clip-map"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download_clip_page" id="download-clip-button">Download Clip</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #download-clip-map {
+        height: 400px;
+        text-align: center;
+    }
+
+    .leaflet-control-zoom {
+        left: 0 !important;
+    }
+</style>
+
+<script type="text/javascript">
+
+    var mapToClip = L.map('download-clip-map');
+    var editableLayers = new L.FeatureGroup();
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+        var display_type = "{{ resource.display_type }}";
+        if (display_type !== 'Raster Data') {
+            $('#download-clip').prop('disabled', true);
+        }
+
+        {% if 'download_resourcebase' not in perms_list or not perms_list %}
+            $('#download-clip').prop('disabled', true);
+        {% endif %}
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="http://www.openstreetmap.org" target="_parent">OpenStreetMap</a> and ' +
+            'contributors, under an <a href="http://www.openstreetmap.org/copyright" target="_parent">open license</a>',
+            maxZoom: 18,
+            id: 'maptoclip'
+        }).addTo(mapToClip);
+
+
+        // add draw control
+        mapToClip.addLayer(editableLayers);
+        var drawControlOptions = {
+            position: 'topleft',
+            draw: {
+                polyline: false,
+                circle: false,
+                rectangle: true,
+                marker: false,
+                polygon: {
+                    allowIntersection: false,
+                    drawError: {
+                        color: '#e1e100',
+                        message: '<strong>You can\'t draw that!</strong>'
+                    },
+                    shapeOptions: {
+                        color: '#bada55'
+                    }
+                }
+            },
+            edit: {
+                featureGroup: editableLayers,
+                remove: true
+            }
+        };
+        var tile_layer = null;
+
+        {% if resource.get_tiles_url %}
+            var tiles_url = "{{ resource.get_tiles_url|safe }}";
+            var last_letter_url = tiles_url.charAt(tiles_url.length - 1);
+            if (parseInt(last_letter_url)) {
+                tiles_url = tiles_url.substring(0, tiles_url.length - 1);
+            }
+            tile_layer = L.tileLayer(tiles_url,
+                    {
+                        'opacity': 0.8
+                    });
+        {% endif %}
+
+        if (tile_layer) {
+            mapToClip.addLayer(tile_layer);
+        }
+
+        var drawControl = new L.Control.Draw(drawControlOptions);
+        mapToClip.addControl(drawControl);
+
+        mapToClip.on(L.Draw.Event.CREATED, function (e) {
+            var type = e.layerType,
+                    layer = e.layer;
+
+            editableLayers.addLayer(layer);
+        });
+
+
+    });
+
+
+    $('#download_clip_page').on('shown.bs.modal', function () {
+        mapToClip.invalidateSize();
+        {% if resource.bbox_string %}
+            var bbox = [{{ resource.bbox_string }}];
+            var bounds = [
+                [bbox[1], bbox[0]],
+                [bbox[3], bbox[2]]
+            ];
+            mapToClip.fitBounds(bounds);
+        {% endif %}
+    });
+
+    function download_clip_layer(clipUrl, geometry_url) {
+        var ship_url = clipUrl + '/clip-layer?' + geometry_url;
+        $.ajax({
+            url: ship_url,
+            type: 'GET',
+            success: function (result) {
+                $('#download-clip-button').prop('disabled', false);
+                var clip_filename = result['clip_filename'];
+                location.href = clipUrl + '/' + clip_filename + '/download-clip';
+            },
+            error: function (result) {
+                $('#download-clip-button').prop('disabled', false);
+                var error_message = result['responseJSON']['error'];
+                var $errorMessageDisplay = $('#download-clip-error-message');
+                $errorMessageDisplay.html(error_message);
+                $errorMessageDisplay.show().delay(2000).fadeOut();
+            }
+        });
+    }
+
+    $('#download-clip-button').click(function () {
+        var url = '';
+        $('#download-clip-button').prop('disabled', true);
+
+        // Open Popup
+        var map_type_name = "{{ resource.service_typename }}";
+
+        var clipUrl = '/clip/' + map_type_name;
+
+        if (editableLayers) {
+            var geojson = editableLayers.toGeoJSON();
+            if (geojson.features.length > 0) {
+                var geometry_url = '&GEOJSON=' + JSON.stringify(geojson);
+                download_clip_layer(clipUrl, geometry_url);
+                return;
+            } else {
+                alert('No polygon in map, this will clip from map extent instead.')
+            }
+        } else {
+            alert('No polygon in map, this will clip from map extent instead.')
+        }
+
+
+        if (layerMap) {
+            var bboxString = layerMap.getBounds().toBBoxString();
+            download_clip_layer(clipUrl, '&BBOX=' + bboxString);
+        }
+    });
+
+</script>
