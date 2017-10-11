@@ -1,7 +1,7 @@
 #--------- Generic stuff all our Dockerfiles should start with so we get caching ------------
 # Note this base image is based on debian
-FROM haitidata_uwsgi
-MAINTAINER Muhammad Anis<anis@kartoza.com>
+FROM haitidata_django
+MAINTAINER Irwan Fathurrahman<irwan@kartoza.com>
 
 # Use local cached debs from host (saves your bandwidth!)
 # Change ip below to that of your apt-cacher-ng host
@@ -25,8 +25,8 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # End of cut & paste section
 
-ADD REQUIREMENTS-dev.txt /REQUIREMENTS-dev.txt
-RUN pip install -r /REQUIREMENTS-dev.txt
+ADD requirements-dev.txt /requirements-dev.txt
+RUN pip install -r /requirements-dev.txt
 ADD bashrc /root/.bashrc
 
 # --------------------------------------------------------

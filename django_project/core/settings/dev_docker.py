@@ -17,9 +17,8 @@ DATABASES = {
         'NAME': 'gis',
         'USER': 'docker',
         'PASSWORD': 'docker',
-        'HOST': 'postgis',
-        'PORT': 5432,
-        'TEST_NAME': 'unittests',
+        'HOST': 'postgres',
+        'PORT': '5432',
     },
     # vector datastore for uploads
     'datastore': {
@@ -27,9 +26,7 @@ DATABASES = {
         'NAME': 'geonode_data',
         'USER': 'docker',
         'PASSWORD': 'docker',
-        'HOST': 'postgis',
-        'PORT': 5432,
+        'HOST': 'postgres',
+        'PORT': '5432',
     }
 }
-
-print INSTALLED_APPS

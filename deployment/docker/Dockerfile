@@ -36,13 +36,13 @@ ENV TEST a
 RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
 RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
 
-ADD REQUIREMENTS.txt /REQUIREMENTS.txt
+COPY requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 
-RUN pip install -r /REQUIREMENTS.txt
 RUN pip install uwsgi
 
-RUN pip uninstall django-user-accounts -y
-RUN pip install git+https://github.com/GeoNode/geonode-user-accounts@invite-user
+COPY requirements-haitidata.txt /requirements-haitidata.txt
+RUN pip install -r /requirements-haitidata.txt
 
 # Install translation
 RUN apt-get -y --force-yes install gettext
@@ -51,8 +51,5 @@ RUN apt-get install gdal-bin
 # Open port 8080 as we will be running our uwsgi socket on that
 
 EXPOSE 8080
-
-#USER www-data
-
 WORKDIR /home/web/django_project
 CMD ["uwsgi", "--env", "LC_ALL=en_US.UTF-8", "--ini", "/uwsgi.conf"]

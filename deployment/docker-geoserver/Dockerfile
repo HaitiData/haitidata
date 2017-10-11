@@ -1,6 +1,8 @@
 FROM geonode/geoserver:2.10.x
 MAINTAINER Kartoza
 
+# ADD resources /tmp/resources
+
 # Install any plugin zip files in resources/plugins
 RUN if ls /tmp/resources/plugins/*.zip > /dev/null 2>&1; then \
       for p in /tmp/resources/plugins/*.zip; do \
