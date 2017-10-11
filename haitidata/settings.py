@@ -21,6 +21,8 @@
 # Django settings for the GeoNode project.
 import os
 from geonode.settings import *
+
+from .utils import absolute_path
 #
 # General Django development settings
 #
@@ -46,6 +48,39 @@ except ImportError:
 STATICFILES_DIRS.append(
     os.path.join(LOCAL_ROOT, "static"),
 )
+
+CLIPPED_DIRECTORY = absolute_path('base', 'clipped_geotiff')
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(PROJECT_ROOT, "templates")],
+        'APP_DIRS': False,
+        'OPTIONS': {
+            #  List of callables that know how to import
+            #  templates from various sources.
+            'loaders': [
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+            ],
+            'context_processors': [
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+                "django.core.context_processors.debug",
+                "django.core.context_processors.i18n",
+                "django.core.context_processors.static",
+                "django.core.context_processors.media",
+                "django.core.context_processors.request",
+                "django.core.context_processors.tz",
+                'account.context_processors.account',
+                'geonode.context_processors.resource_urls',
+                "geonode.geoserver.context_processors.geoserver_urls",
+                #"haitidata.context_processors.project_setting.project_setting",
+                "haitidata.context_processors.clipped_geotiff.clipped_geotiff",
+            ],
+        },
+    },
+]
 
 # Location of url mappings
 ROOT_URLCONF = 'haitidata.urls'
