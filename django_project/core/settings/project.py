@@ -3,8 +3,6 @@
 from .base import *
 from django.utils.translation import ugettext_lazy as _
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -30,7 +28,7 @@ PROJECTION_DIRECTORY = '/tmp/'
 GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'  # no need to change this
 GEOSERVER_PUBLIC_LOCATION = os.environ.get(
     'GEOSERVER_PUBLIC_LOCATION',
-    os.environ.get('SITEURL') + 'geoserver/'
+    os.environ.get('SITEURL') + 'api/geoserver/'
 )
 
 # dynamic setting based on domain
