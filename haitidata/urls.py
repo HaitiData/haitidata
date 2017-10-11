@@ -4,14 +4,17 @@ from osgeo_importer.urls import urlpatterns as importer_urlpatterns
 
 from geonode.urls import *
 
+from filter.urls import api_ext
+
 urlpatterns = patterns('',
    url(r'^/?$',
        TemplateView.as_view(template_name='site_index.html'),
        name='home'),
+    url(r'', include(api_ext.urls))
  ) + urlpatterns + [
     url(r'^chart/', include('charts_app.urls')),
     url(r'^table/', include('wfs_harvest.urls')),
-    url(r'^clip/', include('clip-and-ship.urls'))
+    url(r'^clip/', include('clip-and-ship.urls')),
     ]
 
 urlpatterns += patterns(

@@ -62,7 +62,8 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'geonode-client',
     'charts_app',
     'wfs_harvest',
-    "clip-and-ship"
+    "clip-and-ship",
+    'filter'
     )
 
 LAYER_PREVIEW_LIBRARY = 'react'
