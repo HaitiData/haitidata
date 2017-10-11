@@ -48,7 +48,7 @@ RUN pip install -r /requirements-haitidata.txt
 RUN apt-get -y --force-yes install gettext
 
 RUN apt-get install gdal-bin
-RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin development
+RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin new-architecture
 
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
