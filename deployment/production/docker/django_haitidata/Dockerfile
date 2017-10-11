@@ -32,8 +32,9 @@ ENV LC_ALL en_US.UTF-8
 ENV CPLUS_INCLUDE_PATH /usr/include/gdal
 ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
+WORKDIR /home/web
 
-RUN cd /home/web && wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
+RUN wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
 RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
 
 COPY requirements.txt /requirements.txt
