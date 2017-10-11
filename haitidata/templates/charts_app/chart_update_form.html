@@ -240,10 +240,14 @@ title_detail();
 
 // Set-up the export button
 d3.select('#saveButton').on('click', function(){
-    var svg_img = document.getElementById("chart_svg");
-    console.log(svg_img)
-	var svgString = getSVGString(document.getElementById("chart_svg"));
-	svgString2Image( svgString, 300, 250, 'png', save ); // passes Blob and filesize String to the callback
+  if (!document.getElementById("chart_svg")){
+      var svg_img = document.getElementById("chart_svgchart_area_plain");
+      var svgString = getSVGString(document.getElementById("chart_svgchart_area_plain"));
+  } else {
+      var svg_img = document.getElementById("chart_svg");
+      var svgString = getSVGString(document.getElementById("chart_svg"));
+  }
+  svgString2Image( svgString, svg_img.parentNode.clientWidth, svg_img.parentNode.clientHeight, 'png', save ); // passes Blob and filesize String to the callback
 
 	function save( dataBlob, filesize ){
 		saveAs( dataBlob, 'D3 vis exported to PNG.png' ); // FileSaver.js function

@@ -6,7 +6,7 @@ function get_chart_detail(){
     //create area for chart
     var createChartArea =  function() {
         var chartArea = document.getElementById(id);
-        chartArea.style= "display:table; height:100%";
+        chartArea.style= "display:table; height:100%; width:100%";
     };
 
     // update chart
@@ -36,7 +36,7 @@ function get_chart_popup(){
  //create area for chart
  var createChartArea =  function() {
      var chartArea = document.getElementById(id);
-     chartArea.style= "display:table";
+     chartArea.style= "display:table; width:100%";
  };
  // update chart
  var replaceChart = function(){
