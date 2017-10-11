@@ -36,7 +36,11 @@ function get_chart_popup(){
  //create area for chart
  var createChartArea =  function() {
      var chartArea = document.getElementById(id);
-     chartArea.style= "display:table; width:100%";
+     var chartAreaClone = chartArea.cloneNode(false);
+     var parentNode = chartArea.parentElement;
+     parentNode.insertBefore(chartAreaClone, chartArea);
+     parentNode.removeChild(chartArea);
+     chartAreaClone.style= "display:table; width:100%";
  };
  // update chart
  var replaceChart = function(){
