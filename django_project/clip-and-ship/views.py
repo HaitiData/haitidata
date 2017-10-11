@@ -8,6 +8,8 @@ import urllib2
 import subprocess
 from django.conf import settings
 from django.http import Http404, HttpResponse, JsonResponse
+from django.shortcuts import render
+from django.views.generic.detail import View
 from geonode.layers.views import _resolve_layer, _PERMISSION_MSG_VIEW
 
 
@@ -270,3 +272,20 @@ def download_clip(request, layername, clip_filename):
         return resp
     else:
         raise Http404('Project can not be clipped or masked.')
+
+
+class ClipView(View):
+    template_name = 'clip-and-ship/clip-page.html'
+
+    def get(self, request, geotiffname):
+        context = {
+            'geotiffname': geotiffname,
+            'resource': {
+                'get_tiles_url': "%sgwc/service/gmaps?layers=geonode:%s&zoom={z}&x={x}&y={y}&format=image/png8" % (
+                    settings.GEOSERVER_PUBLIC_LOCATION,
+                    geotiffname
+                ),
+                'service_typename': 'geonode:'+geotiffname
+            }
+        }
+        return render(request, self.template_name, context)

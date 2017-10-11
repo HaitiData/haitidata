@@ -60,6 +60,7 @@ STATICFILES_DIRS += (
     absolute_path('core', 'geonode_static'),
 )
 
+CLIPPED_DIRECTORY = absolute_path('base', 'clipped_geotiff')
 
 # Additional locations of static files
 
@@ -108,7 +109,8 @@ TEMPLATES = [
                 'account.context_processors.account',
                 'geonode.context_processors.resource_urls',
                 "geonode.geoserver.context_processors.geoserver_urls",
-                "core.context_processors.project_setting.project_setting"
+                "core.context_processors.project_setting.project_setting",
+                "core.context_processors.clipped_geotiff.clipped_geotiff",
             ],
         },
     },
