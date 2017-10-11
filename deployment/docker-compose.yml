@@ -52,7 +52,7 @@ services:
 
       # Ensure to change these based on server domain
       - SITEURL=http://192.168.1.6:33300/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://192.168.1.6:8080/geoserver/ # change this to ip or domain geoserver
+      - GEOSERVER_BASE_URL=http://192.168.1.6:33308/geoserver/ # change this to ip or domain geoserver
       # Set your locale - you need to ensure this is created in Dockerfile too...
       - LC_ALL=en_US.UTF-8
     restart: always
@@ -110,7 +110,7 @@ services:
 
       # Ensure to change these based on server domain
       - SITEURL=http://192.168.1.6:33300/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://192.168.1.6:8080/geoserver/ # change this to ip or domain geoserver
+      - GEOSERVER_BASE_URL=http://192.168.1.6:33308/geoserver/ # change this to ip or domain geoserver
       # Set your locale - you need to ensure this is created in Dockerfile too...
       - LC_ALL=en_US.UTF-8
     network_mode: "bridge"
@@ -121,7 +121,7 @@ services:
     links:
       - postgres
     ports:
-      - "8080:8080"
+      - "33308:8080"
     volumes_from:
       - data_dir_conf
     environment:
@@ -130,7 +130,7 @@ services:
       - DOCKER_HOST_IP
       - DJANGO_URL=http://django:8000/
       - SITEURL=http://192.168.1.6/
-      - GEOSERVER_BASE_URL=http://192.168.1.6:8080/geoserver/
+      - GEOSERVER_BASE_URL=http://192.168.1.6:33308/geoserver/
     network_mode: "bridge"
 
   geonode:
