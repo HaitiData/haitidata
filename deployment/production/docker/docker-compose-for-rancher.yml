@@ -1,7 +1,7 @@
 version: '2'
 services:
   geoserver:
-    image: kartoza/haitidata_geoserver
+    image: kartoza/haitidata_geoserver:1.0
     external_links:
     - postgis:postgis
     ports:
@@ -9,12 +9,12 @@ services:
     labels:
       io.rancher.container.pull_image: always
   postgis:
-    image: kartoza/haitidata_db
+    image: kartoza/haitidata_db:1.0
     environment:
       POSTGRES_USER: docker
       POSTGRES_PASS: docker
   django:
-    image: kartoza/haitidata_django
+    image: kartoza/haitidata_django:1.0
     environment:
       DATABASE_HOST: postgis
       DATABASE_NAME: gis
@@ -33,7 +33,7 @@ services:
     labels:
       io.rancher.container.pull_image: always
   nginx:
-    image: kartoza/haitidata_nginx
+    image: kartoza/haitidata_nginx:1.0
     volumes:
     - django-static-data:/home/web/static:ro
     - django-media-data:/home/web/media:ro
