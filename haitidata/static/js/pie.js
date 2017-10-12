@@ -86,7 +86,11 @@ function pieChart(cat, qnt, title, id){
                 .selectAll('polyline')
                 .data(pie)
               .enter().append('polyline')
-                .attr('points', calculatePoints);
+                .attr('points', calculatePoints)
+                .style('opacity', .3)
+                .style('stroke', 'black') 
+                .style('width', '2px') 
+                .style('fill', 'none');
             // ===========================================================================================
 
             // ===========================================================================================
