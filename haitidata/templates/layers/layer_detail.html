@@ -656,12 +656,13 @@
               suggestedTitle = title + " of " + quantity + " for " + category;
           }
               document.getElementById("title").innerHTML = suggestedTitle;
+              title_eval();
               return suggestedTitle;
       };
 
 
       function title_eval(){
-          if (document.getElementById("id_title").textLength == 0){
+          if (document.getElementById("id_title").value == ""){
               document.getElementById("id_title").value = suggestedTitle;
           }
       }
