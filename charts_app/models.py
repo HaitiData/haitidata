@@ -43,7 +43,7 @@ class Chart(models.Model):
     )
 
     layer = models.ForeignKey(Layer, validators=[validate_wfs])
-    title = models.CharField(max_length=128, blank=True)
+    title = models.CharField(max_length=128, blank=False)
     category = models.CharField(max_length=200)
     quantity = models.CharField(max_length=200)
     type = models.SmallIntegerField(choices=CHART_TYPES, default=0)
