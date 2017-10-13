@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^chart/', include('charts_app.urls')),
     url(r'^table/', include('wfs_harvest.urls')),
     url(r'^clip/', include('clip-and-ship.urls')),
+    url(r'^tutorials/$', TemplateView.as_view(template_name='tutorials.html'), name='tutorials'),
     ]
 
 urlpatterns += patterns(
