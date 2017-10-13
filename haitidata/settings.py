@@ -101,6 +101,10 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'filter'
     )
 
+GEOSERVER_PUBLIC_LOCATION = os.getenv(
+    'GEOSERVER_PUBLIC_LOCATION', 'http://haitidata.dev.ithacaweb.org/geoserver/'
+)
+
 LAYER_PREVIEW_LIBRARY = 'react'
 
 TEMPLATES[0]['DIRS'].insert(0, os.path.join(LOCAL_ROOT, "templates"))
@@ -195,6 +199,11 @@ UPLOADER = {
         'GEOGIG_ENABLED': False,
     }
 }
+
+OFFICIAL_USERS = [
+    'cnigs', 'ciat', 'ihsi', 'dpc', 'marndr', 'mairie-de-pap', 'faculte-de-science', 'undp-haiti', 'idb',
+    'european-union', 'worldbank'
+    ]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
