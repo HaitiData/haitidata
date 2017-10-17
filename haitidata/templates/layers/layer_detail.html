@@ -583,7 +583,7 @@
                     <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
                   </div>
                 </div>
-                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Preview</button>
+                <button id="preview_btn" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Preview</button>
                 <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Save</button>
                </form>
           </div>
@@ -671,6 +671,9 @@
           update_link();
           chart_title();
           attachAbstract();
+          if (loading == true) {
+              document.getElementById("preview_btn").disabled = true;
+          }
       }
 
     </script>
