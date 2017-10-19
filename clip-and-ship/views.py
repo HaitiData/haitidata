@@ -141,10 +141,10 @@ def clip_layer(request, layername):
         _file.write(geojson)
         _file.close()
 
-        masking = ('gdalwarp -dstnodata 0 -q -cutline %(MASK)s ' +
-                   '-crop_to_cutline ' +
-                   '-dstalpha -of ' +
-                   'GTiff %(PROJECT)s %(OUTPUT)s')
+        masking = ("gdalwarp -dstnodata 0 -q -cutline '%(MASK)s' " +
+                   "-crop_to_cutline " +
+                   "-dstalpha -of " +
+                   "GTiff '%(PROJECT)s' '%(OUTPUT)s'")
         request_process = masking % {
             'MASK': mask_file,
             'PROJECT': raster_filepath,
