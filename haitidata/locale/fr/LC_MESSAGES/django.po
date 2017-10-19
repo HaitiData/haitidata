@@ -10,64 +10,64 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-17 09:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: Andrea Ajmar <andrea.ajmar@ithaca.polito.it>, 2017\n"
+"Language-Team: French (https://www.transifex.com/ithaca/teams/79634/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: haitidata/templates/_actions.html:3
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: haitidata/templates/_actions.html:5
 msgid "Attributes"
-msgstr ""
+msgstr "Attributs"
 
 #: haitidata/templates/_actions.html:8
 msgid "Granules"
-msgstr ""
+msgstr "Jeux de Données"
 
 #: haitidata/templates/_actions.html:10
 msgid "Ratings"
-msgstr ""
+msgstr "Note"
 
 #: haitidata/templates/_actions.html:11 haitidata/templates/_comments.html:11
 #: haitidata/templates/social/activity_list.html:19
 msgid "Comments"
-msgstr ""
+msgstr "Commentaire"
 
 #: haitidata/templates/_actions.html:13
 msgid "GeoGig"
-msgstr ""
+msgstr "GeoGig"
 
 #: haitidata/templates/_actions.html:16
 msgid "Exif"
-msgstr ""
+msgstr "Exif"
 
 #: haitidata/templates/_comments.html:15 haitidata/templates/_comments.html:52
 msgid "Add Comment"
-msgstr ""
+msgstr "Ajouter un commentaire"
 
 #: haitidata/templates/_comments.html:19
 msgid "Log in to add a comment"
-msgstr ""
+msgstr "Se connecter pour ajouter un commentaire"
 
 #: haitidata/templates/_comments.html:29
 msgid "By"
-msgstr ""
+msgstr "Par"
 
 #: haitidata/templates/_comments.html:60
 #: haitidata/templates/announcements/announcement_form.html:35
 #: haitidata/templates/upload/layer_upload.html:60
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: haitidata/templates/_comments.html:61
 msgid "Submit Comment"
-msgstr ""
+msgstr "Soumettre un Commentaire"
 
 #: haitidata/templates/account/invite_user.html:5
 #: haitidata/templates/account/invite_user.html:6
@@ -75,7 +75,7 @@ msgstr ""
 #: haitidata/templates/people/profile_detail.html:139
 #: haitidata/templates/site_base.html:80
 msgid "Invite User"
-msgstr ""
+msgstr "Inviter un Utilisateur"
 
 #: haitidata/templates/announcements/announcement_form.html:9
 #: haitidata/templates/announcements/announcement_form.html:17
@@ -84,54 +84,53 @@ msgstr ""
 #: haitidata/templates/people/profile_detail.html:133
 #: haitidata/templates/site_base.html:75
 msgid "Announcements"
-msgstr ""
+msgstr "Annonces"
 
 #: haitidata/templates/announcements/announcement_form.html:11
 msgid "Edit Announcement"
-msgstr ""
+msgstr "Modifier un'announce"
 
 #: haitidata/templates/announcements/announcement_form.html:11
 msgid "Create Announcement"
-msgstr ""
+msgstr "Créer un'announce"
 
 #: haitidata/templates/announcements/announcement_form.html:37
 #: haitidata/templates/upload/layer_upload.html:52
 #: haitidata/templates/upload/layer_upload.html:59
 msgid "Delete"
-msgstr ""
+msgstr "Effacer"
 
 #: haitidata/templates/announcements/announcement_form.html:39
 #: haitidata/templates/services/service_edit.html:21
 msgid "Save"
-msgstr ""
+msgstr "Sauvegarder"
 
 #: haitidata/templates/announcements/announcement_list.html:15
 #: haitidata/templates/people/profile_edit.html:19
 msgid "Add Announcement"
-msgstr ""
+msgstr "Ajouter un'announce"
 
 #: haitidata/templates/announcements/announcement_list.html:27
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: haitidata/templates/announcements/announcement_list.html:28
 msgid "Level"
-msgstr ""
+msgstr "Niveau"
 
 #: haitidata/templates/announcements/announcement_list.html:29
 msgid "Announcement"
-msgstr ""
+msgstr "Annonce"
 
 #: haitidata/templates/announcements/announcement_list.html:30
 msgid "Published From"
-msgstr ""
+msgstr "Publié depuis"
 
 #: haitidata/templates/announcements/announcement_list.html:45
 #, python-format
 msgid ""
 "\n"
-"          Published from <b>%(publish_start)s</b> to <b>%(publish_end)s</"
-"b>.\n"
+"          Published from <b>%(publish_start)s</b> to <b>%(publish_end)s</b>.\n"
 "          "
 msgstr ""
 
@@ -139,22 +138,21 @@ msgstr ""
 #: haitidata/templates/layers/layer_detail.html:498
 #: haitidata/templates/search/_search_content.html:16
 msgid "Create a Map"
-msgstr ""
+msgstr "Créer une Carte"
 
 #: haitidata/templates/charts_app/chart_confirm_delete.html:4
 msgid "Deleting"
-msgstr ""
+msgstr "Effacer"
 
 #: haitidata/templates/charts_app/chart_confirm_delete.html:8
 msgid "Remove Chart"
-msgstr ""
+msgstr "Supprimer le Graphique"
 
 #: haitidata/templates/charts_app/chart_confirm_delete.html:13
 #, python-format
 msgid ""
 "\n"
-"          Are you sure you want to remove <a href="
-"\"%(object.get_absolute_url)s\">%(object_title)s</a> chart?\n"
+"          Are you sure you want to remove <a href=\"%(object.get_absolute_url)s\">%(object_title)s</a> chart?\n"
 "        "
 msgstr ""
 
@@ -163,32 +161,32 @@ msgstr ""
 #: haitidata/templates/maps/map_remove.html:22
 #: haitidata/templates/osgeo_importer/upload_confirm_delete.html:23
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "Oui, je suis sûr"
 
 #: haitidata/templates/charts_app/chart_confirm_delete.html:21
 #: haitidata/templates/groups/group_remove.html:22
 #: haitidata/templates/maps/map_remove.html:23
 #: haitidata/templates/osgeo_importer/upload_confirm_delete.html:24
 msgid "No, don't remove it"
-msgstr ""
+msgstr "Non, ne pas enlever "
 
 #: haitidata/templates/charts_app/chart_detail.html:11
 #: haitidata/templates/charts_app/chart_list.html:8
 #: haitidata/templates/charts_app/chart_update_form.html:11
 msgid "Explore Charts"
-msgstr ""
+msgstr "Explorer les Graphiques"
 
 #: haitidata/templates/charts_app/chart_detail.html:17
 #: haitidata/templates/charts_app/chart_list.html:6
 #: haitidata/templates/charts_app/chart_update_form.html:17
 msgid "Charts"
-msgstr ""
+msgstr "Graphiques"
 
 #: haitidata/templates/charts_app/chart_detail.html:76
 #: haitidata/templates/charts_app/chart_update_form.html:76
 #: haitidata/templates/documents/document_detail.html:100
 msgid "Rate this document"
-msgstr ""
+msgstr "Noter ce Document "
 
 #: haitidata/templates/charts_app/chart_detail.html:80
 #: haitidata/templates/charts_app/chart_update_form.html:80
@@ -196,97 +194,97 @@ msgstr ""
 #: haitidata/templates/layers/layer_detail.html:269
 #: haitidata/templates/maps/map_detail.html:92
 msgid "Average Rating"
-msgstr ""
+msgstr "Note Moyenne"
 
 #: haitidata/templates/charts_app/chart_detail.html:91
 #: haitidata/templates/charts_app/chart_update_form.html:91
 msgid "Download CSV"
-msgstr ""
+msgstr "Télécharger le fichier CSV"
 
 #: haitidata/templates/charts_app/chart_detail.html:95
 #: haitidata/templates/charts_app/chart_detail.html:98
 #: haitidata/templates/charts_app/chart_update_form.html:95
 #: haitidata/templates/charts_app/chart_update_form.html:98
 msgid "Modify this Chart"
-msgstr ""
+msgstr "Modifier ce Graphique"
 
 #: haitidata/templates/charts_app/chart_detail.html:96
 #: haitidata/templates/charts_app/chart_update_form.html:96
 msgid "Change type of the chart or type of aggregation."
-msgstr ""
+msgstr "Changer le type du graphique ou l’agrégation. "
 
 #: haitidata/templates/charts_app/chart_detail.html:151
 #: haitidata/templates/charts_app/chart_update_form.html:140
 msgid "Delete this Chart"
-msgstr ""
+msgstr "Supprimer ce Graphique"
 
 #: haitidata/templates/documents/document_detail.html:10
 #: haitidata/templates/documents/document_detail.html:18
 #: haitidata/templates/documents/document_list.html:6
 #: haitidata/templates/site_base.html:38
 msgid "Documents"
-msgstr ""
+msgstr "Documents"
 
 #: haitidata/templates/documents/document_detail.html:12
 #: haitidata/templates/documents/document_list.html:8
 msgid "Explore Documents"
-msgstr ""
+msgstr "Explorer les Documents"
 
 #: haitidata/templates/documents/document_detail.html:46
 #: haitidata/templates/layers/layer_detail.html:58
 #: haitidata/templates/maps/map_detail.html:41
 msgid "in"
-msgstr ""
+msgstr "dans"
 
 #: haitidata/templates/documents/document_detail.html:49
 #: haitidata/templates/layers/layer_detail.html:61
 #: haitidata/templates/maps/map_detail.html:44
 msgid "Created on"
-msgstr ""
+msgstr "Crée le"
 
 #: haitidata/templates/documents/document_detail.html:50
 #: haitidata/templates/layers/layer_detail.html:62
 #: haitidata/templates/maps/map_detail.html:45
 msgid "Published on"
-msgstr ""
+msgstr "Publié le"
 
 #: haitidata/templates/documents/document_detail.html:51
 #: haitidata/templates/layers/layer_detail.html:63
 #: haitidata/templates/maps/map_detail.html:46
 msgid "Updated on"
-msgstr ""
+msgstr "Mis à Jour le"
 
 #: haitidata/templates/documents/document_detail.html:79
 msgid "External Resource"
-msgstr ""
+msgstr "Ressource Externe"
 
 #: haitidata/templates/documents/document_detail.html:123
 #: haitidata/templates/layers/layer_detail.html:354
 #: haitidata/templates/maps/map_detail.html:112
 msgid "Metadata Detail"
-msgstr ""
+msgstr "Détail des Métadonnées"
 
 #: haitidata/templates/documents/document_detail.html:131
 #: haitidata/templates/documents/document_detail.html:133
 #: haitidata/templates/documents/document_detail.html:135
 msgid "Download Document"
-msgstr ""
+msgstr "Télécharger le Document"
 
 #: haitidata/templates/documents/document_detail.html:139
 #: haitidata/templates/layers/layer_detail.html:293
 msgid "Request Download"
-msgstr ""
+msgstr "Demande de Téléchargement"
 
 #: haitidata/templates/documents/document_detail.html:145
 #: haitidata/templates/documents/document_detail.html:152
 msgid "Edit Document"
-msgstr ""
+msgstr "Modifier le Document"
 
 #: haitidata/templates/documents/document_detail.html:160
 #: haitidata/templates/layers/layer_detail.html:374
 #: haitidata/templates/maps/map_detail.html:151
 msgid "Metadata"
-msgstr ""
+msgstr "Métadonnées"
 
 #: haitidata/templates/documents/document_detail.html:161
 #: haitidata/templates/layers/layer_detail.html:375
@@ -294,16 +292,16 @@ msgstr ""
 #: haitidata/templates/maps/map_detail.html:152
 #: haitidata/templates/maps/map_detail.html:166
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: haitidata/templates/documents/document_detail.html:167
 msgid "Document"
-msgstr ""
+msgstr "Document"
 
 #: haitidata/templates/documents/document_detail.html:169
 #: haitidata/templates/layers/layer_detail.html:402
 msgid "Replace"
-msgstr ""
+msgstr "Remplacer"
 
 #: haitidata/templates/documents/document_detail.html:172
 #: haitidata/templates/groups/group_members.html:36
@@ -312,7 +310,7 @@ msgstr ""
 #: haitidata/templates/layers/layer_detail.html:408
 #: haitidata/templates/maps/map_detail.html:167
 msgid "Remove"
-msgstr ""
+msgstr "Supprimer"
 
 #: haitidata/templates/documents/document_detail.html:179
 #: haitidata/templates/documents/document_detail.html:215
@@ -322,30 +320,30 @@ msgstr ""
 #: haitidata/templates/maps/map_detail.html:130
 #: haitidata/templates/maps/map_detail.html:173
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: haitidata/templates/documents/document_detail.html:186
 #: haitidata/templates/documents/document_detail.html:193
 #: haitidata/templates/layers/layer_detail.html:423
 #: haitidata/templates/layers/layer_detail.html:431
 msgid "Download Metadata"
-msgstr ""
+msgstr "Télécharger les Métadonnées"
 
 #: haitidata/templates/documents/document_detail.html:222
 msgid "Resource using this document"
-msgstr ""
+msgstr "Ressource utilisant ce document"
 
 #: haitidata/templates/documents/document_detail.html:224
 msgid "List of resources using this document:"
-msgstr ""
+msgstr "Liste des ressources utilisant ce document:"
 
 #: haitidata/templates/documents/document_detail.html:228
 msgid "This document is related to a "
-msgstr ""
+msgstr "Ce document est lié à"
 
 #: haitidata/templates/documents/document_detail.html:231
 msgid "This document is not related to any maps or layers"
-msgstr ""
+msgstr "Ce document n'est lié à aucune arte ou couche"
 
 #: haitidata/templates/documents/document_detail.html:238
 #: haitidata/templates/documents/document_upload.html:31
@@ -354,67 +352,69 @@ msgstr ""
 #: haitidata/templates/maps/map_detail.html:219
 #: haitidata/templates/upload/layer_upload.html:119
 msgid "Permissions"
-msgstr ""
+msgstr "Autorisations"
 
 #: haitidata/templates/documents/document_detail.html:239
 msgid "Click the button below to change the permissions of this document."
 msgstr ""
+"Cliquer sur le bouton ci-dessous pour modifier les autorisations de ce "
+"document."
 
 #: haitidata/templates/documents/document_detail.html:240
 msgid "Change Document Permissions"
-msgstr ""
+msgstr "Modifier les Autorisations de ce Document"
 
 #: haitidata/templates/documents/document_list.html:15
 #: haitidata/templates/documents/document_upload.html:5
 #: haitidata/templates/documents/document_upload.html:6
 msgid "Upload Document"
-msgstr ""
+msgstr "Télécharger un Document"
 
 #: haitidata/templates/documents/document_upload.html:22
 msgid "Upload"
-msgstr ""
+msgstr "Télécharger"
 
 #: haitidata/templates/groups/group_create.html:5
 #: haitidata/templates/groups/group_create.html:6
 #: haitidata/templates/site_base.html:81
 msgid "Create Group"
-msgstr ""
+msgstr "Créer un Groupe"
 
 #: haitidata/templates/groups/group_create.html:25
 #: haitidata/templates/services/service_register.html:19
 msgid "Create"
-msgstr ""
+msgstr "Créer"
 
 #: haitidata/templates/groups/group_detail.html:4
 #: haitidata/templates/site_base.html:72
 msgid "Groups"
-msgstr ""
+msgstr "Groupes"
 
 #: haitidata/templates/groups/group_detail.html:5
 #: haitidata/templates/groups/group_list.html:5
 #: haitidata/templates/groups/group_list.html:6
 msgid "Explore Groups"
-msgstr ""
+msgstr "Découvrir les Groupes"
 
 #: haitidata/templates/groups/group_detail.html:27
 msgid "This group has not created a logo."
-msgstr ""
+msgstr "Ce groupe n'a pas créé de logo."
 
 #: haitidata/templates/groups/group_detail.html:52
 msgid "Edit Group Details"
-msgstr ""
+msgstr "Modifier les Détails du Groupe"
 
 #: haitidata/templates/groups/group_detail.html:53
 msgid "Manage Group Members"
-msgstr ""
+msgstr "Gérer les membres du groupe"
 
 #: haitidata/templates/groups/group_detail.html:54
 msgid "Delete this Group"
-msgstr ""
+msgstr "Supprimer ce Groupe"
 
 #: haitidata/templates/groups/group_detail.html:57
 msgid "Group Activities"
-msgstr ""
+msgstr "Activités du Groupe"
 
 #: haitidata/templates/groups/group_detail.html:62
 #, python-format
@@ -426,65 +426,67 @@ msgstr ""
 
 #: haitidata/templates/groups/group_detail.html:66
 msgid "Anyone may join this group."
-msgstr ""
+msgstr "Tout le monde peut rejoindre ce groupe."
 
 #: haitidata/templates/groups/group_detail.html:74
 msgid "Anyone may view this group but membership is by invitation only."
 msgstr ""
+"Tout le monde peut voir ce groupe mais l'adhésion est sur invitation "
+"seulement."
 
 #: haitidata/templates/groups/group_detail.html:76
 msgid "Membership is by invitation only."
-msgstr ""
+msgstr "L'adhésion est sur invitation seulement."
 
 #: haitidata/templates/groups/group_detail.html:81
 #: haitidata/templates/groups/group_members.html:17
 msgid "Managers"
-msgstr ""
+msgstr "Administrateurs"
 
 #: haitidata/templates/groups/group_detail.html:93
 #: haitidata/templates/groups/group_members.html:12
 #: haitidata/templates/groups/group_members.html:18
 msgid "Members"
-msgstr ""
+msgstr "Membres"
 
 #: haitidata/templates/groups/group_members.html:5
 #: haitidata/templates/groups/group_members.html:6
 msgid "Update Group Members"
-msgstr ""
+msgstr "Mettre à Jour les Membres du Groupe"
 
 #: haitidata/templates/groups/group_members.html:11
 msgid "Edit Members for"
-msgstr ""
+msgstr "Modifier les Membres pour"
 
 #: haitidata/templates/groups/group_members.html:16
 #: haitidata/templates/social/activity_list.html:16
 msgid "All"
-msgstr ""
+msgstr "Tous"
 
 #: haitidata/templates/groups/group_members.html:31
 #: haitidata/templates/groups/group_members.html:57
 #: haitidata/templates/groups/group_members.html:84
 msgid "Manager"
-msgstr ""
+msgstr "Administrateur"
 
 #: haitidata/templates/groups/group_members.html:40
 #: haitidata/templates/groups/group_members.html:66
 #: haitidata/templates/groups/group_members.html:93
 msgid "Role"
-msgstr ""
+msgstr "Rôle"
 
 #: haitidata/templates/groups/group_members.html:102
 msgid "Add members"
-msgstr ""
+msgstr "Ajouter des membres"
 
 #: haitidata/templates/groups/group_members.html:113
 msgid "Invite people"
-msgstr ""
+msgstr "Inviter des personnes"
 
 #: haitidata/templates/groups/group_remove.html:4
 #: haitidata/templates/groups/group_remove.html:5
 msgid "Remove Group"
-msgstr ""
+msgstr "Supprimer un Groupe"
 
 #: haitidata/templates/groups/group_remove.html:14
 #, python-format
@@ -498,367 +500,366 @@ msgstr ""
 #: haitidata/templates/groups/group_update.html:6
 #: haitidata/templates/groups/group_update.html:13
 msgid "Update Group"
-msgstr ""
+msgstr "Mettre à Jour un Groupe"
 
 #: haitidata/templates/groups/group_update.html:28
 #: haitidata/templates/maps/map_metadata.html:57
 #: haitidata/templates/maps/map_metadata.html:91
 msgid "Update"
-msgstr ""
+msgstr "Mettre à Jour"
 
 #: haitidata/templates/layers/layer_detail.html:11
 #: haitidata/templates/layers/layer_list.html:6
 #: haitidata/templates/site_base.html:37
 #: haitidata/templates/social/activity_list.html:17
 msgid "Layers"
-msgstr ""
+msgstr "Couches"
 
 #: haitidata/templates/layers/layer_detail.html:13
 #: haitidata/templates/layers/layer_list.html:8
 #: haitidata/templates/upload/layer_upload.html:13
 msgid "Explore Layers"
-msgstr ""
+msgstr "Explorer les couches"
 
 #: haitidata/templates/layers/layer_detail.html:19
 msgid "All Layers"
-msgstr ""
+msgstr "Tous les Couches"
 
 #: haitidata/templates/layers/layer_detail.html:103
 msgid "Filter Granules"
-msgstr ""
+msgstr "Filtrer les Jeux de Données"
 
 #: haitidata/templates/layers/layer_detail.html:106
 msgid "Active Filter:"
-msgstr ""
+msgstr "Filtre Actif:"
 
 #: haitidata/templates/layers/layer_detail.html:112
 msgid "Granule ID"
-msgstr ""
+msgstr "ID du Jeu de Données"
 
 #: haitidata/templates/layers/layer_detail.html:113
 msgid "Bounding Box"
-msgstr ""
+msgstr "Rectangle Englobant "
 
 #: haitidata/templates/layers/layer_detail.html:114
 msgid "Time"
-msgstr ""
+msgstr "Temps"
 
 #: haitidata/templates/layers/layer_detail.html:115
 msgid "Elevation"
-msgstr ""
+msgstr "Élévation"
 
 #: haitidata/templates/layers/layer_detail.html:116
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #: haitidata/templates/layers/layer_detail.html:178
 msgid "Dimension"
-msgstr ""
+msgstr "Dimension"
 
 #: haitidata/templates/layers/layer_detail.html:179
 msgid "Enabled"
-msgstr ""
+msgstr "Activée"
 
 #: haitidata/templates/layers/layer_detail.html:180
 msgid "Regex"
-msgstr ""
+msgstr "Regex"
 
 #: haitidata/templates/layers/layer_detail.html:185
 msgid "TIME"
-msgstr ""
+msgstr "TEMPS"
 
 #: haitidata/templates/layers/layer_detail.html:186
 #: haitidata/templates/layers/layer_detail.html:191
 msgid "True"
-msgstr ""
+msgstr "Vrai"
 
 #: haitidata/templates/layers/layer_detail.html:186
 #: haitidata/templates/layers/layer_detail.html:191
 msgid "False"
-msgstr ""
+msgstr "Faux"
 
 #: haitidata/templates/layers/layer_detail.html:190
 msgid "ELEVATION"
-msgstr ""
+msgstr "ÉLÉVATION"
 
 #: haitidata/templates/layers/layer_detail.html:201
 msgid "Attribute Name"
-msgstr ""
+msgstr "Nom d'attribut"
 
 #: haitidata/templates/layers/layer_detail.html:202
 msgid "Label"
-msgstr ""
+msgstr "Étiquette"
 
 #: haitidata/templates/layers/layer_detail.html:203
 #: haitidata/templates/people/profile_detail.html:94
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: haitidata/templates/layers/layer_detail.html:205
 msgid "Range"
-msgstr ""
+msgstr "Gamme"
 
 #: haitidata/templates/layers/layer_detail.html:206
 msgid "Average"
-msgstr ""
+msgstr "Moyenne"
 
 #: haitidata/templates/layers/layer_detail.html:207
 msgid "Median"
-msgstr ""
+msgstr "Médian"
 
 #: haitidata/templates/layers/layer_detail.html:208
 msgid "Standard Deviation"
-msgstr ""
+msgstr "Écart-type"
 
 #: haitidata/templates/layers/layer_detail.html:265
 msgid "Rate this layer"
-msgstr ""
+msgstr "Évaluer cette Couche"
 
 #: haitidata/templates/layers/layer_detail.html:284
 msgid "Download Clip"
-msgstr ""
+msgstr "Couper et Télécharger"
 
 #: haitidata/templates/layers/layer_detail.html:290
 #: haitidata/templates/layers/layer_detail.html:303
 msgid "Download Layer"
-msgstr ""
+msgstr "Télécharger la Couche"
 
 #: haitidata/templates/layers/layer_detail.html:360
 #: haitidata/templates/layers/layer_detail.html:367
 msgid "Edit Layer"
-msgstr ""
+msgstr "Modifier la Couche"
 
 #: haitidata/templates/layers/layer_detail.html:382
 #: haitidata/templates/layers/layer_detail.html:693
 msgid "Styles"
-msgstr ""
+msgstr "Styles"
 
 #: haitidata/templates/layers/layer_detail.html:385
 msgid "Manage"
-msgstr ""
+msgstr "Gérer"
 
 #: haitidata/templates/layers/layer_detail.html:393
 #: haitidata/templates/maps/map_detail.html:158
 msgid "Thumbnail"
-msgstr ""
+msgstr "Vignette"
 
 #: haitidata/templates/layers/layer_detail.html:394
 #: haitidata/templates/maps/map_detail.html:159
 msgid "Set"
-msgstr ""
-
-#: haitidata/templates/layers/layer_detail.html:400
-#, fuzzy
-msgid "Layer"
-msgstr ""
+msgstr "Fixer"
 
 #: haitidata/templates/layers/layer_detail.html:405
 msgid "Edit data"
-msgstr ""
+msgstr "Modifier les Données"
 
 #: haitidata/templates/layers/layer_detail.html:469
 msgid "Legend"
-msgstr ""
+msgstr "Légende"
 
 #: haitidata/templates/layers/layer_detail.html:483
 msgid "Maps using this layer"
-msgstr ""
+msgstr "Cartes utilisant cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:485
 msgid "List of maps using this layer:"
-msgstr ""
+msgstr "Liste des cartes utilisant cette couche:"
 
 #: haitidata/templates/layers/layer_detail.html:491
 msgid "This layer is not currently used in any maps."
-msgstr ""
+msgstr "Cette couche n'est actuellement utilisée dans aucune carte."
 
 #: haitidata/templates/layers/layer_detail.html:496
 msgid "Create a map using this layer"
-msgstr ""
+msgstr "Créer une carte en utilisant cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:497
 msgid "Click the button below to generate a new map based on this layer."
 msgstr ""
+"Cliquez sur le bouton ci-dessous pour générer une nouvelle carte basée sur "
+"cette couche."
 
 #: haitidata/templates/layers/layer_detail.html:504
 msgid "Charts using this layer"
-msgstr ""
+msgstr "Graphiques utilisant cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:506
 msgid "List of charts with this layer:"
-msgstr ""
+msgstr "Liste des graphiques avec cette couche:"
 
 #: haitidata/templates/layers/layer_detail.html:518
 msgid "Create a chart using this layer"
-msgstr ""
+msgstr "Créer un graphique en utilisant cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:519
 msgid ""
-"Click the button below to generate a new chart based on this layer, choosing "
-"a quantity and a category field."
+"Click the button below to generate a new chart based on this layer, choosing"
+" a quantity and a category field."
 msgstr ""
+"Cliquer sur le bouton ci-dessous pour générer un nouveau graphique basé sur "
+"cette couche, en choisissant une quantité et une catégorie."
 
 #: haitidata/templates/layers/layer_detail.html:681
 msgid "Documents related to this layer"
-msgstr ""
+msgstr "Documents liés à cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:682
 msgid "List of documents related to this layer:"
-msgstr ""
+msgstr "Liste des documents liés à cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:694
 msgid ""
 "The following styles are associated with this layer. Choose a style to view "
 "it in the preview map."
 msgstr ""
+"Les styles suivants sont associés à cette couche. Choisisser un style pour "
+"l'afficher dans la carte d'aperçu."
 
 #: haitidata/templates/layers/layer_detail.html:707
 msgid "No styles associated with this layer"
-msgstr ""
+msgstr "Aucun style associé à cette couche"
 
 #: haitidata/templates/layers/layer_detail.html:717
 msgid "Click the button below to change the permissions of this layer."
 msgstr ""
+"Cliquer sur le bouton ci-dessous pour modifier les autorisations de cette "
+"couche."
 
 #: haitidata/templates/layers/layer_detail.html:718
 msgid "Change Layer Permissions"
-msgstr ""
+msgstr "Modifier les autorisations de la couche"
 
 #: haitidata/templates/layers/layer_detail.html:725
 msgid "External service layer"
-msgstr ""
+msgstr "Couche fournie par un service externe"
 
 #: haitidata/templates/layers/layer_detail.html:726
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: haitidata/templates/layers/layer_detail.html:727
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: haitidata/templates/layers/layer_list.html:15
 #: haitidata/templates/site_base.html:43
 #: haitidata/templates/upload/layer_upload.html:5
 #: haitidata/templates/upload/layer_upload.html:7
 msgid "Upload Layer"
-msgstr ""
+msgstr "Télécharger une Couche"
 
 #: haitidata/templates/maps/map_detail.html:9
 #: haitidata/templates/maps/map_list.html:6
 #: haitidata/templates/site_base.html:52 haitidata/templates/site_base.html:58
 #: haitidata/templates/social/activity_list.html:18
 msgid "Maps"
-msgstr ""
+msgstr "Carte"
 
 #: haitidata/templates/maps/map_detail.html:10
 #: haitidata/templates/maps/map_list.html:8
 #: haitidata/templates/maps/map_metadata.html:24
 #: haitidata/templates/site_base.html:54
 msgid "Explore Maps"
-msgstr ""
+msgstr "Explorer les Cartes"
 
 #: haitidata/templates/maps/map_detail.html:88
 msgid "Rate this Map"
-msgstr ""
+msgstr "Evaluer cette Carte"
 
 #: haitidata/templates/maps/map_detail.html:106
 #: haitidata/templates/maps/map_detail.html:121
 msgid "Download Map"
-msgstr ""
+msgstr "Télécharger la Carte"
 
 #: haitidata/templates/maps/map_detail.html:125
 msgid "Download Data Layers"
-msgstr ""
+msgstr "Télécharger les Couches"
 
 #: haitidata/templates/maps/map_detail.html:126
 msgid "Download Web Map Context"
-msgstr ""
+msgstr "Télécharger la Carte Web"
 
 #: haitidata/templates/maps/map_detail.html:137
 #: haitidata/templates/maps/map_detail.html:144
 msgid "Edit Map"
-msgstr ""
-
-#: haitidata/templates/maps/map_detail.html:165
-#, fuzzy
-msgid "Map"
-msgstr ""
+msgstr "Modifier la Carte"
 
 #: haitidata/templates/maps/map_detail.html:180
 msgid "View Map"
-msgstr ""
+msgstr "Voir la Carte"
 
 #: haitidata/templates/maps/map_detail.html:190
 msgid "Map Layers"
-msgstr ""
+msgstr "Couches de la Carte"
 
 #: haitidata/templates/maps/map_detail.html:191
 msgid "This map uses the following layers:"
-msgstr ""
+msgstr "Cette carte utilise les couches suivantes:"
 
 #: haitidata/templates/maps/map_detail.html:207
 msgid "Documents related to this map"
-msgstr ""
+msgstr "Documents relatifs à cette carte"
 
 #: haitidata/templates/maps/map_detail.html:208
 msgid "List of documents related to this map:"
-msgstr ""
+msgstr "Liste des documents relatifs à cette carte:"
 
 #: haitidata/templates/maps/map_detail.html:220
 msgid "Specify which users can view or modify this map"
-msgstr ""
+msgstr "Indiquer quels utilisateurs peuvent afficher ou modifier cette carte"
 
 #: haitidata/templates/maps/map_detail.html:221
 msgid "Change Permissions of this Map"
-msgstr ""
+msgstr "Modifier les Autorisations de cette Carte"
 
 #: haitidata/templates/maps/map_detail.html:227
 msgid "Copy this map"
-msgstr ""
+msgstr "Copier cette carte"
 
 #: haitidata/templates/maps/map_detail.html:228
 msgid "Duplicate this map and modify it for your own purposes"
-msgstr ""
+msgstr "Dupliquer cette carte et modifier-la pour vos propres besoins"
 
 #: haitidata/templates/maps/map_detail.html:229
 msgid "Create a New Map"
-msgstr ""
+msgstr "Créer une Nouvelle Carte"
 
 #: haitidata/templates/maps/map_detail.html:234
 msgid "Map WMS"
-msgstr ""
+msgstr "Carte WMS"
 
 #: haitidata/templates/maps/map_detail.html:236
 msgid "WMS layer group for local map layers"
-msgstr ""
+msgstr "Groupe de couches WMS pour les couches de la carte locale"
 
 #: haitidata/templates/maps/map_detail.html:237
 msgid "on"
-msgstr ""
+msgstr "sur"
 
 #: haitidata/templates/maps/map_detail.html:237
 msgid "local OWS"
-msgstr ""
+msgstr "OWS locale"
 
 #: haitidata/templates/maps/map_detail.html:240
 msgid "Publish local map layers as WMS layer group"
 msgstr ""
+"Publier des couches de la carte locale en tant que groupe de couches WMS"
 
 #: haitidata/templates/maps/map_detail.html:241
 msgid "Publish Map WMS"
-msgstr ""
+msgstr "Publier la Carte comme WMS"
 
 #: haitidata/templates/maps/map_list.html:15
 #: haitidata/templates/maps/map_metadata.html:14
 #: haitidata/templates/site_base.html:55
 msgid "Create Map"
-msgstr ""
+msgstr "Créer la Carte"
 
 #: haitidata/templates/maps/map_metadata.html:5
 #: haitidata/templates/maps/map_metadata.html:7
 #: haitidata/templates/maps/map_metadata.html:25
 msgid "Edit Metadata"
-msgstr ""
+msgstr "Modifier les métadonnées"
 
 #: haitidata/templates/maps/map_metadata.html:30
 #, python-format
@@ -870,89 +871,92 @@ msgstr ""
 
 #: haitidata/templates/maps/map_metadata.html:36
 msgid ""
-"Note: this map's orginal metadata was populated by importing a metadata XML "
-"file.\n"
-"        GeoNode's metadata import supports a subset of ISO, FGDC, and Dublin "
-"Core metadata elements.\n"
+"Note: this map's orginal metadata was populated by importing a metadata XML file.\n"
+"        GeoNode's metadata import supports a subset of ISO, FGDC, and Dublin Core metadata elements.\n"
 "        Some of your original metadata may have been lost."
 msgstr ""
+"Remarque: les métadonnées originales de cette carte ont été crées en "
+"important un fichier XML de métadonnées. L'importation de métadonnées de "
+"GeoNode prend en charge un sous-ensemble d'éléments de métadonnées ISO, FGDC"
+" et Dublin Core. Certaines métadonnées d'origine ont peut-être été perdues."
 
 #: haitidata/templates/maps/map_metadata.html:42
 msgid "Error updating metadata.  Please check the following fields: "
 msgstr ""
+"Erreur lors de la mise à jour des métadonnées. Veuillez vérifier les champs "
+"suivants:"
 
 #: haitidata/templates/maps/map_metadata.html:64
 msgid "Point of Contact"
-msgstr ""
+msgstr "Point de Contact"
 
 #: haitidata/templates/maps/map_metadata.html:69
 msgid "Metadata Provider"
-msgstr ""
+msgstr "Fournisseur de Métadonnées"
 
 #: haitidata/templates/maps/map_metadata.html:74
 msgid "Category"
-msgstr ""
+msgstr "Catégorie"
 
 #: haitidata/templates/maps/map_remove.html:6
 #: haitidata/templates/maps/map_remove.html:8
 msgid "Remove Map"
-msgstr ""
+msgstr "Supprimer la Carte"
 
 #: haitidata/templates/maps/map_remove.html:15
 #, python-format
 msgid ""
 "\n"
-"          Are you sure you want to remove <a href=\"%(map.get_absolute_url)s"
-"\">%(map_title)s</a>?\n"
+"          Are you sure you want to remove <a href=\"%(map.get_absolute_url)s\">%(map_title)s</a>?\n"
 "        "
 msgstr ""
 
 #: haitidata/templates/osgeo_importer/bulk_import.html:17
 msgid "Import files."
-msgstr ""
+msgstr "Importer les fichiers."
 
 #: haitidata/templates/osgeo_importer/configure.html:14
 msgid "Create a Layer from Upload"
-msgstr ""
+msgstr "Créer une Couche à partir du Téléchargement"
 
 #: haitidata/templates/osgeo_importer/new.html:20
 #: haitidata/templates/osgeo_importer/new.html:22
 msgid "Upload Data"
-msgstr ""
+msgstr "Télécharger des Données"
 
 #: haitidata/templates/osgeo_importer/new.html:28
 #: haitidata/templates/osgeo_importer/uploads-list.html:12
 #: haitidata/templates/site_base.html:40
 msgid "Uploads"
-msgstr ""
+msgstr "Données Chargés"
 
 #: haitidata/templates/osgeo_importer/one_shot_demo/one_shot.html:33
 msgid "Select .zip file to import."
-msgstr ""
+msgstr "Sélectionner le fichier .zip à importer."
 
 #: haitidata/templates/osgeo_importer/upload_confirm_delete.html:14
 msgid "Delete upload"
-msgstr ""
+msgstr "Supprimer le téléchargement"
 
 #: haitidata/templates/osgeo_importer/uploads-list.html:14
 msgid "Manage your Data"
-msgstr ""
+msgstr "Gérer vos Données"
 
 #: haitidata/templates/osgeo_importer/uploads-list.html:21
 msgid "Add data"
-msgstr ""
+msgstr "Ajouter des données"
 
 #: haitidata/templates/people/profile_detail.html:7
 msgid "Profile of "
-msgstr ""
+msgstr "Profil de"
 
 #: haitidata/templates/people/profile_detail.html:8
 msgid "User Profiles"
-msgstr ""
+msgstr "Profils d'utilisateurs"
 
 #: haitidata/templates/people/profile_detail.html:61
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: haitidata/templates/people/profile_detail.html:65
 #: haitidata/templates/people/profile_detail.html:70
@@ -961,386 +965,403 @@ msgstr ""
 #: haitidata/templates/people/profile_detail.html:91
 #: haitidata/templates/people/profile_detail.html:95
 msgid "Not provided."
-msgstr ""
+msgstr "Non fourni."
 
 #: haitidata/templates/people/profile_detail.html:69
 msgid "Position"
-msgstr ""
+msgstr "Position de Travail"
 
 #: haitidata/templates/people/profile_detail.html:73
 msgid "Organization"
-msgstr ""
+msgstr "Organisation"
 
 #: haitidata/templates/people/profile_detail.html:78
 msgid "Location"
-msgstr ""
+msgstr "Lieu"
 
 #: haitidata/templates/people/profile_detail.html:82
 msgid "Voice"
-msgstr ""
+msgstr "Voix"
 
 #: haitidata/templates/people/profile_detail.html:90
 msgid "Fax"
-msgstr ""
+msgstr "Fax"
 
 #: haitidata/templates/people/profile_detail.html:99
 #: haitidata/templates/search/_h_keywords_filter.html:3
 msgid "Keywords"
-msgstr ""
+msgstr "Mots Clés"
 
 #: haitidata/templates/people/profile_detail.html:106
 msgid "Not provided"
-msgstr ""
+msgstr "Non fourni"
 
 #: haitidata/templates/people/profile_detail.html:116
 msgid "Message User"
-msgstr ""
+msgstr "Envoyer un Message à l'utilisateur"
 
 #: haitidata/templates/people/profile_detail.html:120
 #: haitidata/templates/people/profile_detail.html:152
 msgid "Edit profile"
-msgstr ""
+msgstr "Editer le profil"
 
 #: haitidata/templates/people/profile_detail.html:121
 msgid "Change password"
-msgstr ""
+msgstr "Changer le mot de passe"
 
 #: haitidata/templates/people/profile_detail.html:124
 msgid "Upload new layers"
-msgstr ""
+msgstr "Télécharger de nouvelles couches"
 
 #: haitidata/templates/people/profile_detail.html:125
 msgid "Create a new map"
-msgstr ""
+msgstr "Créer une nouvelle carte"
 
 #: haitidata/templates/people/profile_detail.html:126
 msgid "My Activities"
-msgstr ""
+msgstr "Mes activités"
 
 #: haitidata/templates/people/profile_detail.html:130
 msgid "Notifications"
-msgstr ""
+msgstr "Avis"
 
 #: haitidata/templates/people/profile_detail.html:138
 #: haitidata/templates/services/service_list.html:6
 #: haitidata/templates/site_base.html:41
 msgid "Remote Services"
-msgstr ""
+msgstr "Services à Distance"
 
 #: haitidata/templates/people/profile_detail.html:140
 msgid "GeoServer"
-msgstr ""
+msgstr "GeoServer"
 
 #: haitidata/templates/people/profile_detail.html:143
 msgid "Admin"
-msgstr ""
+msgstr "Administrateur"
 
 #: haitidata/templates/people/profile_detail.html:156
 msgid "User Activities"
-msgstr ""
+msgstr "Activités de l'utilisateur"
 
 #: haitidata/templates/people/profile_detail.html:169
 msgid "Resources"
-msgstr ""
+msgstr "Ressources"
 
 #: haitidata/templates/people/profile_edit.html:7
 msgid "Edit Profile"
-msgstr ""
+msgstr "Modifier le Profil"
 
 #: haitidata/templates/people/profile_edit.html:10
 msgid "Edit Your Profile"
-msgstr ""
+msgstr "Modifier votre Profil"
 
 #: haitidata/templates/people/profile_edit.html:12
 msgid "Edit Profile for"
-msgstr ""
+msgstr "Modifier le Profil de"
 
 #: haitidata/templates/people/profile_edit.html:28
 msgid "Change your avatar"
-msgstr ""
+msgstr "Changer votre avatar"
 
 #: haitidata/templates/people/profile_edit.html:39
 msgid "Update profile"
-msgstr ""
+msgstr "Mettre à jour le profil"
 
 #: haitidata/templates/people/profile_list.html:4
 #: haitidata/templates/site_base.html:71
 msgid "People"
-msgstr ""
+msgstr "Personnes"
 
 #: haitidata/templates/people/profile_list.html:5
 msgid "Explore People"
-msgstr ""
+msgstr "Explorer les Personnes"
 
 #: haitidata/templates/search/_extent_filter.html:3
 msgid "Extent"
-msgstr ""
+msgstr "Extension"
 
 #: haitidata/templates/search/_general_filters.html:4
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #: haitidata/templates/search/_general_filters.html:19
 msgid "Owners"
-msgstr ""
+msgstr "Propriétaires"
 
 #: haitidata/templates/search/_general_filters.html:33
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: haitidata/templates/search/_general_filters.html:35
 msgid "Date begins after:"
-msgstr ""
+msgstr "La date commence après:"
 
 #: haitidata/templates/search/_general_filters.html:36
 #: haitidata/templates/search/_general_filters.html:40
 msgid "yyyy-mm-dd"
-msgstr ""
+msgstr "aaaa-mm-jj"
 
 #: haitidata/templates/search/_general_filters.html:39
 msgid "Date ends before:"
-msgstr ""
+msgstr "La date se termine avant le:"
 
 #: haitidata/templates/search/_pagination.html:13
 msgid "page"
-msgstr ""
+msgstr "page"
 
 #: haitidata/templates/search/_pagination.html:13
 msgid "of"
-msgstr ""
+msgstr "de"
 
 #: haitidata/templates/search/_region_filter.html:5
 msgid "Regions"
-msgstr ""
+msgstr "Régions"
 
 #: haitidata/templates/search/_search_content.html:11
 msgid "Set permissions"
-msgstr ""
+msgstr "Définir les autorisations"
 
 #: haitidata/templates/search/_search_content.html:23
 msgid "Filters"
-msgstr ""
+msgstr "Filtres"
 
 #: haitidata/templates/search/_search_content.html:24
 #: haitidata/templates/upload/layer_upload.html:112
 msgid "Clear"
-msgstr ""
+msgstr "Effacer"
 
 #: haitidata/templates/search/_search_user_content.html:10
 msgid "search"
-msgstr ""
+msgstr "chercher"
 
 #: haitidata/templates/search/_sort_filters.html:36
 #: haitidata/templates/search/_sort_filters.html:42
 #: haitidata/templates/search/_sort_filters.html:47
 msgid "Most recent"
-msgstr ""
+msgstr "Le plus récent"
 
 #: haitidata/templates/search/_sort_filters.html:37
 #: haitidata/templates/search/_sort_filters.html:43
 #: haitidata/templates/search/_sort_filters.html:48
 msgid "Less recent"
-msgstr ""
+msgstr "Le moins récent"
 
 #: haitidata/templates/search/_sort_filters.html:38
 #: haitidata/templates/search/_sort_filters.html:44
 #: haitidata/templates/search/_sort_filters.html:49
 msgid "A - Z"
-msgstr ""
+msgstr "A - Z"
 
 #: haitidata/templates/search/_sort_filters.html:39
 #: haitidata/templates/search/_sort_filters.html:45
 #: haitidata/templates/search/_sort_filters.html:50
 msgid "Z - A"
-msgstr ""
+msgstr "Z - A"
 
 #: haitidata/templates/search/_sort_filters.html:40
 msgid "Most popular"
-msgstr ""
+msgstr "Le plus populaire"
 
 #: haitidata/templates/search/_text_filter.html:5
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: haitidata/templates/search/_text_filter.html:10
 msgid "Search by text"
-msgstr ""
+msgstr "Rechercher par texte"
 
 #: haitidata/templates/search/search.html:7
 #: haitidata/templates/site_base.html:95 haitidata/templates/site_base.html:97
 msgid "Search"
-msgstr ""
+msgstr "Rechercher"
 
 #: haitidata/templates/services/service_edit.html:15
 msgid "Edit Service"
-msgstr ""
+msgstr "Modifier le Service"
 
 #: haitidata/templates/services/service_list.html:4
 #: haitidata/templates/services/service_register.html:9
 msgid "Services"
-msgstr ""
+msgstr "Service"
 
 #: haitidata/templates/services/service_list.html:12
 msgid "Add Service"
-msgstr ""
+msgstr "Ajouter un Service"
 
 #: haitidata/templates/services/service_register.html:10
 msgid "Register Service"
-msgstr ""
+msgstr "Enregistrer un service"
 
 #: haitidata/templates/services/service_register.html:23
 msgid "Service has been created:"
-msgstr ""
+msgstr "Le service a été créé:"
 
 #: haitidata/templates/services/service_register.html:30
 msgid "The following layers will be imported"
-msgstr ""
+msgstr "Les couches suivantes seront importées"
 
 #: haitidata/templates/site_base.html:35
 msgid "Data"
-msgstr ""
+msgstr "Données"
 
 #: haitidata/templates/site_base.html:44
 msgid "Upload ODK exports"
-msgstr ""
+msgstr "Télécharger les fichiers ODK"
 
 #: haitidata/templates/site_base.html:46
 msgid "Add Remote Service"
-msgstr ""
+msgstr "Ajouter un Service d'accès à Distance"
 
-#: haitidata/templates/site_base.html:62 haitidata/templates/site_index.html:51
+#: haitidata/templates/site_base.html:62
+#: haitidata/templates/site_index.html:51
 msgid "Imagery"
-msgstr ""
+msgstr "Images"
 
 #: haitidata/templates/site_base.html:64
 msgid "Orthophotos"
-msgstr ""
+msgstr "Orthophotos"
 
 #: haitidata/templates/site_base.html:65
 msgid "DSM"
-msgstr ""
+msgstr "MNT"
 
 #: haitidata/templates/site_base.html:69
 msgid "About"
-msgstr ""
+msgstr "Sur"
 
 #: haitidata/templates/site_base.html:73 haitidata/templates/tutorials.html:4
 #: haitidata/templates/tutorials.html:5
 msgid "Tutorials"
-msgstr ""
+msgstr "Tutorielles"
 
 #: haitidata/templates/site_base.html:79
 msgid "Add User"
-msgstr ""
+msgstr "Ajouter un Utilisateur"
 
 #: haitidata/templates/site_base.html:103
 msgid "Register"
-msgstr ""
+msgstr "Registre"
 
 #: haitidata/templates/site_base.html:108
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: haitidata/templates/site_base.html:109
 msgid "Recent Activity"
-msgstr ""
+msgstr "Activité Récente"
 
 #: haitidata/templates/site_base.html:110
 msgid "Inbox"
-msgstr ""
+msgstr "Boîte de Réception"
 
 #: haitidata/templates/site_base.html:115
 msgid "Help"
-msgstr ""
+msgstr "Aide"
 
 #: haitidata/templates/site_base.html:117
 msgid "Logout"
-msgstr ""
+msgstr "Se déconnecter"
 
 #: haitidata/templates/site_base.html:121
 msgid "Sign in"
-msgstr ""
+msgstr "Se connecter"
 
 #: haitidata/templates/site_index.html:10
 msgid ""
-"The purpose of this site is to facilitate open access to geospatial information, data and knowledge, to natural disasters, vulnerability and risk in Haiti, and to encourage their sharing and use. "
+"The purpose of this site is to facilitate open access to geospatial "
+"information, data and knowledge, to natural disasters, vulnerability and "
+"risk in Haiti, and to encourage their sharing and use. "
 msgstr ""
+"Le but de ce site est de faciliter l’accès libre à de l’information, des "
+"données et des connaissances géospatiales, sur les désastres naturels et sur"
+" la vulnérabilité et le risque en Haïti, ainsi que d’encourager leur partage"
+" et leur utilisation."
 
 #: haitidata/templates/site_index.html:19
 msgid "Haiti Risk and Hazards"
-msgstr ""
+msgstr "Risques et Hasards en Haïti"
 
 #: haitidata/templates/site_index.html:22
 msgid "River Flood"
-msgstr ""
+msgstr "Inondation Riverine"
 
 #: haitidata/templates/site_index.html:26
 msgid "Cyclone"
-msgstr ""
+msgstr "Cyclone"
 
 #: haitidata/templates/site_index.html:30
 msgid "Coastal Flood"
-msgstr ""
+msgstr "Inondation Côtière"
 
 #: haitidata/templates/site_index.html:34
 msgid "Earthquake"
-msgstr ""
+msgstr "Tremblement de Terre"
 
 #: haitidata/templates/site_index.html:38
 msgid "Water Scarcity"
-msgstr ""
+msgstr "Sécheresse"
 
 #: haitidata/templates/site_index.html:42
 msgid "Landslide"
-msgstr ""
+msgstr "Glissement de Terre"
 
 #: haitidata/templates/site_index.html:52
 msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
-"quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "
-"consequat. "
+"This section is a shortcut for access to aerial images and digital terrain models. "
+"These dedicated pages allow you to download a subset of these raster data, "
+"defined by drawing polygons on the same layer. "
 msgstr ""
+"Cette section est une raccourci pour l'accès à images aériennes et aux modèles numériques du terrain. "
+"Ces pages dédiées permettent de télécharger un sous-ensemble de ces donnée raster,"
+" défini en dessinant des polygones sur la couche même."
 
 #: haitidata/templates/site_index.html:55
 msgid "Aerial images"
-msgstr ""
+msgstr "Images aériennes"
 
-#: haitidata/templates/site_index.html:56
-#: haitidata/templates/site_index.html:60
 #: haitidata/templates/site_index.html:64
 msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna aliqua."
+"It is an aerial coverage at a spatial resolution of 25 cm. "
+"The mosaic is composed of 3617 datasets. "
 msgstr ""
+"Il s'agit d'une couverture aérienne à une résolution spatiale de 25 cm. "
+"Le mosaïque est composé par 3617 jeux de données. "
 
 #: haitidata/templates/site_index.html:59
 msgid "Satellite imagery"
-msgstr ""
+msgstr "Images satellitaires"
 
 #: haitidata/templates/site_index.html:63
 msgid "DSM/DTM"
+msgstr "MNT"
+
+#: haitidata/templates/site_index.html:64
+msgid ""
+"This is a numerical surface model derived from a LiDAR flight and with a spatial resolution of 1.5 m. "
+"The mosaic is composed by 1873 datasets."
 msgstr ""
+"Il s'agit d'un modèle numérique de surface dérive d'un vol LiDAR et "
+"avec une résolution spatiale de 1.5 m. Le mosaïque est composé par 1873 jeux de données. "
 
 #: haitidata/templates/site_index.html:71
 msgid "Featured Datasets"
-msgstr ""
+msgstr "Ensembles de Données en Vedette"
 
 #: haitidata/templates/site_index.html:83
 msgid "Explore all datasets"
-msgstr ""
+msgstr "Explorer tous les Données"
 
 #: haitidata/templates/social/activity_list.html:4
 #: haitidata/templates/social/activity_list.html:5
 msgid "Recent activity"
-msgstr ""
+msgstr "Activité récente"
 
 #: haitidata/templates/social/activity_list.html:27
 #: haitidata/templates/social/activity_list.html:36
 #: haitidata/templates/social/activity_list.html:45
 #: haitidata/templates/social/activity_list.html:54
 msgid "No actions yet"
-msgstr ""
+msgstr "Aucune action encore"
 
 #: haitidata/templates/tutorials.html:10
 msgid ""
@@ -1353,7 +1374,7 @@ msgstr ""
 
 #: haitidata/templates/tutorials.html:11
 msgid "Platform overview"
-msgstr ""
+msgstr "Présentation de la plateforme"
 
 #: haitidata/templates/tutorials.html:12 haitidata/templates/tutorials.html:14
 #: haitidata/templates/tutorials.html:16 haitidata/templates/tutorials.html:21
@@ -1368,80 +1389,80 @@ msgstr ""
 
 #: haitidata/templates/tutorials.html:13
 msgid "Search filters"
-msgstr ""
+msgstr "Filtres de recherche"
 
 #: haitidata/templates/tutorials.html:15
 msgid "Ship and Clip"
-msgstr ""
+msgstr "Couper et Livrer"
 
 #: haitidata/templates/tutorials.html:20
 msgid "Sharing layers and metadata"
-msgstr ""
+msgstr "Partager couches et métadonnées"
 
 #: haitidata/templates/tutorials.html:22
 msgid "Uploading files from Android ODK"
-msgstr ""
+msgstr "Téléchargement de fichiers depuis Android ODK"
 
 #: haitidata/templates/tutorials.html:24
 msgid "Styling layers"
-msgstr ""
+msgstr "Symboliser les couches"
 
 #: haitidata/templates/tutorials.html:26
 msgid "Graphs"
-msgstr ""
+msgstr "Graphiques"
 
 #: haitidata/templates/tutorials.html:28
 msgid "Creating maps"
-msgstr ""
+msgstr "Créer des cartes"
 
 #: haitidata/templates/tutorials.html:30
 msgid "Managing users"
-msgstr ""
+msgstr "Gestion des utilisateurs"
 
 #: haitidata/templates/tutorials.html:32
 msgid "Rancher"
-msgstr ""
+msgstr "Rancher"
 
 #: haitidata/templates/upload/layer_upload.html:45
 msgid "Incomplete Uploads"
-msgstr ""
+msgstr "Téléchargements incomplets"
 
 #: haitidata/templates/upload/layer_upload.html:46
 msgid "You have the following incomplete uploads"
-msgstr ""
+msgstr "Vos téléchargements incomplets"
 
 #: haitidata/templates/upload/layer_upload.html:49
 msgid "last updated on"
-msgstr ""
+msgstr "dernière mise à jour"
 
 #: haitidata/templates/upload/layer_upload.html:51
 msgid "Resume"
-msgstr ""
+msgstr "Reprends"
 
 #: haitidata/templates/upload/layer_upload.html:58
 msgid "Are you sure you want to delete this upload?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir supprimer ce téléchargement?"
 
 #: haitidata/templates/upload/layer_upload.html:61
 msgid "Delete, and don't ask me again."
-msgstr ""
+msgstr "Supprimer, et ne me demander plus."
 
 #: haitidata/templates/upload/layer_upload.html:78
 msgid "Drop files here"
-msgstr ""
+msgstr "Déposer les fichiers ici"
 
 #: haitidata/templates/upload/layer_upload.html:81
 msgid " or select them one by one:"
-msgstr ""
+msgstr "ou sélectionner-les un par un:"
 
 #: haitidata/templates/upload/layer_upload.html:91
 msgid "Files to be uploaded"
-msgstr ""
+msgstr "Fichiers à télécharger"
 
 #: haitidata/templates/upload/layer_upload.html:99
 msgid "Select the charset or leave default"
-msgstr ""
+msgstr "Sélectionner le charset ou laissez celui de défaut"
 
 #: haitidata/templates/upload/layer_upload.html:113
 msgid "Upload files"
-msgstr ""
+msgstr "Télécharger des fichiers"
