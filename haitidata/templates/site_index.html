@@ -14,54 +14,64 @@
 
 {% block mainbody %}
 <section id="hazards">
-	<div class="container">
+  <div class="container">
 		<div class="row">
 			<h2>{% blocktrans %}Haiti Risk and Hazards{% endblocktrans %}</h2>
-			<div class="col-xs-6 col-md-2">
-				<a class="hazards" href="/search/?limit=100&offset=0&keywords__slug__in=flood"><span class="icon-Flood"></span></a>
-				<h4>{% blocktrans %}River Flood{% endblocktrans %}</h4>
-			</div>
-			<div class="col-xs-6 col-md-2">
-				<a href="/search/?limit=100&offset=0&keywords__slug__in=cyclone"><span class="icon-Cyclone"></span></a>
-				<h4>{% blocktrans %}Cyclone{% endblocktrans %}</h4>
-			</div>
-      <div class="col-xs-6 col-md-2">
-				<a href="/search/?limit=100&offset=0&keywords__slug__in=coastal-flood"><span class="icon-StormSurge"></span></a>
-				<h4>{% blocktrans %}Coastal Flood{% endblocktrans %}</h4>
-			</div>
-      <div class="col-xs-6 col-md-2">
-				<a href="/search/?limit=100&offset=0&keywords__slug__in=earthquake"><span class="icon-Earthquake"></span></a>
-				<h4>{% blocktrans %}Earthquake{% endblocktrans %}</h4>
-			</div>
-      <div class="col-xs-6 col-md-2">
-				<a href="/search/?limit=100&offset=0&keywords__slug__in=water-scarcity"><span class="icon-water_scarcity"></span></a>
-				<h4>{% blocktrans %}Water Scarcity{% endblocktrans %}</h4>
-			</div>
-      <div class="col-xs-6 col-md-2">
-				<a href="/search/?limit=100&offset=0&keywords__slug__in=landslide"><span class="icon-Landslide"></span></a>
-				<h4>{% blocktrans %}Landslide{% endblocktrans %}</h4>
-			</div>
+      <a href="/search/?limit=100&offset=0&keywords__slug__in=inondation-riverine">
+        <div class="col-xs-6 col-md-2 keywords">
+				  <span class="icon-Flood"></span>
+				  <h4>{% blocktrans %}River Flood{% endblocktrans %}</h4>
+			  </div>
+      </a>
+      <a href="/search/?limit=100&offset=0&keywords__slug__in=cyclone">
+			  <div class="col-xs-6 col-md-2 keywords">
+				  <span class="icon-Cyclone"></span>
+				  <h4>{% blocktrans %}Cyclone{% endblocktrans %}</h4>
+			  </div>
+      </a>
+      <a href="/search/?limit=100&offset=0&keywords__slug__in=inondation-cotiere">
+        <div class="col-xs-6 col-md-2 keywords">
+				  <span class="icon-StormSurge"></span>
+				  <h4>{% blocktrans %}Coastal Flood{% endblocktrans %}</h4>
+			  </div>
+      </a>
+      <a href="/search/?limit=100&offset=0&keywords__slug__in=tremblement-de-terre">
+        <div class="col-xs-6 col-md-2 keywords">
+				  <span class="icon-Earthquake"></span>
+				  <h4>{% blocktrans %}Earthquake{% endblocktrans %}</h4>
+			  </div>
+      </a>
+      <a href="/search/?limit=100&offset=0&keywords__slug__in=secheresse">
+        <div class="col-xs-6 col-md-2 keywords">
+          <span class="icon-water_scarcity"></span>
+          <h4>{% blocktrans %}Water Scarcity{% endblocktrans %}</h4>
+  			</div>
+      </a>
+      <a href="/search/?limit=100&offset=0&keywords__slug__in=glissement-de-terre">
+        <div class="col-xs-6 col-md-2 keywords">
+				  <span class="icon-Landslide"></span>
+				  <h4>{% blocktrans %}Landslide{% endblocktrans %}</h4>
+			  </div>
+      </a>
 		</div>
 	</div>
 </section>
 <section id="imagery">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h1>{% blocktrans %}Imagery{% endblocktrans %}</h1>
-        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. {% endblocktrans %}</p>
+        <p>{% blocktrans %}This section is a shortcut for access to aerial images and digital terrain models. These dedicated pages allow you to download a subset of these raster data, defined by drawing polygons on the same layer. {% endblocktrans %}</p>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h3>{% blocktrans %}Aerial images{% endblocktrans %}</h3>
-        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktrans %}</p>
+        <p>{% blocktrans %}It is an aerial coverage at a spatial resolution of 25 cm. The mosaic is composed of 3617 datasets.{% endblocktrans %}</p>
+        <a class="btn btn-default" href="/clip/Haiti25cm-PaP-extract" role="button">{% blocktrans %}Aerial images{% endblocktrans %}</a>
       </div>
-      <div class="col-md-3">
-        <h3>{% blocktrans %}Satellite imagery{% endblocktrans %}</h3>
-        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktrans %}</p>
-      </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h3>{% blocktrans %}DSM/DTM{% endblocktrans %}</h3>
-        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{% endblocktrans %}</p>
+        <p>{% blocktrans %}This is a numerical surface model derived from a LiDAR flight and with a spatial resolution of 1.5 m. The mosaic is composed by 1873 datasets.{% endblocktrans %}</p>
+        <a class="btn btn-default" href="/clip/lidar" role="button">{% blocktrans %}DSM/DTM{% endblocktrans %}</a>
       </div>
     </div>
 </section>
