@@ -433,10 +433,25 @@ footer {
 		h2 {
 			margin-bottom: 1em;
 		}
-		a {
+		.keywords {
+			border-radius: .4em;
 			color: white;
 			&:hover {
 				background: darken(@brand-primary, 10%);
+				color: white;
+				text-decoration: none;
+				transition: 0.5s all;
+				-webkit-transition: 0.5s all;
+				-moz-transition: 0.5s all;
+				-o-transition: 0.5s all;
+				-ms-transition: 0.5s all;
+			}
+		}
+		.keywords a {
+			color: white;
+			&:hover {
+				background: darken(@brand-primary, 10%);
+				color: white;
 				text-decoration: none;
 			}
 		}
@@ -464,6 +479,16 @@ footer {
 			p {
 				font-weight: 400;
 				margin-bottom: 0;
+			}
+			.btn-default {
+				background: rgba(0, 0, 0, 0.4);
+				color: white;
+				text-shadow: none;
+				margin-top: 8px;
+				&:hover {
+					background: @brand-primary;
+					border-color: darken(@brand-primary, 20%);
+				}
 			}
 	}
 

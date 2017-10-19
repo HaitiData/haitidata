@@ -75,7 +75,6 @@ TEMPLATES = [
                 'account.context_processors.account',
                 'geonode.context_processors.resource_urls',
                 "geonode.geoserver.context_processors.geoserver_urls",
-                #"haitidata.context_processors.project_setting.project_setting",
                 "haitidata.context_processors.clipped_geotiff.clipped_geotiff",
             ],
         },
@@ -88,6 +87,7 @@ ROOT_URLCONF = 'haitidata.urls'
 # Location of locale files
 LOCALE_PATHS = (
     os.path.join(LOCAL_ROOT, 'locale'),
+    os.path.join(PROJECT_ROOT, 'locale'),
     ) + LOCALE_PATHS
 
 INSTALLED_APPS = INSTALLED_APPS + (

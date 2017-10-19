@@ -239,8 +239,8 @@
       </article>
 
       <article id="charts" class="tab-pane">
-      <h4>No charts available at this time</h4>
-      <a href="/table/fields?lyrname={{ resource.typename }}">Create Chart</a>
+      <h4>{% trans "No charts available at this time" %}</h4>
+      <a href="/table/fields?lyrname={{ resource.typename }}">{% trans "Create Chart" %}</a>
       </article>
 
       <article id="comments" class="tab-pane">
@@ -509,7 +509,7 @@
         {% for chart in resource.chart_set.all %}
             <li><a href="{% url 'chart_detail' chart.id %}">{{ chart.get_type_display }}</a>, Category field = {{chart.category}}, Quantity field = {{chart.quantity}}</li>
         {% empty %}
-            <li><p>No charts available at this time</p></li>
+            <li><p>{% trans "No charts available at this time" %}</p></li>
         {% endfor %}
         </ul>
     </li>
@@ -517,7 +517,7 @@
     <li class="list-group-item" id="create-chart">
       <h4>{% trans "Create a chart using this layer" %}</h4>
       <p>{% trans "Click the button below to generate a new chart based on this layer, choosing a quantity and a category field." %}</p>
-        <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">Create a chart</button>
+        <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">{% trans "Create a chart" %}</button>
         <div id="form" class="collapse">
           <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/add/{{ resource.id }}/">
             {% csrf_token %}
