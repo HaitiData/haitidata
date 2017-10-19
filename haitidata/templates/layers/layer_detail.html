@@ -382,8 +382,8 @@
                   <h4>{% trans "Styles" %}</h4>
                   {% if preview == 'geoext' %}
                   <a class="btn btn-default btn-block btn-xs style-edit" data-dismiss="modal" href="#">{% trans "Edit" %}</a>
-                  <a class="btn btn-default btn-block btn-xs" href="{% url "layer_style_manage" resource.service_typename %}">{% trans "Manage" %}</a>
                   {% endif %}
+                  <a class="btn btn-default btn-block btn-xs" href="{% url "layer_style_manage" resource.service_typename %}">{% trans "Manage" %}</a>
                 </div>
                 {% endif %}
               {% endif %}
@@ -583,7 +583,7 @@
                     <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
                   </div>
                 </div>
-                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Preview</button>
+                <button id="preview_btn" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Preview</button>
                 <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Save</button>
                </form>
           </div>
@@ -656,12 +656,13 @@
               suggestedTitle = title + " of " + quantity + " for " + category;
           }
               document.getElementById("title").innerHTML = suggestedTitle;
+              title_eval();
               return suggestedTitle;
       };
 
 
       function title_eval(){
-          if (document.getElementById("id_title").textLength == 0){
+          if (document.getElementById("id_title").value == ""){
               document.getElementById("id_title").value = suggestedTitle;
           }
       }
@@ -670,6 +671,9 @@
           update_link();
           chart_title();
           attachAbstract();
+          if (loading == true) {
+              document.getElementById("preview_btn").disabled = true;
+          }
       }
 
     </script>

@@ -1,0 +1,41 @@
+{% extends "site_base.html" %}
+{% load leaflet_tags %}
+{% load staticfiles %}
+
+
+{% block title %}{{ block.super }}{% endblock %}
+{% block page-title %}{{ geotiffname }}{% endblock %}
+
+{% block body_class %}layers{% endblock %}
+
+{% block body_outer %}
+    <div id="download-clip-map"></div>
+
+    <button type="button" class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download_clip_page" id="download-clip-button">Download Clip</button>
+
+    <style>
+        #download-clip-map {
+            height: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .leaflet-control-zoom {
+            left: 0 !important;
+        }
+
+        #download-clip-button {
+            margin-top: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block extra_script %}
+    {% leaflet_js %}
+    {% leaflet_css %}
+
+    <link rel="stylesheet" href="{% static 'geonode/css/leaflet.draw.css' %}"/>
+    <script src="{% static 'geonode/js/draw/leaflet.draw.js' %}"></script>
+
+    {% include 'clip-and-ship/download-clip.html' %}
+{% endblock extra_script %}

@@ -150,6 +150,10 @@ var getCsv = function(csv_link, category, quantity, agg, chartType, id){
                       .datum(dati)
                       .call(line);
                }
+               loading = false;
+               var cog = document.getElementById("rotella");
+               cog.parentNode.removeChild(cog);
+               document.getElementById("preview_btn").disabled = false;
                };
 
                create(chartType);
