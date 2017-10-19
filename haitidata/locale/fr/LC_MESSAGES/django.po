@@ -133,6 +133,9 @@ msgid ""
 "          Published from <b>%(publish_start)s</b> to <b>%(publish_end)s</b>.\n"
 "          "
 msgstr ""
+"\n"
+"          Publié de <b>%(publish_start)s</b> à <b>%(publish_end)s</b>.\n"
+"          "
 
 #: haitidata/templates/base/_resourcebase_snippet.html:37
 #: haitidata/templates/layers/layer_detail.html:498
@@ -155,6 +158,9 @@ msgid ""
 "          Are you sure you want to remove <a href=\"%(object.get_absolute_url)s\">%(object_title)s</a> chart?\n"
 "        "
 msgstr ""
+"\n"
+"          Êtes-vous sûr de vouloir supprimer le graphique <a href=\"%(object.get_absolute_url)s\">%(object_title)s</a>?\n"
+"        "
 
 #: haitidata/templates/charts_app/chart_confirm_delete.html:20
 #: haitidata/templates/groups/group_remove.html:21
@@ -423,6 +429,9 @@ msgid ""
 "            This group is <strong>%(access)s</strong>.\n"
 "          "
 msgstr ""
+"\n"
+"            Ce groupe est <strong>%(access)s</strong>.\n"
+"          "
 
 #: haitidata/templates/groups/group_detail.html:66
 msgid "Anyone may join this group."
@@ -495,6 +504,9 @@ msgid ""
 "          Are you sure you want to remove the group: %(group_title)s?\n"
 "        "
 msgstr ""
+"\n"
+"          Êtes-vous sûr de vouloir supprimer le groupe: %(group_title)s?\n"
+"        "
 
 #: haitidata/templates/groups/group_update.html:5
 #: haitidata/templates/groups/group_update.html:6
@@ -691,6 +703,18 @@ msgstr "Liste des graphiques avec cette couche:"
 msgid "Create a chart using this layer"
 msgstr "Créer un graphique en utilisant cette couche"
 
+#: haitidata/templates/layers/layer_detail.html:242
+msgid "No charts available at this time"
+msgstr "Aucune carte disponible pour le moment"
+
+#: haitidata/templates/layers/layer_detail.html:243
+msgid "Create Chart"
+msgstr "Créer un graphique"
+
+#: haitidata/templates/layers/layer_detail.html:243
+msgid "Create a chart"
+msgstr "Créer un graphique"
+
 #: haitidata/templates/layers/layer_detail.html:519
 msgid ""
 "Click the button below to generate a new chart based on this layer, choosing"
@@ -868,6 +892,9 @@ msgid ""
 "        Editing details for %(map_title)s\n"
 "      "
 msgstr ""
+"\n"
+"        Modifier les détails pour %(map_title)s\n"
+"      "
 
 #: haitidata/templates/maps/map_metadata.html:36
 msgid ""
@@ -910,6 +937,9 @@ msgid ""
 "          Are you sure you want to remove <a href=\"%(map.get_absolute_url)s\">%(map_title)s</a>?\n"
 "        "
 msgstr ""
+"\n"
+"          Êtes-vous sûr de vouloir supprimer <a href=\"%(map.get_absolute_url)s\">%(map_title)s</a>?\n"
+"        "
 
 #: haitidata/templates/osgeo_importer/bulk_import.html:17
 msgid "Import files."
@@ -1227,7 +1257,7 @@ msgstr "MNT"
 
 #: haitidata/templates/site_base.html:69
 msgid "About"
-msgstr "Sur"
+msgstr "À propos"
 
 #: haitidata/templates/site_base.html:73 haitidata/templates/tutorials.html:4
 #: haitidata/templates/tutorials.html:5
@@ -1319,19 +1349,15 @@ msgstr ""
 msgid "Aerial images"
 msgstr "Images aériennes"
 
-#: haitidata/templates/site_index.html:64
-msgid ""
-"It is an aerial coverage at a spatial resolution of 25 cm. "
-"The mosaic is composed of 3617 datasets. "
-msgstr ""
-"Il s'agit d'une couverture aérienne à une résolution spatiale de 25 cm. "
-"Le mosaïque est composé par 3617 jeux de données. "
+#: haitidata/templates/site_index.html:68
+msgid "It is an aerial coverage at a spatial resolution of 25 cm. The mosaic is composed of 3617 datasets."
+msgstr "Il s'agit d'une couverture aérienne à une résolution spatiale de 25 cm. Le mosaïque est composé par 3617 jeux de données."
 
 #: haitidata/templates/site_index.html:59
 msgid "Satellite imagery"
 msgstr "Images satellitaires"
 
-#: haitidata/templates/site_index.html:63
+#: haitidata/templates/site_index.html:73
 msgid "DSM/DTM"
 msgstr "MNT"
 
