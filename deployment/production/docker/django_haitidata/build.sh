@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 IMAGE_NAME=haitidata_django
-TAG_NAME=1.0
-docker build -t dimasciput/${IMAGE_NAME} .
-docker tag dimasciput/${IMAGE_NAME}:latest dimasciput/${IMAGE_NAME}:${TAG_NAME}
-docker push dimasciput/${IMAGE_NAME}:${TAG_NAME}
+TAG_NAME=1.1
+docker build -t kartoza/${IMAGE_NAME} .
+docker tag kartoza/${IMAGE_NAME}:latest kartoza/${IMAGE_NAME}:${TAG_NAME}
+docker push kartoza/${IMAGE_NAME}:${TAG_NAME}
