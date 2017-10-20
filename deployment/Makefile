@@ -47,6 +47,7 @@ web:
 	@echo "------------------------------------------------------------------"
 	@docker-compose -p $(PROJECT_ID) up -d geonode
 	@docker-compose -p $(PROJECT_ID) up -d django
+	@docker-compose -p $(PROJECT_ID) up --no-recreate -d dbbackups
 	@# Dont confuse this with the dbbackup make command below
 	@# This one runs the postgis-backup cron container
 	@# We add --no-recreate so that it does not destroy & recreate the db container
@@ -70,6 +71,15 @@ db:
 	@echo "Running db in production mode"
 	@echo "------------------------------------------------------------------"
 	@docker-compose -p $(PROJECT_ID) up -d postgres
+
+dbrestore:
+	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "dropdb --if-exists $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "dropdb --if-exists $(DATABASE_GEONODE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_GEONODE_NAME)"
+
+	@docker exec -t -i $(PROJECT_ID)-postgres pg_restore /backups/latest-$(DATABASE_NAME).dmp | docker exec -i $(PROJECT_ID)-postgres su - postgres -c "psql $(DATABASE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-postgres pg_restore /backups/latest-$(DATABASE_GEONODE_NAME).dmp | docker exec -i $(PROJECT_ID)-postgres su - postgres -c "psql $(DATABASE_GEONODE_NAME)"
 
 nginx:
 	@echo
@@ -220,16 +230,6 @@ dbshell-geonode-data:
 	@echo "------------------------------------------------------------------"
 	@docker exec -t -i $(PROJECT_ID)-postgres psql -U docker -h localhost $(DATABASE_GEONODE_NAME)
 
-dbrestore:
-	@echo
-	@echo "------------------------------------------------------------------"
-	@echo "Restore dump from backups/latest.dmp in production mode"
-	@echo "------------------------------------------------------------------"
-	@# - prefix causes command to continue even if it fails
-	-@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "dropdb $(DATABASE_NAME)"
-	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgres $(DATABASE_NAME)"
-	@docker exec -t -i $(PROJECT_ID)-postgres pg_restore /backups/latest.dmp | docker exec -i $(PROJECT_ID)-postgres su - postgres -c "psql $(DATABASE_NAME)"
-
 dbbackup:
 	@echo
 	@echo "------------------------------------------------------------------"
@@ -239,13 +239,7 @@ dbbackup:
 	@echo "------------------------------------------------------------------"
 	@# - prefix causes command to continue even if it fails
 	@# Explicitly don't use -it so we can call this make target over a remote ssh session
-	@docker exec $(PROJECT_ID)-postgres-backups /backups.sh
-	@docker exec $(PROJECT_ID)-postgres-backups cat /var/log/cron.log | tail -2 | head -1 | awk '{print $4}'
-	-@if [ -f "backups/latest.dmp" ]; then rm backups/latest.dmp; fi
-	# backups is intentionally missing from front of first clause below otherwise symlink comes
-	# out with wrong path...
-	@ln -s `date +%Y`/`date +%B`/PG_$(PROJECT_ID)_$(DATABASE_NAME).`date +%d-%B-%Y`.dmp backups/latest.dmp
-	@echo "Backup should be at: backups/`date +%Y`/`date +%B`/PG_$(PROJECT_ID)_$(DATABASE_NAME).`date +%d-%B-%Y`.dmp"
+	@docker exec $(PROJECT_ID)-dbbackups /bin/bash -c "./backups.sh"
 
 sentry:
 	@echo
