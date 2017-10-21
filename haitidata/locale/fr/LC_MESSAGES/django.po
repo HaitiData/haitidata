@@ -137,6 +137,11 @@ msgstr ""
 "          Publié de <b>%(publish_start)s</b> à <b>%(publish_end)s</b>.\n"
 "          "
 
+#: haitidata/templates/base/_resourcebase_snippet.html:5
+#: haitidata/templates/charts_app/chart_list.html:22
+msgid "No content found."
+msgstr "Aucun contenu trouvé."
+
 #: haitidata/templates/base/_resourcebase_snippet.html:37
 #: haitidata/templates/layers/layer_detail.html:498
 #: haitidata/templates/search/_search_content.html:16

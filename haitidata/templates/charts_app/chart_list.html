@@ -11,21 +11,16 @@
 {% block body_class %}charts{% endblock %}
 
 {% block body %}
-<ul>
   {% for chart in object_list %}
-  <li>{{ chart.title }}</li>
-  <li>{{ chart.layer }} - {{ chart.category }} - {{ chart.quantity }}</li>
-  <li>{{ chart.type }} - {{ chart.agg_type }}</li>
-  <li>{{ chart.abstract }}</li>
+  <h4>{{ chart.title }}</h4>
+  <p>{% trans "Source" %}: {{ chart.layer }}<!-- {{ chart.category }} - {{ chart.quantity }}--></p>
+  <!-- <p>{{ chart.type }} - {{ chart.agg_type }}</p> -->
+  <p><small>{{ chart.abstract }}</small></p>
   <br>
   {% empty %}
-  <li>No Charts yet!</li>
+  <h3>{% trans "No content found." %}</h3>
   {% endfor %}
-</ul>
-{% include "_bulk_permissions_form.html" %}
-
-
-
+  {% include "_bulk_permissions_form.html" %}
 {% endblock %}
 
 {% block extra_script %}
