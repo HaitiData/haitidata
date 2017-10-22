@@ -12,6 +12,62 @@ from django.shortcuts import render
 from django.views.generic.detail import View
 from geonode.layers.views import _resolve_layer, _PERMISSION_MSG_VIEW
 
+WCS_URL = settings.GEOSERVER_BASE_URL + \
+          'wcs?request=getcoverage&' \
+          'version=1.0.0&service=WCS&coverage={layer_name}&' \
+          'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
+          'height={height}'
+
+MAX_CLIP_SIZE = settings.MAXIMUM_CLIP_SIZE
+TILE_SAMPLE_SIZE = 100  # tile sample size will be 100*100
+
+
+def check_file_size(clipped_size):
+    """ Checking file size that is allowed or not
+
+    :param clipped_size: File size to be checked
+    :type clipped_size: float
+
+    :return: Checking file size is allowed or not
+    :rtype: bool
+    """
+    if float(clipped_size) > float(MAX_CLIP_SIZE):
+        return False
+    return True
+
+
+def download_wcs(layername, bbox_string, width, height, raster_filepath):
+    """ Download clipped image from wcs.
+
+    :param layername: layername for wcs request
+    :type layername: str
+
+    :param bbox_string: bbox string for wcs request
+    :type bbox_string: str
+
+    :param width: width for wcs request
+    :type width: int
+
+    :param height: height for wcs request
+    :type height: int
+
+    :param raster_filepath: filepath for downloaded wcs clipped
+    :type raster_filepath: str
+
+    :return:
+    """
+    wcs_formatted_url = WCS_URL.format(
+        layer_name=layername,
+        bbox=bbox_string,
+        width=width,
+        height=height
+    )
+
+    response = urllib2.urlopen(wcs_formatted_url)
+    fh = open(raster_filepath, "w")
+    fh.write(response.read())
+    fh.close()
+
 
 def clip_layer(request, layername):
     """Clipping raster layer and save to temp folder.
@@ -66,11 +122,6 @@ def clip_layer(request, layername):
         bbox_string = ','.join(bbox_array)
     except AttributeError:
         # Call wcs command
-        wcs_url = settings.GEOSERVER_LOCATION + 'wcs?request=getcoverage&' \
-                  'version=1.0.0&service=WCS&coverage={layer_name}&' \
-                  'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
-                  'height={height}'
-
         bbox_array = bbox_string.split(',')
         offset = 50
         x = float(bbox_array[2]) - float(bbox_array[0])
@@ -79,24 +130,53 @@ def clip_layer(request, layername):
         y = float(bbox_array[3]) - float(bbox_array[1])
         height = int(y * 43260) + offset
 
-        wcs_formatted_url = wcs_url.format(
-            layer_name=layername,
-            bbox=bbox_string,
-            width=width,
-            height=height
-        )
+        width = int(width * settings.WCS_DOWNLOADED_RATIO_SIZE)
+        height = int(height * settings.WCS_DOWNLOADED_RATIO_SIZE)
 
         extention = 'tif'
 
+        # checking file size of wcs download
+        # it is done by assumption by getting sample
+        # 1. getting part 10x10 through wcs
+        # 2. get the filesize
+        # 3. times filesize by width/10 * height/10, as assumption for actual filesize
+        # -------------------------------------------------
+        number_tile_in_width = int(width / TILE_SAMPLE_SIZE)
+        number_tile_in_height = int(height / TILE_SAMPLE_SIZE)
+
+        sample_filepath = os.path.join(
+            temporary_folder,
+            layer.title + '.sample.' + extention)
+        download_wcs(
+            layername, bbox_string,
+            TILE_SAMPLE_SIZE,
+            TILE_SAMPLE_SIZE,
+            sample_filepath)
+
+        expected_clip_size = os.path.getsize(sample_filepath)
+        # size of 10x10 times width_sample * height_sample
+        expected_clip_size = expected_clip_size * (
+            number_tile_in_width * number_tile_in_height
+        )
+
+        if not check_file_size(expected_clip_size):
+            response = JsonResponse({
+                'error': 'Clipped file size is '
+                         'bigger than %s mb' % (
+                             int(MAX_CLIP_SIZE) / 1000000
+                         )
+            })
+            response.status_code = 403
+            return response
+
+        # -------------------------------------------------
+
+        # download actual wcs clipped
         raster_filepath = os.path.join(
-                temporary_folder,
-                layer.title + '.' + extention)
+            temporary_folder,
+            layer.title + '.' + extention)
 
-        response = urllib2.urlopen(wcs_formatted_url)
-
-        fh = open(raster_filepath, "w")
-        fh.write(response.read())
-        fh.close()
+        download_wcs(layername, bbox_string, width, height, raster_filepath)
 
         if not geojson:
             response = JsonResponse({
@@ -160,14 +240,14 @@ def clip_layer(request, layername):
 
     if os.path.exists(output):
         # Check size
-        max_clip_size = settings.MAXIMUM_CLIP_SIZE
         clipped_size = os.path.getsize(output)
 
-        if float(clipped_size) > float(max_clip_size):
-            max_clip_size_mb = int(max_clip_size) / 1000000
+        if not check_file_size(clipped_size):
             response = JsonResponse({
                 'error': 'Clipped file size is '
-                         'bigger than ' + str(max_clip_size_mb) + ' mb'
+                         'bigger than %s mb' % (
+                             int(MAX_CLIP_SIZE) / 1000000
+                         )
             })
             response.status_code = 403
             return response
@@ -285,7 +365,7 @@ class ClipView(View):
                     settings.GEOSERVER_PUBLIC_LOCATION,
                     geotiffname
                 ),
-                'service_typename': 'geonode:'+geotiffname
+                'service_typename': 'geonode:' + geotiffname
             }
         }
         return render(request, self.template_name, context)
