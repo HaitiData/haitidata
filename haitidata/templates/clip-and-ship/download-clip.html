@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="{% static 'geonode/css/leaflet.draw.css' %}"/>
 <script src="{% static 'geonode/js/draw/leaflet.draw.js' %}"></script>
+<script src="{% static 'js/loadingoverlay.js' %}"></script>
 
 <script type="text/javascript">
 
@@ -101,16 +102,19 @@
 
     function download_clip_layer(clipUrl, geometry_url) {
         var ship_url = clipUrl + '/clip-layer?' + geometry_url;
+        $('#download-clip-map').LoadingOverlay("show", {image: "/static/img/loading-spinner.gif"});
         $.ajax({
             url: ship_url,
             type: 'GET',
             success: function (result) {
+                $('#download-clip-map').LoadingOverlay("hide");
                 $('#download-clip-button').prop('disabled', false);
                 var clip_filename = result['clip_filename'];
                 location.href = clipUrl + '/' + clip_filename + '/download-clip';
                 editableLayers.clearLayers();
             },
             error: function (result) {
+                $('#download-clip-map').LoadingOverlay("hide");
                 $('#download-clip-button').prop('disabled', false);
                 var error_message = result['responseJSON']['error'];
                 var $errorMessageDisplay = $('#download-clip-error-message');
