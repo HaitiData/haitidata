@@ -1,24 +1,100 @@
 version: '2'
 services:
   geoserver:
-    image: dimasciput/haitidata_geoserver
+    image: kartoza/haitidata_geoserver:1.0
+    environment:
+      DOCKER_HOST: ''
+      PUBLIC_PORT: '80'
+      DOCKER_HOST_IP: ''
+      DJANGO_URL: http://django:8000/
+      SITEURL: http://88.99.166.60/
+      GEOSERVER_BASE_URL: http://88.99.166.60:32208/geoserver/
     stdin_open: true
-    external_links:
-    - postgis:postgis
+    volumes:
+    - /geoserver-data:/geoserver-data/data
+    - /home/ubuntu/cnigs-data:/cnigs_data
     tty: true
+    links:
+    - postgres:postgres
+    - postgres:postgres
     ports:
     - 32208:8080/tcp
     labels:
       io.rancher.container.pull_image: always
-  postgis:
-    build: ./db
-    environment:
-      POSTGRES_USER: docker
-      POSTGRES_PASS: docker
-  django:
-    build: ./django_haitadata
-    external_links:
-    - postgis:postgis
-    tty: true
+  geoserver-balancer:
+    image: rancher/lb-service-haproxy:v0.7.9
     ports:
-    - 33208:8080/tcp
+    - 30008:30008/tcp
+    expose:
+    - 8080:8080/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+  django:
+    image: kartoza/haitidata_django:1.2
+    environment:
+      DATABASE_HOST: postgres
+      DATABASE_NAME: gis
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+      DJANGO_SETTINGS_MODULE: core.settings.prod_docker
+      GEOSERVER_BASE_URL: http://88.99.166.60:32208/geoserver/
+      GEOSERVER_PUBLIC_LOCATION: http://88.99.166.60/api/geoserver/
+      LC_ALL: en_US.UTF-8
+      RABBITMQ_HOST: rabbitmq
+      SITEURL: http://88.99.166.60/
+      DATABASE_USERNAME: docker
+      DATABASE_PASSWORD: docker
+    stdin_open: true
+    volumes:
+    - django-static-data:/home/web/static:rw
+    - django-media-data:/home/web/media:rw
+    tty: true
+    links:
+    - postgres:postgres
+    - postgres:postgres
+    - geoserver:geoserver
+    labels:
+      io.rancher.container.pull_image: always
+  elasticsearch:
+    image: elasticsearch
+  nginx:
+    image: kartoza/haitidata_nginx:1.0
+    stdin_open: true
+    volumes:
+    - django-static-data:/home/web/static:ro
+    - django-media-data:/home/web/media:ro
+    tty: true
+    links:
+    - django:django
+    - geoserver:geoserver
+    - django:django
+    ports:
+    - 80:8080/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  rabbitmq:
+    image: rabbitmq
+  postgres:
+    image: kartoza/haitidata_db:1.0
+    environment:
+      PASS: docker
+      POSTGRES_PASS: docker
+      POSTGRES_USER: docker
+      USERNAME: docker
+  dbbackups:
+    image: kartoza/pg-backup:9.4
+    environment:
+      DUMPPREFIX: HAITIDATA
+      PGUSER: docker
+      PGPASSWORD: docker
+      PGPORT: '5432'
+      PGHOST: db
+      PGDATABASE: gis
+    stdin_open: true
+    volumes:
+    - /backups:/backups
+    tty: true
+    links:
+    - postgres:db
+    labels:
+      io.rancher.container.pull_image: always
