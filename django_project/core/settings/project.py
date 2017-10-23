@@ -91,3 +91,5 @@ SOCIAL_ORIGINS = [{
     "url": "https://plus.google.com/share?url={url}",
     "css_class": "gp"
 }]
+
+WCS_DOWNLOADED_RATIO_SIZE = 1
