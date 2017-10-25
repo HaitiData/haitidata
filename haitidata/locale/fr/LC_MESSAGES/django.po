@@ -882,7 +882,7 @@ msgstr "Publier la Carte comme WMS"
 #: haitidata/templates/maps/map_metadata.html:14
 #: haitidata/templates/site_base.html:55
 msgid "Create Map"
-msgstr "Créer la Carte"
+msgstr "Créer une Carte"
 
 #: haitidata/templates/maps/map_metadata.html:5
 #: haitidata/templates/maps/map_metadata.html:7
