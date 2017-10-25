@@ -1,10 +1,17 @@
 {% extends "site_base.html" %}
+{% load i18n %}
 {% load leaflet_tags %}
 {% load staticfiles %}
 
 
 {% block title %}{{ block.super }}{% endblock %}
-{% block page-title %}{{ geotiffname }}{% endblock %}
+{% block page-title %}
+{% if geotiffname == 'ortho_images' %}
+  Ortho Photos
+{% elif geotiffname == 'lidar' %}
+  {% trans "DSM" %}
+{% endif %}
+{% endblock %}
 
 {% block body_class %}layers{% endblock %}
 
