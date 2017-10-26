@@ -12,7 +12,7 @@
 
 {% block body %}
   {% for chart in object_list %}
-  <h4>{{ chart.title }}</h4>
+  <h4><a href="/chart/{{ chart.id }}/">{{ chart.title }}</a></h4>
   <p>{% trans "Source" %}: {{ chart.layer }}<!-- {{ chart.category }} - {{ chart.quantity }}--></p>
   <!-- <p>{{ chart.type }} - {{ chart.agg_type }}</p> -->
   <p><small>{{ chart.abstract }}</small></p>
