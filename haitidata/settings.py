@@ -167,6 +167,16 @@ BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
 
+# Force French as default language
+# Needs /usr/local/lib/python2.7/dist-packages/setmydefaultlanguage/__init__.py
+# See doc http://docs.geonode.org/en/master/tutorials/admin/default_lang/
+
+LANGUAGE_CODE = 'fr'
+
+MIDDLEWARE_CLASSES += (
+    'setmydefaultlanguage.ForceDefaultLanguageMiddleware',
+)
+
 _HAITI_LANGUAGES = (
     ('en', 'English'),
     ('fr', 'Français'),
