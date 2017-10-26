@@ -102,18 +102,14 @@ INSTALLED_APPS = INSTALLED_APPS + (
     )
 
 GEOSERVER_PUBLIC_LOCATION = os.environ.get(
-    'GEOSERVER_PUBLIC_LOCATION', 'http://88.99.166.60:32208/geoserver/'
+    'GEOSERVER_PUBLIC_LOCATION', 'http://136.243.4.93:8080/geoserver/'
 )
 
 # dynamic setting based on domain
 GEOSERVER_BASE_URL = os.environ.get(
     'GEOSERVER_BASE_URL',
-    'http://88.99.166.60:32208/geoserver/'
+    'http://136.243.4.93:8080/geoserver/'
 )  # change this to geoserver container location
-
-#GEOSERVER_BASE_URL = GEOSERVER_PUBLIC_LOCATION = os.getenv(
-#    'GEOSERVER_PUBLIC_LOCATION', 'http://haitidata.dev.ithacaweb.org/geoserver/'
-#)
 
 LAYER_PREVIEW_LIBRARY = 'react'
 
@@ -170,6 +166,16 @@ LOCKDOWN_GEONODE = True
 BROKER_URL = "amqp://guest@localhost:5672"
 CELERY_ALWAYS_EAGER = True
 IMPORT_TASK_SOFT_TIME_LIMIT = 90
+
+# Force French as default language
+# Needs /usr/local/lib/python2.7/dist-packages/setmydefaultlanguage/__init__.py
+# See doc http://docs.geonode.org/en/master/tutorials/admin/default_lang/
+
+LANGUAGE_CODE = 'fr'
+
+MIDDLEWARE_CLASSES += (
+    'setmydefaultlanguage.ForceDefaultLanguageMiddleware',
+)
 
 _HAITI_LANGUAGES = (
     ('en', 'English'),

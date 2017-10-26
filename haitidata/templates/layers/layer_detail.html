@@ -517,6 +517,7 @@
     <li class="list-group-item" id="create-chart">
       <h4>{% trans "Create a chart using this layer" %}</h4>
       <p>{% trans "Click the button below to generate a new chart based on this layer, choosing a quantity and a category field." %}</p>
+      <p>Pour voir comment créer un graphique, consulter le <a href="/tutorials/">tutoriel</a>.</p>
         <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">{% trans "Create a chart" %}</button>
         <div id="form" class="collapse">
           <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/add/{{ resource.id }}/">
@@ -525,7 +526,7 @@
               <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
             </div>
             <div class="form-group">
-              <label class="control-label col-md-2" for="id_category">Category:</label>
+              <label class="control-label col-md-2" for="id_category">Catégorie:</label>
                 <div class="col-md-8">
                   <select class="form-control" id="id_category" name="category" >
                     {% for attribute in resource.attributes %}
@@ -535,7 +536,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label  class="control-label col-md-2" for="id_quantity">Quantity:</label>
+                <label  class="control-label col-md-2" for="id_quantity">Quantité:</label>
                 <div class="col-md-8">
                   <select class="form-control" id="id_quantity" name="quantity">
                     {% for attribute in resource.attributes %}
@@ -558,7 +559,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label  class="control-label col-md-2" for="id_aggr_type">Aggregation:</label>
+                  <label  class="control-label col-md-2" for="id_aggr_type">Aggrégation:</label>
                   <div class="col-md-8">
                     <select class="form-control" id="id_aggr_type" name="aggr_type">
                       <option value="0">Sum</option>
@@ -570,21 +571,21 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-md-2" for="id_title">Title:</label>
+                  <label class="control-label col-md-2" for="id_title">Titre:</label>
                   <div class="col-md-8">
                     <input id="id_title" maxlength="128" name="title" type="text" class="form-control" >
-                    <p style="font-size: small; margin:0">Suggested title:</p>
+                    <p style="font-size: small; margin:0">Titre suggéré:</p>
                     <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-md-2" for="id_abstract">Abstract:</label>
+                  <label class="control-label col-md-2" for="id_abstract">Résumé:</label>
                   <div class="col-md-8">
                     <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
                   </div>
                 </div>
-                <button id="preview_btn" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Preview</button>
-                <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Save</button>
+                <button id="preview_btn" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Aperçu</button>
+                <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Sauvegarder</button>
                </form>
           </div>
         </li>
