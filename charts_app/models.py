@@ -45,7 +45,7 @@ class Chart(models.Model):
     layer = models.ForeignKey(Layer, validators=[validate_wfs])
     title = models.CharField(max_length=128, blank=False)
     category = models.CharField(max_length=200)
-    quantity = models.CharField(max_length=200)
+    quantity = models.CharField(max_length=200, blank=True)
     type = models.SmallIntegerField(choices=CHART_TYPES, default=0)
     aggr_type = models.SmallIntegerField(choices=AGGREGATION_TYPES, default=3)
     abstract = models.TextField(blank=True)
@@ -60,7 +60,7 @@ class ChartForm(ModelForm):
          layer = cleaned_data.get('layer')
          category = cleaned_data.get('category')
          quantity = cleaned_data.get('quantity')
-
+         aggr_type = cleaned_data.get('aggr_type')
          categories, quantities = get_fields(layer)
 
          if category not in categories:
@@ -69,7 +69,7 @@ class ChartForm(ModelForm):
                      code='non_extant_category_field',
                       params={'lyr_title': lyr.title, 'category': category})
 
-         if quantity not in quantities:
+         if quantity not in quantities and aggr_type != 2:
              lyr = Layer.objects.get(pk=layer)
              raise VE(_('%(lyr_title)s does not contain the field %(quantity)s'),
                       code='non_extant_quantity_field',

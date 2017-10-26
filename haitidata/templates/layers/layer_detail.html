@@ -668,7 +668,14 @@
           }
       }
 
+      function check_quantity(){
+          if (document.f.quantity.value == ''){
+                  document.f.aggr_type.value = 2;
+              }
+      }
+        
       function updateLinkAndTitle(){
+          check_quantity();
           update_link();
           chart_title();
           attachAbstract();
