@@ -1314,7 +1314,7 @@ msgstr ""
 
 #: haitidata/templates/site_index.html:19
 msgid "Haiti Risk and Hazards"
-msgstr "Risques et Hasards en Haïti"
+msgstr "Risques et Aléa en Haïti"
 
 #: haitidata/templates/site_index.html:22
 msgid "River Flood"
