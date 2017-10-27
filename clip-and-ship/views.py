@@ -6,6 +6,7 @@ import zipfile
 import urllib2
 
 import subprocess
+from pyproj import Proj, transform
 from django.conf import settings
 from django.http import Http404, HttpResponse, JsonResponse
 from django.shortcuts import render
@@ -17,6 +18,11 @@ WCS_URL = settings.GEOSERVER_BASE_URL + \
           'version=1.0.0&service=WCS&coverage={layer_name}&' \
           'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
           'height={height}'
+
+WCS_URL_2_0_1 = settings.GEOSERVER_BASE_URL + \
+                'wcs?request=getcoverage&' \
+                'version=2.0.1&service=WCS&coverageid={layer_name}&' \
+                'format=geotiff&crs=EPSG:4326&subset=E({x1},{x2})&subset=N({y1},{y2})'
 
 MAX_CLIP_SIZE = settings.MAXIMUM_CLIP_SIZE
 TILE_SAMPLE_SIZE = 100  # tile sample size will be 100*100
@@ -69,6 +75,28 @@ def download_wcs(layername, bbox_string, width, height, raster_filepath):
     fh.close()
 
 
+def download_wcs_v2(layername, x1, x2, y1, y2, raster_filepath):
+    """ Download clipped image from wcs.
+
+    :param raster_filepath: filepath for downloaded wcs clipped
+    :type raster_filepath: str
+
+    :return:
+    """
+    wcs_formatted_url = WCS_URL_2_0_1.format(
+        layer_name=layername,
+        x1=x1,
+        x2=x2,
+        y1=y1,
+        y2=y2
+    )
+
+    response = urllib2.urlopen(wcs_formatted_url)
+    fh = open(raster_filepath, "w")
+    fh.write(response.read())
+    fh.close()
+
+
 def clip_layer(request, layername):
     """Clipping raster layer and save to temp folder.
     Clipping layer by bbox or by geojson.
@@ -77,11 +105,22 @@ def clip_layer(request, layername):
     :return: file size
     """
     # PREPARATION
-    layer = _resolve_layer(
-        request,
-        layername,
-        'base.view_resourcebase',
-        _PERMISSION_MSG_VIEW)
+    try:
+        layer = _resolve_layer(
+            request,
+            layername,
+            'base.view_resourcebase',
+            _PERMISSION_MSG_VIEW)
+    except Http404 as e:
+        response = JsonResponse({
+            'error': '%s. '
+                     'Please do '
+                     '<i>python manage.py updatelayers</i> '
+                     'to retrieve it from geoserver.' % e
+        })
+        response.status_code = 404
+        return response
+
     download_from_wcs = False
 
     query = request.GET or request.POST
@@ -175,8 +214,15 @@ def clip_layer(request, layername):
         raster_filepath = os.path.join(
             temporary_folder,
             layer.title + '.' + extention)
+        x1, x2 = bbox_array[0], bbox_array[2]
+        y1, y2 = bbox_array[1], bbox_array[3]
+        inProj = Proj(init='epsg:4326')
+        outProj = Proj(init='epsg:32618')
 
-        download_wcs(layername, bbox_string, width, height, raster_filepath)
+        x1, y1 = transform(inProj, outProj, x1, y1)
+        x2, y2 = transform(inProj, outProj, x2, y2)
+
+        download_wcs_v2(layername, x1, x2, y1, y2, raster_filepath)
 
         if not geojson:
             response = JsonResponse({
