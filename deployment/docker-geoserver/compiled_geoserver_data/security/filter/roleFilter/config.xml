@@ -1,0 +1,7 @@
+<roleFilter>
+  <id>5ae533e0:15f57ad720c:-7fd9</id>
+  <name>roleFilter</name>
+  <className>org.geoserver.security.filter.GeoServerRoleFilter</className>
+  <httpResponseHeaderAttrForIncludedRoles>roles</httpResponseHeaderAttrForIncludedRoles>
+  <roleConverterName>roleConverter</roleConverterName>
+</roleFilter>
