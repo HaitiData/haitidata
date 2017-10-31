@@ -11,6 +11,23 @@
     {% else %}
     <link href="{{ STATIC_URL }}lib/css/assets.min.css?v={{ VERSION }}" rel="stylesheet"/>
     {% endif %}
+    <link rel="shortcut icon" href="/favicon.ico">
+  	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+  	<link rel="icon" type="image/png" sizes="196x196" href="/static/img/favicon-192.png">
+  	<link rel="icon" type="image/png" sizes="160x160" href="/static/img/favicon-160.png">
+  	<link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon-96.png">
+  	<link rel="icon" type="image/png" sizes="64x64" href="/static/img/favicon-64.png">
+  	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32.png">
+  	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16.png">
+  	<link rel="apple-touch-icon" href="/static/img/favicon-57.png">
+  	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicon-114.png">
+  	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon-72.png">
+  	<link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicon-144.png">
+  	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon-60.png">
+  	<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicon-120.png">
+  	<link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicon-76.png">
+  	<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicon-152.png">
+  	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon-180.png">
     <link href="{{ STATIC_URL }}geonode/css/ext-compatibility.css?v={{ VERSION }}" rel="stylesheet" />
     <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
     <link href="{{ STATIC_URL }}css/haitidata.css" rel="stylesheet"/>
@@ -36,12 +53,13 @@
           <ul class="dropdown-menu">
             <li><a href="{% url "layer_browse" %}">{% trans "Layers" %}</a></li>
             <li><a href="{% url "document_browse" %}">{% trans "Documents" %}</a></li>
-            <li><a href="{% url "chart_list" %}">{% trans "Charts" %}</a></li>
+            <li><a href="{% url "chart_list" %}">{% trans "Graphs" %}</a></li>
             {% if user.is_authenticated %}
             <li><a href="/uploads">{% trans "Uploads" %}</a></li>
             <li><a href="{% url "services" %}">{% trans "Remote Services" %}</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{% url "layer_upload" %}">Upload Layer</a></li>
+            <li><a href="{% url "layer_upload" %}">{% trans "Upload Layer" %}</a></li>
+            <li><a href="/uploads/new">{% trans "Upload ODK exports" %}</a></li>
             <li><a href="{% url "document_upload" %}">Upload Document</a></li>
             <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
             {% endif %}
@@ -58,18 +76,19 @@
             <a href="{% url "maps_browse" %}">{% trans "Maps" %}</a>
             {% endif %}
           </li>
-         <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Imagery" %}<i class="fa fa-angle-down fa-lg"></i></a>
+          <li id="nav_imagery">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Imagery" %}<i class="fa fa-angle-down fa-lg"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="/clip/ortho_images">Orthophotos</a></li>
-                <li><a href="/clip/lidar">DSM</a></li>
+                <li><a href="/clip/ortho_images">{% trans "Orthophotos" %}</a></li>
+                <li> <a href="/clip/lidar">{% trans "DSM" %}</a></li>
               </ul>
-          </li>
+            </li>
           <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %}<i class="fa fa-angle-down fa-lg"></i></a>
             <ul class="dropdown-menu">
               <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
               <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
+              <li><a href="{% url "tutorials" %}">{% trans "Tutorials" %}</a></li>
               {% if perms.announcements.can_manage %}
               <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
               {% endif %}

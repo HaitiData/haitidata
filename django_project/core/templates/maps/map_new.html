@@ -13,7 +13,34 @@
 		{% include 'maps/map_geoexplorer.js' %}
 	{% endif %}
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 	{{ block.super }}
 {% endblock %}
 
-{% block footer %}{% endblock %}
+{% block footer %}
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Le Carte</h4>
+      </div>
+      <div class="modal-body">
+        <p>Une carte est une représentation d'un espace géographique en utilisant une ou plusieurs couches.</p>
+        <p>Pour voir comment créer une carte, consulter le <a href="/tutorials/">tutoriel.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick = "$('.modal').hide()" on button close;>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).on('ready',function(){
+        $('#myModal').modal('show');
+    });
+</script>
+{% endblock %}

@@ -92,60 +92,9 @@
          </a>
       </li>
       <li class="list-group-item">
-            <h4>{% trans "Modify this Chart" %}</h4>
-            <p>{% trans "Change type of the chart or type of aggregation." %}</p>
-            <a id="updt_chart">
-                <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="update_params();" >{% trans "Modify this Chart" %}</button>
-            </a>
-            <div id="form" class="collapse">
-                <form name="f" method="post" class="form-horizontal" onchange="update_params();" action="{% url 'chart_update' chart.id %}" >
-                    {% csrf_token %}
-                         <div class="form-group">
-                             <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_type">Type:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_type" name="type">
-                                 <option value="0">Bar chart</option>
-                                 <option value="1">Pie chart</option>
-                                 <option value="2">Donut chart</option>
-                                 <option value="3">Line chart</option>
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label  class="control-label col-md-2" for="id_aggr_type">Aggregation:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_aggr_type" name="aggr_type">
-                                 <option value="0">Sum</option>
-                                 <option value="1">Mean</option>
-                                 <option value="2">Category count</option>
-                                 <option value="3">Max</option>
-                                 <option value="4">Min</option>
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_title">Title:</label>
-                             <div class="col-md-8">
-                                <input class="form-control" id="id_title" maxlength="128" name="title" type="text">
-                                 <p style="font-size: small; margin:0">Suggested title:</p>
-                                 <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_abstract">Abstract:</label>
-                             <div class="col-md-8">
-                             <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
-
-                             </div>
-                         </div>
-                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Display chart</button>
-                         <button type="submit" class="btn btn-primary btn-block" value="Submit">Update chart in db</button>
-               </form>
-          </div>
-      </li>
+          <a href="{% url 'chart_update' object.id %}" id="mod_chart">
+              <button class="btn btn-primary btn-md btn-block">{% trans "Modify this Chart" %}</button>
+          </a>
       <li class="list-group-item">
          <a href="{% url 'chart_delete' object.id %}" id="del_chart">
               <button class="btn btn-primary btn-md btn-block">{% trans "Delete this Chart" %}</button>
@@ -213,7 +162,7 @@ function attachAbstract(){
 }
 
 function chart_title(){
-    if (agg == dict_title_agg[2]){
+    if (agg == "2"){
         suggestedTitle = dict_title_agg[agg] + " of elements for "  + category;
     } else {
         var title = dict_title_agg[agg]
@@ -252,10 +201,14 @@ title_detail();
 
 // Set-up the export button
 d3.select('#saveButton').on('click', function(){
-    var svg_img = document.getElementById("chart_svg");
-    console.log(svg_img)
-	var svgString = getSVGString(document.getElementById("chart_svg"));
-	svgString2Image( svgString, 300, 250, 'png', save ); // passes Blob and filesize String to the callback
+  if (!document.getElementById("chart_svg")){
+      var svg_img = document.getElementById("chart_svgchart_area_plain");
+      var svgString = getSVGString(document.getElementById("chart_svgchart_area_plain"));
+  } else {
+      var svg_img = document.getElementById("chart_svg");
+      var svgString = getSVGString(document.getElementById("chart_svg"));
+  }
+  svgString2Image( svgString, svg_img.parentNode.clientWidth, svg_img.parentNode.clientHeight, 'png', save ); // passes Blob and filesize String to the callback
 
 	function save( dataBlob, filesize ){
 		saveAs( dataBlob, 'D3 vis exported to PNG.png' ); // FileSaver.js function

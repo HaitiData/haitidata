@@ -251,7 +251,7 @@ section#subheader {
 	padding-top: 0;
 
 	p {
-		color: @gray-light;
+		color: @gray;
 		display: inline-block;
 	}
 
@@ -433,10 +433,25 @@ footer {
 		h2 {
 			margin-bottom: 1em;
 		}
-		a {
+		.keywords {
+			border-radius: 0.6em;
 			color: white;
 			&:hover {
-				background: darken(@brand-primary, 10%);
+				background: @brand-primary;
+				color: white;
+				text-decoration: none;
+				        transition: 1s all;
+				-webkit-transition: 1s all;
+				   -moz-transition: 1s all;
+				     -o-transition: 1s all;
+				    -ms-transition: 1s all;
+			}
+		}
+		.keywords a {
+			color: white;
+			&:hover {
+				background: @brand-primary;
+				color: white;
 				text-decoration: none;
 			}
 		}
@@ -464,6 +479,16 @@ footer {
 			p {
 				font-weight: 400;
 				margin-bottom: 0;
+			}
+			.btn-default {
+				background: rgba(0, 0, 0, 0.4);
+				color: white;
+				text-shadow: none;
+				margin-top: 8px;
+				&:hover {
+					background: @brand-primary;
+					border-color: darken(@brand-primary, 20%);
+				}
 			}
 	}
 
@@ -522,10 +547,15 @@ footer {
 }
 /* Items
 ----------------------- */
-.actions,
-.filter {
+.actions, .filter {
 	.fa {
 		margin-right: 8px;
+	}
+
+	.input-group {
+		.fa {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -646,34 +676,56 @@ footer {
 .item-thumb {
 	padding-left: 0;
 	padding-right: 0;
-
 	img {
 		width: 100%;
+	}
+	.cnigs-logo {
+		border-radius: 50%;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		height: 42px;
+		width: 42px;
+		z-index: 99;
 	}
 }
 
 .item-details {
 	background: white;
 	color: @text-color;
-
+	position: relative;
+	height: 200px;
+  h4 {
+		margin-bottom: 0.25em;
+		margin-top: 0.25em;
+	}
+	p { margin-bottom: 0.25em; }
+	p.abstract {
+		font-size: 0.875em;
+	}
 	.item-meta {
+		font-size: 0.75em;
 		margin-top: 1em;
-
 		.item-category {
-			font-size: 12px;
 			text-transform: uppercase;
 		}
+		a {
+			color: @gray-darker;
+		}
 	}
-
-	.btn-sm {
-		margin-right: -17px;
+	.btn-xs {
+		border-color: @gray-lighter;
+		border-bottom-right-radius: 0;
+		border-top-left-radius: 0;
+		margin-right: -16px;
 		margin-top: -1px;
-		padding: 0.5em 1em;
+		padding: 0.25em 0.5em;
 	}
-
 	.item-items {
 		border-top: 1px solid @gray-lighter;
-
+		position: absolute;
+		bottom: 0;
+		font-size: 0.875em;
 		ul {
 			margin: 0 0 0 -15px;
 			padding: 0.5em;
@@ -910,6 +962,10 @@ body.importer {
 }
 /* ------ Search
 ------------------------------ */
+.btn-tools {
+	font-size: 0.75em;
+}
+
 nav.filter {
 	h4 {
 		background: @gray-dark;
@@ -918,25 +974,23 @@ nav.filter {
 		padding: 10px 0;
 		text-transform: uppercase;
 		border-radius: 3px;
-
 		a {
 			color: white;
 		}
-
 		a.toggle {
 			text-decoration: none;
 		}
-
 		i {
 			margin-left: 8px;
 		}
 	}
-
+	li a {
+		color: @gray;
+	}
 	.active {
-		color: @brand-info;
-
+		color: @brand-primary;
 		.badge {
-			background: @brand-info;
+			background: @brand-primary;
 		}
 	}
 
@@ -947,6 +1001,7 @@ nav.filter {
 	li a {
 		border-bottom: 1px solid @gray-lighter;
 		cursor: pointer;
+		font-size: 14px;
 		padding: 5px 10px;
 	}
 }
@@ -1190,6 +1245,7 @@ nav.filter {
 }
 
 #composerCart {
+	font-size: 14px;
 	.list-group i {
 		margin-right: 0;
 	}

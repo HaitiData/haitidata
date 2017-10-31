@@ -16,12 +16,18 @@
     </a>
   </div>
   {% endif %}
-
 {% endblock %}
 
 {% block body_class %}maps{% endblock %}
 
 {% block body %}
+<div class="row">
+  <div class="col-xs-12">
+    <p>Les cartes constituent une des composantes principales de HaitiData.</p>
+    <p>Les cartes sont formées par une ou plusieurs couches chacune représentée avec son propre style. Les couches peuvent provenir soit de HaitiData soit d'un serveur externe supportant le standard WMS soit de services Web tels que Google ou MapQuest.</p>
+    <p>Les cartes de HaitiData contient aussi d'autres information comme par exemple le niveau de zoom et l'étendue de la carte, l'ordre des couches et leurs style.</p>
+  </div>
+</div>
   {% include "search/_search_content.html" %}
   {% include "_bulk_permissions_form.html" %}
 {% endblock %}

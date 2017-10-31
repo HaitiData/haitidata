@@ -238,6 +238,11 @@
         {% endif %}
       </article>
 
+      <article id="charts" class="tab-pane">
+      <h4>{% trans "No charts available at this time" %}</h4>
+      <a href="/table/fields?lyrname={{ resource.typename }}">{% trans "Create Chart" %}</a>
+      </article>
+
       <article id="comments" class="tab-pane">
         {% with resource as obj %}
           {% include "_comments.html" %}
@@ -274,14 +279,16 @@
   <div class="col-md-4">
 
     <ul class="list-group">
+      {% if resource.service_type = "WCS" %}
       <li class="list-group-item">
           <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download_clip_page" id="download-clip">{% trans "Download Clip" %}</button>
       </li>
+      {% endif %}
       {% if resource.storeType != "remoteStore" %}
         <li class="list-group-item">
         {% if links or links_download %}
-          <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download-layer">{% trans "Download Layer" %}</button>
-          {% else %}
+           <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download-layer">{% trans "Download Layer" %}</button>
+        {% else %}
           {% if request.user.is_authenticated %}
           <button class="btn btn-primary btn-md btn-block" id="request-download">{% trans "Request Download" %}</button>
           {% endif %}
@@ -343,7 +350,7 @@
     {% endif %}
 
     <li class="list-group-item">
-      <a href="{% url "layer_metadata_detail" resource.alternate %}">
+      <a href="{% url "layer_metadata_detail" resource.typename %}">
         <button class="btn btn-primary btn-md btn-block">{% trans "Metadata Detail" %}</button>
       </a>
     </li>
@@ -375,8 +382,8 @@
                   <h4>{% trans "Styles" %}</h4>
                   {% if preview == 'geoext' %}
                   <a class="btn btn-default btn-block btn-xs style-edit" data-dismiss="modal" href="#">{% trans "Edit" %}</a>
-                  <a class="btn btn-default btn-block btn-xs" href="{% url "layer_style_manage" resource.service_typename %}">{% trans "Manage" %}</a>
                   {% endif %}
+                  <a class="btn btn-default btn-block btn-xs" href="{% url "layer_style_manage" resource.service_typename %}">{% trans "Manage" %}</a>
                 </div>
                 {% endif %}
               {% endif %}
@@ -492,6 +499,7 @@
     </li>
 
     <!-- Charts section -->
+    {% if resource.service_type != "WCS" %}
     <li class="list-group-item">
       <h4>{% trans "Charts using this layer" %}</h4>
       {% if resource.maps %}
@@ -501,7 +509,7 @@
         {% for chart in resource.chart_set.all %}
             <li><a href="{% url 'chart_detail' chart.id %}">{{ chart.get_type_display }}</a>, Category field = {{chart.category}}, Quantity field = {{chart.quantity}}</li>
         {% empty %}
-            <li><p>No charts available at this time</p></li>
+            <li><p>{% trans "No charts available at this time" %}</p></li>
         {% endfor %}
         </ul>
     </li>
@@ -509,75 +517,75 @@
     <li class="list-group-item" id="create-chart">
       <h4>{% trans "Create a chart using this layer" %}</h4>
       <p>{% trans "Click the button below to generate a new chart based on this layer, choosing a quantity and a category field." %}</p>
-            <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">Create a chart</button>
-                    <div id="form" class="collapse">
-              <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/add/{{ resource.id }}/">
-                    {% csrf_token %}
-                         <div class="form-group">
-                             <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_category">Category:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_category" name="category" >
-                                 {% for attribute in resource.attributes %}
-                                 <option value={{ attribute.attribute }}>{{ attribute.attribute }}</option>
-                                 {% endfor %}
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label  class="control-label col-md-2" for="id_quantity">Quantity:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_quantity" name="quantity">
-                                 {% for attribute in resource.attributes %}
-                                 {% if 'gml:' not in attribute.attribute_type and 'string' not in attribute.attribute_type%}
-                                  <option value={{ attribute.attribute }}>{{ attribute.attribute }}</option>
-                                 {% endif %}
-                                 {% endfor %}
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_type">Type:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_type" name="type">
-                                 <option value="0" selected="selected">Bar chart</option>
-                                 <option value="1">Pie chart</option>
-                                 <option value="2">Donut chart</option>
-                                 <option value="3">Line chart</option>
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label  class="control-label col-md-2" for="id_aggr_type">Aggregation:</label>
-                             <div class="col-md-8">
-                                <select class="form-control" id="id_aggr_type" name="aggr_type">
-                                 <option value="0">Sum</option>
-                                 <option value="1">Mean</option>
-                                 <option value="2">Category count</option>
-                                 <option value="3">Max</option>
-                                 <option value="4">Min</option>
-                             </select>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_title">Title:</label>
-                             <div class="col-md-8">
-                                <input id="id_title" maxlength="128" name="title" type="text" class="form-control" >
-                                 <p style="font-size: small; margin:0">Suggested title:</p>
-                                 <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
-                             </div>
-                         </div>
-                         <div class="form-group">
-                             <label class="control-label col-md-2" for="id_abstract">Abstract:</label>
-                             <div class="col-md-8">
-                             <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
-
-                             </div>
-                         </div>
-                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Preview</button>
-                         <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Save</button>
+      <p>Pour voir comment créer un graphique, consulter le <a href="/tutorials/">tutoriel</a>.</p>
+        <button class="btn btn-primary btn-md btn-block" data-toggle="collapse" data-target="#form" onclick="updateLinkAndTitle();">{% trans "Create a chart" %}</button>
+        <div id="form" class="collapse">
+          <form name="f" method="post" class="form-horizontal" onchange="updateLinkAndTitle();" action="/chart/add/{{ resource.id }}/">
+            {% csrf_token %}
+            <div class="form-group">
+              <input id="id_layer" name="layer" value="{{ resource.id }}" type="hidden">
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2" for="id_category">Catégorie:</label>
+                <div class="col-md-8">
+                  <select class="form-control" id="id_category" name="category" >
+                    {% for attribute in resource.attributes %}
+                    <option value={{ attribute.attribute }}>{{ attribute.attribute }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label  class="control-label col-md-2" for="id_quantity">Quantité:</label>
+                <div class="col-md-8">
+                  <select class="form-control" id="id_quantity" name="quantity">
+                    {% for attribute in resource.attributes %}
+                    {% if 'gml:' not in attribute.attribute_type and 'string' not in attribute.attribute_type%}
+                    <option value={{ attribute.attribute }}>{{ attribute.attribute }}</option>
+                    {% endif %}
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2" for="id_type">Type:</label>
+                  <div class="col-md-8">
+                    <select class="form-control" id="id_type" name="type">
+                      <option value="0" selected="selected">Bar chart</option>
+                      <option value="1">Pie chart</option>
+                      <option value="2">Donut chart</option>
+                      <option value="3">Line chart</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label  class="control-label col-md-2" for="id_aggr_type">Aggrégation:</label>
+                  <div class="col-md-8">
+                    <select class="form-control" id="id_aggr_type" name="aggr_type">
+                      <option value="0">Sum</option>
+                      <option value="1">Mean</option>
+                      <option value="2">Category count</option>
+                      <option value="3">Max</option>
+                      <option value="4">Min</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2" for="id_title">Titre:</label>
+                  <div class="col-md-8">
+                    <input id="id_title" maxlength="128" name="title" type="text" class="form-control" >
+                    <p style="font-size: small; margin:0">Titre suggéré:</p>
+                    <p  id="title" style="font-size: small; margin:0">Testo di prova</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2" for="id_abstract">Résumé:</label>
+                  <div class="col-md-8">
+                    <textarea  class="form-control" cols="40" id="id_abstract" name="abstract" rows="5"></textarea>
+                  </div>
+                </div>
+                <button id="preview_btn" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#chart_popup" onclick="get_chart_popup()">Aperçu</button>
+                <button type="submit" class="btn btn-primary btn-block" onclick="title_eval();">Sauvegarder</button>
                </form>
           </div>
         </li>
@@ -614,62 +622,71 @@
           </div>
     </div>
 
-<script>
-var typename = "{{ resource.typename }}";
-var lyr;
-var category;
-var quantity;
-var agg;
-var chart_type;
-var csv_url;
-var suggestedTitle = "";
+    <script>
+      var typename = "{{ resource.typename }}";
+      var lyr;
+      var category;
+      var quantity;
+      var agg;
+      var chart_type;
+      var csv_url;
+      var suggestedTitle = "";
+
+      function update_link(){
+          csv_url = '/table?lyrname=' + typename;
+          category = document.f.category.value;
+          csv_url = csv_url + '&category=' + category;
+          quantity = document.f.quantity.value;
+          csv_url = csv_url + '&quantity=' + quantity;
+          agg = document.f.aggr_type.value;
+          chart_type = document.f.type.value;
+          return;
+      }
+
+      function attachAbstract(){
+          var abstractText = document.getElementById("id_abstract").value;
+          document.getElementById('abstract').innerHTML = abstractText;
+      }
 
 
-function update_link(){
-    csv_url = '/table?lyrname=' + typename;
-    category = document.f.category.value;
-    csv_url = csv_url + '&category=' + category;
-    quantity = document.f.quantity.value;
-    csv_url = csv_url + '&quantity=' + quantity;
-    agg = document.f.aggr_type.value;
-    chart_type = document.f.type.value;
-    return;
-}
-
-function attachAbstract(){
-    var abstractText = document.getElementById("id_abstract").value;
-    document.getElementById('abstract').innerHTML = abstractText;
-}
+      function chart_title(){
+          if (agg == "2"){
+              suggestedTitle = dict_title_agg[agg] + " of elements for "  + category;
+          } else {
+              var title = dict_title_agg[agg]
+              suggestedTitle = title + " of " + quantity + " for " + category;
+          }
+              document.getElementById("title").innerHTML = suggestedTitle;
+              title_eval();
+              return suggestedTitle;
+      };
 
 
-function chart_title(){
-    if (agg == dict_title_agg[2]){
-        suggestedTitle = dict_title_agg[agg] + " of elements for "  + category;
-    } else {
-        var title = dict_title_agg[agg]
-        suggestedTitle = title + " of " + quantity + " for " + category;
-    }
-        document.getElementById("title").innerHTML = suggestedTitle;
-        return suggestedTitle;
-};
+      function title_eval(){
+          if (document.getElementById("id_title").value == ""){
+              document.getElementById("id_title").value = suggestedTitle;
+          }
+      }
 
+      function check_quantity(){
+          if (document.f.quantity.value == ''){
+                  document.f.aggr_type.value = 2;
+              }
+      }
+        
+      function updateLinkAndTitle(){
+          check_quantity();
+          update_link();
+          chart_title();
+          attachAbstract();
+          if (loading == true) {
+              document.getElementById("preview_btn").disabled = true;
+          }
+      }
 
-function title_eval(){
-    if (document.getElementById("id_title").textLength == 0){
-        document.getElementById("id_title").value = suggestedTitle;
-    }
-}
+    </script>
 
-function updateLinkAndTitle(){
-    update_link();
-    chart_title();
-    attachAbstract();
-}
-
-
-
-</script>
-
+    {% endif %}
 
     {% if documents.count > 0 %}
     <li class="list-group-item">
@@ -753,10 +770,6 @@ function updateLinkAndTitle(){
     {% include 'request_download.html' %}
     {% include 'layers/download_clip.html' %}
     <script type="text/javascript">
-
-        var layerMap = layerMap || null;
-        var editableLayers = editableLayers || null;
-
        $("#comment_submit_btn").click(function(event) {
             $.ajax({
               type: "POST",

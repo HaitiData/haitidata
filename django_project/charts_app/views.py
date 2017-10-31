@@ -35,7 +35,6 @@ class ChartDetail(DetailView):
 
 class ChartCreate(LoginRequiredMixin, CreateView):
     form_class = ChartForm
-    template_name_suffix = 'charts_app/chart_update_form.html'
     template_name = 'charts_app/chart_update_form.html'
 
     def get_initial(self):

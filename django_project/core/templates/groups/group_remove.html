@@ -1,8 +1,10 @@
 {% extends "groups/group_base.html" %}
 {% load i18n %}
 
-{% block title %}{{ group.title }} — {{ block.super }}{% endblock %}
-{% block body_class %}groups remove{% endblock %}
+{% block title %}{{ block.super }} {% trans "Remove Group" %}{% endblock %}
+{% block page-title %}{% trans "Remove Group" %}{% endblock %}
+
+{% block body_class %}groups{% endblock %}
 
 {% block body %}
 <div class="row">

@@ -20,8 +20,8 @@
         {% else %}
         printService: "",
         {% endif %}
-        /* The URL to a REST map configuration service.  This service
-         * provides listing and, with an authenticated user, saving of
+        /* The URL to a REST map configuration service.  This service 
+         * provides listing and, with an authenticated user, saving of 
          * maps on the server for sharing and editing.
          */
         rest: "{% url "maps_browse" %}",
@@ -36,7 +36,7 @@
         localGeoServerBaseUrl: "{{ GEOSERVER_BASE_URL }}",
         localCSWBaseUrl: "{{ CATALOGUE_BASE_URL }}",
         csrfToken: "{{ csrf_token }}",
-        tools: [{ptype: "gxp_getfeedfeatureinfo"}]
+        tools: [{ptype: "gxp_getfeedfeatureinfo"}],
 		};
 		var config = Object.assign( defaultConfig, {{ viewer|safe }});
     var options = {mapConfig: config, zoomToLayer: true};

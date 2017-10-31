@@ -136,10 +136,14 @@
           </div>
       </li>
       <li class="list-group-item">
-{#         <a href="{% url '' %}" id="del_chart">#}
-{#              <button class="btn btn-primary btn-md btn-block">{% trans "Delete this Chart" %}</button>#}
-{#         </a>#}
+         <a href="{% url 'chart_delete' object.id %}" id="del_chart">
+              <button class="btn btn-primary btn-md btn-block">{% trans "Delete this Chart" %}</button>
+         </a>
       </li>
+      <li class="list-group-item">
+         <button id='saveButton' class="btn btn-primary btn-md btn-block">Export my D3 visualization to PNG</button>
+      </li>
+
   </div>
 </div>
 
@@ -229,9 +233,6 @@ title_detail();
 
 
 </script>
- <div>
-<button id='saveButton'>Export my D3 visualization to PNG</button>
-</div>
  <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
 	 <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
 
@@ -240,10 +241,14 @@ title_detail();
 
 // Set-up the export button
 d3.select('#saveButton').on('click', function(){
-    var svg_img = document.getElementById("chart_svg");
-    console.log(svg_img)
-	var svgString = getSVGString(document.getElementById("chart_svg"));
-	svgString2Image( svgString, 300, 250, 'png', save ); // passes Blob and filesize String to the callback
+  if (!document.getElementById("chart_svg")){
+      var svg_img = document.getElementById("chart_svgchart_area_plain");
+      var svgString = getSVGString(document.getElementById("chart_svgchart_area_plain"));
+  } else {
+      var svg_img = document.getElementById("chart_svg");
+      var svgString = getSVGString(document.getElementById("chart_svg"));
+  }
+  svgString2Image( svgString, svg_img.parentNode.clientWidth, svg_img.parentNode.clientHeight, 'png', save ); // passes Blob and filesize String to the callback
 
 	function save( dataBlob, filesize ){
 		saveAs( dataBlob, 'D3 vis exported to PNG.png' ); // FileSaver.js function

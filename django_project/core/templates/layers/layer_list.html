@@ -18,7 +18,7 @@
   {% endif %}
 {% endblock %}
 
-{% block body_class %}layers{% endblock %}
+{% block body_class %}layers explore{% endblock %}
 
 {% block body %}
   {% with include_type_filter='true' %}
@@ -34,6 +34,7 @@
 {% endblock %}
 
 {% block extra_script %}
+{{ block.super }}
   {% if GEONODE_SECURITY_ENABLED %}
     {% include "_permissions_form_js.html" %}
   {% endif %}

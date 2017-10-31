@@ -3,8 +3,6 @@ import xml.etree.ElementTree as ET
 
 from geonode.layers.models import Layer
 
-from django.conf import settings
-
 
 def get_fields(layer_id):
     layer = Layer.objects.get(pk=layer_id)
@@ -16,8 +14,8 @@ def get_fields(layer_id):
         'typename':lyrname
     })
 
-    wfs_request = urllib.urlopen('%sows?%s'
-                                 % (settings.GEOSERVER_LOCATION, params))
+    wfs_request = urllib.urlopen('http://localhost/geoserver/ows?%s'
+                                 % params)
     content = wfs_request.read()
 
     root = ET.fromstring(content)

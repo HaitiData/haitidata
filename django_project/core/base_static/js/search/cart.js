@@ -5,7 +5,7 @@
     .controller('CartList', function($scope, cart){
       $scope.cart = cart;
       $scope.layers_params = '';
-  
+
       $scope.newMap = function(){
         var items = cart.getCart().items;
         var params = '';
@@ -21,7 +21,7 @@
         var selected_ids = $.map(items, function(item){return item.id});
         var message = $('#bulk_perms_message');
         if(selected_ids.length == 0){
-         message.find('.message').html('Please select at least one resource to set the permissions');
+         message.find('.message').html('Veuillez sélectionner au moins une ressource pour définir les autorisations');
          message.addClass('alert-danger').removeClass('alert-success alert-warning hidden');
          return;
         }
@@ -35,14 +35,14 @@
            },
            success: function(data) {
              var not_changed = $.parseJSON(data).not_changed;
-             if (not_changed.length > 0){ 
-               message.find('.message').html('Permissions correctly registered, although the following resources were'+ 
-                   ' skipped because you don\'t have the rights to edit their permissions:');
+             if (not_changed.length > 0){
+               message.find('.message').html('Autorisations correctement enregistrées, bien que les ressources suivantes aient été'+
+                   ' sauté parce que vous n\'avez pas le droit de modifier leurs autorisations');
                message.find('.extra_content').html(not_changed.join('</br>'));
                message.addClass('alert-warning').removeClass('alert-success alert-danger hidden');
              }
              else{
-               message.find('.message').html('Permissions correctly registered.');
+               message.find('.message').html('Autorisations correctement enregistrées.');
                message.addClass('alert-success').removeClass('alert-warning alert-danger hidden');
              }
            },
@@ -63,7 +63,7 @@
     }])
 
     .service('cart', function(){
-      
+
       this.init = function(){
         this.$cart = {
           items: []
