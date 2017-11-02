@@ -1,0 +1,43 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+{% endblock %}
+
+{% block title %}{{ block.super }} {% trans "Contact" %}{% endblock %}
+{% block page-title %}{% trans "Contact" %}{% endblock %}
+
+{% block body_outer %}
+<div class="row">
+  <div class="col-md-4">
+    <h3>{% blocktrans %}Address{% endblocktrans %}</h3>
+    <p>Impasse Baron # 13 bis, Turgeau<br />Port-au-Prince, Haïti (HT 6113)</p>
+    <h3>{% blocktrans %}Telephones{% endblocktrans %}</h3>
+    <p><a href="tel:509-2813-0412">(509) 2813-0412</a> - <a href="tel:509-2813-0413">(509) 2813-0413</a></p>
+    <h3>{% blocktrans %}Email{% endblocktrans %}</h3>
+    <p><a href="mailto:contact@cnigs.ht">contact@cnigs.ht</a></p>
+  </div>
+  <div class="col-md-8">
+    <div id="map" style="width: 100%; height: 400px;"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_script %}
+
+<script>
+
+	var map = L.map('map').setView([18.530215,-72.323377], 15);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>',
+	}).addTo(map);
+
+  L.marker([18.530215,-72.323377]).addTo(map)
+    .bindPopup("<b>CNIGS</b><br />Centre National de<br /> l'Information Géo-Spatiale").openPopup();
+
+</script>
+{% endblock extra_script %}
