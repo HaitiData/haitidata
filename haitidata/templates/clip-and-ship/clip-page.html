@@ -16,11 +16,14 @@
 {% block body_class %}layers{% endblock %}
 
 {% block body_outer %}
-{% if geotiffname == 'ortho_images' %}
 <div class="row">
   <div class="col-md-12">
     <article id="info">
+      {% if geotiffname == 'ortho_images' %}
       <p>Les <strong>orthophotographies</strong> ou <strong>orthoimages</strong> sont des images aériennes ou satellitales de la surface terrestre rectifiées géométriquement et égalisées radiométriquement. Ces images se présentant sous forme de dalles couvrant une zone de la Terre peuvent être géoréférencées dans n'importe quel système de coordonnées. Elles servent de fonds cartographiques dans les Systèmes d'information géographique.</p>
+      {% else %}
+      <p>Un Modèle Numérique de Terrain (MNT) est une représentation 3D de la surface d'un terrain ou d'une planète, créée à partir des données d'altitude du terrain."</p>
+      {% endif %}
       <p>Ces prises de vu sur Haiti ont été faites entre le 2014 et le 2016.</p>
       <p>Pour sélectionner la zone d’intérêt:</p>
       <ul>
@@ -28,11 +31,10 @@
         <li>Cliquer sur l'icône <img height="16" width="16" src="/static/img/square.png"> pour utiliser un rectangle comme forme de base</li>
       </ul>
       <p>Pour mieux comprendre comment sélectionner la zone d’intérêt, voir le <a href="/tutorials/#clip">tutoriel</a>.</p>
-      <p>La taille maximale accepté est de 40 megabytes.</p>
+      <p>La taille maximale accepté est de 40 mégaoctets.</p>
     </article>
   </div>
 </div>
-{% endif %}
 <div id="download-clip-error-message" class="label label-danger" style="margin-bottom: 50px; display: none">Error message</div>
 <div id="download-clip-map"></div>
 
