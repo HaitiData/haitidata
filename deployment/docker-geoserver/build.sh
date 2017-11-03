@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t kartoza/geoserver .
+docker build -t kartoza/geoserver-clu .

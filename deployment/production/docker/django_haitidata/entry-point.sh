@@ -8,8 +8,5 @@ python manage.py makemigrations --noinput --merge
 echo "Run collectstatic"
 python manage.py collectstatic --noinput
 
-if [ "$DEBUG" == "True" ]; then
-    python manage.py runserver 0.0.0.0:8000
-else
-	uwsgi --ini /uwsgi.conf
-fi
+
+uwsgi --ini /uwsgi.conf

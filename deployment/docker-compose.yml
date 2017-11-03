@@ -1,4 +1,4 @@
-version: '2.2'
+version: '2.0'
 services:
 
   postgres:
@@ -107,6 +107,7 @@ services:
       - postgres
     volumes:
       - ./geoserver_data:/geoserver_data/data
+      - ./geowebcache:/geowebcache
     environment:
       - DOCKER_HOST
       - PUBLIC_PORT=80
