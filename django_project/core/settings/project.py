@@ -10,7 +10,7 @@ GEOSERVER_PUBLIC_LOCATION = os.environ.get(
     os.environ.get('SITEURL') + 'api/geoserver/'
 )
 
-GEOSERVER_DEV_LOCATION = 'http://136.243.4.93:8080/geoserver/'
+GEOSERVER_DEV_URL = 'http://136.243.4.93:8080/geoserver/'
 
 # dynamic setting based on domain
 GEOSERVER_BASE_URL = os.environ.get(

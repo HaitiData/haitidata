@@ -24,6 +24,17 @@ WCS_URL_2_0_1 = settings.GEOSERVER_BASE_URL + \
                 'version=2.0.1&service=WCS&coverageid={layer_name}&' \
                 'format=geotiff&crs=EPSG:4326&subset=E({x1},{x2})&subset=N({y1},{y2})'
 
+WCS_URL_dev = settings.GEOSERVER_DEV_URL + \
+          'wcs?request=getcoverage&' \
+          'version=1.0.0&service=WCS&coverage={layer_name}&' \
+          'format=geotiff&crs=EPSG:4326&bbox={bbox}&width={width}&' \
+          'height={height}'
+
+WCS_URL_2_0_1_dev = settings.GEOSERVER_DEV_URL + \
+                'wcs?request=getcoverage&' \
+                'version=2.0.1&service=WCS&coverageid={layer_name}&' \
+                'format=geotiff&crs=EPSG:4326&subset=E({x1},{x2})&subset=N({y1},{y2})'
+
 MAX_CLIP_SIZE = settings.MAXIMUM_CLIP_SIZE
 TILE_SAMPLE_SIZE = 100  # tile sample size will be 100*100
 
@@ -62,12 +73,20 @@ def download_wcs(layername, bbox_string, width, height, raster_filepath):
 
     :return:
     """
-    wcs_formatted_url = WCS_URL.format(
-        layer_name=layername,
-        bbox=bbox_string,
-        width=width,
-        height=height
-    )
+    if layername == 'geonode:ortho_images' or layername == 'geonode:lidar':
+        wcs_formatted_url = WCS_URL_dev.format(
+            layer_name=layername,
+            bbox=bbox_string,
+            width=width,
+            height=height
+        )
+    else:
+        wcs_formatted_url = WCS_URL.format(
+            layer_name=layername,
+            bbox=bbox_string,
+            width=width,
+            height=height
+        )
 
     response = urllib2.urlopen(wcs_formatted_url)
     fh = open(raster_filepath, "w")
@@ -83,13 +102,22 @@ def download_wcs_v2(layername, x1, x2, y1, y2, raster_filepath):
 
     :return:
     """
-    wcs_formatted_url = WCS_URL_2_0_1.format(
-        layer_name=layername,
-        x1=x1,
-        x2=x2,
-        y1=y1,
-        y2=y2
-    )
+    if layername == 'geonode:ortho_images' or layername == 'geonode:lidar':
+        wcs_formatted_url = WCS_URL_2_0_1_dev.format(
+            layer_name=layername,
+            x1=x1,
+            x2=x2,
+            y1=y1,
+            y2=y2
+        )
+    else:
+        wcs_formatted_url = WCS_URL_2_0_1.format(
+            layer_name=layername,
+            x1=x1,
+            x2=x2,
+            y1=y1,
+            y2=y2
+        )
 
     response = urllib2.urlopen(wcs_formatted_url)
     fh = open(raster_filepath, "w")
@@ -408,7 +436,7 @@ class ClipView(View):
             'geotiffname': geotiffname,
             'resource': {
                 'get_tiles_url': "%sgwc/service/gmaps?layers=geonode:%s&zoom={z}&x={x}&y={y}&format=image/png8" % (
-                    settings.GEOSERVER_DEV_LOCATION,
+                    settings.GEOSERVER_DEV_URL,
                     geotiffname
                 ),
                 'service_typename': 'geonode:' + geotiffname
