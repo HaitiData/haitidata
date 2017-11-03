@@ -408,7 +408,7 @@ class ClipView(View):
             'geotiffname': geotiffname,
             'resource': {
                 'get_tiles_url': "%sgwc/service/gmaps?layers=geonode:%s&zoom={z}&x={x}&y={y}&format=image/png8" % (
-                    settings.GEOSERVER_PUBLIC_LOCATION,
+                    settings.GEOSERVER_DEV_LOCATION,
                     geotiffname
                 ),
                 'service_typename': 'geonode:' + geotiffname
