@@ -41,13 +41,12 @@ services:
       - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
       - VIRTUAL_HOST=haitidata.com
       - VIRTUAL_PORT=8080
-      - PROXY_ALLOWED_HOSTS=192.168.0.116
+      - PROXY_ALLOWED_HOSTS=127.0.0.1
       # Ensure to change these based on server domain
-      - SITEURL=http://192.168.0.116:33300/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://192.168.0.116:33308/geoserver/ # change this to ip or domain geoserver
+      - SITEURL=http://127.0.0.1/  # change this to ip or domain location
+      - GEOSERVER_BASE_URL=http://127.0.0.1:33308/geoserver/ # change this to ip or domain geoserver
       # Set your locale - you need to ensure this is created in Dockerfile too...
       - LC_ALL=en_US.UTF-8
-    network_mode: "bridge"
 
   # This is the entry point for a development server.
   # Run with --no-deps to run attached to the services
@@ -76,7 +75,6 @@ services:
       - "33303:8080"
       # for ssh
       - "33302:22"
-    network_mode: "bridge"
 
   celery:
     container_name: haitidata-celery
@@ -95,14 +93,13 @@ services:
       - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
       - VIRTUAL_HOST=haitidata.com
       - VIRTUAL_PORT=8080
-      - PROXY_ALLOWED_HOSTS=192.168.0.116
+      - PROXY_ALLOWED_HOSTS=127.0.0.1
 
       # Ensure to change these based on server domain
-      - SITEURL=http://192.168.0.116:33300/  # change this to ip or domain location
-      - GEOSERVER_BASE_URL=http://192.168.0.116:33308/geoserver/ # change this to ip or domain geoserver
+      - SITEURL=http://127.0.0.1/  # change this to ip or domain location
+      - GEOSERVER_BASE_URL=http://127.0.0.1:33308/geoserver/ # change this to ip or domain geoserver
       # Set your locale - you need to ensure this is created in Dockerfile too...
       - LC_ALL=en_US.UTF-8
-    network_mode: "bridge"
 
   geoserver-source:
     build: ./docker-geoserver
@@ -114,9 +111,9 @@ services:
       - DOCKER_HOST
       - PUBLIC_PORT=80
       - DOCKER_HOST_IP
-      - DJANGO_URL=http://192.168.0.116:33300/
-      - SITEURL=http://192.168.0.116:33300/
-      - GEOSERVER_BASE_URL=http://192.168.0.116:33308/geoserver/
+      - DJANGO_URL=http://127.0.0.1/
+      - SITEURL=http://127.0.0.1/
+      - GEOSERVER_BASE_URL=http://127.0.0.1:33308/geoserver/
     ports:
       - "32208:8080"
 
@@ -130,9 +127,9 @@ services:
       - DOCKER_HOST
       - PUBLIC_PORT=80
       - DOCKER_HOST_IP
-      - DJANGO_URL=http://192.168.0.116:33300/
-      - SITEURL=http://192.168.0.116:33300/
-      - GEOSERVER_BASE_URL=http://192.168.0.116:33308/geoserver/
+      - DJANGO_URL=http://127.0.0.1/
+      - SITEURL=http://127.0.0.1/
+      - GEOSERVER_BASE_URL=http://127.0.0.1:33308/geoserver/
     ports:
       - "33308:8080"
 
