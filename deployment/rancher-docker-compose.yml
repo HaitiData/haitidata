@@ -1,197 +1,101 @@
-#
-# Production server with UWSGI configured to run on port 8080
-#
-# docker-compose build
-# docker-compose up -d web
-#
-# See accompanying Make commands for easy collectstatic etc.
-
-rabbitmq:
-   image: library/rabbitmq
-   hostname: rabbitmq
-   environment:
-      - RABBIT_PASSWORD=rabbit_test_password
-      - USER=rabbit_user
-      - RABBITMQ_NODENAME=rabbit
-
-
-smtp:
-  # Note you cannot scale if you use conteiner_name
-  container_name: haitidata-smtp
-  image: catatnight/postfix
-  hostname: postfix
-  environment:
-    # You could change this to something more suitable
-    - maildomain=kartoza.com
-    - smtp_user=noreply:docker
-  restart: always
-
-db:
-  # Note you cannot scale if you use conteiner_name
-  container_name: haitidata-db
-  image: kartoza/postgis:9.4-2.1
-  volumes:
-    - ./pg/postgres_data:/var/lib/postgresql
-    - ./backups:/backups
-    - ./fresh-backups:/fresh-backups
-  environment:
-    - USERNAME=docker
-    - PASS=docker
-  restart: always
-  ports:
-    - "33305:5432"
-
-uwsgi-ephemeral:
-  image:  muhammadanis/haitidata_uwsgi
-  environment:
-    - DATABASE_NAME=gis
-    - DATABASE_USERNAME=docker
-    - DATABASE_PASSWORD=docker
-    - DATABASE_HOST=db
-    - RABBITMQ_HOST=rabbitmq
-    - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-    - VIRTUAL_HOST=haitidata.com
-    - VIRTUAL_PORT=8080
-    - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33300/api/geoserver/
-    # Set your locale - you need to ensure this is created in Dockerfile too...
-    - LC_ALL=en_ZA.UTF-8
-  links:
-    - smtp:smtp
-    - db:db
-  user: root
-  restart: on-failure:5
-
-uwsgi:
-  # Note you cannot scale if you use conteiner_name
-  image:  muhammadanis/haitidata_uwsgi
-  environment:
-    - DATABASE_NAME=gis
-    - DATABASE_USERNAME=docker
-    - DATABASE_PASSWORD=docker
-    - DATABASE_HOST=db
-    - RABBITMQ_HOST=rabbitmq
-    - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-    - VIRTUAL_HOST=haitidata.com
-    - VIRTUAL_PORT=8080
-    - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33300/api/geoserver/
-    # Set your locale - you need to ensure this is created in Dockerfile too...
-    - LC_ALL=en_ZA.UTF-8
-  user: root
-  links:
-    - smtp:smtp
-    - db:db
-    - geoserver:geoserver
-  restart: always
-
-dbbackups:
-  # Note you cannot scale if you use conteiner_name
-  container_name: haitidata-db-backups
-  image: kartoza/pg-backup:9.4
-  hostname: pg-backups
-  volumes:
-    - ./backups:/backups
-  links:
-    - db:db
-  environment:
-    # take care to let the project name below match that
-    # declared in the top of the makefile
-    - DUMPPREFIX=PG_haiti
-    # These are all defaults anyway, but setting explicitly in
-    # case we ever want to ever use different credentials
-    - PGUSER=docker
-    - PGPASSWORD=docker
-    - PGPORT=5432
-    - PGHOST=db
-    - PGDATABASE=gis
-  restart: always
-
-# This is normally the main entry point for a production server
-web:
-  # Note you cannot scale if you use conteiner_name
-  container_name: haitidata-web
-  image: nginx
-  hostname: nginx
-  volumes:
-    - ./sites-enabled:/etc/nginx/conf.d:ro
-    # I dont use volumes_from as I want to use the ro modifier
-    - ./static:/home/web/static:ro
-    - ./media:/home/web/media:ro
-    - ./logs:/var/log/nginx
-    # - /etc/letsencrypt:/etc/letsencrypt
-    - ./webroot-path:/home/web/webroot-path
-  links:
-    - uwsgi:uwsgi
-    - geoserver:geoserver
-  ports:
-    - "33300:8080"
-  restart: always
-
-# This is the entry point for a development server.
-# Run with --no-deps to run attached to the services
-# from produ environment if wanted
-devweb:
-  # Note you cannot scale if you use conteiner_name
-  container_name: haitidata-dev-web
-  build: docker
-  dockerfile: Dockerfile-dev
-  hostname: haitidata-dev-web
-  environment:
-    - DATABASE_NAME=gis
-    - DATABASE_USERNAME=docker
-    - DATABASE_PASSWORD=docker
-    - DATABASE_HOST=db
-    - RABBITMQ_HOST=rabbitmq
-    - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-    - PYTHONPATH=/home/web/django_project
-    - VIRTUAL_HOST=haitidata.com
-    - VIRTUAL_PORT=8080
-    - GEOSERVER_PUBLIC_LOCATION=http://0.0.0.0:33303/api/geoserver/
-  volumes:
-    - ../django_project:/home/web/django_project
-    - ./static:/home/web/static
-    - ./media:/home/web/media
-    - ./reports:/home/web/reports
-    - ./logs:/var/log/
-  links:
-    - smtp:smtp
-    - db:db
-    - rabbitmq:rabbitmq
-    - geoserver:geoserver
-  ports:
-    # for django test server
-    - "33303:8080"
-    # for ssh
-    - "33302:22"
-
-worker:
-   build: docker
-   hostname: worker
-   command: celery worker -A config.celery -l info  --beat
-   environment:
-     - DATABASE_NAME=gis
-     - DATABASE_USERNAME=docker
-     - DATABASE_PASSWORD=docker
-     - DATABASE_HOST=db
-     - DATABASE_QGIS_HOST=db_gis
-     - RABBITMQ_HOST=rabbitmq
-     - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
-     - VIRTUAL_HOST=haitidata.com
-     - VIRTUAL_PORT=8080
-     - C_FORCE_ROOT=true
-   volumes:
-     - ../django_project:/home/web/django_project
-     - ./static:/home/web/static
-     - ./media:/home/web/media
-     - ./reports:/home/web/reports
-     - ./logs:/var/log/
-   links:
-     - smtp:smtp
-     - db:db
-     - rabbitmq:rabbitmq
-   restart: on-failure:5
-
-geoserver:
-  image: kartoza/geoserver
-  container_name: haitidata-geoserver
-  ports:
-    - "33308:8080"
+version: '2'
+services:
+  geoserver:
+    image: dimasciput/haitidata_geoserver:clustering
+    environment:
+      DJANGO_URL: http://88.99.166.60/
+      SITEURL: http://88.99.166.60/
+      GEOSERVER_BASE_URL: http://88.99.166.60:33308/geoserver/
+    stdin_open: true
+    volumes:
+    - /home/ubuntu/cnigs-data:/home/ubuntu/cnigs-data
+    - /home/ubuntu/haitidata-dev-data/data:/geoserver_data/data
+    tty: true
+    links:
+    - postgres:postgres
+    labels:
+      io.rancher.container.start_once: 'true'
+      io.rancher.container.hostname_override: container_name
+      io.rancher.container.pull_image: always
+  geoserver-balancer:
+    image: rancher/lb-service-haproxy:v0.7.9
+    ports:
+    - 33308:33308/tcp
+    expose:
+    - 8080:8080/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin
+      io.rancher.container.create_agent: 'true'
+  django:
+    image: kartoza/haitidata_django:1.4
+    environment:
+      DATABASE_HOST: postgres
+      DATABASE_NAME: gis
+      DATABASE_PASSWORD: docker
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+      DATABASE_USERNAME: docker
+      DJANGO_SETTINGS_MODULE: core.settings.prod_docker
+      GEOSERVER_BASE_URL: http://88.99.166.60:33308/geoserver/
+      GEOSERVER_PUBLIC_LOCATION: http://88.99.166.60/api/geoserver/
+      LC_ALL: en_US.UTF-8
+      RABBITMQ_HOST: rabbitmq
+      SITEURL: http://88.99.166.60/
+    stdin_open: true
+    volumes:
+    - django-static-data:/home/web/static:rw
+    - django-media-data:/home/web/media:rw
+    tty: true
+    links:
+    - postgres:postgres
+    - geoserver-balancer:geoserver-balancer
+    command:
+    - /entry-point.sh
+    labels:
+      io.rancher.container.pull_image: always
+  elasticsearch:
+    image: elasticsearch
+  nginx:
+    image: dimasciput/haitidata_nginx:latest
+    stdin_open: true
+    volumes:
+    - django-static-data:/home/web/static:ro
+    - django-media-data:/home/web/media:ro
+    - django-media-data:/home/web/uploaded:ro
+    - /home/ubuntu/haitidata/deployment/production/docker/nginx/sites-enabled:/etc/nginx/sites-enabled:ro
+    tty: true
+    links:
+    - django:django
+    - geoserver-balancer:geoserver
+    ports:
+    - 80:8080/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  rabbitmq:
+    image: rabbitmq
+  postgres:
+    image: dimasciput/haitidata_db
+    environment:
+      PASS: docker
+      POSTGRES_PASS: docker
+      POSTGRES_USER: docker
+      USERNAME: docker
+    volumes:
+    - /home/ubuntu/database-backups/backups:/dev_backups
+    - /backups:/backups
+  dbbackups:
+    image: kartoza/pg-backup:9.4
+    environment:
+      DUMPPREFIX: HAITIDATA
+      PGDATABASE: gis
+      PGHOST: db
+      PGPASSWORD: docker
+      PGPORT: '5432'
+      PGUSER: docker
+    stdin_open: true
+    volumes:
+    - /backups:/backups
+    tty: true
+    links:
+    - postgres:db
+    labels:
+      io.rancher.container.pull_image: always

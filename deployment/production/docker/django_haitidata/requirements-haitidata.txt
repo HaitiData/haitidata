@@ -6,3 +6,4 @@ django-compressor
 django-geonode-client
 django-tastypie==0.14.0
 OWSLib==0.14
+GDAL==1.10.0

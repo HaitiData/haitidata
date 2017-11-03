@@ -34,9 +34,6 @@ ENV C_INCLUDE_PATH /usr/include/gdal
 ENV TEST a
 WORKDIR /home/web
 
-RUN wget http://download.osgeo.org/gdal/$GDAL_VERSION/gdal-$GDAL_VERSION.tar.gz && tar -xvzf gdal-$GDAL_VERSION.tar.gz && rm /home/web/gdal-$GDAL_VERSION.tar.gz
-RUN cd /home/web/gdal-$GDAL_VERSION && ./configure -prefix=/usr/ && make && make install && cd /home/web/gdal-$GDAL_VERSION/swig/python && python setup.py install && rm -rf /home/web/gdal-$GDAL_VERSION
-
 COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
@@ -48,8 +45,9 @@ RUN pip install -r /requirements-haitidata.txt
 # Install translation
 RUN apt-get -y --force-yes install gettext
 
-RUN apt-get install gdal-bin
-RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git && git pull origin development
+RUN apt-get install gdal-bin python-gdal -y
+RUN git init && git remote add origin https://github.com/HaitiData/haitidata.git
+RUN git pull origin development
 
 # Open port 8080 as we will be running our uwsgi socket on that
 EXPOSE 8080
