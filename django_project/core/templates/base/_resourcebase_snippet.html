@@ -9,9 +9,9 @@
       <div class="col-xs-12 profile-avatar">
         <div class="col-xs-4 item-thumb">
           <a href="{{ item.detail_url }}"><img ng-src="{{ item.thumbnail_url }}" /></a>
-          <span ng-model="isUser" ng-init="isUser=['ciat','cnigs','dpc','fac-sciences-haiti','idb','ihsi','mairiedepap','marndr','undp-haiti']" ></span>
+          <span ng-model="isUser" ng-init="isUser=['ciat','cnigs','dpc','european-union','fac-sciences-haiti','idb','ihsi','mairiedepap','marndr','prcu','undp-haiti']" ></span>
           <span ng-if="isUser.indexOf(item.owner__username) > -1">
-            <img class="cnigs-logo" ng-src="/media/avatars/{{ item.owner__username }}/resized/240/{{ item.owner__username }}.png" />
+            <img class="cnigs-logo" ng-src="/uploaded/avatars/{{ item.owner__username }}/resized/240/{{ item.owner__username }}.png" />
           </span>
         </div>
         <div class="col-xs-8 item-details">
