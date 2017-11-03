@@ -6,18 +6,33 @@ MAINTAINER GeoNode Development Team
 #
 ENV GEOSERVER_VERSION=2.10.x
 ENV GEOSERVER_DATA_DIR="/geoserver_data/data"
+ENV GEOWEBCACHE_CACHE_DIR="/geowebcache"
 
 RUN mkdir -p $GEOSERVER_DATA_DIR
 ADD compiled_geoserver_data /geoserver_data/data
 
+ADD resources /tmp/resources
+
+# Custom settings for envronment variables
+ENV GEOSERVER_OPTS "-Djava.awt.headless=true -server -Xms16G -Xmx32G -Xrs -XX:PerfDataSamplingInterval=500 \
+ -Dorg.geotools.referencing.forceXY=true -XX:SoftRefLRUPolicyMSPerMB=36000 -XX:+UseParallelGC -XX:NewRatio=2 \
+ -XX:+CMSClassUnloadingEnabled"
+
+#-XX:+UseConcMarkSweepGC use this rather than parallel GC?
+ENV JAVA_OPTS "$JAVA_OPTS $GEOSERVER_OPTS "
+
 #
 # Download and install GeoServer
 #
-RUN cd /usr/local/tomcat/webapps \
-    && wget --progress=bar:force:noscroll \
-    http://build.geonode.org/geoserver/latest/geoserver-${GEOSERVER_VERSION}.war \
-    && unzip -q geoserver-${GEOSERVER_VERSION}.war -d geoserver \
-    && rm geoserver-${GEOSERVER_VERSION}.war
+RUN if [ ! -f /tmp/resources/geoserver.war ]; then \
+    wget --progress=bar:force:noscroll http://build.geonode.org/geoserver/latest/geoserver-${GEOSERVER_VERSION}.war \
+      -O /tmp/resources/geoserver.war; \
+    fi; \
+
+    unzip /tmp/resources/geoserver.war -d $CATALINA_HOME/webapps/geoserver \
+    && rm -rf $CATALINA_HOME/webapps/geoserver/data \
+    && rm -rf /tmp/geoserver
+
 
 # copy the script and perform the run of scripts from entrypoint.sh
 RUN mkdir -p /usr/local/tomcat/tmp
@@ -32,7 +47,6 @@ COPY entrypoint.sh /usr/local/tomcat/tmp
 
 RUN chmod +x /usr/local/tomcat/tmp/entrypoint.sh
 
-ADD resources /tmp/resources
 ADD broker.xml /tmp/broker.xml
 
 # Install any plugin zip files in resources/plugins
