@@ -1,0 +1,26 @@
+version: '2'
+services:
+  geoserver:
+    image: kartoza/haitidata_geoserver:1.0
+    environment:
+      DOCKER_HOST: ''
+      PUBLIC_PORT: '80'
+      DOCKER_HOST_IP: ''
+    volumes:
+    - geoserver-data:/geoserver-data/data
+    links:
+    - postgres:postgres
+    ports:
+    - 33307:8080/tcp
+  postgres:
+    image: kartoza/haitidata_db:1.0
+    environment:
+      PASS: docker
+      POSTGRES_PASS: docker
+      POSTGRES_USER: docker
+      USERNAME: docker
+volumes:
+
+  geoserver-data:
+    external: true
+    per_container: true
