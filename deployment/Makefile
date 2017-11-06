@@ -20,8 +20,16 @@ fresh-deploy: fresh-web
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "dropdb --if-exists $(DATABASE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "dropdb --if-exists $(DATABASE_GEONODE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
-	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_GEONODE_NAME)"
+	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis geonode_data"
 
+geoserver:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Building geoserver"
+	@echo "------------------------------------------------------------------"
+	@docker-compose -p $(PROJECT_ID) build geoserver
+	@docker-compose -p $(PROJECT_ID) up -d geoserver
+	@docker-compose -p $(PROJECT_ID) restart geoserver
 
 default: web
 run: build permissions web migrate collectstatic
