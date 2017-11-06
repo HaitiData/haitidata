@@ -4,7 +4,7 @@ services:
   postgres:
     # Note you cannot scale if you use conteiner_name
     container_name: haitidata-postgres
-    image: dimasciput/haitidata_nginx:latest
+    image: kartoza/postgis:9.4-2.1
     volumes:
       - ./pg/postgres_data:/var/lib/postgresql
       - ./backups:/backups
