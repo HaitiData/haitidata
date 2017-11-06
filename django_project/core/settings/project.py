@@ -55,7 +55,10 @@ INSTALLED_APPS += (
     # Add any additional project apps here
     "charts_app",
     "wfs_harvest",
-    "clip-and-ship"
+    "clip-and-ship",
+
+    "filter",
+    "thumbnail"
 
 )
 
