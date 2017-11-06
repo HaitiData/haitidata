@@ -98,7 +98,8 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'charts_app',
     'wfs_harvest',
     "clip-and-ship",
-    'filter'
+    'filter',
+    'thumbnail'
     )
 
 GEOSERVER_PUBLIC_LOCATION = os.environ.get(
