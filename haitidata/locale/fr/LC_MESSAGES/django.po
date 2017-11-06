@@ -1303,14 +1303,29 @@ msgstr "Se connecter"
 
 #: haitidata/templates/site_index.html:10
 msgid ""
-"The purpose of this site is to facilitate open access to geospatial "
-"information, data and knowledge, to natural disasters, vulnerability and "
-"risk in Haiti, and to encourage their sharing and use. "
+"HaitiData is a platform designed to disseminate, share and exploit GIS and cartographic data about Haiti. "
+"This idea was born after the earthquake of January 12, 2010. "
+"The first version of HaitiData has been used by several actors and partners involved in risk and disaster management, urban planning, agriculture and food security, spatial planning, environmental management, infrastructure, statistics, tourism, topographic mapping, thematic mapping, etc."
 msgstr ""
-"Le but de ce site est de faciliter l’accès libre à de l’information, des "
-"données et des connaissances géospatiales, sur les désastres naturels et sur"
-" la vulnérabilité et le risque en Haïti, ainsi que d’encourager leur partage"
-" et leur utilisation."
+"HaitiData est une plate-forme conçue pour diffuser, partager et exploiter des données SIG et cartographiques sur Haïti. "
+"Une idée qui a vu le jour après le tremblement de terre du 12 janvier 2010 "
+"et dont la version initiale a été utilisée par plusieurs acteurs et partenaires engagés dans la gestion des risques et désastres, la planification urbaine, l’agriculture et la sécurité alimentaire, l’aménagement du territoire, la gestion de l’environnement, les infrastructures, les statistiques, le tourisme, la cartographie topographique, la cartographie thématique, etc."
+
+#: haitidata/templates/site_index.html:10
+msgid "CNIGS, as the national agency whose official mission is to collect and disseminate spatial data in Haiti (and the main governmental agency in terms of GIS capabilities), is therefore in charge of the platform."
+msgstr "Le CNIGS, en tant qu’agence nationale ayant pour mission officielle de collecter et diffuser des données spatialisées en Haïti (et principale entité étatique en termes de capacités en SIG), est donc chargé de la direction technique de la plate-forme."
+
+#: haitidata/templates/site_index.html:10
+msgid ""
+"The data hosted on HaitiData is accessible to the general public and improves exchange and collaboration between Ministries, "
+"NGOs, the international community, academia and the private sector."
+msgstr ""
+"Les données hébergées sur HaitiData sont accessibles au grand public et doivent contribuer à plus de synergies et une collaboration plus étroite entre les Ministères, "
+"les ONGs, la communauté internationale, les universités et le secteur privé."
+
+#: haitidata/templates/site_index.html:10
+msgid "HaitiData.org is based on GeoNode which is an open source geospatial platform and a web technology tool."
+msgstr "HaitiData.org est basé sur la plateforme de GeoNode qui est une plateforme géo-spatiale open-source et un outil de technologie Web."
 
 #: haitidata/templates/site_index.html:19
 msgid "Haiti Risk and Hazards"
@@ -1340,15 +1355,10 @@ msgstr "Sécheresse"
 msgid "Landslide"
 msgstr "Glissement de Terre"
 
+
 #: haitidata/templates/site_index.html:52
-msgid ""
-"This section is a shortcut for access to aerial images and digital terrain models. "
-"These dedicated pages allow you to download a subset of these raster data, "
-"defined by drawing polygons on the same layer. "
-msgstr ""
-"Cette section est une raccourci pour l'accès à images aériennes et aux modèles numériques du terrain. "
-"Ces pages dédiées permettent de télécharger un sous-ensemble de ces donnée raster,"
-" défini en dessinant des polygones sur la couche même."
+msgid "This section is a shortcut for access to aerial images and digital terrain models. These dedicated pages allow you to download a subset of these raster data, defined by drawing polygons on the same layer."
+msgstr "Cette section est une raccourci pour l'accès à images aériennes et aux modèles numériques du terrain. Ces pages dédiées permettent de télécharger un sous-ensemble de ces donnée raster, défini en dessinant des polygones sur la couche même."
 
 #: haitidata/templates/site_index.html:55
 msgid "Aerial images"
@@ -1356,7 +1366,7 @@ msgstr "Images aériennes"
 
 #: haitidata/templates/site_index.html:68
 msgid "It is an aerial coverage at a spatial resolution of 25 cm. The mosaic is composed of 3617 datasets."
-msgstr "Il s'agit d'une couverture aérienne à une résolution spatiale de 25 cm. Le mosaïque est composé par 3617 jeux de données."
+msgstr "Couverture aérienne à résolution spatiale de 25 cm. La mosaïque est composée de 3617 jeux de données."
 
 #: haitidata/templates/site_index.html:59
 msgid "Satellite imagery"
@@ -1371,8 +1381,8 @@ msgid ""
 "This is a numerical surface model derived from a LiDAR flight and with a spatial resolution of 1.5 m. "
 "The mosaic is composed by 1873 datasets."
 msgstr ""
-"Il s'agit d'un modèle numérique de surface dérive d'un vol LiDAR et "
-"avec une résolution spatiale de 1.5 m. Le mosaïque est composé par 1873 jeux de données. "
+"Le Modèle Numérique de Terrain a été produit par un vol LiDAR et avec une résolution spatiale de 1.5 m. "
+"Le mosaïque est composé de 1873 jeux de données. "
 
 #: haitidata/templates/site_index.html:71
 msgid "Featured Datasets"
