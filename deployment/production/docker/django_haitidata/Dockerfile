@@ -58,4 +58,6 @@ RUN mkdir -p /home/web/media
 ADD entry-point.sh /entry-point.sh
 RUN chmod +x /entry-point.sh
 
+RUN pip install --upgrade --force-reinstall django-geonode-client==1.0.0
+
 CMD ["uwsgi", "--env", "LC_ALL=en_ZA.UTF-8", "--ini", "/uwsgi.conf"]
