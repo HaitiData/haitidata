@@ -4,7 +4,6 @@ from .base import *
 from django.utils.translation import ugettext_lazy as _
 
 PROJECTION_DIRECTORY = '/tmp/'
-GEOSERVER_LOCATION = 'http://geoserver:8080/geoserver/'  # no need to change this
 GEOSERVER_PUBLIC_LOCATION = os.environ.get(
     'GEOSERVER_PUBLIC_LOCATION',
     os.environ.get('SITEURL') + 'api/geoserver/'
@@ -17,6 +16,11 @@ GEOSERVER_BASE_URL = os.environ.get(
     'GEOSERVER_BASE_URL',
     'http://0.0.0.0:8080/geoserver/'
 )  # change this to geoserver container location
+
+GEOSERVER_LOCATION = os.environ.get(
+    'GEOSERVER_LOCATION',
+    'http://geoserver:8080/geoserver/'
+)
 
 OGC_SERVER = {
     'default': {
