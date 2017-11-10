@@ -88,6 +88,7 @@ TEMPLATES = [
         'DIRS': [
             # project level templates
             absolute_path('core', 'templates'),
+            '/usr/local/lib/python2.7/site-packages/geonode/templates'
         ],
         'APP_DIRS': False,
         'OPTIONS': {
