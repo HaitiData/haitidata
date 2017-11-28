@@ -1,5 +1,6 @@
 from django.contrib import admin
 from geonode.sitemap import LayerSitemap, MapSitemap
+from django.views.generic.base import RedirectView
 
 import autocomplete_light
 
@@ -25,13 +26,14 @@ urlpatterns = patterns(
     '',
     url(r'^/?$', TemplateView.as_view(template_name='site_index.html'), name='home'),
     url(r'^layers/(?P<layername>[^/]*)/thumbnail$', layer_thumbnail, name='layer_thumbnail2'),
+    (r'^maps/\[object Object\]/geoserver/wms$', RedirectView.as_view(url='/geoserver/wms',query_string=True)),
     url(r'^', include('geonode.urls')),
     url(r'', include(api_ext.urls)),
     url(r'^chart/', include('charts_app.urls')),
     url(r'^table/', include('wfs_harvest.urls')),
     url(r'^clip/', include('clip-and-ship.urls')),
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
-    url(r'^tutorials/$', TemplateView.as_view(template_name='tutorials.html'), name='tutorials'),
+    url(r'^tutorials/$', TemplateView.as_view(template_name='tutorials.html'), name='tutorials'), 
 )
 urlpatterns += patterns(
     '',
