@@ -13,7 +13,7 @@ upload-fixtures:
 	@docker-compose -p $(PROJECT_ID) run django /bin/bash -c "\
 	python manage.py loaddata /home/web/django_project/base/fixtures/base_region.json"
 
-fresh-web: build permissions web upload-fixtures
+fresh-web: build permissions web
 
 # Use this for fresh build (it will restore with empty stable database)
 fresh-deploy: fresh-web
@@ -21,6 +21,8 @@ fresh-deploy: fresh-web
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "dropdb --if-exists $(DATABASE_GEONODE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis geonode_data"
+	@docker exec -it $(PROJECT_ID)-postgres bash -c 'echo "hostssl	all	all	172.18.0.0/16	md5" >> /etc/postgresql/9.4/main/pg_hba.conf'
+	@docker exec -it $(PROJECT_ID)-postgres service postgresql restart
 
 geoserver:
 	@echo
@@ -333,3 +335,4 @@ help:
 	@echo "* **superuser** - create a django superuser account."
 	@echo "* **update-migrations** - freshen all migration definitions to match the current code base."
 	@echo "* **web** - same as **run** - runs the production site."
+
