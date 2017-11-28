@@ -182,3 +182,151 @@ IMPORT_TASK_SOFT_TIME_LIMIT = 90
 MAX_CSV_RECORDS = 20000
 
 DEBUG = True
+
+MAPBOX_ACCESS_TOKEN = os.environ.get('MAPBOX_ACCESS_TOKEN', None)
+MAP_BASELAYERS = [
+    {
+        'args': [
+            'No background',
+        ],
+        'fixed': True,
+        'group': 'background',
+        'name': 'background',
+        'source': {
+            'ptype': 'gxp_olsource',
+            'url': 'http://haitidata.org/api/geoserver/wms',
+        },
+        'type': 'OpenLayers.Layer',
+        'visibility': False,
+    },
+    {
+        'fixed': True,
+        'group': 'background',
+        'name': 'mapnik',
+        'source': {
+            'ptype': 'gxp_osmsource',
+        },
+        'type': 'OpenLayers.Layer.OSM',
+        'visibility': True,
+    },
+    {
+        'args': [
+            'Mapbox Satellite',
+            [
+                'https://api.mapbox.com/v4/mapbox.satellite/${z}/${x}/${y}.png?access_token=' + str(
+                        MAPBOX_ACCESS_TOKEN),
+            ],
+            {
+                'transitionEffect': 'resize',
+                'attribution': 'Mapbox'
+            }
+        ],
+        'type': 'OpenLayers.Layer.XYZ',
+        'source': {
+            'ptype': 'gxp_olsource',
+        },
+        'visibility': True,
+        'fixed': True,
+        'group': 'background',
+    },
+    {
+        'args': [
+            'Mapbox Outdoors',
+            [
+                'https://api.mapbox.com/v4/mapbox.outdoors/${z}/${x}/${y}.png?access_token=' + str(
+                        MAPBOX_ACCESS_TOKEN),
+            ],
+            {
+                'transitionEffect': 'resize',
+                'attribution': 'Mapbox'
+            }
+        ],
+        'type': 'OpenLayers.Layer.XYZ',
+        'source': {
+            'ptype': 'gxp_olsource',
+        },
+        'visibility': True,
+        'fixed': True,
+        'group': 'background',
+    },
+    {
+        'args': [
+            'Mapbox Dark',
+            [
+                'https://api.mapbox.com/v4/mapbox.dark/${z}/${x}/${y}.png?access_token=' + str(
+                    MAPBOX_ACCESS_TOKEN),
+            ],
+            {
+                'transitionEffect': 'resize',
+                'attribution': 'Mapbox'
+            }
+        ],
+        'type': 'OpenLayers.Layer.XYZ',
+        'source': {
+            'ptype': 'gxp_olsource',
+        },
+        'visibility': True,
+        'fixed': True,
+        'group': 'background',
+    },
+    {
+        'args': [
+            'Mapbox Light',
+            [
+                'https://api.mapbox.com/v4/mapbox.light/${z}/${x}/${y}.png?access_token=' + str(
+                        MAPBOX_ACCESS_TOKEN),
+            ],
+            {
+                'transitionEffect': 'resize',
+                'attribution': 'Mapbox'
+            }
+        ],
+        'type': 'OpenLayers.Layer.XYZ',
+        'source': {
+            'ptype': 'gxp_olsource',
+        },
+        'visibility': True,
+        'fixed': True,
+        'group': 'background',
+    },
+    {
+        'args': [
+            'Mapbox Streetmap',
+            [
+                'https://api.mapbox.com/v4/mapbox.streets/${z}/${x}/${y}.png?access_token=' + str(
+                        MAPBOX_ACCESS_TOKEN),
+            ],
+            {
+                'transitionEffect': 'resize',
+                'attribution': 'Mapbox'
+            }
+        ],
+        'type': 'OpenLayers.Layer.XYZ',
+        'source': {
+            'ptype': 'gxp_olsource',
+        },
+        'visibility': True,
+        'fixed': True,
+        'group': 'background',
+    },
+    {
+        'args': [
+            'Mapbox Satellite Streetmap',
+            [
+                'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/${z}/${x}/${y}?access_token=' + str(
+                        MAPBOX_ACCESS_TOKEN),
+            ],
+            {
+                'transitionEffect': 'resize',
+                'attribution': 'Mapbox'
+            }
+        ],
+        'type': 'OpenLayers.Layer.XYZ',
+        'source': {
+            'ptype': 'gxp_olsource',
+        },
+        'visibility': True,
+        'fixed': True,
+        'group': 'background',
+    },
+]
