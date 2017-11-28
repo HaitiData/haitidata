@@ -6,9 +6,9 @@
 
 {% block title %}{{ block.super }}{% endblock %}
 {% block page-title %}
-{% if geotiffname == 'ortho_images' %}
+{% if geotiffname == 'ortho_images_pyramid' %}
   Ortho Photos
-{% elif geotiffname == 'lidar' %}
+{% elif geotiffname == 'lidar_dem_mosaic' %}
   {% trans "DSM" %}
 {% endif %}
 {% endblock %}
@@ -19,7 +19,7 @@
 <div class="row">
   <div class="col-md-12">
     <article id="info">
-      {% if geotiffname == 'ortho_images' %}
+      {% if geotiffname == 'ortho_images_pyramid' %}
       <p>Les <strong>orthophotographies</strong> ou <strong>orthoimages</strong> sont des images aériennes ou satellitales de la surface terrestre rectifiées géométriquement et égalisées radiométriquement. Ces images se présentant sous forme de dalles couvrant une zone de la Terre peuvent être géoréférencées dans n'importe quel système de coordonnées. Elles servent de fonds cartographiques dans les Systèmes d'information géographique.</p>
       {% else %}
       <p>Un Modèle Numérique de Terrain (MNT) est une représentation 3D de la surface d'un terrain ou d'une planète, créée à partir des données d'altitude du terrain."</p>
