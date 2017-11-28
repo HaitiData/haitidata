@@ -22,7 +22,7 @@ fresh-deploy: fresh-web
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis $(DATABASE_NAME)"
 	@docker exec -t -i $(PROJECT_ID)-postgres su - postgres -c "createdb -O docker -T template_postgis geonode_data"
 	@docker exec -it $(PROJECT_ID)-postgres bash -c 'echo "hostssl	all	all	172.18.0.0/16	md5" >> /etc/postgresql/9.4/main/pg_hba.conf'
-	@docker exec -it $(PROJECT_ID)-postgres service postgresql restart
+	@docker exec $(PROJECT_ID)-postgres service postgresql restart
 
 geoserver:
 	@echo
