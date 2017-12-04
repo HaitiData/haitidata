@@ -4,9 +4,8 @@ services:
   postgres:
     # Note you cannot scale if you use conteiner_name
     container_name: haitidata-postgres
-    image: kartoza/postgis:9.4-2.1
+    image: kartoza/geonode_db
     volumes:
-      - ./pg/postgres_data:/var/lib/postgresql
       - ./backups:/backups
     environment:
       - USERNAME=docker
@@ -123,7 +122,7 @@ services:
     links:
       - postgres
     volumes:
-      - /geoserver-data:/geoserver_data/data
+      - ./geoserver-data:/geoserver_data/data
     environment:
       - DOCKER_HOST
       - PUBLIC_PORT=80

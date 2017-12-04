@@ -5,13 +5,12 @@ You should write some docs, it's good for the soul.
 # Docker installation
 
 ## Install docker
-This will install an Haitidata container
+Follow the instructions from:
+https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce
 
-Makes sure to have docker-compose installed
-```
-sudo apt-get install python-pip
-sudo pip install docker-compose
-```
+## Install docker-compose
+Follow the instructions from:
+https://docs.docker.com/compose/install/#install-compose
 
 ## Get project code
 Clone the repo:
@@ -24,7 +23,7 @@ Run the docker container:
 ```
 cd deployment
 make deploy
-make update-migrations-localization:
+make update-migrations-localization
 ```
 
-then you can visit http://0.0.0.0:33300```
+then you can visit http://0.0.0.0:33300
