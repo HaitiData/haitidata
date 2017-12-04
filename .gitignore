@@ -99,3 +99,5 @@ django_project/media
 # OSX Crap
 deployment/backups
 deployment/data_dir
+deployment/geoserver_data
+deployment/geoserver-data
