@@ -12,6 +12,7 @@ from django.http import Http404, HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.generic.detail import View
 from geonode.layers.views import _resolve_layer, _PERMISSION_MSG_VIEW
+from geonode.layers.models import Layer
 
 WCS_URL = settings.GEOSERVER_BASE_URL + \
           'wcs?request=getcoverage&' \
@@ -134,11 +135,10 @@ def clip_layer(request, layername):
     """
     # PREPARATION
     try:
-        layer = _resolve_layer(
-            request,
-            layername,
-            'base.view_resourcebase',
-            _PERMISSION_MSG_VIEW)
+        layer = Layer.objects.get(
+                workspace=layername.split(':')[0],
+                name=layername.split(':')[1]
+        )
     except Http404 as e:
         response = JsonResponse({
             'error': '%s. '
@@ -346,11 +346,10 @@ def download_clip(request, layername, clip_filename):
     :return: The HTTPResponse with a file.
     """
     # PREPARATION
-    layer = _resolve_layer(
-        request,
-        layername,
-        'base.view_resourcebase',
-        _PERMISSION_MSG_VIEW)
+    layer = Layer.objects.get(
+            workspace=layername.split(':')[0],
+            name=layername.split(':')[1]
+    )
 
     query = request.GET or request.POST
     params = {
