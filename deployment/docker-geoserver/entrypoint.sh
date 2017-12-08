@@ -13,8 +13,7 @@ echo "Remove redundant library..."
 echo "Cleaning old cluster settings ..."
 rm -vf $CLUSTER_CONFIG_DIR/*
 
-export CATALINA_OPTS='-DCLUSTER_CONFIG_DIR="$CLUSTER_CONFIG_DIR" -Dactivemq.base="$CLUSTER_CONFIG_DIR/tmp" -Dactivemq.transportConnectors.server.uri="tcp://0.0.0.0:0?maximumConnections=1000&wireFormat.maxFrameSize=104857600&jms.useAsyncSend=true&transport.daemon=true&trace=true"'
-
+export CATALINA_OPTS=''
 
 # start tomcat
 exec catalina.sh run

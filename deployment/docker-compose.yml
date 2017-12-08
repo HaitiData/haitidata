@@ -105,7 +105,6 @@ services:
     links:
       - postgres
     volumes:
-      - ./geoserver_data:/geoserver_data/data
       - ./geowebcache:/geowebcache
     environment:
       - DOCKER_HOST
