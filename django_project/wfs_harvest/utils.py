@@ -1,7 +1,11 @@
 import urllib
 import xml.etree.ElementTree as ET
 
+import requests
+
 from geonode.layers.models import Layer
+
+from django.conf import settings
 
 
 def get_fields(layer_id):
@@ -40,17 +44,19 @@ def get_featno(layer_id):
     lyr = Layer.objects.get(pk=layer_id)
     wfs_baseurl = lyr.link_set.get(link_type='OGC:WFS').url
 
-    params = urllib.urlencode({
+    USER = settings.OGC_SERVER['default']['USER']
+    PASSWD = settings.OGC_SERVER['default']['PASSWORD']
+
+    payload = {
         'service': 'WFS',
         'version': '1.1.0',
         'request': 'GetFeature',
         'typename': lyr.typename,
         'resultType': 'hits'
-    })
+    }
 
-    wfs_count_request = urllib.urlopen(wfs_baseurl + '?%s' % params)
-    content = wfs_count_request.read()
+    r = requests.get(wfs_baseurl, params=payload, auth=(USER, PASSWD))
 
-    root = ET.fromstring(content)
+    root = ET.fromstring(r.text)
 
     return int(root.attrib['numberOfFeatures'])

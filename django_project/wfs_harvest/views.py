@@ -1,6 +1,7 @@
 import urllib
 import xml.etree.ElementTree as ET
 
+import requests
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.conf import settings
@@ -62,7 +63,7 @@ def get_wfs_csv(request):
         response.reason_phrase = 'REQUEST ENTITY TOO LARGE'
         return response
 
-    params = urllib.urlencode({
+    payload = {
         'service':'WFS',
         'version':'1.1.0',
         'request':'GetFeature',
@@ -70,11 +71,13 @@ def get_wfs_csv(request):
         'propertyName':category_field + ',' + quantity_field,
         'outputFormat':'csv',
         'maxFeatures': str(settings.MAX_CSV_RECORDS)
-    })
-
+    }
     wfs_baseurl = lyr.link_set.get(link_type='OGC:WFS').url
-    wfs_request = urllib.urlopen(wfs_baseurl + '?%s' % params)
-    content = wfs_request.read()    
-    response = HttpResponse(content, content_type='text/csv')
+    USER = settings.OGC_SERVER['default']['USER']
+    PASSWD = settings.OGC_SERVER['default']['PASSWORD']
+
+    r = requests.get(wfs_baseurl, params=payload, auth=(USER, PASSWD))
+
+    response = HttpResponse(r.text, content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="myfile.csv"'
     return response
