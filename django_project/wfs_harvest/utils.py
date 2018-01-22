@@ -1,7 +1,9 @@
-import urllib
+import urllib, urllib2
 import xml.etree.ElementTree as ET
 
 from geonode.layers.models import Layer
+
+from django.conf import settings
 
 
 def get_fields(layer_id):
@@ -40,6 +42,17 @@ def get_featno(layer_id):
     lyr = Layer.objects.get(pk=layer_id)
     wfs_baseurl = lyr.link_set.get(link_type='OGC:WFS').url
 
+    USER = settings.OGC_SERVER['default']['USER']
+    PASSWD = settings.OGC_SERVER['default']['PASSWORD']
+    passman = urllib2.HTTPPasswordMgrWithDefaultRealm()
+    passman.add_password(None, wfs_baseurl, USER, PASSWD)
+
+    authhandler = urllib2.HTTPBasicAuthHandler(passman)
+
+    opener = urllib2.build_opener(authhandler)
+
+    urllib2.install_opener(opener)
+
     params = urllib.urlencode({
         'service': 'WFS',
         'version': '1.1.0',
@@ -48,7 +61,7 @@ def get_featno(layer_id):
         'resultType': 'hits'
     })
 
-    wfs_count_request = urllib.urlopen(wfs_baseurl + '?%s' % params)
+    wfs_count_request = urllib2.urlopen(wfs_baseurl + '?%s' % params)
     content = wfs_count_request.read()
 
     root = ET.fromstring(content)
