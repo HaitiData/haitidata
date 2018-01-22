@@ -1,5 +1,7 @@
-import urllib, urllib2
+import urllib
 import xml.etree.ElementTree as ET
+
+import requests
 
 from geonode.layers.models import Layer
 
@@ -44,26 +46,17 @@ def get_featno(layer_id):
 
     USER = settings.OGC_SERVER['default']['USER']
     PASSWD = settings.OGC_SERVER['default']['PASSWORD']
-    passman = urllib2.HTTPPasswordMgrWithDefaultRealm()
-    passman.add_password(None, wfs_baseurl, USER, PASSWD)
 
-    authhandler = urllib2.HTTPBasicAuthHandler(passman)
-
-    opener = urllib2.build_opener(authhandler)
-
-    urllib2.install_opener(opener)
-
-    params = urllib.urlencode({
+    payload = {
         'service': 'WFS',
         'version': '1.1.0',
         'request': 'GetFeature',
         'typename': lyr.typename,
         'resultType': 'hits'
-    })
+    }
 
-    wfs_count_request = urllib2.urlopen(wfs_baseurl + '?%s' % params)
-    content = wfs_count_request.read()
+    r = requests.get(wfs_baseurl, params=payload, auth=(USER, PASSWD))
 
-    root = ET.fromstring(content)
+    root = ET.fromstring(r.text)
 
     return int(root.attrib['numberOfFeatures'])
