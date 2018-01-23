@@ -7,22 +7,24 @@ from geonode.layers.models import Layer
 
 from django.conf import settings
 
+USER = settings.OGC_SERVER['default']['USER']
+PASSWD = settings.OGC_SERVER['default']['PASSWORD']
+
 
 def get_fields(layer_id):
-    layer = Layer.objects.get(pk=layer_id)
-    lyrname = layer.typename
-    params = urllib.urlencode({
-        'service':'WFS',
-        'version':'1.1.0',
-        'request':'DescribeFeatureType',
-        'typename':lyrname
-    })
+    lyr = Layer.objects.get(pk=layer_id)
+    wfs_baseurl = lyr.link_set.get(link_type='OGC:WFS').url
 
-    wfs_request = urllib.urlopen('http://localhost/geoserver/ows?%s'
-                                 % params)
-    content = wfs_request.read()
+    payload = {
+        'service': 'WFS',
+        'version': '1.1.0',
+        'request': 'DescribeFeatureType',
+        'typename': lyr.typename,
+    }
 
-    root = ET.fromstring(content)
+    r = requests.get(wfs_baseurl, params=payload, auth=(USER, PASSWD))
+    root = ET.fromstring(r.text)
+
     namespace = root.tag.split('}')[0] + '}'
     xpath = ('./{0}complexType/{0}complexContent/'
              '{0}extension/{0}sequence/{0}element').format(namespace)
@@ -43,9 +45,6 @@ def get_fields(layer_id):
 def get_featno(layer_id):
     lyr = Layer.objects.get(pk=layer_id)
     wfs_baseurl = lyr.link_set.get(link_type='OGC:WFS').url
-
-    USER = settings.OGC_SERVER['default']['USER']
-    PASSWD = settings.OGC_SERVER['default']['PASSWORD']
 
     payload = {
         'service': 'WFS',
