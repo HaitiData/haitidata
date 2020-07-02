@@ -71,3 +71,26 @@ loaders = TEMPLATES[0]['OPTIONS'].get('loaders') or ['django.template.loaders.fi
 # loaders.insert(0, 'apptemplates.Loader')
 TEMPLATES[0]['OPTIONS']['loaders'] = loaders
 TEMPLATES[0].pop('APP_DIRS', None)
+
+# HaitiData
+
+INSTALLED_APPS += (
+    "clip_and_ship",
+)
+
+LANGUAGE_CODE = 'fr'
+
+_HAITI_LANGUAGES = (
+    ('en', 'English'),
+    ('fr', 'Français'),
+)
+
+LANGUAGES = os.getenv('LANGUAGES', _HAITI_LANGUAGES)
+
+DISPLAY_COMMENTS = False
+
+MAXIMUM_CLIP_SIZE = '80000000'
+
+WCS_DOWNLOADED_RATIO_SIZE = 1
+
+THUMBNAIL_GENERATOR_DEFAULT_SIZE = {'width': 480, 'height': 400}
