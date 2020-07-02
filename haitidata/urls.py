@@ -1,29 +1,35 @@
-from django.conf.urls import patterns, url
+# -*- coding: utf-8 -*-
+#########################################################################
+#
+# Copyright (C) 2017 OSGeo
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+#########################################################################
+
+from django.conf.urls import url, include
 from django.views.generic import TemplateView
-from osgeo_importer.urls import urlpatterns as importer_urlpatterns
 
-from geonode.urls import *
+from geonode.urls import urlpatterns
 
-from filter.urls import api_ext
-from thumbnail.views import layer_thumbnail
+urlpatterns += [
+## include your urls here
 
-urlpatterns = patterns('',
+]
+
+urlpatterns = [
    url(r'^/?$',
        TemplateView.as_view(template_name='site_index.html'),
        name='home'),
-    url(r'', include(api_ext.urls)),
-    url(r'^layers/(?P<layername>[^/]*)/thumbnail$', layer_thumbnail, name='layer_thumbnail2'),
- ) + urlpatterns + [
-    url(r'^chart/', include('charts_app.urls')),
-    url(r'^table/', include('wfs_harvest.urls')),
-    url(r'^clip/', include('clip-and-ship.urls')),
-    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
-    url(r'^tutorials/$', TemplateView.as_view(template_name='tutorials.html'), name='tutorials'),
-    ]
-
-urlpatterns += patterns(
-    '',
-    url(r'^i18n/', include('django.conf.urls.i18n')),
-)
-urlpatterns += importer_urlpatterns
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ ] + urlpatterns

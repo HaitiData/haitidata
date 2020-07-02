@@ -1333,7 +1333,7 @@ msgstr "Risques et Aléa en Haïti"
 
 #: haitidata/templates/site_index.html:22
 msgid "River Flood"
-msgstr "Inondation Riverine"
+msgstr "Inondation Riveraine"
 
 #: haitidata/templates/site_index.html:26
 msgid "Cyclone"
