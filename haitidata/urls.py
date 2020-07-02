@@ -19,13 +19,15 @@
 #########################################################################
 
 from django.conf.urls import url, include
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, RedirectView
 
 from geonode.urls import urlpatterns
 
 urlpatterns += [
 ## include your urls here
-
+   url(r'^clip/', include('clip_and_ship.urls')),
+   url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+   url(r'^tutorials/$', TemplateView.as_view(template_name='tutorials.html'), name='tutorials'),
 ]
 
 urlpatterns = [
